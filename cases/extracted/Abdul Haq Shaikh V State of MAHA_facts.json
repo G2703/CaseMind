@@ -1,0 +1,31 @@
+{
+  "tier_1_determinative": {
+    "sexual_act_description": "The appellant removed his clothes and inserted his finger in the victim’s private part, touched her private parts inappropriately, and asked her to hold his private part in her hand, causing her pain.",
+    "absence_of_consent": "The victim, aged 4, was unable to give consent, and the act was performed without her consent while she was alone in the appellant's house."
+  },
+  "tier_2_material": {
+    "aggravated_circumstances_of_rape": "The victim was a minor, aged 4 years, which attracts aggravated circumstances under POCSO Act.",
+    "victim_age": "4 years old at the time of the incident, born on 16/01/2014.",
+    "relationship_to_accused": "The victim was a friend of the appellant's daughter and often visited their house to play."
+  },
+  "tier_3_contextual": {
+    "incident_location": "The incident occurred at the appellant's house.",
+    "incident_date_time": "The incident took place on 09/02/2018.",
+    "time_of_reporting": "The incident was reported immediately to the police by the victim's mother on the same day."
+  },
+  "tier_4_procedural": {
+    "case_number": "CRIMINAL APPEAL NO. 23 OF 2020",
+    "case_title": "Raju @ Abdul Haq Shaikh Mohammed Hanif vs. The State of Maharashtra & Anr.",
+    "court_name": "High Court of Judicature at Bombay, Criminal Appellate Jurisdiction",
+    "judgment_date": "8th December 2022",
+    "appellant_or_petitioner": "Raju @ Abdul Haq Shaikh Mohammed Hanif",
+    "respondent": "The State of Maharashtra & Anr."
+  },
+  "residual_details": {
+    "additional_facts": "The appellant was convicted under multiple sections of the POCSO Act and IPC 376. The victim's medical examination showed no signs of force, but the possibility of sexual assault could not be ruled out. The appellant claimed a false implication due to a dispute with the victim’s father. The appellant's conviction was based on the victim's testimony, supported by her mother and medical examination, despite the appellant's denial and the defense witnesses' testimony."
+  },
+  "template_id": "ipc_376",
+  "template_label": "Rape (IPC 376)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T17:59:47.285300"
+}

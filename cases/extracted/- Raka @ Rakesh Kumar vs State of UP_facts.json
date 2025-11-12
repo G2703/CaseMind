@@ -1,0 +1,31 @@
+{
+  "tier_1_determinative": {
+    "sexual_act_description": "The victim stated that no force or violence was used by the appellant, and she went with him voluntarily. The appellant did nothing by force.",
+    "absence_of_consent": "The victim's statement under Section 164 Cr.P.C indicates she went with the appellant voluntarily to Assam and no molestation or rape was committed."
+  },
+  "tier_2_material": {
+    "aggravated_circumstances_of_rape": "The case involves sections under the POCSO Act, indicating the victim was a minor, which constitutes an aggravated circumstance.",
+    "victim_age": "The victim is indicated to be a minor as the case involves sections of the POCSO Act.",
+    "relationship_to_accused": "The victim was enticed by the appellant, suggesting no prior relationship."
+  },
+  "tier_3_contextual": {
+    "incident_location": "The victim went to Assam with the appellant and stayed at his grandfather's house for two days.",
+    "incident_date_time": "The victim returned on 15.8.2023, indicating the incident occurred before this date.",
+    "time_of_reporting": "The appellant was in jail since 23.8.2023, suggesting the report was made around that time."
+  },
+  "tier_4_procedural": {
+    "case_number": "CRIMINAL APPEAL No. - 681 of 2024",
+    "case_title": "Raka @ Rakesh Kumar vs State Of U.P. Thru. Prin. Secy. Home Lko. And 2 Others",
+    "court_name": "High Court of Judicature at Allahabad, Lucknow Bench",
+    "judgment_date": "14.2.2025",
+    "appellant_or_petitioner": "Raka @ Rakesh Kumar",
+    "respondent": "State Of U.P. Thru. Prin. Secy. Home Lko. And 2 Others"
+  },
+  "residual_details": {
+    "additional_facts": "The appellant was accused under Sections 363, 366, 376 IPC, 3/4 POCSO Act, and Sections 3(2)(V) SC/ST Act. The appeal was allowed, and the appellant was granted bail with conditions."
+  },
+  "template_id": "ipc_376",
+  "template_label": "Rape (IPC 376)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T17:58:00.840270"
+}

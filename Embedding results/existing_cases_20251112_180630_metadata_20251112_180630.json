@@ -1,221 +1,287 @@
 {
   "embeddings_metadata": {
+    "- Raka @ Rakesh Kumar vs State of UP": {
+      "case_id": "- Raka @ Rakesh Kumar vs State of UP",
+      "text_length": 1861,
+      "timestamp": "2025-11-12T18:06:11.115215"
+    },
+    "4255_2012_17_1501_56348_Judgement_14-Oct-2024": {
+      "case_id": "4255_2012_17_1501_56348_Judgement_14-Oct-2024",
+      "text_length": 1835,
+      "timestamp": "2025-11-12T18:06:11.420299"
+    },
     "Aakash Ramchandra Chavan Vs. State of Maharashtra": {
       "case_id": "Aakash Ramchandra Chavan Vs. State of Maharashtra",
-      "text_length": 2661,
-      "timestamp": "2025-11-12T15:22:40.734699"
+      "text_length": 2567,
+      "timestamp": "2025-11-12T18:06:11.740325"
+    },
+    "Abbas Sk vs State of West Bengal": {
+      "case_id": "Abbas Sk vs State of West Bengal",
+      "text_length": 1798,
+      "timestamp": "2025-11-12T18:06:12.056188"
     },
     "Abdul @ Aslam Salim Shaikh Vs. State of Maharashtra": {
       "case_id": "Abdul @ Aslam Salim Shaikh Vs. State of Maharashtra",
-      "text_length": 1846,
-      "timestamp": "2025-11-12T15:22:41.115948"
+      "text_length": 1788,
+      "timestamp": "2025-11-12T18:06:12.395955"
+    },
+    "Abdul Haq Shaikh V State of MAHA": {
+      "case_id": "Abdul Haq Shaikh V State of MAHA",
+      "text_length": 2074,
+      "timestamp": "2025-11-12T18:06:12.762433"
+    },
+    "Abdul Karim Vs State of Karnataka": {
+      "case_id": "Abdul Karim Vs State of Karnataka",
+      "text_length": 2109,
+      "timestamp": "2025-11-12T18:06:13.059570"
+    },
+    "Abdul Nasar vs State of Kerla": {
+      "case_id": "Abdul Nasar vs State of Kerla",
+      "text_length": 1996,
+      "timestamp": "2025-11-12T18:06:13.431311"
+    },
+    "Abdul Nassar Vs State of Kerla": {
+      "case_id": "Abdul Nassar Vs State of Kerla",
+      "text_length": 1925,
+      "timestamp": "2025-11-12T18:06:13.772804"
+    },
+    "Abdul Rahman Vs State of  UP": {
+      "case_id": "Abdul Rahman Vs State of  UP",
+      "text_length": 1855,
+      "timestamp": "2025-11-12T18:06:14.089423"
     },
     "Abdulwafa Abubakhar Khan Vs. State of Maharashtra": {
       "case_id": "Abdulwafa Abubakhar Khan Vs. State of Maharashtra",
-      "text_length": 1861,
-      "timestamp": "2025-11-12T15:22:41.538443"
+      "text_length": 1543,
+      "timestamp": "2025-11-12T18:06:14.407316"
+    },
+    "Abhijeet Chandrakant Pawar v State of maha": {
+      "case_id": "Abhijeet Chandrakant Pawar v State of maha",
+      "text_length": 2099,
+      "timestamp": "2025-11-12T18:06:14.807672"
     },
     "Adesh Anil Kale Vs. State of Maharashtra": {
       "case_id": "Adesh Anil Kale Vs. State of Maharashtra",
       "text_length": 1780,
-      "timestamp": "2025-11-12T15:22:41.956590"
+      "timestamp": "2025-11-12T18:06:15.139958"
+    },
+    "Aftab Khan V State of Maha": {
+      "case_id": "Aftab Khan V State of Maha",
+      "text_length": 1906,
+      "timestamp": "2025-11-12T18:06:15.439074"
+    },
+    "Aftab Mustaq Khan V State of maha": {
+      "case_id": "Aftab Mustaq Khan V State of maha",
+      "text_length": 1871,
+      "timestamp": "2025-11-12T18:06:15.836989"
     },
     "Akshay Eknath Kokate Vs. State of Maharashtra": {
       "case_id": "Akshay Eknath Kokate Vs. State of Maharashtra",
       "text_length": 1617,
-      "timestamp": "2025-11-12T15:22:42.377221"
+      "timestamp": "2025-11-12T18:06:16.155944"
     },
     "Akshay Rajendra Parache Vs. State of Maharashtra": {
       "case_id": "Akshay Rajendra Parache Vs. State of Maharashtra",
       "text_length": 1969,
-      "timestamp": "2025-11-12T15:22:42.819293"
+      "timestamp": "2025-11-12T18:06:16.517177"
     },
     "Amar Kumar Singh Vs. State of Maharashtra": {
       "case_id": "Amar Kumar Singh Vs. State of Maharashtra",
       "text_length": 1877,
-      "timestamp": "2025-11-12T15:22:43.269159"
+      "timestamp": "2025-11-12T18:06:16.878124"
     },
     "Amin Mohammed Shaikh Vs. State of Maharashtra": {
       "case_id": "Amin Mohammed Shaikh Vs. State of Maharashtra",
       "text_length": 2610,
-      "timestamp": "2025-11-12T15:22:43.752649"
+      "timestamp": "2025-11-12T18:06:17.241208"
     },
     "Amol Ramchandra Pawar Vs. State of Maharashtra": {
       "case_id": "Amol Ramchandra Pawar Vs. State of Maharashtra",
       "text_length": 1819,
-      "timestamp": "2025-11-12T15:22:44.217455"
+      "timestamp": "2025-11-12T18:06:17.564106"
     },
     "Amol Vishwas Ovhal Vs. State of Maharashtra": {
       "case_id": "Amol Vishwas Ovhal Vs. State of Maharashtra",
       "text_length": 2084,
-      "timestamp": "2025-11-12T15:22:44.644007"
+      "timestamp": "2025-11-12T18:06:17.898371"
     },
     "Anant Chandru Wake Vs. State of Maharashtra": {
       "case_id": "Anant Chandru Wake Vs. State of Maharashtra",
       "text_length": 1958,
-      "timestamp": "2025-11-12T15:22:45.098178"
+      "timestamp": "2025-11-12T18:06:18.242996"
     },
     "Arjun Baban Jagdhane Vs. State of Maharashtra": {
       "case_id": "Arjun Baban Jagdhane Vs. State of Maharashtra",
       "text_length": 2106,
-      "timestamp": "2025-11-12T15:22:45.532260"
+      "timestamp": "2025-11-12T18:06:18.574358"
     },
     "Arjun Selvam Pille Vs. State of Maharashtra": {
       "case_id": "Arjun Selvam Pille Vs. State of Maharashtra",
       "text_length": 2485,
-      "timestamp": "2025-11-12T15:22:45.959573"
+      "timestamp": "2025-11-12T18:06:18.903109"
     },
     "Arjunsing Rajputsing Dudhani Vs. State of Maharashtra": {
       "case_id": "Arjunsing Rajputsing Dudhani Vs. State of Maharashtra",
       "text_length": 2158,
-      "timestamp": "2025-11-12T15:22:46.382797"
+      "timestamp": "2025-11-12T18:06:19.247579"
     },
     "Arshad Ali Chhotehussain Shaikh Vs.State of Maharashtra": {
       "case_id": "Arshad Ali Chhotehussain Shaikh Vs.State of Maharashtra",
       "text_length": 2581,
-      "timestamp": "2025-11-12T15:22:46.782579"
+      "timestamp": "2025-11-12T18:06:19.595853"
     },
     "Arshad Riyaz Shaikh alias Madrasi Vs. State of Maharashtra": {
       "case_id": "Arshad Riyaz Shaikh alias Madrasi Vs. State of Maharashtra",
       "text_length": 2007,
-      "timestamp": "2025-11-12T15:22:47.177921"
+      "timestamp": "2025-11-12T18:06:19.969612"
     },
     "Ashish Kailas Kamble Vs. State of Maharashtra": {
       "case_id": "Ashish Kailas Kamble Vs. State of Maharashtra",
       "text_length": 1882,
-      "timestamp": "2025-11-12T15:22:47.834407"
+      "timestamp": "2025-11-12T18:06:20.475447"
     },
     "Ashish Shamsher Vaid Vs. State of Maharashtra": {
       "case_id": "Ashish Shamsher Vaid Vs. State of Maharashtra",
       "text_length": 1715,
-      "timestamp": "2025-11-12T15:22:48.357494"
+      "timestamp": "2025-11-12T18:06:20.890341"
     },
     "Ashok Kundanmal Kothari Vs. State of Maharashtra": {
       "case_id": "Ashok Kundanmal Kothari Vs. State of Maharashtra",
       "text_length": 1921,
-      "timestamp": "2025-11-12T15:22:48.874821"
+      "timestamp": "2025-11-12T18:06:21.276723"
     },
     "Ashok Laxman Bhagyawant Vs. State of Maharashtra": {
       "case_id": "Ashok Laxman Bhagyawant Vs. State of Maharashtra",
       "text_length": 2370,
-      "timestamp": "2025-11-12T15:22:49.261700"
+      "timestamp": "2025-11-12T18:06:21.701795"
     },
     "Ashwinikunal Ashokkumar Singh Vs. State of Maharashtra": {
       "case_id": "Ashwinikunal Ashokkumar Singh Vs. State of Maharashtra",
       "text_length": 2415,
-      "timestamp": "2025-11-12T15:22:49.681636"
+      "timestamp": "2025-11-12T18:06:22.113837"
     },
     "Avinash Shashikant Sawant Vs. State of Maharashtra": {
       "case_id": "Avinash Shashikant Sawant Vs. State of Maharashtra",
       "text_length": 1868,
-      "timestamp": "2025-11-12T15:22:50.087553"
+      "timestamp": "2025-11-12T18:06:22.532131"
     },
     "Azgar Ali Abdul Khan Vs. State of Maharashtra": {
       "case_id": "Azgar Ali Abdul Khan Vs. State of Maharashtra",
       "text_length": 1864,
-      "timestamp": "2025-11-12T15:22:50.500979"
+      "timestamp": "2025-11-12T18:06:22.887710"
     },
     "Baban @ Bhal Prakash Ghanvat Vs. State of Maharashtra": {
       "case_id": "Baban @ Bhal Prakash Ghanvat Vs. State of Maharashtra",
       "text_length": 1667,
-      "timestamp": "2025-11-12T15:22:50.902649"
+      "timestamp": "2025-11-12T18:06:23.220479"
     },
     "Balu Pandharinath Takle Vs. State of Maharashtra": {
       "case_id": "Balu Pandharinath Takle Vs. State of Maharashtra",
       "text_length": 1392,
-      "timestamp": "2025-11-12T15:22:51.276375"
+      "timestamp": "2025-11-12T18:06:23.553702"
     },
     "Barku Dagadu Hilam Vs. State of Maharashtra": {
       "case_id": "Barku Dagadu Hilam Vs. State of Maharashtra",
       "text_length": 2118,
-      "timestamp": "2025-11-12T15:22:51.665949"
+      "timestamp": "2025-11-12T18:06:24.134214"
     },
     "Bhagwan Babu Margale Vs. State of Maharashtra": {
       "case_id": "Bhagwan Babu Margale Vs. State of Maharashtra",
       "text_length": 1797,
-      "timestamp": "2025-11-12T15:22:52.074719"
+      "timestamp": "2025-11-12T18:06:24.506779"
     },
     "Bhai Bhikaji Rane Vs. State of Maharashtra": {
       "case_id": "Bhai Bhikaji Rane Vs. State of Maharashtra",
       "text_length": 2117,
-      "timestamp": "2025-11-12T15:22:52.575953"
+      "timestamp": "2025-11-12T18:06:24.891089"
     },
     "Bharat Tatya Khotare Vs. State of Maharashtra": {
       "case_id": "Bharat Tatya Khotare Vs. State of Maharashtra",
       "text_length": 2300,
-      "timestamp": "2025-11-12T15:22:53.099674"
+      "timestamp": "2025-11-12T18:06:25.252908"
     },
     "Bhika Rambhau Ekaankar Vs. State of Maharashtra": {
       "case_id": "Bhika Rambhau Ekaankar Vs. State of Maharashtra",
       "text_length": 1809,
-      "timestamp": "2025-11-12T15:22:53.629626"
+      "timestamp": "2025-11-12T18:06:25.642234"
     },
     "Bhim @ Raju @ Shankar Gundayya Maku Vs. State of Maharashtra": {
       "case_id": "Bhim @ Raju @ Shankar Gundayya Maku Vs. State of Maharashtra",
       "text_length": 1751,
-      "timestamp": "2025-11-12T15:22:54.171593"
+      "timestamp": "2025-11-12T18:06:26.021378"
     },
     "Bhisma Mohan Datta Vs. State of Maharashtra": {
       "case_id": "Bhisma Mohan Datta Vs. State of Maharashtra",
       "text_length": 1910,
-      "timestamp": "2025-11-12T15:22:54.854473"
+      "timestamp": "2025-11-12T18:06:26.365848"
     },
     "Chaggansingh Udaysingh Parmar Vs. State of Maharashtra": {
       "case_id": "Chaggansingh Udaysingh Parmar Vs. State of Maharashtra",
       "text_length": 1848,
-      "timestamp": "2025-11-12T15:22:55.367560"
+      "timestamp": "2025-11-12T18:06:26.744667"
     },
     "Charanjit Singh Gill Vs. State of Maharashtra": {
       "case_id": "Charanjit Singh Gill Vs. State of Maharashtra",
       "text_length": 1398,
-      "timestamp": "2025-11-12T15:22:55.771968"
+      "timestamp": "2025-11-12T18:06:27.117538"
     },
     "Chetan Ramdas Dumbre Vs. State of Maharashtra": {
       "case_id": "Chetan Ramdas Dumbre Vs. State of Maharashtra",
       "text_length": 2487,
-      "timestamp": "2025-11-12T15:22:56.199811"
+      "timestamp": "2025-11-12T18:06:27.469413"
     },
     "Chetan Shashikant Pawar Vs. State of Maharashtra": {
       "case_id": "Chetan Shashikant Pawar Vs. State of Maharashtra",
       "text_length": 2541,
-      "timestamp": "2025-11-12T15:22:56.631128"
+      "timestamp": "2025-11-12T18:06:27.826793"
     },
     "Chetan": {
       "case_id": "Chetan",
       "text_length": 2188,
-      "timestamp": "2025-11-12T15:22:57.033770"
+      "timestamp": "2025-11-12T18:06:28.175015"
     },
     "Chima Sakru Wagh Vs. State of Maharashtra": {
       "case_id": "Chima Sakru Wagh Vs. State of Maharashtra",
       "text_length": 1907,
-      "timestamp": "2025-11-12T15:22:57.429026"
+      "timestamp": "2025-11-12T18:06:28.516811"
     },
     "Chintaman Niljekar Vs. State of Maharashtra": {
       "case_id": "Chintaman Niljekar Vs. State of Maharashtra",
       "text_length": 1978,
-      "timestamp": "2025-11-12T15:22:57.875006"
+      "timestamp": "2025-11-12T18:06:28.894103"
     },
     "Dablu Arun Vishwas Vs. State of Maharashtra": {
       "case_id": "Dablu Arun Vishwas Vs. State of Maharashtra",
       "text_length": 2793,
-      "timestamp": "2025-11-12T15:22:58.291430"
+      "timestamp": "2025-11-12T18:06:29.351421"
     },
     "Danish Pirmohammad Pathan Vs. State of Maharashtra": {
       "case_id": "Danish Pirmohammad Pathan Vs. State of Maharashtra",
       "text_length": 2614,
-      "timestamp": "2025-11-12T15:22:58.728174"
+      "timestamp": "2025-11-12T18:06:29.822211"
     },
     "Dattu Bhausing Chavan Vs. State of Maharashtra": {
       "case_id": "Dattu Bhausing Chavan Vs. State of Maharashtra",
       "text_length": 2326,
-      "timestamp": "2025-11-12T15:22:59.288707"
+      "timestamp": "2025-11-12T18:06:30.190038"
     }
   },
   "case_texts": {
-    "Aakash Ramchandra Chavan Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"attempt_to_extract_cash\":\"Yes, there was an attempt to extract cash and valuables from Vijay Sadavate by threatening him and from Pradeep Pawar by demanding his wristwatch.\",\"threat_to_kill\":\"Yes, threats of killing were made to Vijay Sadavate.\",\"weapon_used\":\"Knife was used to inflict injuries during the robbery attempt.\",\"injury_detail\":\"Vijay Sadavate suffered a contused lacerated wound on the occipital area and right hand. Pradeep Pawar had a bleeding injury to his right palm and base of thumb.\",\"actus_reus_description\":\"The accused attempted to rob Vijay Sadavate and Pradeep Pawar using a knife, inflicting injuries on both victims.\"},\"tier_2_material\":{\"number_of_perpetrators\":\"Three accused persons were involved in the crime.\",\"victim_identity\":\"Vijay Sadavate and Pradeep Pawar were the victims.\",\"previous_similar_incident\":\"Yes, a similar incident involving the same accused occurred shortly before, targeting Pradeep Pawar.\",\"medical_evidence\":\"Medical treatment was provided to Vijay Sadavate at Shatabdi Hospital and to Pradeep Pawar at Rajawadi Hospital.\",\"identification_parade\":\"Test Identification Parade was conducted where both victims identified the accused.\"},\"tier_3_contextual\":{\"incident_date_time\":\"The incident occurred on 24th October 2009 at around 11:30 p.m.\",\"incident_location\":\"The incident took place by the side of the railway track near Chembur Railway Station, Mumbai.\",\"victim_activity_before_incident\":\"Vijay Sadavate was returning home from work and had alighted from a train at Chembur Railway Station.\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No.290 of 2014\",\"case_title\":\"Aakash Ramchandra Chavan vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"29th August 2019\",\"appellant_or_petitioner\":\"Aakash Ramchandra Chavan\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"A. M. Badar, J.\",\"counsel_for_appellant\":\"Mrs. N.S.K. Ayubi, Advocate for the Appellant.\",\"counsel_for_respondent\":\"Mr. Amit Palkar, APP for the Respondent - State.\",\"sections_invoked\":\"Section 394 read with Section 397 of the Indian Penal Code\",\"case_type\":\"Criminal Appeal\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code, Sections 394 and 397\"},\"residual_details\":{\"additional_facts\":\"The third accused was acquitted, and there were no weapons seized during the investigation. The appeal was dismissed, upholding the conviction and sentence.\"},\"template_id\":\"ipc_397\",\"template_label\":\"Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T15:05:50.092255\"}",
-    "Abdul @ Aslam Salim Shaikh Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"making_any_preparation_to_commit_dacoity\":\"The act constituted making preparation to commit dacoity as the accused and others were found assembled with the intention to commit dacoity at a specific location, as informed by an informant and observed by the police.\"},\"tier_2_material\":{\"nature_of_preparation\":\"The preparation involved assembling at a location with the intention to commit dacoity, discussing the timing and readiness of weapons, and being found in possession of knives and a chopper by some of the accused.\"},\"tier_3_contextual\":{\"incident_location\":\"Trimurti Market, Zhaveri Bazar\",\"incident_date_time\":\"28th March, 2001, around 5:30 PM\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No.696 of 2006\",\"case_title\":\"Abdul @ Aslam Salim Shaikh vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"17th April, 2007\",\"appellant_or_petitioner\":\"Abdul @ Aslam Salim Shaikh\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"J.H. Bhatia, J.\",\"counsel_for_appellant\":\"Mr. Abhaykumar Apte\",\"counsel_for_respondent\":\"Ms. S.V. Gajre\",\"sections_invoked\":\"IPC 399, IPC 402, Arms Act Section 4 r/w Section 25\",\"case_type\":\"Criminal Appeal\",\"citation\":\"/\",\"acts_and_sections\":\"Indian Penal Code Sections 399 and 402, Arms Act Section 4 read with Section 25\"},\"residual_details\":{\"additional_facts\":\"The appellant was convicted and sentenced to imprisonment and fine for the offences, but the conviction under the Arms Act was set aside due to lack of evidence of possession of weapons by the appellant and absence of notification by the Central Government under Section 4 of the Arms Act.\"},\"template_id\":\"ipc_399\",\"template_label\":\"Making preparation to commit dacoity (IPC 399)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:12:02.474497\"}",
-    "Abdulwafa Abubakhar Khan Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"theft_or_attempted_theft\":\"Actual theft of cash amounting to Rs. 4080/- was involved.\",\"voluntary_causing_or_attempting_death_hurt_wrongful_restraint\":\"No mention of causing death, hurt, or wrongful restraint, but the case involved robbery under Section 392 IPC.\"},\"tier_2_material\":{\"property_description\":\"Cash amounting to Rs. 4080/- was stolen.\"},\"tier_3_contextual\":{\"incident_location\":\"The exact location of the incident is not specified, but the case was handled in Greater Bombay at Sewree.\",\"incident_date_time\":\"The specific date and time of the incident are not mentioned in the document.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO. 479 OF 2005\",\"case_title\":\"Abdulwafa Abubakhar Khan & Anr vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"10th June, 2005\",\"appellant_or_petitioner\":\"Abdulwafa Abubakhar Khan & Anr\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"SMT. V.K. TAHILRAMANI, J.\",\"counsel_for_appellant\":\"Mr. M.H. Bandrekar\",\"counsel_for_respondent\":\"Mr. Y.S. Shinde, A.P.P.\",\"sections_invoked\":\"Section 392 read with Section 34 of IPC\",\"case_type\":\"Criminal Appeal\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code, Section 392 read with Section 34\"},\"residual_details\":{\"additional_facts\":\"The appellants were originally sentenced to three years of rigorous imprisonment and a fine of Rs. 500/- each. Appellant No. 2 had been in custody for more than two and a half years, while Appellant No. 1 was in custody for about a year and is noted to be a young boy of 20 years with no antecedents. The sentence was reduced to the period already undergone, with a fine adjustment for Appellant No. 1.\"},\"template_id\":\"ipc_392\",\"template_label\":\"Robbery (IPC 392)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:12:28.136849\"}",
+    "- Raka @ Rakesh Kumar vs State of UP": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The victim stated that no force or violence was used by the appellant, and she went with him voluntarily. The appellant did nothing by force.\",\"absence_of_consent\":\"The victim's statement under Section 164 Cr.P.C indicates she went with the appellant voluntarily to Assam and no molestation or rape was committed.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The case involves sections under the POCSO Act, indicating the victim was a minor, which constitutes an aggravated circumstance.\",\"victim_age\":\"The victim is indicated to be a minor as the case involves sections of the POCSO Act.\",\"relationship_to_accused\":\"The victim was enticed by the appellant, suggesting no prior relationship.\"},\"tier_3_contextual\":{\"incident_location\":\"The victim went to Assam with the appellant and stayed at his grandfather's house for two days.\",\"incident_date_time\":\"The victim returned on 15.8.2023, indicating the incident occurred before this date.\",\"time_of_reporting\":\"The appellant was in jail since 23.8.2023, suggesting the report was made around that time.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL No. - 681 of 2024\",\"case_title\":\"Raka @ Rakesh Kumar vs State Of U.P. Thru. Prin. Secy. Home Lko. And 2 Others\",\"court_name\":\"High Court of Judicature at Allahabad, Lucknow Bench\",\"judgment_date\":\"14.2.2025\",\"appellant_or_petitioner\":\"Raka @ Rakesh Kumar\",\"respondent\":\"State Of U.P. Thru. Prin. Secy. Home Lko. And 2 Others\"},\"residual_details\":{\"additional_facts\":\"The appellant was accused under Sections 363, 366, 376 IPC, 3/4 POCSO Act, and Sections 3(2)(V) SC/ST Act. The appeal was allowed, and the appellant was granted bail with conditions.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T17:58:00.840270\"}",
+    "4255_2012_17_1501_56348_Judgement_14-Oct-2024": "{\"tier_1_determinative\":{\"ipc_sections_charged\":\"IPC 302 r/w 34, Arms Act 25/27\",\"nature_of_offense_category\":\"Violent Offense\"},\"tier_2_material\":{\"accused_age\":\"Not specified\",\"victim_age\":\"Not specified\",\"motive_for_crime\":\"Refusal to give jaggery\"},\"tier_3_contextual\":{\"time_of_offense\":\"9:45 PM\",\"place_of_offense\":\"Courtyard of victim's house in village Dosni\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No.2224 of 2014\",\"case_title\":\"Sandeep vs. State of Uttarakhand\",\"court_name\":\"Supreme Court of India\",\"judgment_date\":\"2024\",\"appellant_or_petitioner\":\"Sandeep\",\"respondent\":\"State of Uttarakhand\",\"judges_coram\":\"R. Mahadevan, J.\",\"counsel_for_appellant\":\"Mrs. Sudha Gupta\",\"counsel_for_respondent\":\"Mr. Akshat Kumar\",\"sections_invoked\":\"IPC 302 r/w 34, Arms Act 25/27\",\"case_type\":\"Criminal Appeal\",\"citation\":\"2024 INSC 771\",\"acts_and_sections\":\"Indian Penal Code, 1860 (IPC), Arms Act, 1959\"},\"residual_details\":{\"additional_facts\":\"The appellant, Sandeep, was convicted for murder under Section 302 r/w 34 IPC, while acquitted under Section 25/27 of the Arms Act. The incident occurred on 30.10.1997 when the deceased, Abdul Hameed, was shot in the courtyard of his house. The prosecution's case was based on eyewitness accounts, primarily from the victim's family members. The High Court confirmed the Sessions Court's decision, leading to the appeal in the Supreme Court. The appellant argued discrepancies in witness statements and lack of specific evidence tying him to the crime, while the State maintained the conviction was supported by eyewitness testimony. The Supreme Court had previously granted bail to the appellant during the pendency of the appeal.\"},\"template_id\":\"criminal_case\",\"template_label\":\"Criminal Case\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T17:58:36.438762\"}",
+    "Aakash Ramchandra Chavan Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"attempt_to_extract_cash\":\"Yes, the accused attempted to extract cash and valuables from the victim Vijay Sadavate by threatening to kill him.\",\"threat_to_kill\":\"Yes, threats to kill were extended to Vijay Sadavate during the robbery attempt.\",\"weapon_used\":\"Knife was used by one of the accused to inflict injury on Vijay Sadavate.\",\"injury_detail\":\"Vijay Sadavate received a bleeding injury on the back of his head, and Pradeep Pawar sustained a bleeding injury to his right palm.\",\"actus_reus_description\":\"The accused attempted to rob Vijay Sadavate and Pradeep Pawar by threatening them with a knife and causing injuries.\"},\"tier_2_material\":{\"number_of_perpetrators\":\"Three accused persons were involved in the offense.\",\"victim_identity\":\"Vijay Sadavate and Pradeep Pawar were the victims.\",\"previous_similar_incident\":\"Yes, a similar attempt to rob Pradeep Pawar occurred shortly before the incident with Vijay Sadavate.\",\"medical_evidence\":\"Medical evidence confirmed injuries to Vijay Sadavate's head and Pradeep Pawar's right palm.\",\"identification_parade\":\"A Test Identification Parade was conducted where the accused were identified by the victims.\"},\"tier_3_contextual\":{\"incident_date_time\":\"The incident occurred on 24th October 2009 at about 11.30 p.m.\",\"incident_location\":\"The incident took place near Chembur Railway Station, Mumbai.\",\"victim_activity_before_incident\":\"Vijay Sadavate was returning home from work and had alighted from a local train at Chembur Railway Station.\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No.290 of 2014\",\"case_title\":\"Aakash Ramchandra Chavan vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"29th August 2019\",\"appellant_or_petitioner\":\"Aakash Ramchandra Chavan\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"A. M. BADAR, J.\",\"counsel_for_appellant\":\"Mrs. N.S.K. Ayubi\",\"counsel_for_respondent\":\"Mr. Amit Palkar, APP\",\"sections_invoked\":\"Section 394 read with Section 397 of the Indian Penal Code\",\"case_type\":\"Criminal Appeal\",\"citation\":\".\",\"acts_and_sections\":\"Indian Penal Code, Sections 394 and 397\"},\"residual_details\":{\"additional_facts\":\"The accused Aakash Chavan was identified by the victims during the trial, and discrepancies in the victim's testimonies were deemed minor and not affecting the case outcome.\"},\"template_id\":\"ipc_397\",\"template_label\":\"Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T15:30:54.956047\"}",
+    "Abbas Sk vs State of West Bengal": "{\"tier_1_determinative\":{\"ipc_sections_charged\":\"376(3) of IPC and Section 6 of the POCSO Act\",\"nature_of_offense_category\":\"Violent Offense\"},\"tier_2_material\":{\"accused_age\":\"Not specified\",\"victim_age\":\"8 years\",\"motive_for_crime\":\"Not explicitly stated, possibly opportunistic due to the circumstances of being alone with the victim.\"},\"tier_3_contextual\":{\"time_of_offense\":\"Around 5 PM\",\"place_of_offense\":\"First floor room of the victim's house\"},\"tier_4_procedural\":{\"case_number\":\"C.R.A. 326 of 2019\",\"case_title\":\"Abbas Sk. @ Abbas Hossain Vs. State of West Bengal\",\"court_name\":\"High Court at Calcutta\",\"judgment_date\":\"23.09.2022\",\"appellant_or_petitioner\":\"Abbas Sk. @ Abbas Hossain\",\"respondent\":\"State of West Bengal\",\"judges_coram\":\"Justice Joymalya Bagchi and Justice Ananya Bandyopadhyay\",\"counsel_for_appellant\":\"Mr. Pratip Kr. Chatterjee, Mr. Gautam Banerjee, Mr. Anjan Dutta\",\"counsel_for_respondent\":\"Mr. Sudip Ghosh, Mr. Apurba Kr. Datta\",\"sections_invoked\":\"Section 376(3) of IPC, Section 6 of the POCSO Act, Section 376(2)(i) IPC (initially), Section 4/6 of POCSO Act\",\"case_type\":\"Criminal Appeal\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code, POCSO Act\"},\"residual_details\":{\"additional_facts\":\"The victim was lured and raped by the accused who was a private tutor. The crime was reported by the victim's aunt. The medical examination confirmed severe injuries to the victim. The forensic report did not find evidence of semen. The defense highlighted contradictions in witness testimonies and procedural lapses, arguing for acquittal. The prosecution's case was supported by medical evidence and witness testimonies.\"},\"template_id\":\"criminal_case\",\"template_label\":\"Criminal Case\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T17:59:13.921904\"}",
+    "Abdul @ Aslam Salim Shaikh Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"making_any_preparation_to_commit_dacoity\":\"Yes, the accused were found assembling with the intention to commit dacoity, as evidenced by the informant's report and their conversation about reducing the crowd and keeping weapons ready.\"},\"tier_2_material\":{\"nature_of_preparation\":\"The accused were observed planning the dacoity in Zhaveri Bazar, with specific instructions to wait until the crowd reduced and to keep weapons ready.\"},\"tier_3_contextual\":{\"incident_location\":\"Zhaveri Bazar, Trimurti Market, Mumbai\",\"incident_date_time\":\"28th March, 2001, around 5:30 PM to 7:15 PM\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No.696 of 2006\",\"case_title\":\"Abdul @ Aslam Salim Shaikh vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"17th April, 2007\",\"appellant_or_petitioner\":\"Abdul @ Aslam Salim Shaikh\",\"respondent\":\"State of Maharashtra\",\"judges_coram\":\"J.H. Bhatia, J.\",\"counsel_for_appellant\":\"Mr. Abhaykumar Apte\",\"counsel_for_respondent\":\"Ms. S.V. Gajre\",\"sections_invoked\":\"IPC 399, IPC 402, Section 4 r/w Section 25 of the Arms Act\",\"case_type\":\"Criminal Appeal\",\"citation\":\":2007 (4) BomCR 730\",\"acts_and_sections\":\"Indian Penal Code Sections 399, 402; Arms Act Section 4 r/w Section 25\"},\"residual_details\":{\"additional_facts\":\"The appellant was not found in possession of any weapon and the prosecution failed to prove any notification under Section 4 of the Arms Act for the area in question. The appellant's conviction under the Arms Act was set aside, but the conviction under IPC sections 399 and 402 was maintained.\"},\"template_id\":\"ipc_399\",\"template_label\":\"Making preparation to commit dacoity (IPC 399)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T15:37:00.988214\"}",
+    "Abdul Haq Shaikh V State of MAHA": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The appellant removed his clothes and inserted his finger in the victim’s private part, touched her private parts inappropriately, and asked her to hold his private part in her hand, causing her pain.\",\"absence_of_consent\":\"The victim, aged 4, was unable to give consent, and the act was performed without her consent while she was alone in the appellant's house.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The victim was a minor, aged 4 years, which attracts aggravated circumstances under POCSO Act.\",\"victim_age\":\"4 years old at the time of the incident, born on 16/01/2014.\",\"relationship_to_accused\":\"The victim was a friend of the appellant's daughter and often visited their house to play.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred at the appellant's house.\",\"incident_date_time\":\"The incident took place on 09/02/2018.\",\"time_of_reporting\":\"The incident was reported immediately to the police by the victim's mother on the same day.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO. 23 OF 2020\",\"case_title\":\"Raju @ Abdul Haq Shaikh Mohammed Hanif vs. The State of Maharashtra & Anr.\",\"court_name\":\"High Court of Judicature at Bombay, Criminal Appellate Jurisdiction\",\"judgment_date\":\"8th December 2022\",\"appellant_or_petitioner\":\"Raju @ Abdul Haq Shaikh Mohammed Hanif\",\"respondent\":\"The State of Maharashtra & Anr.\"},\"residual_details\":{\"additional_facts\":\"The appellant was convicted under multiple sections of the POCSO Act and IPC 376. The victim's medical examination showed no signs of force, but the possibility of sexual assault could not be ruled out. The appellant claimed a false implication due to a dispute with the victim’s father. The appellant's conviction was based on the victim's testimony, supported by her mother and medical examination, despite the appellant's denial and the defense witnesses' testimony.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T17:59:47.285300\"}",
+    "Abdul Karim Vs State of Karnataka": "{\"tier_1_determinative\":{\"mischief_act\":\"Withdrawal of TADA charges to facilitate the release of Veerappan's associates from judicial custody.\",\"damage_amount\":\"Not applicable as this is not a financial damage case but a legal and procedural issue.\"},\"tier_2_material\":{\"property_description\":\"The legal charges under TADA against Veerappan's associates were affected.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident relates to the border region between Karnataka and Tamil Nadu, specifically involving the Designated Court at Mysore and Chennai.\",\"incident_date_time\":\"The events unfolded around the abduction on 30th July 2000, and subsequent court orders on 19th August 2000 and 28th August 2000.\"},\"tier_4_procedural\":{\"case_number\":\"Not explicitly mentioned in the provided text.\",\"case_title\":\"Abdul Karim v. State of Karnataka and Ors.\",\"court_name\":\"Supreme Court of India\",\"judgment_date\":\"November 7, 2000\",\"appellant_or_petitioner\":\"Abdul Karim\",\"respondent\":\"State of Karnataka and Others\",\"judges_coram\":\"S.P. Bharucha, D.P. Mohapatra, and Y.K. Sabharwal, JJ.\",\"counsel_for_appellant\":\"Not explicitly mentioned in the provided text.\",\"counsel_for_respondent\":\"Not explicitly mentioned in the provided text.\",\"sections_invoked\":\"Section 321 of the Code of Criminal Procedure, Terrorist and Disruptive Activities Act (TADA), National Security Act (NSA)\",\"case_type\":\"Criminal Appeal\",\"citation\":\"[2000] SUPP. 4 S.C.R. 382\",\"acts_and_sections\":\"Code of Criminal Procedure, 1973; Terrorist and Disruptive Activities Act; National Security Act\"},\"residual_details\":{\"additional_facts\":\"Veerappan, a notorious criminal, kidnapped popular film actor Rajkumar. The State Government conceded to Veerappan's demands to withdraw TADA charges against his associates to ensure Rajkumar's release. The Supreme Court criticized the actions of the State Government and the Public Prosecutor for not independently assessing the public interest.\"},\"template_id\":\"ipc_427\",\"template_label\":\"Mischief causing damage (IPC 427)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:00:30.384031\"}",
+    "Abdul Nasar vs State of Kerla": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The accused committed rape upon the child victim in a room in his house.\",\"absence_of_consent\":\"The act falls under clause 6 of absence of consent as the victim was a minor, aged about 9 years.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The rape was followed by murder, as the accused strangled and killed the child victim after committing the sexual assault.\",\"victim_age\":\"9 years old\",\"relationship_to_accused\":\"The child victim was a friend of the daughter of the accused.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred in the house of the accused, located on the side of the panchayat road at Ponnamkallu in Amarambalam Village.\",\"incident_date_time\":\"The incident occurred on 4th April, 2012, at around 6:45 am.\",\"time_of_reporting\":\"The incident was reported on 4th April, 2012, at 7:00 pm. The delay was because the child victim went missing and a search was conducted before reporting.\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal Nos. 1122-1123 of 2018\",\"case_title\":\"Abdul Nassar v. State of Kerala & Anr.\",\"court_name\":\"Supreme Court of India\",\"judgment_date\":\"07 January 2025\",\"appellant_or_petitioner\":\"Abdul Nassar\",\"respondent\":\"State of Kerala & Anr.\"},\"residual_details\":{\"additional_facts\":\"The accused attempted to conceal the body of the victim beneath a cot and later in the bathroom. He also attempted to dispose of the body in a septic tank. The investigation included forensic evidence such as DNA matching, which linked the accused to the crime. The accused was sentenced to death for murder under Section 302 IPC and to 7 years of rigorous imprisonment for rape under Section 376 IPC. The conviction was based on circumstantial evidence, and the case was appealed to the Supreme Court after the High Court confirmed the death sentence.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T17:22:13.543217\"}",
+    "Abdul Nassar Vs State of Kerla": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The accused committed rape upon the 9-year-old child victim in a room in his house.\",\"absence_of_consent\":\"The child victim was 9 years old, making her incapable of giving legal consent as per the law.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The rape was followed by the murder of the child victim, and the offense was committed against a minor, attracting aggravated punishment under POCSO Act and IPC 376.\",\"victim_age\":\"9 years old\",\"relationship_to_accused\":\"The child victim was a friend of the accused's daughter.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred in the house of the accused at Ponnamkallu, Amarambalam Village.\",\"incident_date_time\":\"The incident took place on 4th April, 2012, at around 6:45 am.\",\"time_of_reporting\":\"The incident was reported on 4th April, 2012, at 7:00 pm, with a delay explained by the initial search for the missing child before filing the complaint.\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Appeal No(s). 1122-1123 of 2018\",\"case_title\":\"Abdul Nassar v. State of Kerala & Anr.\",\"court_name\":\"Supreme Court of India\",\"judgment_date\":\"07 January 2025\",\"appellant_or_petitioner\":\"Abdul Nassar\",\"respondent\":\"State of Kerala & Anr.\"},\"residual_details\":{\"additional_facts\":\"The accused attempted to conceal the crime by hiding the victim's body beneath a cot and later in the bathroom. He also attempted to dispose of the body in the septic tank. Forensic evidence, including DNA matching the accused, was found on the victim's clothing. The accused was found guilty and sentenced to death by the trial court, which was upheld by the High Court. The accused died during the pendency of the Supreme Court appeal, which was continued by his legal heirs.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:01:06.028645\"}",
+    "Abdul Rahman Vs State of  UP": "{\"tier_1_determinative\":{\"ipc_sections_charged\":\"376-D, 120-B, 506 IPC and Section 3 (2) (V) of SC/ST Act\",\"nature_of_offense_category\":\"Sexual Offense\"},\"tier_2_material\":{\"accused_age\":\": null\",\"victim_age\":\"30 years\",\"motive_for_crime\":\"Facilitating compromise in matrimonial dispute, leading to rape and blackmail with video evidence\"},\"tier_3_contextual\":{\"time_of_offense\":\"Evening\",\"place_of_offense\":\"House of co-accused Tabassum\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL No. - 6277 of 2022\",\"case_title\":\"Abdul Rahman vs. State Of U.P. Thr. Prin. Secy. (Home) Govt. Of U.P. And Anr.\",\"court_name\":\"High Court of Judicature at Allahabad\",\"judgment_date\":\"14.3.2023\",\"appellant_or_petitioner\":\"Abdul Rahman\",\"respondent\":\"State Of U.P. Thr. Prin. Secy. (Home) Govt. Of U.P. And Anr.\",\"judges_coram\":\"Hon'ble Ram Manohar Narayan Mishra, J.\",\"counsel_for_appellant\":\"Shitlesh Pandey\",\"counsel_for_respondent\":\"G.A.\",\"sections_invoked\":\"Section 14-A(2) Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act, 376-D, 120-B, 506 IPC and Section 3 (2) (V) of SC/ST Act\",\"case_type\":\"Criminal Appeal\",\"citation\":\": null\",\"acts_and_sections\":\"Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act, IPC Sections 376-D, 120-B, 506\"},\"residual_details\":{\"additional_facts\":\"The appellant, Abdul Rahman, was accused of raping the victim after she was given adulterated tea and made unconscious. A video was allegedly made to blackmail the victim. The appellant was granted bail as there was no electronic evidence collected, and similar accused had been granted bail. The victim was involved in a matrimonial dispute with her husband, which was used as a pretext for the crime.\"},\"template_id\":\"criminal_case\",\"template_label\":\"Criminal Case\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:01:47.308827\"}",
+    "Abdulwafa Abubakhar Khan Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"theft_or_attempted_theft\":\"Theft of cash\",\"voluntary_causing_or_attempting_death_hurt_wrongful_restraint\":\"Not explicitly mentioned, but implied threat or use of force in robbery\"},\"tier_2_material\":{\"property_description\":\"Cash of Rs.4080/-\"},\"tier_3_contextual\":{\"incident_location\":\"Greater Bombay\",\"incident_date_time\":\"Not specified\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO. 479 OF 2005\",\"case_title\":\"Abdulwafa Abubakhar Khan & Anr vs The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"10th June, 2005\",\"appellant_or_petitioner\":\"Abdulwafa Abubakhar Khan & Anr\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"SMT. V.K. TAHILRAMANI, J.\",\"counsel_for_appellant\":\"Mr. M.H. Bandrekar\",\"counsel_for_respondent\":\"Mr. Y.S. Shinde\",\"sections_invoked\":\"Section 392 r.w. Section 34 of IPC\",\"case_type\":\"Criminal Appeal\",\"citation\":\"/\",\"acts_and_sections\":\"Indian Penal Code (IPC) Section 392 read with Section 34\"},\"residual_details\":{\"additional_facts\":\"Appellant No.2 was in custody for more than two and a half years, and Appellant No.1 was in custody for about a year. Appellant No.1 is a young boy of 20 years with no antecedents. The sentence of imprisonment was reduced to the period already undergone, with a fine of Rs.500/- maintained for Appellant No.2 and increased to Rs.5000/- for Appellant No.1.\"},\"template_id\":\"ipc_392\",\"template_label\":\"Robbery (IPC 392)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T15:35:38.500510\"}",
+    "Abhijeet Chandrakant Pawar v State of maha": "{\"tier_1_determinative\":{\"ipc_sections_charged\":\"IPC 363, 366-A, 342, 376(d), 506 read with Section 34\",\"nature_of_offense_category\":\"Violent Offense\"},\"tier_2_material\":{\"accused_age\":\"Abhijit @ Rohit Chandrakant Pawar: 22 years, Pravin @ Khanna Pavlas Waidande: 27 years\",\"victim_age\":\"15 years\",\"motive_for_crime\":\"Not explicitly mentioned, but possibly coercion and sexual assault\"},\"tier_3_contextual\":{\"time_of_offense\":\"Around 9:00 PM\",\"place_of_offense\":\"Field near Peth Bhimnagar, Taluka Walwa, District Sangli\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO.996 OF 2017, CRIMINAL APPEAL NO.655 OF 2016\",\"case_title\":\"Abhijit @ Rohit Chandrakant Pawar vs. State of Maharashtra, Pravin @ Khanna Pavlas Waidande vs. State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"5th January 2024\",\"appellant_or_petitioner\":\"Abhijit @ Rohit Chandrakant Pawar, Pravin @ Khanna Pavlas Waidande\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"PRAKASH D. NAIK, J.\",\"counsel_for_appellant\":\"Mr. Sachin Chavan, Ms. Nasreen Ayubi, Mrs. Megha Bajoria\",\"counsel_for_respondent\":\"Ms. P.N. Dabholkar, APP\",\"sections_invoked\":\"Sections 363, 366-A, 342, 376(D), 323, 506 r/w Section 34 of IPC and Section 6 of the POCSO Act\",\"case_type\":\"Criminal Appeal\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code, Protection of Children from Sexual Offences Act, 2012\"},\"residual_details\":{\"additional_facts\":\"The trial court convicted the appellants for several IPC offenses but acquitted them under the POCSO Act due to lack of proof of the victim's age. The victim was allegedly kidnapped while returning from a medical shop and subjected to sexual assault. The incident was reported after a delay, and the victim's age was questioned due to discrepancies in the birth certificate. The prosecution relied on the victim's testimony and medical evidence, while the defense argued lack of evidence and delay in reporting.\"},\"template_id\":\"criminal_case\",\"template_label\":\"Criminal Case\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:02:32.742287\"}",
     "Adesh Anil Kale Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"five_or_more_persons_committing_dacoity\":\"The case involves four accused, which does not meet the requirement of five or more persons for dacoity under IPC 395. However, the application for bail was considered for accused numbers 2 and 3.\"},\"tier_2_material\":{\"property_stolen\":\"Jewellery was stolen from the house of the informant, Navnath Haridas Metkari.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred at the house of Navnath Haridas Metkari, in Baramati, Lokhandevasti, Katphal, District Pune.\",\"incident_date_time\":\"The FIR was registered on 04/05/2023, indicating the incident occurred around this time.\"},\"tier_4_procedural\":{\"case_number\":\"BAIL APPLICATION NO. 4079 OF 2023\",\"case_title\":\"Adesh Anil Kale & Umesh Anil Kale vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"December 21, 2023\",\"appellant_or_petitioner\":\"Adesh Anil Kale and Umesh Anil Kale\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"M. S. Karnik, J.\",\"counsel_for_appellant\":\"Ms. Poonam Patil i/b Mr. Manindra Pandey\",\"counsel_for_respondent\":\"Ms. Rutuja Ambekar, APP for the State\",\"sections_invoked\":\"IPC 395, 452, 457, 380, 506 read with 34\",\"case_type\":\"Bail Application\",\"citation\":\"2023:BHC-AS:38851\",\"acts_and_sections\":\"Indian Penal Code, 1860 - Sections 395, 452, 457, 380, 506 read with 34\"},\"residual_details\":{\"additional_facts\":\"The applicants, aged 19, are brothers with no prior criminal antecedents. The charge sheet has been filed, and there was a recovery of gold ornaments at their instance. One accused remains absconding.\"},\"template_id\":\"ipc_395\",\"template_label\":\"Punishment for dacoity (IPC 395)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:12:44.064130\"}",
+    "Aftab Khan V State of Maha": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The appellant removed the victim's pyjama and his jeans, and put his private part on her private part, but the evidence was insufficient to conclude penetrative intercourse.\",\"absence_of_consent\":\"The victim was 5 to 6 years old, which under Section 375 IPC implies lack of consent due to her age.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The victim was a minor, aged between 5 to 6 years, which attracts aggravated punishment under POCSO.\",\"victim_age\":\"5 to 6 years old\",\"relationship_to_accused\":\"The accused took the victim to his shop, indicating a possible acquaintance, but the exact relationship is not specified.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred at the appellant's shop.\",\"incident_date_time\":\"The incident took place on 11 May 2012.\",\"time_of_reporting\":\"The exact time of reporting is not specified, but the medical examination was conducted on the same day.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO. 870 OF 2014\",\"case_title\":\"Aftab Mustaq Khan vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"06.10.2022\",\"appellant_or_petitioner\":\"Aftab Mustaq Khan\",\"respondent\":\"The State of Maharashtra\"},\"residual_details\":{\"additional_facts\":\"The trial court initially sentenced the appellant to life imprisonment under Section 376 IPC, but the High Court altered the conviction to attempt to commit rape under Section 376 read with 511 IPC, sentencing him to 10 years of rigorous imprisonment. The medical examination found the victim's private parts slightly reddish, but no conclusive evidence of penetration was available. The appellant was aged about 18 to 19 years at the time of the incident.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:03:07.388584\"}",
+    "Aftab Mustaq Khan V State of maha": "{\"tier_1_determinative\":{\"sexual_act_description\":\"The appellant removed the victim's pyjama and then removed his jeans pant. The appellant then put his private part on the victim's private part. The trial court recorded it in vernacular as ‘milane laga’.\",\"absence_of_consent\":\"The victim was 5 to 6 years old at the time of the incident, which implies lack of consent due to age.\"},\"tier_2_material\":{\"aggravated_circumstances_of_rape\":\"The victim was a minor, aged 5 to 6 years old, which involves aggravated circumstances under POCSO.\",\"victim_age\":\"5 to 6 years old\",\"relationship_to_accused\":\"The accused, Aftab Mustaq Khan, appears to have been known to the victim as he took her to his shop.\"},\"tier_3_contextual\":{\"incident_location\":\"The incident occurred at the appellant's shop.\",\"incident_date_time\":\"11 May 2012\",\"time_of_reporting\":\"The exact time of reporting is not mentioned, but the incident was reported after the victim disclosed it to her parents.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL APPEAL NO. 870 OF 2014\",\"case_title\":\"Aftab Mustaq Khan vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"06.10.2022\",\"appellant_or_petitioner\":\"Aftab Mustaq Khan\",\"respondent\":\"The State of Maharashtra\"},\"residual_details\":{\"additional_facts\":\"The trial court initially convicted the appellant for rape under Section 376 IPC, sentencing him to life imprisonment. However, the High Court altered the conviction to attempt to commit rape under Section 376 read with 511 IPC, sentencing him to 10 years of rigorous imprisonment. The victim's medical examination revealed no injury marks, and the hymen was intact, which contributed to the alteration of the conviction.\"},\"template_id\":\"ipc_376\",\"template_label\":\"Rape (IPC 376)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T18:03:38.620893\"}",
     "Akshay Eknath Kokate Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"theft_or_attempted_theft\":\"Actual theft of cash amounting to Rs.14 lakhs.\",\"voluntary_causing_or_attempting_death_hurt_wrongful_restraint\":\"Assault on the complainant and one other person during the robbery.\"},\"tier_2_material\":{\"property_description\":\"Cash amount of Rs.14 lakhs.\"},\"tier_3_contextual\":{\"incident_location\":\"Western Express Highway, Andheri Bridge, Andheri (East), Mumbai.\",\"incident_date_time\":\"30th October 2017, at about 5:45 p.m.\"},\"tier_4_procedural\":{\"case_number\":\"CRIMINAL BAIL APPLICATION NO.1774 OF 2022\",\"case_title\":\"Akshay Eknath Kokate vs. State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"5th September 2023\",\"appellant_or_petitioner\":\"Akshay Eknath Kokate\",\"respondent\":\"State of Maharashtra\",\"judges_coram\":\"REVATI MOHITE DERE, J.\",\"counsel_for_appellant\":\"Mr. Shaikh Abdul Kalam a/w Ms. Sana Shaikh\",\"counsel_for_respondent\":\"Ms. P. P. Shinde, A.P.P for the Respondent – State\",\"sections_invoked\":\"Sections 392 r/w 34 of the Indian Penal Code\",\"case_type\":\"Criminal Bail Application\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code, Section 392 read with Section 34\"},\"residual_details\":{\"additional_facts\":\"The applicant was identified in a Test Identification Parade by the complainant. The applicant allegedly purchased a motorcycle with the stolen amount. The applicant has been in custody since November 2017, and no witnesses have been examined in the trial yet.\"},\"template_id\":\"ipc_392\",\"template_label\":\"Robbery (IPC 392)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:13:07.063106\"}",
     "Akshay Rajendra Parache Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"mischief_act\":\"Causing damage to a motorcycle during a quarrel.\",\"damage_amount\":\"Not specified, but the damage was significant enough to be included in a police complaint.\"},\"tier_2_material\":{\"property_description\":\"Motorcycle belonging to Yogesh Chayal.\"},\"tier_3_contextual\":{\"incident_location\":\"Nashik, Maharashtra.\",\"incident_date_time\":\"15th November, 2020\"},\"tier_4_procedural\":{\"case_number\":\"Criminal Bail Application No. 191 of 2022 and Criminal Bail Application No. 3090 of 2021\",\"case_title\":\"Akshay Rajendra Parache versus The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"20th October, 2022\",\"appellant_or_petitioner\":\"Akshay Rajendra Parache and Harsh Kishor Babu\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"Prakash D. Naik, J.\",\"counsel_for_appellant\":\"Mr. Aniket Vagal a/w Mr. Kunal Pednekar for Akshay Rajendra Parache; Mr. Hitesh Shah for Harsh Kishor Babu.\",\"counsel_for_respondent\":\"Mr. N. B. Patil, APP for the State.\",\"sections_invoked\":\"Sections 302, 395, 397, 143, 147, 148, 149 of IPC and MCOC Act sections\",\"case_type\":\"Criminal Bail Application\",\"citation\":\"\",\"acts_and_sections\":\"Indian Penal Code (IPC) sections 302, 395, 397, 143, 147, 148, 149 and Maharashtra Control of Organised Crime Act (MCOC Act) sections 3(1)(i), 3(1)(ii), 3(2), 3(3), and 3(4)\"},\"residual_details\":{\"additional_facts\":\"The applicants were part of a group accused of organized crime activities including robbery, theft, and extortion. A significant aspect of the case involves the alleged involvement of the accused in a gang and their activities, leading to serious charges under the MCOC Act. The bail applications were allowed due to lack of evidence directly linking the applicants to the crime scene or the assault.\"},\"template_id\":\"ipc_427\",\"template_label\":\"Mischief causing damage (IPC 427)\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:13:25.630309\"}",
     "Amar Kumar Singh Vs. State of Maharashtra": "{\"tier_1_determinative\":{\"ipc_sections_charged\":\"420, 465, 468, 471 read with 34 IPC, Section 4(a) of the Maharashtra Prohibition of Gambling Act, Section 25(c) of the Indian Telegraph Act\",\"nature_of_offense_category\":\"Fraud and Gambling Offense\"},\"tier_2_material\":{\"accused_age\":\": null\",\"victim_age\":\"null\",\"motive_for_crime\":\"null\"},\"tier_3_contextual\":{\"time_of_offense\":\"null\",\"place_of_offense\":\"a flat in front of the MCA Cricket Stadium on Mumbai-Pune Expressway\"},\"tier_4_procedural\":{\"case_number\":\"Anticipatory Bail Application No.3370 of 2023\",\"case_title\":\"Aman Kumar Singh vs. The State of Maharashtra\",\"court_name\":\"High Court of Judicature at Bombay\",\"judgment_date\":\"31st January, 2024\",\"appellant_or_petitioner\":\"Aman Kumar Singh\",\"respondent\":\"The State of Maharashtra\",\"judges_coram\":\"SARANG V. KOTWAL, J.\",\"counsel_for_appellant\":\"Mr. Farooq Sothi, Advocate a/w. Rupali Sawant i/b. S.P. Associates\",\"counsel_for_respondent\":\"Smt. M.H. Mhatre, APP\",\"sections_invoked\":\"Sections 420, 465, 468, 471 IPC, Section 4(a) Maharashtra Prohibition of Gambling Act, Section 25(c) Indian Telegraph Act\",\"case_type\":\"Anticipatory Bail Application\",\"citation\":\"null\",\"acts_and_sections\":\"Indian Penal Code, Maharashtra Prohibition of Gambling Act, Indian Telegraph Act\"},\"residual_details\":{\"additional_facts\":\"The FIR was lodged by Police Constable Nitin Lokhande from the Robbery Cell, Pimpri Chinchwad, following a raid on 26.5.2023. The Applicant was not named in the FIR, and there was no material indicating his direct or indirect involvement according to the learned APP. The Applicant's anticipatory bail was initially rejected by the Sessions Court based on incorrect submissions that he helped procure SIM cards.\"},\"template_id\":\"criminal_case\",\"template_label\":\"Criminal Case\",\"extraction_confidence\":1.0,\"extraction_timestamp\":\"2025-11-12T14:13:42.418683\"}",
@@ -258,7 +324,7 @@
   "model_info": {
     "model_name": "all-mpnet-base-v2",
     "embedding_dimension": 768,
-    "total_cases": 42,
-    "timestamp": "20251112_152259"
+    "total_cases": 53,
+    "timestamp": "20251112_180630"
   }
 }

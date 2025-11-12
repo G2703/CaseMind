@@ -35,7 +35,7 @@ def get_processed_files():
 def process_single_file(pdf_path):
     """Process a single PDF file using the pipeline"""
     try:
-        cmd = f'python src/main_pipeline.py "{pdf_path}"'
+        cmd = f'python src/bg_creation/main_pipeline.py "{pdf_path}"'
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)  # 5 minute timeout
         
         if result.returncode == 0:
@@ -55,7 +55,7 @@ def process_single_file(pdf_path):
 
 def main():
     # Directory containing the PDF files
-    robbery_dir = Path("cases/input_files/Cases/Robbery/High court")
+    robbery_dir = Path("cases\input_files\Cases\Rape\HC")
     
     if not robbery_dir.exists():
         print(f"❌ Directory not found: {robbery_dir}")

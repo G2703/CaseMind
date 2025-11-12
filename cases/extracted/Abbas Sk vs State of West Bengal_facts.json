@@ -1,0 +1,37 @@
+{
+  "tier_1_determinative": {
+    "ipc_sections_charged": "376(3) of IPC and Section 6 of the POCSO Act",
+    "nature_of_offense_category": "Violent Offense"
+  },
+  "tier_2_material": {
+    "accused_age": "Not specified",
+    "victim_age": "8 years",
+    "motive_for_crime": "Not explicitly stated, possibly opportunistic due to the circumstances of being alone with the victim."
+  },
+  "tier_3_contextual": {
+    "time_of_offense": "Around 5 PM",
+    "place_of_offense": "First floor room of the victim's house"
+  },
+  "tier_4_procedural": {
+    "case_number": "C.R.A. 326 of 2019",
+    "case_title": "Abbas Sk. @ Abbas Hossain Vs. State of West Bengal",
+    "court_name": "High Court at Calcutta",
+    "judgment_date": "23.09.2022",
+    "appellant_or_petitioner": "Abbas Sk. @ Abbas Hossain",
+    "respondent": "State of West Bengal",
+    "judges_coram": "Justice Joymalya Bagchi and Justice Ananya Bandyopadhyay",
+    "counsel_for_appellant": "Mr. Pratip Kr. Chatterjee, Mr. Gautam Banerjee, Mr. Anjan Dutta",
+    "counsel_for_respondent": "Mr. Sudip Ghosh, Mr. Apurba Kr. Datta",
+    "sections_invoked": "Section 376(3) of IPC, Section 6 of the POCSO Act, Section 376(2)(i) IPC (initially), Section 4/6 of POCSO Act",
+    "case_type": "Criminal Appeal",
+    "citation": "",
+    "acts_and_sections": "Indian Penal Code, POCSO Act"
+  },
+  "residual_details": {
+    "additional_facts": "The victim was lured and raped by the accused who was a private tutor. The crime was reported by the victim's aunt. The medical examination confirmed severe injuries to the victim. The forensic report did not find evidence of semen. The defense highlighted contradictions in witness testimonies and procedural lapses, arguing for acquittal. The prosecution's case was supported by medical evidence and witness testimonies."
+  },
+  "template_id": "criminal_case",
+  "template_label": "Criminal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T17:59:13.921904"
+}
