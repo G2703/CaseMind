@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": null,
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL BAIL APPLICATION NO",
+      "victim_identity": null,
+      "previous_similar_incident": null,
+      "medical_evidence": null,
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": "Yeola City Police Station",
+      "victim_activity_before_incident": null
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL BAIL APPLICATION NO. 1316 OF 2022",
+      "case_title": "Chetan Shashikant Pawar vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "9 January 2023",
+      "appellant_or_petitioner": "Chetan Shashikant Pawar",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "N.R. Borkar, J.",
+      "counsel_for_appellant": "Mr. N.G. Rokade",
+      "counsel_for_respondent": "Mr. S.S. Hulke, APP",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 394, 397, 341, 120-B, 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 352 OF 2012",
+      "case_title": "Chetan Ramdas Dumbre & Nilesh Dnyaneshwar Vitekar vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "17.03.2022",
+      "appellant_or_petitioner": "Chetan Ramdas Dumbre & Nilesh Dnyaneshwar Vitekar",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "S.S. Shinde & N.R. Borkar, JJ.",
+      "counsel_for_appellant": "Mr. Aashish Satpute",
+      "counsel_for_respondent": "Mr. V.B. Kondedeshmukh",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 394, IPC 302, IPC 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

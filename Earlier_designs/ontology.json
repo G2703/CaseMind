@@ -1,0 +1,737 @@
+{
+    "ontology_schema": [
+    {
+      "node_id": "legal_case",
+      "label": "Legal Case",
+      "parent": null,
+      "sections": [],
+      "description": "The root node for all legal cases.",
+      "children": [
+        "criminal_case"
+      ],
+      "example_terms": [
+        "case",
+        "appeal",
+        "trial",
+        "writ petition"
+      ],
+      "example_cases_count": 22
+    },
+    {
+      "node_id": "criminal_case",
+      "label": "Criminal Case",
+      "parent": "legal_case",
+      "sections": [],
+      "description": "Cases involving criminal offenses.",
+      "children": [
+        "violent_offense",
+        "property_offense",
+        "preparatory_offense",
+        "other_offense",
+        "terrorism_offense"
+      ],
+      "example_terms": [
+        "offence",
+        "crime",
+        "conviction",
+        "acquittal",
+        "IPC",
+        "bail",
+        "POTA"
+      ],
+      "example_cases_count": 22
+    },
+    {
+      "node_id": "violent_offense",
+      "label": "Violent Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes involving physical violence or threat of violence against a person.",
+      "children": [
+        "homicide",
+        "sexual_offense",
+        "assault",
+        "ipc_307"
+      ],
+      "example_terms": [
+        "murder",
+        "rape",
+        "assault",
+        "hurt",
+        "killed",
+        "strangulation",
+        "gang-rape",
+        "brutal",
+        "grievous hurt",
+        "attempt to murder",
+        "thrown from height"
+      ],
+      "example_cases_count": 15
+    },
+    {
+      "node_id": "homicide",
+      "label": "Homicide",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses resulting in the death of a person.",
+      "children": [
+        "ipc_302"
+      ],
+      "example_terms": [
+        "murder",
+        "homicide",
+        "killed",
+        "dead body",
+        "succumbed to injuries",
+        "gunshot"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "ipc_302",
+      "label": "Murder",
+      "parent": "homicide",
+      "sections": [
+        "IPC 302"
+      ],
+      "description": "Offense of murder as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "murder",
+        "killed",
+        "death sentence",
+        "life imprisonment",
+        "knife-blows",
+        "strangled",
+        "stab injury",
+        "verbal altercation",
+        "smashing head",
+        "37 knife-blows",
+        "gunshot"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "sexual_offense",
+      "label": "Sexual Offense",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Crimes of a sexual nature.",
+      "children": [
+        "ipc_376",
+        "ipc_376d",
+        "pocso_act",
+        "ipc_354a"
+      ],
+      "example_terms": [
+        "rape",
+        "sexual assault",
+        "sexual harassment",
+        "modesty",
+        "gang rape",
+        "POCSO",
+        "forcible"
+      ],
+      "example_cases_count": 8
+    },
+    {
+      "node_id": "ipc_376",
+      "label": "Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376",
+        "IPC 376(2)(f)",
+        "IPC 376(2)(i)"
+      ],
+      "description": "Offense of rape as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "rape",
+        "sexual assault",
+        "child victim",
+        "forcible",
+        "father",
+        "rooftop",
+        "gang rape",
+        "pregnant",
+        "9 years old",
+        "strangled"
+      ],
+      "example_cases_count": 6
+    },
+    {
+      "node_id": "ipc_376d",
+      "label": "Gang Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376D",
+        "IPC 376(2)(e)",
+        "IPC 376(2)(g)"
+      ],
+      "description": "Offense of gang rape as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "gang rape",
+        "gang-raped",
+        "communal hatred",
+        "drugging",
+        "video",
+        "make video viral"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "pocso_act",
+      "label": "POCSO Offense",
+      "parent": "sexual_offense",
+      "sections": [
+        "POCSO Act 3",
+        "POCSO Act 4",
+        "POCSO Act 5",
+        "POCSO Act 6"
+      ],
+      "description": "Offenses under the Protection of Children from Sexual Offences Act.",
+      "children": [],
+      "example_terms": [
+        "POCSO",
+        "child victim",
+        "9 years old",
+        "15 years old",
+        "penetrative sexual assault",
+        "father"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_354a",
+      "label": "Sexual Harassment",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 354A"
+      ],
+      "description": "Offense of sexual harassment as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "sexual harassment",
+        "outraging modesty",
+        "caught hold of hand",
+        "unwelcome",
+        "entered house"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "assault",
+      "label": "Assault",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses involving physical assault not necessarily resulting in death.",
+      "children": [
+        "ipc_323",
+        "ipc_324"
+      ],
+      "example_terms": [
+        "hurt",
+        "assault",
+        "blow",
+        "iron rod"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "ipc_323",
+      "label": "Voluntarily Causing Hurt",
+      "parent": "assault",
+      "sections": [
+        "IPC 323"
+      ],
+      "description": "Offense of voluntarily causing simple hurt.",
+      "children": [],
+      "example_terms": [
+        "hurt",
+        "assaulted",
+        "kicks and fist blows"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_324",
+      "label": "Voluntarily Causing Hurt by Dangerous Weapon",
+      "parent": "assault",
+      "sections": [
+        "IPC 324"
+      ],
+      "description": "Offense of voluntarily causing hurt by means of a dangerous weapon or means.",
+      "children": [],
+      "example_terms": [
+        "assault with weapon",
+        "hit with iron rod",
+        "stab"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_307",
+      "label": "Attempt to Murder",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 307"
+      ],
+      "description": "Offense of attempting to commit murder.",
+      "children": [],
+      "example_terms": [
+        "attempt to murder",
+        "thrown from height",
+        "assault with intent to kill",
+        "assault with axe"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "property_offense",
+      "label": "Property Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes committed against property, such as theft, robbery, and trespass.",
+      "children": [
+        "theft",
+        "robbery",
+        "dacoity",
+        "trespass",
+        "ipc_384"
+      ],
+      "example_terms": [
+        "robbery",
+        "dacoity",
+        "theft",
+        "stolen",
+        "looted",
+        "trespass",
+        "extortion",
+        "cash"
+      ],
+      "example_cases_count": 10
+    },
+    {
+      "node_id": "theft",
+      "label": "Theft",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving theft without immediate violence.",
+      "children": [
+        "ipc_380"
+      ],
+      "example_terms": [
+        "theft",
+        "stolen",
+        "jewellery"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_380",
+      "label": "Theft in Dwelling House",
+      "parent": "theft",
+      "sections": [
+        "IPC 380"
+      ],
+      "description": "Offense of theft committed in any building, tent, or vessel used as a human dwelling.",
+      "children": [],
+      "example_terms": [
+        "theft in house",
+        "jewellery stolen"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "robbery",
+      "label": "Robbery",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving theft with violence or threat of violence (less than 5 perpetrators).",
+      "children": [
+        "ipc_392",
+        "ipc_394",
+        "ipc_397"
+      ],
+      "example_terms": [
+        "robbery",
+        "looted",
+        "snatch",
+        "knife",
+        "assaulted",
+        "cash",
+        "gunshot"
+      ],
+      "example_cases_count": 8
+    },
+    {
+      "node_id": "ipc_392",
+      "label": "Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 392"
+      ],
+      "description": "Offense of committing robbery.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "looted",
+        "cash",
+        "assaulted",
+        "Rs 14 lakhs",
+        "Rs.4080"
+      ],
+      "example_cases_count": 7
+    },
+    {
+      "node_id": "ipc_394",
+      "label": "Voluntarily Causing Hurt in Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 394"
+      ],
+      "description": "Offense of voluntarily causing hurt while committing or attempting to commit robbery.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "assaulted",
+        "bleeding injury",
+        "hurt",
+        "blow of knife",
+        "CLW on occipital"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_397",
+      "label": "Robbery with Deadly Weapon",
+      "parent": "robbery",
+      "sections": [
+        "IPC 397"
+      ],
+      "description": "Offense of robbery or dacoity, with an attempt to cause death or grievous hurt, using a deadly weapon.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "knife",
+        "deadly weapon",
+        "assaulted by knife"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "dacoity",
+      "label": "Dacoity",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Robbery committed by five or more persons.",
+      "children": [
+        "ipc_395"
+      ],
+      "example_terms": [
+        "dacoity",
+        "5 or more persons"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_395",
+      "label": "Dacoity",
+      "parent": "dacoity",
+      "sections": [
+        "IPC 395"
+      ],
+      "description": "Offense of committing dacoity (robbery by 5 or more persons).",
+      "children": [],
+      "example_terms": [
+        "dacoity",
+        "robbery",
+        "five persons",
+        "4 accused"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "trespass",
+      "label": "Trespass",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving unlawful entry into property.",
+      "children": [
+        "ipc_452",
+        "ipc_457"
+      ],
+      "example_terms": [
+        "house-trespass",
+        "entered house",
+        "broken into"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_452",
+      "label": "House-trespass with Preparation",
+      "parent": "trespass",
+      "sections": [
+        "IPC 452"
+      ],
+      "description": "Offense of house-trespass after preparation for causing hurt, assault, or wrongful restraint.",
+      "children": [],
+      "example_terms": [
+        "house-trespass",
+        "entered house",
+        "harass",
+        "robbery",
+        "sexual harassment"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_457",
+      "label": "Lurking House-trespass",
+      "parent": "trespass",
+      "sections": [
+        "IPC 457"
+      ],
+      "description": "Offense of lurking house-trespass or house-breaking by night to commit an offense punishable with imprisonment.",
+      "children": [],
+      "example_terms": [
+        "lurking house-trespass",
+        "house-breaking",
+        "broken into"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_384",
+      "label": "Extortion",
+      "parent": "property_offense",
+      "sections": [
+        "IPC 384"
+      ],
+      "description": "Offense of extortion by putting a person in fear of injury.",
+      "children": [],
+      "example_terms": [
+        "extortion",
+        "make video viral",
+        "extracting money",
+        "gold ornaments"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "preparatory_offense",
+      "label": "Preparatory Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes involving preparation or assembly to commit a more serious offense.",
+      "children": [
+        "ipc_399",
+        "ipc_402"
+      ],
+      "example_terms": [
+        "preparation",
+        "assembled",
+        "intention to commit"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_399",
+      "label": "Preparation for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 399"
+      ],
+      "description": "Offense of making any preparation for committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "preparation",
+        "dacoity",
+        "assembled",
+        "Zhaveri shop",
+        "chopper"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_402",
+      "label": "Assembling for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 402"
+      ],
+      "description": "Offense of assembling for the purpose of committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "assembled",
+        "dacoity",
+        "intention to commit",
+        "six persons"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "other_offense",
+      "label": "Other Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Miscellaneous offenses, including against public justice or other statutes.",
+      "children": [
+        "ipc_201",
+        "ipc_506",
+        "arms_act_violation",
+        "ipc_147",
+        "ipc_149",
+        "sc_st_act_violation",
+        "it_act_violation"
+      ],
+      "example_terms": [
+        "intimidation",
+        "disappearance of evidence",
+        "arms act",
+        "rioting",
+        "SC/ST Act",
+        "IT Act"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "ipc_201",
+      "label": "Disappearance of Evidence",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 201"
+      ],
+      "description": "Offense of causing disappearance of evidence of an offense, or giving false information.",
+      "children": [],
+      "example_terms": [
+        "disappearance of evidence",
+        "hidden dead body",
+        "concealed",
+        "hidden in haystack",
+        "septic tank"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "ipc_506",
+      "label": "Criminal Intimidation",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 506"
+      ],
+      "description": "Offense of criminal intimidation.",
+      "children": [],
+      "example_terms": [
+        "intimidation",
+        "threat",
+        "make video viral",
+        "threat of killing"
+      ],
+      "example_cases_count": 5
+    },
+    {
+      "node_id": "arms_act_violation",
+      "label": "Arms Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "Arms Act 3",
+        "Arms Act 4",
+        "Arms Act 25"
+      ],
+      "description": "Violation of the Arms Act, 1959, such as possession of arms without a license or in contravention of a notification.",
+      "children": [],
+      "example_terms": [
+        "arms act",
+        "weapon",
+        "knife",
+        "chopper",
+        "firearm"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_147",
+      "label": "Rioting",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 147"
+      ],
+      "description": "Offense of rioting, using force or violence by an unlawful assembly.",
+      "children": [],
+      "example_terms": [
+        "rioting",
+        "riots",
+        "communal hatred"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_149",
+      "label": "Unlawful Assembly",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 149"
+      ],
+      "description": "Offense where every member of an unlawful assembly is guilty of an offense committed in prosecution of a common object.",
+      "children": [],
+      "example_terms": [
+        "unlawful assembly",
+        "r/w 149",
+        "common object"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "sc_st_act_violation",
+      "label": "SC/ST Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "SC/ST Act 1989 3(2)(v)"
+      ],
+      "description": "Offenses under the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989.",
+      "children": [],
+      "example_terms": [
+        "SC/ST Act",
+        "atrocities",
+        "scheduled caste"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "it_act_violation",
+      "label": "IT Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "IT Act 2000 66"
+      ],
+      "description": "Offenses under the Information Technology Act, 2000, such as computer-related offenses.",
+      "children": [],
+      "example_terms": [
+        "IT Act",
+        "video viral",
+        "took videos"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "terrorism_offense",
+      "label": "Terrorism Offense",
+      "parent": "criminal_case",
+      "sections": [
+        "POTA 2002"
+      ],
+      "description": "Offenses related to terrorism, such as under POTA or UAPA.",
+      "children": [],
+      "example_terms": [
+        "bomb blast",
+        "POTA",
+        "terrorist act",
+        "conspiracy"
+      ],
+      "example_cases_count": 1
+    }
+  ]
+}

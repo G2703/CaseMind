@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": ", Appellate side",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": ", Appellate side"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.1472 OF 2018",
+      "case_title": "Amol Vishwas Ovhal vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "7th October 2019",
+      "appellant_or_petitioner": "Amol Vishwas Ovhal",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A. M. BADAR, J.",
+      "counsel_for_appellant": "Mr.B.A.Lawate",
+      "counsel_for_respondent": "Mr.Vinod Chate",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 392, 342, 506 Part II, 394, 452, 347, 504"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

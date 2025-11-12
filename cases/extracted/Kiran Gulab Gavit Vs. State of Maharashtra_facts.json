@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "the Applicant Mr",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "the Applicant Mr"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO. 2275 OF 2022",
+      "case_title": "Kiran Gulab Gavit vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "16th January, 2023",
+      "appellant_or_petitioner": "Kiran Gulab Gavit",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "S. M. MODAK, J.",
+      "counsel_for_appellant": "Mr. Ganesh Bhujbal",
+      "counsel_for_respondent": "Mr. N. B. Patil",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "confession_recorded": "yes"
+    }
+  }
+}

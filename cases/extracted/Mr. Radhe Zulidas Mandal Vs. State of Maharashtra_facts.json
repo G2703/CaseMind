@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "Appellant",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Appellant"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": "and PW-21 drew memorandum panchanama (Exh"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 809 OF 2015",
+      "case_title": "Mr. Radhe Zulidas Mandal vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "20th October 2022",
+      "appellant_or_petitioner": "Mr. Radhe Zulidas Mandal",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A.S. Gadkari & Milind N. Jadhav, JJ.",
+      "counsel_for_appellant": "Mr. Murtaza N. Najmi, Ms. Davinder Sabharwal",
+      "counsel_for_respondent": "Mr. H.J. Dedhia",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code, 1860 - Sections 302, 34, 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

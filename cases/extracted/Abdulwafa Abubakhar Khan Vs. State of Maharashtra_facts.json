@@ -1,0 +1,42 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "Appellants Mr",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Appellants Mr"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": "involved is only Rs"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No. 479 of 2005",
+      "case_title": "Abdulwafa Abubakhar Khan & Anr vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "10th June, 2005",
+      "appellant_or_petitioner": "Abdulwafa Abubakhar Khan & Anr",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "SMT. V.K. TAHILRAMANI, J.",
+      "counsel_for_appellant": "Mr. M.H. Bandrekar",
+      "counsel_for_respondent": "Mr. Y.S. Shinde",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 392, IPC 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

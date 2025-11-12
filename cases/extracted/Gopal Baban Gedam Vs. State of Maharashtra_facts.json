@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "the Appellant",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "the Appellant"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.170 OF 2019",
+      "case_title": "Gopal Baban Gedam vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "20th February 2019",
+      "appellant_or_petitioner": "Gopal Baban Gedam",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A. M. Badar, J.",
+      "counsel_for_appellant": "Ms. Megha Bajoria",
+      "counsel_for_respondent": "Mrs. M.R. Tidke",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 392, IPC 342, IPC 506, IPC 394, IPC 452, IPC 347, IPC 504"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

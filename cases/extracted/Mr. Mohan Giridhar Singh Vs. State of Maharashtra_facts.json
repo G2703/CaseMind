@@ -1,0 +1,53 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": "threatened to kill if the amount is not paid",
+      "weapon_used": null,
+      "injury_detail": "bleeding injury to P",
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "victim_identity": null,
+      "previous_similar_incident": "ly known as Oberoi Hotel at Nariman Point",
+      "medical_evidence": "reveals that on 17-7-2004 from 10 a",
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": "the police station",
+      "victim_activity_before_incident": "except P"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No. 1213 of 2005",
+      "case_title": "Mr. Mohan Girdhar Singh vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "14th June, 2007",
+      "appellant_or_petitioner": "Mr. Mohan Girdhar Singh",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "J.H. Bhatia, J.",
+      "counsel_for_appellant": "Mr. Rajendra Sorankar",
+      "counsel_for_respondent": "Ms. D.H. Mhatre",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 450, IPC 392, IPC 394, IPC 397"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

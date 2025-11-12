@@ -1,0 +1,129 @@
+{
+  "node_id": "ipc_354a",
+  "label": "Sexual Harassment (IPC 354A)",
+  "parent": "violent_offense",
+  "sections": [
+    "IPC 354A"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "sexual_harassment_act",
+        "against_a_woman"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "physical_contact_and_advances",
+        "demand_or_request_for_sexual_favours",
+        "showing_pornography_against_will",
+        "making_sexually_coloured_remarks"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": []
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "sexual_harassment_act": {
+      "type": "string",
+      "description": "The specific act of sexual harassment committed (A, B, C, or D of 354A)."
+    },
+    "against_a_woman": {
+      "type": "boolean",
+      "description": "Whether the victim is a woman."
+    },
+    "physical_contact_and_advances": {
+      "type": "boolean",
+      "description": "Did the offense involve physical contact and advances involving unwelcome and explicit sexual overtures? (Section 354A(1)(i))."
+    },
+    "demand_or_request_for_sexual_favours": {
+      "type": "boolean",
+      "description": "Did the offense involve a demand or request for sexual favours? (Section 354A(1)(ii))."
+    },
+    "showing_pornography_against_will": {
+      "type": "boolean",
+      "description": "Did the offense involve showing pornography against the will of a woman? (Section 354A(1)(iii))."
+    },
+    "making_sexually_coloured_remarks": {
+      "type": "boolean",
+      "description": "Did the offense involve making sexually coloured remarks? (Section 354A(1)(iv))."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "section 354A IPC"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

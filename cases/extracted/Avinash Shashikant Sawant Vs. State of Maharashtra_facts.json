@@ -1,0 +1,47 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": ", the Appellant has been sentenced to suffer imprisonment for life and to pay fine of Rs",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "has been convicted for the offence punishable under Section 302",
+      "victim_age": "1 of 14 MAMTA AMAR KALE Digitally signed by MAMTA AMAR KALE Date: 2021",
+      "motive_for_crime": "the Appellant"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 107 OF 2011",
+      "case_title": "Avinash Shashikant Sawant vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "19 July 2021",
+      "appellant_or_petitioner": "Avinash Shashikant Sawant",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "NITIN JAMDAR AND C. V. BHADANG, JJ.",
+      "counsel_for_appellant": "Mr. Chaitanya Pendse a/w. Mr. B. D. Shinde a/w. Ms. Siddhi Bhosale",
+      "counsel_for_respondent": "Ms. Prajakta Shinde, APP",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 302, IPC 452, IPC 392, IPC 397"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "node_id": "domestic_violence_act",
+  "label": "Protection of Women from Domestic Violence Act (PWDVA)",
+  "parent": "matrimonial_offense",
+  "sections": [
+    "PWDVA 12",
+    "PWDVA 18",
+    "PWDVA 20",
+    "PWDVA 21",
+    "PWDVA 22"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "domestic_relationship",
+        "respondent_identity",
+        "domestic_violence_occurrence"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "nature_of_domestic_violence",
+        "relief_sought"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": [
+        "shared_household"
+      ]
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "domestic_relationship": {
+      "type": "boolean",
+      "description": "Whether a domestic relationship exists or has existed between the aggrieved person and the respondent."
+    },
+    "respondent_identity": {
+      "type": "string",
+      "description": "The person against whom the relief is sought (adult male or family member)."
+    },
+    "domestic_violence_occurrence": {
+      "type": "boolean",
+      "description": "Whether the domestic violence (as defined in the Act) has occurred."
+    },
+    "nature_of_domestic_violence": {
+      "type": "string",
+      "description": "Specific type of violence (e.g., 'physical abuse', 'emotional abuse', 'economic abuse')."
+    },
+    "relief_sought": {
+      "type": "string",
+      "description": "The specific relief sought (e.g., 'protection order', 'residence order', 'monetary relief')."
+    },
+    "shared_household": {
+      "type": "boolean",
+      "description": "Whether the parties have lived together in a shared household."
+    },
+    "type_of_petition": {
+      "type": "string",
+      "description": "The section under which the application is filed (e.g., 'Sec 12 application')."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "DV Act",
+    "protection order",
+    "monetary relief"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

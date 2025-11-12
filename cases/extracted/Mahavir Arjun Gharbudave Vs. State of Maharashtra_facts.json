@@ -1,0 +1,49 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": null,
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION BAIL APPLICATION NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": ", for ransom",
+      "victim_age": "2 --- 7-ba-3741-2021",
+      "motive_for_crime": "the Applicant Mr"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION BAIL APPLICATION NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION BAIL APPLICATION NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO.3741 OF 2021",
+      "case_title": "Mahavir Arjun Gharbudave vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "May 11, 2022",
+      "appellant_or_petitioner": "Mahavir Arjun Gharbudave",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "N. J. JAMADAR, J.",
+      "counsel_for_appellant": "Mr. Shailesh Chavan",
+      "counsel_for_respondent": "Mr. Ajay Patil",
+      "sections_invoked": [
+        "IPC 364A"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code, 1860 - Sections 395, 394, 364A, 341 read with 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes",
+      "bail_granted": "yes"
+    }
+  }
+}

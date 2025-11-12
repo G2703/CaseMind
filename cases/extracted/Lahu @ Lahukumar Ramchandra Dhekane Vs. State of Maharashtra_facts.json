@@ -1,0 +1,38 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 1326 OF 2002",
+      "case_title": "Lahu @ Lahukumar Ramchandra Dhekane vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "31/8/2004",
+      "appellant_or_petitioner": "Lahu @ Lahukumar Ramchandra Dhekane",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "H.L. Gokhale & A.S. Aguiar, JJ.",
+      "counsel_for_appellant": "Mr. Abhaykumar Apte",
+      "counsel_for_respondent": "Mrs. Usha Kejriwal, A.P.P.",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 363, IPC 364-A, IPC 386, IPC 302, IPC 201"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

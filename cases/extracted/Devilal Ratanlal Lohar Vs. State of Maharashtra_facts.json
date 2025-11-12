@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_394",
+  "tier_1_determinative": {
+    "fields": {
+      "person_voluntarily_causes_hurt": "Not explicitly mentioned",
+      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "injury_severity": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL REVISION APPLICATION NO.162 OF 2021",
+      "case_title": "Devilal Ratanlal Lohar vs. Kamlesh Sohanlal Lohar & Ors.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "23rd June 2022",
+      "appellant_or_petitioner": "Devilal Ratanlal Lohar",
+      "respondent": "Kamlesh Sohanlal Lohar, Sohanlal Lohar, Rakesh Sohanlal Lohar, Dinesh Ramlalji Purbiya, The State of Maharashtra",
+      "judges_coram": "PRAKASH D. NAIK",
+      "counsel_for_appellant": "Mr. Vinod Kashid",
+      "counsel_for_respondent": "Mr. Abdullah F. Cutlariwala with Mr. Ankit Pandey for respondent nos.1 to 3, Mr. A.R. Patil, APP, for State",
+      "sections_invoked": [
+        "IPC 394"
+      ],
+      "case_type": "Criminal Revision Application",
+      "citation": null,
+      "acts_and_sections": "IPC 394, IPC 328, IPC 34, CrPC 457"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

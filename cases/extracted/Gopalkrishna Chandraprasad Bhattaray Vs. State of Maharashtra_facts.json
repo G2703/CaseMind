@@ -1,0 +1,47 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "with having committed the murder of one Rajendra ``Singh Shivnath Singh between 16",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "2 --- - 2 - of one Chetan Joglekar during the aforesaid time and place and in the course of the said transaction and in the alternative to have committed theft of cash of Rs",
+      "victim_age": "2 --- - 2 - of one Chetan Joglekar during the aforesaid time and place and in the course of the said transaction and in the alternative to have committed theft of cash of Rs",
+      "motive_for_crime": "Appellant Mr"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 362 OF 1999",
+      "case_title": "Gopalkrishna Chandraprasad Bhattaray vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "29th June, 2006",
+      "appellant_or_petitioner": "Gopalkrishna Chandraprasad Bhattaray",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "J.N. Patel and Smt Roshan Dalvi, JJ",
+      "counsel_for_appellant": "Mr. Abhaykumar Apte",
+      "counsel_for_respondent": "Mr. A.S. Gadkari",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 302, IPC 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

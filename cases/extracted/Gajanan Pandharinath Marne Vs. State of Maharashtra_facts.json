@@ -1,0 +1,48 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "37(1) (3) read with Section 135 of the Maharashtra Police Act",
+      "nature_of_offense_category": "2021"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "2 --- 8 aba 2608 of 2021",
+      "victim_age": "2 --- 8 aba 2608 of 2021",
+      "motive_for_crime": "Applicants"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "2021",
+      "place_of_offense": "2021"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "ABA No.2608 of 2021",
+      "case_title": "Gajanan Pandharinath Marne vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "13th July, 2022",
+      "appellant_or_petitioner": "Gajanan Pandharinath Marne",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "N.J. Jamadar",
+      "counsel_for_appellant": "Mr. Shailesh Kharat",
+      "counsel_for_respondent": "Mr. A.A. Palkar",
+      "sections_invoked": [
+        "IPC 353"
+      ],
+      "case_type": "Anticipatory Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 353, IPC 188, IPC 268, IPC 269, IPC 143, IPC 149, Disaster Management Act 51(b), Epidemic Act 3, Criminal Law Amendment Act 7, Maharashtra Police Act 37(1)(3), Maharashtra Police Act 135, IPC 279, IPC 341, IPC 504, IPC 506, Motor Vehicles Act 184, Motor Vehicles Act 199, Motor Vehicles Act 177"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": "certificate also lends prima facie support to the claim of the first informant",
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION ANTICIPATORY BAIL APPLICATION NO",
+      "victim_identity": null,
+      "previous_similar_incident": "enmity",
+      "medical_evidence": "certificate evidencing the examination of the applicant No",
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": "Sultanpur police station",
+      "victim_activity_before_incident": "the Investigating Officer in terms of the order dated 12th June"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Anticipatory Bail Application No. 1598 of 2023",
+      "case_title": "Mohammad Usman Sagir Khan And Anr. vs. State of Maharashtra and Others",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "27th September, 2023",
+      "appellant_or_petitioner": "Mohammad Usman Sagir Khan And Anr.",
+      "respondent": "State of Maharashtra and Others",
+      "judges_coram": "N. J. Jamadar",
+      "counsel_for_appellant": "Mr. S.K. Ali i/b A. A. Sidhdhiqui",
+      "counsel_for_respondent": "Mr. M. G. Patil, APP for State; Mr. Ganesh Gupta with Mr. Jamal Khan, Mr. Sahil Ghorpade for Respondent No. 2",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Anticipatory Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code, 1860 - Sections 394, 34, 397"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "weapon_recovered": "yes"
+    }
+  }
+}

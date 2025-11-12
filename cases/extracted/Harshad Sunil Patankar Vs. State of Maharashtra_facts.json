@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_427",
+  "tier_1_determinative": {
+    "fields": {
+      "mischief_act": "ivities of Slumlords",
+      "damage_amount": "d the motorcycle in his possession"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL WRIT PETITION NO. 78 OF 2024",
+      "case_title": "Harshad Sunil Patankar vs. The Commissioner of Police, Nashik & Ors.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "19th April, 2024",
+      "appellant_or_petitioner": "Harshad Sunil Patankar",
+      "respondent": "The Commissioner of Police, Nashik & Ors.",
+      "judges_coram": "A.S. Gadkari and Shyam C. Chandak, JJ.",
+      "counsel_for_appellant": "Mr. Himanshu Gavit a/w. Mr. Rohit Patil and Mr. Akshay Bankapur",
+      "counsel_for_respondent": "Mr. J.P. Yagnik, APP for the State",
+      "sections_invoked": [
+        "MPDA Act 3(2)"
+      ],
+      "case_type": "Criminal Writ Petition",
+      "citation": null,
+      "acts_and_sections": "Maharashtra Prevention of Dangerous Activities Act, IPC Sections 326, 323, 504, 506, 34, MP Act Sections 142, 135, Arms Act Section 4/25"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "bail_granted": "yes"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_380",
+  "tier_1_determinative": {
+    "fields": {
+      "dishonest_intention": "Not explicitly mentioned",
+      "moving_movable_property": "Not explicitly mentioned",
+      "in_building_tent_or_vessel": "Not explicitly mentioned"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPLICATION NO.1080 OF 2021",
+      "case_title": "Chaggansingh Udaysing Parmar vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "4th March 2024",
+      "appellant_or_petitioner": "Chaggansingh Udaysing Parmar",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "PRAKASH D. NAIK AND N.R.BORKAR, JJ.",
+      "counsel_for_appellant": "Mr.Manish N.Jain with RituG.Gehlot, Nidhi g.Kherodiya and Prasad D. Mundhe i/by S.M.Jain Associates",
+      "counsel_for_respondent": "Mr.A.S.Shalgaonkar, APP",
+      "sections_invoked": [
+        "IPC 380"
+      ],
+      "case_type": "Criminal Application",
+      "citation": null,
+      "acts_and_sections": "IPC 380, IPC 454, IPC 457"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

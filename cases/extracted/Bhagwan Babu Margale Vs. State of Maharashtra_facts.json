@@ -1,0 +1,48 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "3(1)(ii) and Section 3(4) of the Maharashtra Control of Organized Crimes Act",
+      "nature_of_offense_category": "2020"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "2 --- 45 ba 897 of 2020",
+      "victim_age": "2 --- 45 ba 897 of 2020",
+      "motive_for_crime": "Applicant"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "2020",
+      "place_of_offense": "2020"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO.897 OF 2020",
+      "case_title": "Bhagwan Babu Margale vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "22nd June, 2022",
+      "appellant_or_petitioner": "Bhagwan Babu Margale",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "N.J. Jamadar",
+      "counsel_for_appellant": "Mr. Satyavrat Joshi",
+      "counsel_for_respondent": "Mr. Y.Y. Dabake",
+      "sections_invoked": [
+        "MCOCA 3(1)(ii)"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 394, IPC 34, MCOCA 3(1)(ii), MCOCA 3(4)"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

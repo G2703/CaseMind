@@ -1,0 +1,557 @@
+{
+  "ontology_schema": [
+    {
+      "node_id": "legal_case",
+      "label": "Legal Case",
+      "parent": null,
+      "sections": [],
+      "description": "The root node for all legal cases.",
+      "children": [
+        "criminal_case",
+        "family_law_dispute"
+      ],
+      "example_terms": [
+        "case",
+        "appeal",
+        "trial",
+        "writ petition",
+        "revision application"
+      ],
+      "example_cases_count": 27
+    },
+    {
+      "node_id": "criminal_case",
+      "label": "Criminal Case",
+      "parent": "legal_case",
+      "sections": [],
+      "description": "Cases involving criminal offenses.",
+      "children": [
+        "violent_offense",
+        "property_offense",
+        "preparatory_offense",
+        "other_offense",
+        "terrorism_offense",
+        "matrimonial_offense"
+      ],
+      "example_terms": [
+        "offence",
+        "crime",
+        "conviction",
+        "acquittal",
+        "IPC",
+        "bail",
+        "POTA"
+      ],
+      "example_cases_count": 25
+    },
+    {
+      "node_id": "violent_offense",
+      "label": "Violent Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Offenses involving physical harm or threat of harm.",
+      "children": [
+        "sexual_offense",
+        "assault",
+        "ipc_324",
+        "ipc_307",
+        "ipc_354a",
+        "ipc_363"
+      ],
+      "example_terms": [
+        "murder",
+        "grievous hurt",
+        "rape",
+        "kidnapping"
+      ],
+      "example_cases_count": 18
+    },
+    {
+      "node_id": "sexual_offense",
+      "label": "Sexual Offense",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses related to sexual violence or exploitation.",
+      "children": [
+        "ipc_376"
+      ],
+      "example_terms": [
+        "rape",
+        "POCSO",
+        "sexual assault"
+      ],
+      "example_cases_count": 6
+    },
+    {
+      "node_id": "ipc_376",
+      "label": "Rape (IPC 376)",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376",
+        "POCSO 6",
+        "POCSO 4"
+      ],
+      "description": "Offense of rape.",
+      "children": [],
+      "example_terms": [
+        "section 376 IPC",
+        "aggravated rape"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_363",
+      "label": "Kidnapping (IPC 363)",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 363"
+      ],
+      "description": "Offense of kidnapping from lawful guardianship.",
+      "children": [],
+      "example_terms": [
+        "section 363 IPC"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_354a",
+      "label": "Sexual Harassment (IPC 354A)",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 354A"
+      ],
+      "description": "Offense of sexual harassment and punishment for sexual harassment.",
+      "children": [],
+      "example_terms": [
+        "section 354A IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "assault",
+      "label": "Assault/Hurt",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses involving hurt or assault.",
+      "children": [
+        "ipc_323"
+      ],
+      "example_terms": [
+        "simple hurt",
+        "grievous hurt"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_323",
+      "label": "Voluntarily causing hurt (IPC 323)",
+      "parent": "assault",
+      "sections": [
+        "IPC 323"
+      ],
+      "description": "Offense of voluntarily causing simple hurt.",
+      "children": [],
+      "example_terms": [
+        "section 323 IPC"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_324",
+      "label": "Voluntarily causing hurt by dangerous weapons (IPC 324)",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 324"
+      ],
+      "description": "Offense of voluntarily causing hurt by dangerous weapons or means.",
+      "children": [],
+      "example_terms": [
+        "section 324 IPC"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_307",
+      "label": "Attempt to Murder (IPC 307)",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 307"
+      ],
+      "description": "Offense of attempt to murder.",
+      "children": [],
+      "example_terms": [
+        "section 307 IPC"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "property_offense",
+      "label": "Property Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Offenses against property.",
+      "children": [
+        "theft",
+        "robbery",
+        "dacoity",
+        "trespass",
+        "ipc_427"
+      ],
+      "example_terms": [
+        "stolen property",
+        "extortion",
+        "mischief"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "theft",
+      "label": "Theft",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving the taking of property dishonestly.",
+      "children": [
+        "ipc_380"
+      ],
+      "example_terms": [
+        "stealing",
+        "dishonest intention"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_380",
+      "label": "Theft in dwelling house (IPC 380)",
+      "parent": "theft",
+      "sections": [
+        "IPC 380"
+      ],
+      "description": "Theft committed in any building, tent or vessel used as a human dwelling.",
+      "children": [],
+      "example_terms": [
+        "section 380 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_427",
+      "label": "Mischief causing damage (IPC 427)",
+      "parent": "property_offense",
+      "sections": [
+        "IPC 427"
+      ],
+      "description": "Mischief causing damage to the amount of fifty rupees or upwards.",
+      "children": [],
+      "example_terms": [
+        "section 427 IPC",
+        "damage"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "robbery",
+      "label": "Robbery and Extortion",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses where theft or extortion is compounded by violence or threat.",
+      "children": [
+        "ipc_392",
+        "ipc_394",
+        "ipc_397",
+        "ipc_384"
+      ],
+      "example_terms": [
+        "armed robbery",
+        "extortion"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_392",
+      "label": "Robbery (IPC 392)",
+      "parent": "robbery",
+      "sections": [
+        "IPC 392"
+      ],
+      "description": "Punishment for robbery.",
+      "children": [],
+      "example_terms": [
+        "section 392 IPC"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_394",
+      "label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+      "parent": "robbery",
+      "sections": [
+        "IPC 394"
+      ],
+      "description": "Voluntarily causing hurt in committing or attempting to commit robbery.",
+      "children": [],
+      "example_terms": [
+        "section 394 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_397",
+      "label": "Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)",
+      "parent": "robbery",
+      "sections": [
+        "IPC 397"
+      ],
+      "description": "Robbery or dacoity, with attempt to cause death or grievous hurt.",
+      "children": [],
+      "example_terms": [
+        "section 397 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_384",
+      "label": "Extortion (IPC 384)",
+      "parent": "robbery",
+      "sections": [
+        "IPC 384"
+      ],
+      "description": "Offense of extortion.",
+      "children": [],
+      "example_terms": [
+        "section 384 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "dacoity",
+      "label": "Dacoity",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses committed by five or more persons working together to commit or attempt to commit robbery.",
+      "children": [
+        "ipc_395"
+      ],
+      "example_terms": [
+        "gang",
+        "armed group"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_395",
+      "label": "Punishment for dacoity (IPC 395)",
+      "parent": "dacoity",
+      "sections": [
+        "IPC 395"
+      ],
+      "description": "Punishment for the offense of dacoity.",
+      "children": [],
+      "example_terms": [
+        "section 395 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "trespass",
+      "label": "Trespass",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses related to unauthorized entry onto property.",
+      "children": [
+        "ipc_452",
+        "ipc_457"
+      ],
+      "example_terms": [
+        "house-breaking",
+        "criminal trespass"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_452",
+      "label": "House-trespass after preparation for hurt, assault or wrongful restraint (IPC 452)",
+      "parent": "trespass",
+      "sections": [
+        "IPC 452"
+      ],
+      "description": "House-trespass having made preparation for causing hurt to any person, or for assaulting any person, or for wrongfully restraining any person, or for putting any person in fear of hurt, or of assault, or of wrongful restraint.",
+      "children": [],
+      "example_terms": [
+        "section 452 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_457",
+      "label": "Lurking house-trespass or house-breaking by night in order to commit offence punishable with imprisonment (IPC 457)",
+      "parent": "trespass",
+      "sections": [
+        "IPC 457"
+      ],
+      "description": "Lurking house-trespass or house-breaking by night in order to commit offence punishable with imprisonment.",
+      "children": [],
+      "example_terms": [
+        "section 457 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "preparatory_offense",
+      "label": "Preparatory Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Offenses related to preparation for a future crime, often dacoity.",
+      "children": [
+        "ipc_399",
+        "ipc_402"
+      ],
+      "example_terms": [
+        "conspiracy",
+        "preparation"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_399",
+      "label": "Making preparation to commit dacoity (IPC 399)",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 399"
+      ],
+      "description": "Making any preparation for the purpose of committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "section 399 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "ipc_402",
+      "label": "Assembling for purpose of committing dacoity (IPC 402)",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 402"
+      ],
+      "description": "Assembling with five or more persons for the purpose of committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "section 402 IPC"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "other_offense",
+      "label": "Other Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "A catch-all category for offenses not classified under the main criminal branches.",
+      "children": [],
+      "example_terms": [
+        "miscellaneous"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "terrorism_offense",
+      "label": "Terrorism Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Offenses related to acts of terrorism or unlawful activities against the State (e.g., POTA, UAPA).",
+      "children": [],
+      "example_terms": [
+        "POTA",
+        "UAPA",
+        "terrorist funding"
+      ],
+      "example_cases_count": 0
+    },
+    {
+      "node_id": "matrimonial_offense",
+      "label": "Matrimonial Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Offenses primarily arising out of marital relationships.",
+      "children": [
+        "ipc_498a",
+        "domestic_violence_act"
+      ],
+      "example_terms": [
+        "dowry death",
+        "cruelty",
+        "DV Act"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "ipc_498a",
+      "label": "Cruelty by Husband or Relatives (IPC 498A)",
+      "parent": "matrimonial_offense",
+      "sections": [
+        "IPC 498A"
+      ],
+      "description": "Offense of subjection of a married woman to cruelty by her husband or his relatives.",
+      "children": [],
+      "example_terms": [
+        "section 498A IPC",
+        "harassment for dowry"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "domestic_violence_act",
+      "label": "Protection of Women from Domestic Violence Act (PWDVA)",
+      "parent": "matrimonial_offense",
+      "sections": [
+        "PWDVA 12",
+        "PWDVA 18",
+        "PWDVA 20",
+        "PWDVA 21",
+        "PWDVA 22"
+      ],
+      "description": "Cases under the Protection of Women from Domestic Violence Act, 2005.",
+      "children": [],
+      "example_terms": [
+        "DV Act",
+        "protection order",
+        "monetary relief"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "family_law_dispute",
+      "label": "Family Law Dispute",
+      "parent": "legal_case",
+      "sections": [],
+      "description": "Cases primarily governed by civil/family laws (e.g., HMA, Divorce, Maintenance).",
+      "children": [
+        "maintenance_dispute"
+      ],
+      "example_terms": [
+        "divorce",
+        "maintenance pendente lite",
+        "HMA",
+        "family court"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "maintenance_dispute",
+      "label": "Maintenance Dispute",
+      "parent": "family_law_dispute",
+      "sections": [
+        "HMA 24",
+        "HMA 18",
+        "HMA 20"
+      ],
+      "description": "Disputes primarily concerning maintenance orders under various Acts (e.g., HMA, CrPC).",
+      "children": [],
+      "example_terms": [
+        "section 24 HMA",
+        "pendente lite",
+        "interim maintenance",
+        "monthly maintenance"
+      ],
+      "example_cases_count": 1
+    }
+  ]
+}

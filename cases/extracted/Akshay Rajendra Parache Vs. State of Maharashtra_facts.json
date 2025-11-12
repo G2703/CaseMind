@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_427",
+  "tier_1_determinative": {
+    "fields": {
+      "mischief_act": "and on granting approval Section 3(1)(i)",
+      "damage_amount": "to the motorcycle of Yogesh Chayal"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Bail Application No. 191 of 2022 and Criminal Bail Application No. 3090 of 2021",
+      "case_title": "Akshay Rajendra Parache vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "20th October, 2022",
+      "appellant_or_petitioner": "Akshay Rajendra Parache and Harsh Kishor Babu",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "Prakash D. Naik, J.",
+      "counsel_for_appellant": "Mr. Aniket Vagal a/w Mr. Kunal Pednekar for Akshay Rajendra Parache, Mr. Hitesh Shah for Harsh Kishor Babu",
+      "counsel_for_respondent": "Mr. N. B. Patil, APP for the State",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 302, 395, 397, 143, 147, 148, 149; MCOC Act Sections 3(1)(i), 3(1)(ii), 3(2), 3(3), 3(4)"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "bail_granted": "yes"
+    }
+  }
+}

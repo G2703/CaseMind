@@ -1,0 +1,42 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "ade for the appellant",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "ade for the appellant"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No.115 of 2002",
+      "case_title": "Mohamed Yusuf Salim Nurani vs. The State",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "2nd March, 2006",
+      "appellant_or_petitioner": "Mohamed Yusuf Salim Nurani",
+      "respondent": "The State",
+      "judges_coram": "V.M. Kanade, J.",
+      "counsel_for_appellant": "Mr. Kuldeep Patil with Mr. Shahank Borade",
+      "counsel_for_respondent": "Ms. S.V. Gajre, APP",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code, Section 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "was registered",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": ") versus State of Maharashtra ] in Bombay Sessions Case No",
+      "victim_age": "2 --- :2: 393 r/w",
+      "motive_for_crime": "the Appellants"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 605 OF 1989",
+      "case_title": "Mohamed Kasam Shamshuddin Shaikh & Jagdish @ Jagya Bhaskar Jadhav vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "10th January, 2007",
+      "appellant_or_petitioner": "Mohamed Kasam Shamshuddin Shaikh & Jagdish @ Jagya Bhaskar Jadhav",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "D. G. Deshpande, S. R. Sathe",
+      "counsel_for_appellant": "Mr. Majeed Memon, Sr. Advocate with Mr. Subhash Kanse",
+      "counsel_for_respondent": "Dr. F. R. Shaikh, APP",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 393, IPC 302, IPC 307"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "identification_parade_held": "yes"
+    }
+  }
+}

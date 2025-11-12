@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "Appellant",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Appellant"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": "obtained by the theft"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No. 121 of 2023",
+      "case_title": "Kumar Ramu Rathod vs. The State of Maharashtra & Anr.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "20 February 2023",
+      "appellant_or_petitioner": "Kumar Ramu Rathod",
+      "respondent": "The State of Maharashtra & Anr.",
+      "judges_coram": "Sarang V. Kotwal, J.",
+      "counsel_for_appellant": "Mr. Manas N. Gawankar (Appointed Advocate) a/w. Shreyas N. Gawankar",
+      "counsel_for_respondent": "Mr. S. R. Agarkar, APP for State/Respondent No.1",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 392, IPC 332, IPC 353, IPC 323, IPC 504, IPC 506-II, Railways Act 153, CrPC 428"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "medical_examination_conducted": "yes"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": null,
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY APPELLATE SIDE CRIMINAL JURISDICTION WRIT PETITION NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "2 --- 2/3 17",
+      "victim_age": "2 --- 2/3 17",
+      "motive_for_crime": "the Petitioner Shri V"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY APPELLATE SIDE CRIMINAL JURISDICTION WRIT PETITION NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY APPELLATE SIDE CRIMINAL JURISDICTION WRIT PETITION NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "WP No. 1292 of 2018",
+      "case_title": "Kaynaat Ramnik Singh Dhillon vs. The State Of Maharashtra & Ors",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "11th January, 2023",
+      "appellant_or_petitioner": "Kaynaat Ramnik Singh Dhillon",
+      "respondent": "The State Of Maharashtra & Ors",
+      "judges_coram": "NITIN W. SAMBRE & R. N. LADDHA, JJ",
+      "counsel_for_appellant": null,
+      "counsel_for_respondent": "Shri V. B. Konde-Deshmukh, APP",
+      "sections_invoked": [
+        "IPC 166-A"
+      ],
+      "case_type": "Writ Petition",
+      "citation": null,
+      "acts_and_sections": "Article 226 of Constitution of India, IPC 166-A"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

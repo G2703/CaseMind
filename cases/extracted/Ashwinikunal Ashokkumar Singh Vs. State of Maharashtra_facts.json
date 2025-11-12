@@ -1,0 +1,38 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Interim Application No. 2734 of 2023",
+      "case_title": "Ashwinikunal Ashokkumar Singh vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "20th December 2023",
+      "appellant_or_petitioner": "Ashwinikunal Ashokkumar Singh",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "Revati Mohite Dere & Gauri Godse, JJ.",
+      "counsel_for_appellant": "Mr. Mohammed Umar Kazi a/w Mr. Abdul Wahab Shaikh",
+      "counsel_for_respondent": "Mr. J. P. Yagnik, Addl.P.P",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 302, IPC 120B r/w 34, IPC 394 r/w 34, IPC 449 r/w 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

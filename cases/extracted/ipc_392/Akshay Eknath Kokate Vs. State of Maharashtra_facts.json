@@ -1,0 +1,44 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "the Applicant",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "the Applicant"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL BAIL APPLICATION NO.1774 OF 2022",
+      "case_title": "Akshay Eknath Kokate vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "5th September 2023",
+      "appellant_or_petitioner": "Akshay Eknath Kokate",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "REVATI MOHITE DERE, J.",
+      "counsel_for_appellant": "Mr. Shaikh Abdul Kalam a/w Ms. Sana Shaikh",
+      "counsel_for_respondent": "Ms. P. P. Shinde, A.P.P",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 392, 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "identification_parade_held": "yes",
+      "bail_granted": "yes"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_394",
+  "tier_1_determinative": {
+    "fields": {
+      "person_voluntarily_causes_hurt": "Yes, mentioned in case details",
+      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "injury_severity": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.802 OF 2004",
+      "case_title": "The State of Maharashtra vs. Bhika Rambhau Ekaankar & Ors.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "24.2.2020",
+      "appellant_or_petitioner": "The State of Maharashtra",
+      "respondent": "Bhika Rambhau Ekaankar & Ors.",
+      "judges_coram": "K.R. Shriram, J",
+      "counsel_for_appellant": "Ms. Anamika Malhotra",
+      "counsel_for_respondent": "and such presumption is strengthened by the order of acquittal passed in his favour by the Trial Court.",
+      "sections_invoked": [
+        "IPC 394"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 341, 324, 394, 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "appeal_filed": "yes"
+    }
+  }
+}

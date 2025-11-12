@@ -1,0 +1,41 @@
+{
+  "template_used": "ipc_395",
+  "tier_1_determinative": {
+    "fields": {
+      "five_or_more_persons_committing_dacoity": "Not explicitly mentioned"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_stolen": "would remain as it is"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.1153 OF 2003",
+      "case_title": "Balu Pandharinath Takle vs. State of Maharashtra",
+      "court_name": "High Court of Judicature of Bombay",
+      "judgment_date": "August 29, 2006",
+      "appellant_or_petitioner": "Balu Pandharinath Takle",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "A.M. Khanwilkar, J",
+      "counsel_for_appellant": "Smt. Pranali Kakade",
+      "counsel_for_respondent": "Mr. Y.S. Shinde, APP",
+      "sections_invoked": [
+        "IPC 395"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 395, IPC 397, IPC 394"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes"
+    }
+  }
+}

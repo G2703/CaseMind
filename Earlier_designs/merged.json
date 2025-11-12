@@ -1,0 +1,2240 @@
+{
+  "ontology_schema": [
+    {
+      "node_id": "legal_case",
+      "label": "Legal Case",
+      "parent": null,
+      "sections": [],
+      "description": "The root node for all legal cases.",
+      "children": [
+        "criminal_case"
+      ],
+      "example_terms": [
+        "case",
+        "appeal",
+        "trial",
+        "writ petition"
+      ],
+      "example_cases_count": 22
+    },
+    {
+      "node_id": "criminal_case",
+      "label": "Criminal Case",
+      "parent": "legal_case",
+      "sections": [],
+      "description": "Cases involving criminal offenses.",
+      "children": [
+        "violent_offense",
+        "property_offense",
+        "preparatory_offense",
+        "other_offense",
+        "terrorism_offense"
+      ],
+      "example_terms": [
+        "offence",
+        "crime",
+        "conviction",
+        "acquittal",
+        "IPC",
+        "bail",
+        "POTA"
+      ],
+      "example_cases_count": 22
+    },
+    {
+      "node_id": "violent_offense",
+      "label": "Violent Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes involving physical violence or threat of violence against a person.",
+      "children": [
+        "homicide",
+        "sexual_offense",
+        "assault",
+        "ipc_307"
+      ],
+      "example_terms": [
+        "murder",
+        "rape",
+        "assault",
+        "hurt",
+        "killed",
+        "strangulation",
+        "gang-rape",
+        "brutal",
+        "grievous hurt",
+        "attempt to murder",
+        "thrown from height"
+      ],
+      "example_cases_count": 15
+    },
+    {
+      "node_id": "homicide",
+      "label": "Homicide",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses resulting in the death of a person.",
+      "children": [
+        "ipc_302"
+      ],
+      "example_terms": [
+        "murder",
+        "homicide",
+        "killed",
+        "dead body",
+        "succumbed to injuries",
+        "gunshot"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "ipc_302",
+      "label": "Murder",
+      "parent": "homicide",
+      "sections": [
+        "IPC 302"
+      ],
+      "description": "Offense of murder as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "murder",
+        "killed",
+        "death sentence",
+        "life imprisonment",
+        "knife-blows",
+        "strangled",
+        "stab injury",
+        "verbal altercation",
+        "smashing head",
+        "37 knife-blows",
+        "gunshot"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "sexual_offense",
+      "label": "Sexual Offense",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Crimes of a sexual nature.",
+      "children": [
+        "ipc_376",
+        "ipc_376d",
+        "pocso_act",
+        "ipc_354a"
+      ],
+      "example_terms": [
+        "rape",
+        "sexual assault",
+        "sexual harassment",
+        "modesty",
+        "gang rape",
+        "POCSO",
+        "forcible"
+      ],
+      "example_cases_count": 8
+    },
+    {
+      "node_id": "ipc_376",
+      "label": "Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376",
+        "IPC 376(2)(f)",
+        "IPC 376(2)(i)"
+      ],
+      "description": "Offense of rape as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "rape",
+        "sexual assault",
+        "child victim",
+        "forcible",
+        "father",
+        "rooftop",
+        "gang rape",
+        "pregnant",
+        "9 years old",
+        "strangled"
+      ],
+      "example_cases_count": 6
+    },
+    {
+      "node_id": "ipc_376d",
+      "label": "Gang Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376D",
+        "IPC 376(2)(e)",
+        "IPC 376(2)(g)"
+      ],
+      "description": "Offense of gang rape as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "gang rape",
+        "gang-raped",
+        "communal hatred",
+        "drugging",
+        "video",
+        "make video viral"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "pocso_act",
+      "label": "POCSO Offense",
+      "parent": "sexual_offense",
+      "sections": [
+        "POCSO Act 3",
+        "POCSO Act 4",
+        "POCSO Act 5",
+        "POCSO Act 6"
+      ],
+      "description": "Offenses under the Protection of Children from Sexual Offences Act.",
+      "children": [],
+      "example_terms": [
+        "POCSO",
+        "child victim",
+        "9 years old",
+        "15 years old",
+        "penetrative sexual assault",
+        "father"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_354a",
+      "label": "Sexual Harassment",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 354A"
+      ],
+      "description": "Offense of sexual harassment as defined by the Indian Penal Code.",
+      "children": [],
+      "example_terms": [
+        "sexual harassment",
+        "outraging modesty",
+        "caught hold of hand",
+        "unwelcome",
+        "entered house"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "assault",
+      "label": "Assault",
+      "parent": "violent_offense",
+      "sections": [],
+      "description": "Offenses involving physical assault not necessarily resulting in death.",
+      "children": [
+        "ipc_323",
+        "ipc_324"
+      ],
+      "example_terms": [
+        "hurt",
+        "assault",
+        "blow",
+        "iron rod"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "ipc_323",
+      "label": "Voluntarily Causing Hurt",
+      "parent": "assault",
+      "sections": [
+        "IPC 323"
+      ],
+      "description": "Offense of voluntarily causing simple hurt.",
+      "children": [],
+      "example_terms": [
+        "hurt",
+        "assaulted",
+        "kicks and fist blows"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_324",
+      "label": "Voluntarily Causing Hurt by Dangerous Weapon",
+      "parent": "assault",
+      "sections": [
+        "IPC 324"
+      ],
+      "description": "Offense of voluntarily causing hurt by means of a dangerous weapon or means.",
+      "children": [],
+      "example_terms": [
+        "assault with weapon",
+        "hit with iron rod",
+        "stab"
+      ],
+      "example_cases_count": 1
+    },
+    {
+      "node_id": "ipc_307",
+      "label": "Attempt to Murder",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 307"
+      ],
+      "description": "Offense of attempting to commit murder.",
+      "children": [],
+      "example_terms": [
+        "attempt to murder",
+        "thrown from height",
+        "assault with intent to kill",
+        "assault with axe"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "property_offense",
+      "label": "Property Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes committed against property, such as theft, robbery, and trespass.",
+      "children": [
+        "theft",
+        "robbery",
+        "dacoity",
+        "trespass",
+        "ipc_384"
+      ],
+      "example_terms": [
+        "robbery",
+        "dacoity",
+        "theft",
+        "stolen",
+        "looted",
+        "trespass",
+        "extortion",
+        "cash"
+      ],
+      "example_cases_count": 10
+    },
+    {
+      "node_id": "theft",
+      "label": "Theft",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving theft without immediate violence.",
+      "children": [
+        "ipc_380"
+      ],
+      "example_terms": [
+        "theft",
+        "stolen",
+        "jewellery"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_380",
+      "label": "Theft in Dwelling House",
+      "parent": "theft",
+      "sections": [
+        "IPC 380"
+      ],
+      "description": "Offense of theft committed in any building, tent, or vessel used as a human dwelling.",
+      "children": [],
+      "example_terms": [
+        "theft in house",
+        "jewellery stolen"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "robbery",
+      "label": "Robbery",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving theft with violence or threat of violence (less than 5 perpetrators).",
+      "children": [
+        "ipc_392",
+        "ipc_394",
+        "ipc_397"
+      ],
+      "example_terms": [
+        "robbery",
+        "looted",
+        "snatch",
+        "knife",
+        "assaulted",
+        "cash",
+        "gunshot"
+      ],
+      "example_cases_count": 8
+    },
+    {
+      "node_id": "ipc_392",
+      "label": "Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 392"
+      ],
+      "description": "Offense of committing robbery.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "looted",
+        "cash",
+        "assaulted",
+        "Rs 14 lakhs",
+        "Rs.4080"
+      ],
+      "example_cases_count": 7
+    },
+    {
+      "node_id": "ipc_394",
+      "label": "Voluntarily Causing Hurt in Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 394"
+      ],
+      "description": "Offense of voluntarily causing hurt while committing or attempting to commit robbery.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "assaulted",
+        "bleeding injury",
+        "hurt",
+        "blow of knife",
+        "CLW on occipital"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_397",
+      "label": "Robbery with Deadly Weapon",
+      "parent": "robbery",
+      "sections": [
+        "IPC 397"
+      ],
+      "description": "Offense of robbery or dacoity, with an attempt to cause death or grievous hurt, using a deadly weapon.",
+      "children": [],
+      "example_terms": [
+        "robbery",
+        "knife",
+        "deadly weapon",
+        "assaulted by knife"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "dacoity",
+      "label": "Dacoity",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Robbery committed by five or more persons.",
+      "children": [
+        "ipc_395"
+      ],
+      "example_terms": [
+        "dacoity",
+        "5 or more persons"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_395",
+      "label": "Dacoity",
+      "parent": "dacoity",
+      "sections": [
+        "IPC 395"
+      ],
+      "description": "Offense of committing dacoity (robbery by 5 or more persons).",
+      "children": [],
+      "example_terms": [
+        "dacoity",
+        "robbery",
+        "five persons",
+        "4 accused"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "trespass",
+      "label": "Trespass",
+      "parent": "property_offense",
+      "sections": [],
+      "description": "Offenses involving unlawful entry into property.",
+      "children": [
+        "ipc_452",
+        "ipc_457"
+      ],
+      "example_terms": [
+        "house-trespass",
+        "entered house",
+        "broken into"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_452",
+      "label": "House-trespass with Preparation",
+      "parent": "trespass",
+      "sections": [
+        "IPC 452"
+      ],
+      "description": "Offense of house-trespass after preparation for causing hurt, assault, or wrongful restraint.",
+      "children": [],
+      "example_terms": [
+        "house-trespass",
+        "entered house",
+        "harass",
+        "robbery",
+        "sexual harassment"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "ipc_457",
+      "label": "Lurking House-trespass",
+      "parent": "trespass",
+      "sections": [
+        "IPC 457"
+      ],
+      "description": "Offense of lurking house-trespass or house-breaking by night to commit an offense punishable with imprisonment.",
+      "children": [],
+      "example_terms": [
+        "lurking house-trespass",
+        "house-breaking",
+        "broken into"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_384",
+      "label": "Extortion",
+      "parent": "property_offense",
+      "sections": [
+        "IPC 384"
+      ],
+      "description": "Offense of extortion by putting a person in fear of injury.",
+      "children": [],
+      "example_terms": [
+        "extortion",
+        "make video viral",
+        "extracting money",
+        "gold ornaments"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "preparatory_offense",
+      "label": "Preparatory Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Crimes involving preparation or assembly to commit a more serious offense.",
+      "children": [
+        "ipc_399",
+        "ipc_402"
+      ],
+      "example_terms": [
+        "preparation",
+        "assembled",
+        "intention to commit"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_399",
+      "label": "Preparation for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 399"
+      ],
+      "description": "Offense of making any preparation for committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "preparation",
+        "dacoity",
+        "assembled",
+        "Zhaveri shop",
+        "chopper"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_402",
+      "label": "Assembling for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 402"
+      ],
+      "description": "Offense of assembling for the purpose of committing dacoity.",
+      "children": [],
+      "example_terms": [
+        "assembled",
+        "dacoity",
+        "intention to commit",
+        "six persons"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "other_offense",
+      "label": "Other Offense",
+      "parent": "criminal_case",
+      "sections": [],
+      "description": "Miscellaneous offenses, including against public justice or other statutes.",
+      "children": [
+        "ipc_201",
+        "ipc_506",
+        "arms_act_violation",
+        "ipc_147",
+        "ipc_149",
+        "sc_st_act_violation",
+        "it_act_violation"
+      ],
+      "example_terms": [
+        "intimidation",
+        "disappearance of evidence",
+        "arms act",
+        "rioting",
+        "SC/ST Act",
+        "IT Act"
+      ],
+      "example_cases_count": 11
+    },
+    {
+      "node_id": "ipc_201",
+      "label": "Disappearance of Evidence",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 201"
+      ],
+      "description": "Offense of causing disappearance of evidence of an offense, or giving false information.",
+      "children": [],
+      "example_terms": [
+        "disappearance of evidence",
+        "hidden dead body",
+        "concealed",
+        "hidden in haystack",
+        "septic tank"
+      ],
+      "example_cases_count": 3
+    },
+    {
+      "node_id": "ipc_506",
+      "label": "Criminal Intimidation",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 506"
+      ],
+      "description": "Offense of criminal intimidation.",
+      "children": [],
+      "example_terms": [
+        "intimidation",
+        "threat",
+        "make video viral",
+        "threat of killing"
+      ],
+      "example_cases_count": 5
+    },
+    {
+      "node_id": "arms_act_violation",
+      "label": "Arms Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "Arms Act 3",
+        "Arms Act 4",
+        "Arms Act 25"
+      ],
+      "description": "Violation of the Arms Act, 1959, such as possession of arms without a license or in contravention of a notification.",
+      "children": [],
+      "example_terms": [
+        "arms act",
+        "weapon",
+        "knife",
+        "chopper",
+        "firearm"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_147",
+      "label": "Rioting",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 147"
+      ],
+      "description": "Offense of rioting, using force or violence by an unlawful assembly.",
+      "children": [],
+      "example_terms": [
+        "rioting",
+        "riots",
+        "communal hatred"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "ipc_149",
+      "label": "Unlawful Assembly",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 149"
+      ],
+      "description": "Offense where every member of an unlawful assembly is guilty of an offense committed in prosecution of a common object.",
+      "children": [],
+      "example_terms": [
+        "unlawful assembly",
+        "r/w 149",
+        "common object"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "sc_st_act_violation",
+      "label": "SC/ST Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "SC/ST Act 1989 3(2)(v)"
+      ],
+      "description": "Offenses under the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989.",
+      "children": [],
+      "example_terms": [
+        "SC/ST Act",
+        "atrocities",
+        "scheduled caste"
+      ],
+      "example_cases_count": 4
+    },
+    {
+      "node_id": "it_act_violation",
+      "label": "IT Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "IT Act 2000 66"
+      ],
+      "description": "Offenses under the Information Technology Act, 2000, such as computer-related offenses.",
+      "children": [],
+      "example_terms": [
+        "IT Act",
+        "video viral",
+        "took videos"
+      ],
+      "example_cases_count": 2
+    },
+    {
+      "node_id": "terrorism_offense",
+      "label": "Terrorism Offense",
+      "parent": "criminal_case",
+      "sections": [
+        "POTA 2002"
+      ],
+      "description": "Offenses related to terrorism, such as under POTA or UAPA.",
+      "children": [],
+      "example_terms": [
+        "bomb blast",
+        "POTA",
+        "terrorist act",
+        "conspiracy"
+      ],
+      "example_cases_count": 1
+    }
+  ],
+  "templates": {
+    "ipc_302": {
+      "node_id": "ipc_302",
+      "label": "Murder",
+      "parent": "homicide",
+      "sections": [
+        "IPC 302"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "cause_of_death",
+        "weapon_used"
+      ],
+      "optional_fields": [
+        "motive",
+        "time_of_offense",
+        "number_of_perpetrators",
+        "postmortem_report_findings",
+        "victim_age",
+        "accused_relationship_to_victim",
+        "other_victims_injured"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the deceased victim(s)."
+        },
+        "cause_of_death": {
+          "type": "string",
+          "description": "The medical or direct cause of death (e.g., strangulation, stabbing, gunshot)."
+        },
+        "weapon_used": {
+          "type": "category",
+          "description": "Weapon used to commit the murder.",
+          "canonical_values": [
+            "knife",
+            "firearm",
+            "blunt_object",
+            "ligature",
+            "poison",
+            "hands_or_feet",
+            "sword",
+            "sickle",
+            "rock",
+            "axe",
+            "unknown"
+          ]
+        },
+        "motive": {
+          "type": "string",
+          "description": "The alleged motive for the offense (e.g., property dispute, personal enmity, sudden fight, communal hatred, lust for property)."
+        },
+        "time_of_offense": {
+          "type": "datetime",
+          "description": "The approximate date and time of the murder."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "The number of individuals involved in committing the murder."
+        },
+        "postmortem_report_findings": {
+          "type": "string",
+          "description": "Key findings from the postmortem examination, such as number and nature of injuries."
+        },
+        "victim_age": {
+          "type": "integer",
+          "description": "Age of the victim, if specified (especially if minor)."
+        },
+        "accused_relationship_to_victim": {
+          "type": "string",
+          "description": "Relationship of accused to victim (e.g., 'Husband', 'Step-family')."
+        },
+        "other_victims_injured": {
+          "type": "string",
+          "description": "Names or identifiers of other victims injured during the same incident."
+        }
+      },
+      "example_terms": [
+        "murder",
+        "dead",
+        "homicide",
+        "killed",
+        "strangled",
+        "knife-blows",
+        "stab injury",
+        "verbal altercation",
+        "smashing head",
+        "37 knife-blows",
+        "gunshot"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_376": {
+      "node_id": "ipc_376",
+      "label": "Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376",
+        "IPC 376(2)(f)",
+        "IPC 376(2)(i)"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "victim_age",
+        "act_description"
+      ],
+      "optional_fields": [
+        "medical_evidence_findings",
+        "use_of_force",
+        "location_of_offense",
+        "accused_relationship_to_victim",
+        "forensic_evidence"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "victim_age": {
+          "type": "integer",
+          "description": "The age of the victim at the time of the offense."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the alleged act of rape (e.g., 'forcible vaginal penetrative sex')."
+        },
+        "medical_evidence_findings": {
+          "type": "string",
+          "description": "Summary of medical evidence (e.g., injuries, hymen status, 'redness over labia minora')."
+        },
+        "use_of_force": {
+          "type": "boolean",
+          "description": "Whether physical force or violence was used during the commission."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "The place where the offense occurred (e.g., 'victim's home', 'accused's house', 'rooftop')."
+        },
+        "accused_relationship_to_victim": {
+          "type": "string",
+          "description": "Relationship of the accused to the victim (e.g., 'Father', 'Neighbour', 'Guardian', 'Friend's father')."
+        },
+        "forensic_evidence": {
+          "type": "string",
+          "description": "Summary of forensic evidence (e.g., 'DNA match of semen on victim's clothes')."
+        }
+      },
+      "example_terms": [
+        "rape",
+        "sexual assault",
+        "forcible",
+        "child victim",
+        "father",
+        "rooftop",
+        "gang rape",
+        "pregnant",
+        "9 years old"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_376d": {
+      "node_id": "ipc_376d",
+      "label": "Gang Rape",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 376D",
+        "IPC 376(2)(e)",
+        "IPC 376(2)(g)"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "act_description",
+        "number_of_perpetrators",
+        "location_of_offense"
+      ],
+      "optional_fields": [
+        "victim_age",
+        "medical_evidence_findings",
+        "use_of_drugs_on_victim",
+        "use_of_video_recording",
+        "associated_offense",
+        "motive"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim(s)."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the alleged act of gang rape."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "Number of persons involved in the act."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "The place where the offense occurred (e.g., 'Hotel', 'House')."
+        },
+        "victim_age": {
+          "type": "integer",
+          "description": "The age of the victim at the time of the offense."
+        },
+        "medical_evidence_findings": {
+          "type": "string",
+          "description": "Summary of medical or forensic evidence."
+        },
+        "use_of_drugs_on_victim": {
+          "type": "boolean",
+          "description": "Whether the victim was drugged or intoxicated."
+        },
+        "use_of_video_recording": {
+          "type": "boolean",
+          "description": "Whether the act was recorded."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "Other offenses committed simultaneously (e.g., 'Murder', 'Extortion')."
+        },
+        "motive": {
+          "type": "string",
+          "description": "The alleged motive for the offense (e.g., 'communal hatred', 'extortion')."
+        }
+      },
+      "example_terms": [
+        "gang rape",
+        "gang-raped",
+        "communal hatred",
+        "drugging",
+        "video"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "pocso_act": {
+      "node_id": "pocso_act",
+      "label": "POCSO Offense",
+      "parent": "sexual_offense",
+      "sections": [
+        "POCSO Act 3",
+        "POCSO Act 4",
+        "POCSO Act 5",
+        "POCSO Act 6"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "victim_age",
+        "act_description"
+      ],
+      "optional_fields": [
+        "medical_evidence_findings",
+        "accused_relationship_to_victim",
+        "use_of_video_recording",
+        "associated_offense"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the child victim."
+        },
+        "victim_age": {
+          "type": "integer",
+          "description": "The age of the victim (must be < 18)."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the sexual act (e.g., 'penetrative sexual assault')."
+        },
+        "medical_evidence_findings": {
+          "type": "string",
+          "description": "Summary of medical or forensic evidence (e.g., 'redness over labia minora')."
+        },
+        "accused_relationship_to_victim": {
+          "type": "string",
+          "description": "Relationship of the accused (e.g., 'Father', 'Relative', 'Stranger')."
+        },
+        "use_of_video_recording": {
+          "type": "boolean",
+          "description": "Whether the act was recorded."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "Other offenses committed simultaneously (e.g., 'Murder', 'Extortion')."
+        }
+      },
+      "example_terms": [
+        "POCSO",
+        "child victim",
+        "9 years old",
+        "15 years old",
+        "penetrative sexual assault"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_354a": {
+      "node_id": "ipc_354a",
+      "label": "Sexual Harassment",
+      "parent": "sexual_offense",
+      "sections": [
+        "IPC 354A"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "act_description"
+      ],
+      "optional_fields": [
+        "location_of_offense",
+        "verbal_remarks_made",
+        "physical_contact_description",
+        "time_of_offense",
+        "accused_relationship_to_victim"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the act of sexual harassment (e.g., physical contact, remarks, demand)."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "The place where the offense occurred (e.g., 'victim's house')."
+        },
+        "verbal_remarks_made": {
+          "type": "string",
+          "description": "Specific sexually coloured remarks, if any."
+        },
+        "physical_contact_description": {
+          "type": "string",
+          "description": "Nature of the unwelcome physical contact (e.g., 'caught hold of hand')."
+        },
+        "time_of_offense": {
+          "type": "datetime",
+          "description": "The approximate date and time of the offense (e.g., '2:30 a.m.')."
+        },
+        "accused_relationship_to_victim": {
+          "type": "string",
+          "description": "Relationship of accused to victim (e.g., 'Neighbour')."
+        }
+      },
+      "example_terms": [
+        "sexual harassment",
+        "outraging modesty",
+        "caught hold",
+        "unwelcome advances",
+        "caught hold of hand"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_323": {
+      "node_id": "ipc_323",
+      "label": "Voluntarily Causing Hurt",
+      "parent": "assault",
+      "sections": [
+        "IPC 323"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "injury_description"
+      ],
+      "optional_fields": [
+        "weapon_used"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "injury_description": {
+          "type": "string",
+          "description": "Description of the hurt or injury caused (e.g., bruises, swelling)."
+        },
+        "weapon_used": {
+          "type": "string",
+          "description": "Weapon or means used to cause hurt (e.g., 'hands', 'fists', 'stick')."
+        }
+      },
+      "example_terms": [
+        "hurt",
+        "assault",
+        "blow",
+        "kicks and fist blows"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_324": {
+      "node_id": "ipc_324",
+      "label": "Voluntarily Causing Hurt by Dangerous Weapon",
+      "parent": "assault",
+      "sections": [
+        "IPC 324"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "injury_description",
+        "weapon_used"
+      ],
+      "optional_fields": [
+        "motive",
+        "number_of_perpetrators"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "injury_description": {
+          "type": "string",
+          "description": "Description of the hurt caused (e.g., 'contusion', 'abrasion')."
+        },
+        "weapon_used": {
+          "type": "category",
+          "description": "Dangerous weapon used.",
+          "canonical_values": [
+            "knife",
+            "iron_rod",
+            "stick",
+            "sword",
+            "sickle",
+            "blunt_object",
+            "unknown"
+          ]
+        },
+        "motive": {
+          "type": "string",
+          "description": "The alleged motive for the offense."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "Number of individuals involved."
+        }
+      },
+      "example_terms": [
+        "hurt by weapon",
+        "assault with iron rod",
+        "hit with sickle"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_307": {
+      "node_id": "ipc_307",
+      "label": "Attempt to Murder",
+      "parent": "violent_offense",
+      "sections": [
+        "IPC 307"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "act_description",
+        "weapon_used",
+        "injury_description"
+      ],
+      "optional_fields": [
+        "motive",
+        "injury_gravity",
+        "number_of_perpetrators",
+        "accused_relationship_to_victim"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "The act constituting the attempt (e.g., 'stabbing', 'shooting', 'thrown from height')."
+        },
+        "weapon_used": {
+          "type": "category",
+          "description": "Weapon used in the attempt.",
+          "canonical_values": [
+            "knife",
+            "firearm",
+            "blunt_object",
+            "axe",
+            "hands_or_feet",
+            "none_known"
+          ]
+        },
+        "injury_description": {
+          "type": "string",
+          "description": "Description of injuries sustained by the victim (e.g., 'CLW on left cervical', 'multiple fractures')."
+        },
+        "motive": {
+          "type": "string",
+          "description": "The alleged motive for the offense (e.g., 'sudden quarrel', 'suspected of disclosing affair')."
+        },
+        "injury_gravity": {
+          "type": "category",
+          "description": "Gravity of the injuries.",
+          "canonical_values": [
+            "simple",
+            "grievous",
+            "dangerous_to_life",
+            "none"
+          ]
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "Number of individuals involved."
+        },
+        "accused_relationship_to_victim": {
+          "type": "string",
+          "description": "Relationship of accused to victim (e.g., 'Step-father', 'Co-worker')."
+        }
+      },
+      "example_terms": [
+        "attempt to murder",
+        "stabbed",
+        "thrown from height",
+        "assault with intent to kill"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_380": {
+      "node_id": "ipc_380",
+      "label": "Theft in Dwelling House",
+      "parent": "theft",
+      "sections": [
+        "IPC 380"
+      ],
+      "required_fields": [
+        "location_of_dwelling",
+        "stolen_property_description"
+      ],
+      "optional_fields": [
+        "property_value",
+        "method_of_entry"
+      ],
+      "field_definitions": {
+        "location_of_dwelling": {
+          "type": "string",
+          "description": "The address or description of the dwelling (house, tent, vessel) from which theft occurred."
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen (e.g., jewellery, cash)."
+        },
+        "property_value": {
+          "type": "integer",
+          "description": "Estimated monetary value of the stolen property."
+        },
+        "method_of_entry": {
+          "type": "string",
+          "description": "How entry was gained to the dwelling (e.g., 'broken lock', 'open door', 'broken into')."
+        }
+      },
+      "example_terms": [
+        "theft",
+        "stolen",
+        "jewellery",
+        "dwelling",
+        "house",
+        "broken into"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_392": {
+      "node_id": "ipc_392",
+      "label": "Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 392"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "stolen_property_description"
+      ],
+      "optional_fields": [
+        "use_of_force_description",
+        "number_of_perpetrators",
+        "property_value",
+        "weapon_used",
+        "identification_method"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim(s) of the robbery."
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen (e.g., cash, valuables, scooter)."
+        },
+        "use_of_force_description": {
+          "type": "string",
+          "description": "Description of the force or threat of force used (e.g., 'assaulted', 'threatened', 'threw chili powder')."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "The number of individuals involved (must be less than 5)."
+        },
+        "property_value": {
+          "type": "integer",
+          "description": "Estimated monetary value of the stolen property (e.g., 1400000, 4080)."
+        },
+        "weapon_used": {
+          "type": "string",
+          "description": "Any weapon used or shown during the robbery (e.g., 'firearm')."
+        },
+        "identification_method": {
+          "type": "category",
+          "description": "Method used to identify the accused.",
+          "canonical_values": [
+            "test_identification_parade",
+            "dock_identification",
+            "photograph",
+            "none"
+          ]
+        }
+      },
+      "example_terms": [
+        "robbery",
+        "looted",
+        "cash",
+        "assaulted",
+        "Rs 14 lakhs"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_394": {
+      "node_id": "ipc_394",
+      "label": "Voluntarily Causing Hurt in Robbery",
+      "parent": "robbery",
+      "sections": [
+        "IPC 394"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "injury_description",
+        "weapon_used"
+      ],
+      "optional_fields": [
+        "stolen_property_description",
+        "number_of_perpetrators",
+        "medical_report_findings",
+        "identification_method"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim(s)."
+        },
+        "injury_description": {
+          "type": "string",
+          "description": "Description of the hurt or injury caused (e.g., 'bleeding injury', 'contused lacerated wound')."
+        },
+        "weapon_used": {
+          "type": "category",
+          "description": "Weapon used to cause the hurt.",
+          "canonical_values": [
+            "knife",
+            "blunt_object",
+            "hands_or_feet",
+            "unknown"
+          ]
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen. Can be 'attempt' if nothing was taken."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "The number of individuals involved (must be less than 5)."
+        },
+        "medical_report_findings": {
+          "type": "string",
+          "description": "Key findings from the medical examination of the victim (e.g., 'CLW on occipital')."
+        },
+        "identification_method": {
+          "type": "category",
+          "description": "Method used to identify the accused.",
+          "canonical_values": [
+            "test_identification_parade",
+            "dock_identification",
+            "photograph",
+            "none"
+          ]
+        }
+      },
+      "example_terms": [
+        "robbery",
+        "hurt",
+        "assault",
+        "injury",
+        "knife",
+        "bleeding",
+        "blow of knife",
+        "CLW on occipital"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_397": {
+      "node_id": "ipc_397",
+      "label": "Robbery with Deadly Weapon",
+      "parent": "robbery",
+      "sections": [
+        "IPC 397"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "weapon_used",
+        "action_with_weapon"
+      ],
+      "optional_fields": [
+        "stolen_property_description",
+        "number_of_perpetrators",
+        "injury_description",
+        "identification_method"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim(s)."
+        },
+        "weapon_used": {
+          "type": "category",
+          "description": "The deadly weapon used or exhibited.",
+          "canonical_values": [
+            "knife",
+            "firearm",
+            "chopper",
+            "other_deadly_weapon"
+          ]
+        },
+        "action_with_weapon": {
+          "type": "string",
+          "description": "How the weapon was used (e.g., 'used to stab', 'shown to threaten', 'gave blow')."
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen. Can be 'attempt' if nothing was taken."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "The number of individuals involved."
+        },
+        "injury_description": {
+          "type": "string",
+          "description": "Description of any injury caused by the weapon."
+        },
+        "identification_method": {
+          "type": "category",
+          "description": "Method used to identify the accused.",
+          "canonical_values": [
+            "test_identification_parade",
+            "dock_identification",
+            "photograph",
+            "none"
+          ]
+        }
+      },
+      "example_terms": [
+        "robbery",
+        "dacoity",
+        "deadly weapon",
+        "knife",
+        "firearm",
+        "assaulted by knife"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_395": {
+      "node_id": "ipc_395",
+      "label": "Dacoity",
+      "parent": "dacoity",
+      "sections": [
+        "IPC 395"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "stolen_property_description",
+        "number_of_perpetrators"
+      ],
+      "optional_fields": [
+        "weapon_used",
+        "use_of_force_description",
+        "location_of_offense",
+        "property_recovered"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim(s) of the dacoity."
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen (e.g., jewellery, cash)."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "The number of individuals involved (must be 5 or more, or 4 in some cases)."
+        },
+        "weapon_used": {
+          "type": "string",
+          "description": "Any weapon used or shown during the dacoity."
+        },
+        "use_of_force_description": {
+          "type": "string",
+          "description": "Description of the force or threat of force used (e.g., 'no one injured')."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "The place where the dacoity occurred (e.g., 'victim's house')."
+        },
+        "property_recovered": {
+          "type": "string",
+          "description": "Description of stolen property that was recovered."
+        }
+      },
+      "example_terms": [
+        "dacoity",
+        "robbery",
+        "five persons",
+        "4 accused"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_452": {
+      "node_id": "ipc_452",
+      "label": "House-trespass with Preparation",
+      "parent": "trespass",
+      "sections": [
+        "IPC 452"
+      ],
+      "required_fields": [
+        "location_of_dwelling",
+        "victim_identity",
+        "purpose_of_trespass"
+      ],
+      "optional_fields": [
+        "time_of_offense",
+        "method_of_entry",
+        "preparation_description"
+      ],
+      "field_definitions": {
+        "location_of_dwelling": {
+          "type": "string",
+          "description": "The address or description of the dwelling that was trespassed."
+        },
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the person(s) inside the dwelling."
+        },
+        "purpose_of_trespass": {
+          "type": "string",
+          "description": "The alleged purpose of the trespass (e.g., 'to commit robbery', 'to commit assault/harassment', 'to commit dacoity')."
+        },
+        "time_of_offense": {
+          "type": "datetime",
+          "description": "The approximate date and time of the trespass (e.g., '2:30 a.m.')."
+        },
+        "method_of_entry": {
+          "type": "string",
+          "description": "How entry was gained to the dwelling."
+        },
+        "preparation_description": {
+          "type": "string",
+          "description": "Description of the preparation made (e.g., 'carrying weapons')."
+        }
+      },
+      "example_terms": [
+        "house-trespass",
+        "entered house",
+        "sexual harassment"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_457": {
+      "node_id": "ipc_457",
+      "label": "Lurking House-trespass",
+      "parent": "trespass",
+      "sections": [
+        "IPC 457"
+      ],
+      "required_fields": [
+        "location_of_dwelling",
+        "time_of_offense",
+        "intended_offense"
+      ],
+      "optional_fields": [
+        "method_of_entry",
+        "concealment_method",
+        "stolen_property_description"
+      ],
+      "field_definitions": {
+        "location_of_dwelling": {
+          "type": "string",
+          "description": "The address or description of the dwelling that was trespassed."
+        },
+        "time_of_offense": {
+          "type": "string",
+          "description": "The time of the offense, typically 'night'."
+        },
+        "intended_offense": {
+          "type": "string",
+          "description": "The offense intended to be committed inside (e.g., 'theft', 'robbery', 'dacoity')."
+        },
+        "method_of_entry": {
+          "type": "string",
+          "description": "How entry was gained (e.g., 'house-breaking', 'broken into')."
+        },
+        "concealment_method": {
+          "type": "string",
+          "description": "How the perpetrator concealed their presence."
+        },
+        "stolen_property_description": {
+          "type": "string",
+          "description": "List or description of the items stolen, if any."
+        }
+      },
+      "example_terms": [
+        "lurking house-trespass",
+        "house-breaking",
+        "night",
+        "theft",
+        "broken into"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_384": {
+      "node_id": "ipc_384",
+      "label": "Extortion",
+      "parent": "property_offense",
+      "sections": [
+        "IPC 384"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "threat_of_injury_description",
+        "property_extorted"
+      ],
+      "optional_fields": [
+        "associated_offense",
+        "method_of_threat"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "threat_of_injury_description": {
+          "type": "string",
+          "description": "Description of the threat or fear of injury used (e.g., 'make video viral', 'eliminate family')."
+        },
+        "property_extorted": {
+          "type": "string",
+          "description": "The property or valuable security extorted (e.g., 'money', 'gold ornaments')."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "Other offenses committed simultaneously (e.g., 'Rape', 'Gang Rape')."
+        },
+        "method_of_threat": {
+          "type": "string",
+          "description": "How the threat was communicated (e.g., 'verbal', 'showing video')."
+        }
+      },
+      "example_terms": [
+        "extortion",
+        "make video viral",
+        "extracting money",
+        "gold ornaments"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_399": {
+      "node_id": "ipc_399",
+      "label": "Preparation for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 399"
+      ],
+      "required_fields": [
+        "number_of_perpetrators_assembled",
+        "location_of_assembly"
+      ],
+      "optional_fields": [
+        "weapons_recovered",
+        "target_description",
+        "actions_of_preparation"
+      ],
+      "field_definitions": {
+        "number_of_perpetrators_assembled": {
+          "type": "integer",
+          "description": "Number of persons assembled (e.g., 5 or 6)."
+        },
+        "location_of_assembly": {
+          "type": "string",
+          "description": "The place where the group was assembled (e.g., 'Zhaveri Bazar')."
+        },
+        "weapons_recovered": {
+          "type": "string",
+          "description": "List of weapons or items recovered from the group (e.g., 'knives', 'chopper')."
+        },
+        "target_description": {
+          "type": "string",
+          "description": "The alleged target of the intended dacoity (e.g., 'Zhaveri shop')."
+        },
+        "actions_of_preparation": {
+          "type": "string",
+          "description": "Specific actions taken that constitute preparation."
+        }
+      },
+      "example_terms": [
+        "preparation",
+        "dacoity",
+        "assembled",
+        "weapons",
+        "Zhaveri shop",
+        "chopper"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_402": {
+      "node_id": "ipc_402",
+      "label": "Assembling for Dacoity",
+      "parent": "preparatory_offense",
+      "sections": [
+        "IPC 402"
+      ],
+      "required_fields": [
+        "number_of_perpetrators_assembled",
+        "location_of_assembly",
+        "proof_of_purpose"
+      ],
+      "optional_fields": [
+        "weapons_recovered"
+      ],
+      "field_definitions": {
+        "number_of_perpetrators_assembled": {
+          "type": "integer",
+          "description": "Number of persons assembled (e.g., 5 or 6)."
+        },
+        "location_of_assembly": {
+          "type": "string",
+          "description": "The place where the group was assembled."
+        },
+        "proof_of_purpose": {
+          "type": "string",
+          "description": "Evidence proving the assembly was for the purpose of committing dacoity (e.g., 'informant info', 'overheard conversation')."
+        },
+        "weapons_recovered": {
+          "type": "string",
+          "description": "List of weapons or items recovered from the group."
+        }
+      },
+      "example_terms": [
+        "assembled",
+        "dacoity",
+        "intention",
+        "purpose of",
+        "six persons"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_201": {
+      "node_id": "ipc_201",
+      "label": "Disappearance of Evidence",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 201"
+      ],
+      "required_fields": [
+        "primary_offense_committed",
+        "act_of_concealment"
+      ],
+      "optional_fields": [
+        "evidence_concealed_description",
+        "perpetrator_identity"
+      ],
+      "field_definitions": {
+        "primary_offense_committed": {
+          "type": "string",
+          "description": "The main offense (e.g., 'murder') for which evidence was concealed."
+        },
+        "act_of_concealment": {
+          "type": "string",
+          "description": "The specific action taken to make the evidence disappear (e.g., 'hiding dead body in haystack', 'hiding body in bathroom', 'attempt to use septic tank')."
+        },
+        "evidence_concealed_description": {
+          "type": "string",
+          "description": "Description of the evidence that was concealed (e.g., 'dead body')."
+        },
+        "perpetrator_identity": {
+          "type": "string",
+          "description": "Identifier of the person who concealed the evidence."
+        }
+      },
+      "example_terms": [
+        "disappearance of evidence",
+        "concealed",
+        "hid body",
+        "hidden in haystack",
+        "septic tank"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_506": {
+      "node_id": "ipc_506",
+      "label": "Criminal Intimidation",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 506"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "threat_description"
+      ],
+      "optional_fields": [
+        "method_of_threat"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim who was threatened."
+        },
+        "threat_description": {
+          "type": "string",
+          "description": "The nature of the threat (e.g., 'threat of injury', 'threat to kill', 'make video viral')."
+        },
+        "method_of_threat": {
+          "type": "string",
+          "description": "How the threat was communicated (e.g., 'verbal', 'gesture')."
+        }
+      },
+      "example_terms": [
+        "criminal intimidation",
+        "threat",
+        "threatened",
+        "make video viral"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "arms_act_violation": {
+      "node_id": "arms_act_violation",
+      "label": "Arms Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "Arms Act 3",
+        "Arms Act 4",
+        "Arms Act 25"
+      ],
+      "required_fields": [
+        "weapon_description",
+        "weapon_type"
+      ],
+      "optional_fields": [
+        "license_held",
+        "notification_under_sec_4_proven",
+        "possession_circumstance"
+      ],
+      "field_definitions": {
+        "weapon_description": {
+          "type": "string",
+          "description": "Description of the weapon (e.g., 'knife', 'chopper', 'revolver')."
+        },
+        "weapon_type": {
+          "type": "category",
+          "description": "The legal category of the weapon under the Arms Act.",
+          "canonical_values": [
+            "firearm_or_ammunition",
+            "other_weapon"
+          ]
+        },
+        "license_held": {
+          "type": "boolean",
+          "description": "Whether the accused held a valid license (relevant for Sec 3)."
+        },
+        "notification_under_sec_4_proven": {
+          "type": "boolean",
+          "description": "Whether the prosecution proved the existence of a notification under Sec 4 for the area (relevant for 'other_weapon')."
+        },
+        "possession_circumstance": {
+          "type": "string",
+          "description": "How and where the weapon was possessed (e.g., 'on person', 'in vehicle')."
+        }
+      },
+      "example_terms": [
+        "arms act",
+        "weapon",
+        "knife",
+        "chopper",
+        "firearm",
+        "licence"
+      ],
+      "suggested_section_mapping_confidence": 0.95
+    },
+    "ipc_147": {
+      "node_id": "ipc_147",
+      "label": "Rioting",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 147"
+      ],
+      "required_fields": [
+        "location_of_offense",
+        "number_of_perpetrators",
+        "use_of_force_or_violence"
+      ],
+      "optional_fields": [
+        "associated_offense",
+        "weapon_used"
+      ],
+      "field_definitions": {
+        "location_of_offense": {
+          "type": "string",
+          "description": "Location where the rioting occurred."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "Number of persons in the assembly (>= 5)."
+        },
+        "use_of_force_or_violence": {
+          "type": "boolean",
+          "description": "Whether force or violence was used by the assembly."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "Other offenses committed during the riot (e.g., 'Murder', 'Gang Rape')."
+        },
+        "weapon_used": {
+          "type": "string",
+          "description": "Weapons used by the rioters."
+        }
+      },
+      "example_terms": [
+        "rioting",
+        "riots",
+        "communal hatred"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "ipc_149": {
+      "node_id": "ipc_149",
+      "label": "Unlawful Assembly",
+      "parent": "other_offense",
+      "sections": [
+        "IPC 149"
+      ],
+      "required_fields": [
+        "location_of_offense",
+        "number_of_perpetrators",
+        "common_object_of_assembly"
+      ],
+      "optional_fields": [
+        "associated_offense"
+      ],
+      "field_definitions": {
+        "location_of_offense": {
+          "type": "string",
+          "description": "Location where the assembly gathered."
+        },
+        "number_of_perpetrators": {
+          "type": "integer",
+          "description": "Number of persons in the assembly (>= 5)."
+        },
+        "common_object_of_assembly": {
+          "type": "string",
+          "description": "The common object of the assembly (e.g., 'to commit murder')."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "The offense committed in prosecution of the common object."
+        }
+      },
+      "example_terms": [
+        "unlawful assembly",
+        "r/w 149",
+        "common object"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "sc_st_act_violation": {
+      "node_id": "sc_st_act_violation",
+      "label": "SC/ST Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "SC/ST Act 1989 3(2)(v)"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "victim_sc_st_status_known_to_accused",
+        "underlying_ipc_offense"
+      ],
+      "optional_fields": [
+        "caste_based_slurs_used",
+        "location_of_offense"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "victim_sc_st_status_known_to_accused": {
+          "type": "boolean",
+          "description": "Whether the accused knew the victim belonged to SC/ST."
+        },
+        "underlying_ipc_offense": {
+          "type": "string",
+          "description": "The associated IPC offense committed (e.g., 'Rape', 'Assault', 'Murder', 'Gang Rape')."
+        },
+        "caste_based_slurs_used": {
+          "type": "boolean",
+          "description": "Whether caste-based insults or slurs were used."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "Location where the offense occurred."
+        }
+      },
+      "example_terms": [
+        "SC/ST Act",
+        "atrocities",
+        "scheduled caste"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    "it_act_violation": {
+      "node_id": "it_act_violation",
+      "label": "IT Act Violation",
+      "parent": "other_offense",
+      "sections": [
+        "IT Act 2000 66"
+      ],
+      "required_fields": [
+        "victim_identity",
+        "act_description",
+        "device_used"
+      ],
+      "optional_fields": [
+        "platform_used",
+        "associated_offense"
+      ],
+      "field_definitions": {
+        "victim_identity": {
+          "type": "string",
+          "description": "Name or identifier of the victim."
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the computer-related offense (e.g., 'took videos of incident', 'threatened to make viral')."
+        },
+        "device_used": {
+          "type": "string",
+          "description": "Device used to commit the offense (e.g., 'mobile phone', 'computer')."
+        },
+        "platform_used": {
+          "type": "string",
+          "description": "Platform used, if any (e.g., 'social media', 'messaging app')."
+        },
+        "associated_offense": {
+          "type": "string",
+          "description": "Other offenses committed simultaneously (e.g., 'Extortion', 'Rape', 'Gang Rape')."
+        }
+      },
+      "example_terms": [
+        "IT Act",
+        "video viral",
+        "took videos"
+      ],
+      "suggested_section_mapping_confidence": 0.95
+    },
+    "terrorism_offense": {
+      "node_id": "terrorism_offense",
+      "label": "Terrorism Offense",
+      "parent": "criminal_case",
+      "sections": [
+        "POTA 2002",
+        "UAPA"
+      ],
+      "required_fields": [
+        "statute",
+        "act_description",
+        "location_of_offense"
+      ],
+      "optional_fields": [
+        "motive",
+        "allegation_type",
+        "number_of_incidents",
+        "target_description"
+      ],
+      "field_definitions": {
+        "statute": {
+          "type": "category",
+          "description": "The special statute invoked.",
+          "canonical_values": [
+            "POTA 2002",
+            "UAPA",
+            "TADA",
+            "unknown"
+          ]
+        },
+        "act_description": {
+          "type": "string",
+          "description": "Description of the terrorist act (e.g., 'bomb blast', 'conspiracy')."
+        },
+        "location_of_offense": {
+          "type": "string",
+          "description": "Location(s) of the act(s)."
+        },
+        "motive": {
+          "type": "string",
+          "description": "The alleged motive (e.g., 'strike terror', 'wage war')."
+        },
+        "allegation_type": {
+          "type": "category",
+          "description": "Type of allegation.",
+          "canonical_values": [
+            "conspiracy",
+            "direct_act",
+            "aiding_and_abetting",
+            "funding"
+          ]
+        },
+        "number_of_incidents": {
+          "type": "integer",
+          "description": "Number of distinct incidents (e.g., multiple blasts)."
+        },
+        "target_description": {
+          "type": "string",
+          "description": "The target of the act (e.g., 'public transport', 'government building')."
+        }
+      },
+      "example_terms": [
+        "bomb blast",
+        "POTA",
+        "terrorist act",
+        "conspiracy",
+        "UAPA"
+      ],
+      "suggested_section_mapping_confidence": 0.95
+    }
+  },
+  "changes": [
+    "update:legal_case",
+    "update:criminal_case",
+    "update:violent_offense",
+    "update:homicide",
+    "update:ipc_302",
+    "update:template:ipc_302",
+    "update:sexual_offense",
+    "update:ipc_376",
+    "update:template:ipc_376",
+    "update:ipc_376d",
+    "update:template:ipc_376d",
+    "update:pocso_act",
+    "update:template:pocso_act",
+    "update:ipc_354a",
+    "update:template:ipc_354a",
+    "update:assault",
+    "update:ipc_323",
+    "update:template:ipc_323",
+    "update:property_offense",
+    "update:theft",
+    "update:ipc_380",
+    "update:template:ipc_380",
+    "update:robbery",
+    "update:ipc_392",
+    "update:template:ipc_392",
+    "update:ipc_394",
+    "update:template:ipc_394",
+    "update:ipc_397",
+    "update:template:ipc_397",
+    "update:dacoity",
+    "update:ipc_395",
+    "update:template:ipc_395",
+    "update:trespass",
+    "update:ipc_452",
+    "update:template:ipc_452",
+    "update:ipc_457",
+    "update:template:ipc_457",
+    "update:ipc_384",
+    "update:template:ipc_384",
+    "update:preparatory_offense",
+    "update:ipc_399",
+    "update:template:ipc_399",
+    "update:ipc_402",
+    "update:template:ipc_402",
+    "update:other_offense",
+    "update:ipc_201",
+    "update:template:ipc_201",
+    "update:ipc_506",
+    "update:template:ipc_506",
+    "update:arms_act_violation",
+    "update:template:arms_act_violation",
+    "update:ipc_147",
+    "update:template:ipc_147",
+    "update:ipc_149",
+    "update:template:ipc_149",
+    "update:sc_st_act_violation",
+    "update:template:sc_st_act_violation",
+    "update:it_act_violation",
+    "update:template:it_act_violation",
+    "add:ipc_307",
+    "add:template:ipc_307",
+    "add:ipc_324",
+    "add:template:ipc_324",
+    "add:terrorism_offense",
+    "add:template:terrorism_offense"
+  ]
+}

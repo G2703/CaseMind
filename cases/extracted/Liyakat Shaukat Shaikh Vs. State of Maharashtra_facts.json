@@ -1,0 +1,44 @@
+{
+  "template_used": "ipc_394",
+  "tier_1_determinative": {
+    "fields": {
+      "person_voluntarily_causes_hurt": "Yes, mentioned in case details",
+      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "injury_severity": "on the head with a butt of revolver or pistol"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No. 286 of 2005",
+      "case_title": "Liyakat Shaukat Shaikh & Anr. vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "17th April, 2007",
+      "appellant_or_petitioner": "Liyakat Shaukat Shaikh and Deepak Dattatraya Patil",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "J.H. Bhatia, J.",
+      "counsel_for_appellant": "Mr. Najmi Murtuza",
+      "counsel_for_respondent": "Mr. Y.S. Shinde",
+      "sections_invoked": [
+        "IPC 394"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 392, 34, 398, 394, 379, 393"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "identification_parade_held": "yes",
+      "appeal_filed": "yes"
+    }
+  }
+}

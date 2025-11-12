@@ -1,0 +1,53 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": "revolver",
+      "injury_detail": null,
+      "actus_reus_description": "of the other three robbers"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY IN THE HIGH COURT OF JUDICATURE AT BOMBAY APPELLATE SIDE APPELLATE SIDE APPELLATE SIDE CRIMINAL APPEAL NO",
+      "victim_identity": "Nathuram Thakurshah Gupta",
+      "previous_similar_incident": "and having heard the commotion he phoned the police station and called for police help",
+      "medical_evidence": "of eye-witnesses i",
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": null,
+      "victim_activity_before_incident": "and having heard the commotion he phoned the police station and called for police help"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No. 252 of 1996",
+      "case_title": "Lalchand Meghraj Kumavat vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "October 17, 2007",
+      "appellant_or_petitioner": "Lalchand Meghraj Kumavat",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "Smt. Ranjana Desai, J.",
+      "counsel_for_appellant": "Mr. Manoj J. Bhatt",
+      "counsel_for_respondent": "Mr. Y. S. Shinde, APP",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 452, IPC 392, IPC 397, Arms Act 25(1-B)(a), Arms Act 27(1)"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

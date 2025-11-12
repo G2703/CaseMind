@@ -1,0 +1,32 @@
+# Legal AI Framework Requirements - Simplified
+
+# Core AI/ML Libraries
+openai>=1.0.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Development and Testing (Optional)
+pytest>=7.0.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Previously used libraries (commented out after simplification):
+# PyMuPDF>=1.23.0          # PDF processing - not currently used
+# PyPDF2>=3.0.0            # PDF processing - not currently used
+# google-generativeai>=0.3.0  # Gemini API - not currently used
+# pandas>=2.0.0            # Data processing - not currently used
+# numpy>=1.24.0            # Numerical computing - not currently used
+# scipy>=1.11.0            # Scientific computing - not currently used
+# matplotlib>=3.7.0        # Plotting - not currently used
+# regex>=2023.0.0          # Advanced regex - removed from code
+# nltk>=3.8.0              # NLP toolkit - not currently used
+# spacy>=3.7.0             # NLP framework - not currently used
+# sentence-transformers>=2.2.0  # Embeddings - not currently used
+# faiss-cpu>=1.7.4         # Vector search - not currently used
+# pydantic>=2.0.0          # Data validation - removed from code
+# tqdm>=4.65.0             # Progress bars - not currently used
+# loguru>=0.7.0            # Advanced logging - using built-in logging
+# pyyaml>=6.0.1            # YAML parsing - not currently used
+# configparser>=6.0.0      # Config parsing - not currently used

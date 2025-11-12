@@ -1,0 +1,115 @@
+{
+  "node_id": "ipc_427",
+  "label": "Mischief causing damage (IPC 427)",
+  "parent": "property_offense",
+  "sections": [
+    "IPC 427"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "mischief_act",
+        "damage_amount"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "property_description"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": []
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "mischief_act": {
+      "type": "string",
+      "description": "The act that caused the destruction or damage."
+    },
+    "damage_amount": {
+      "type": "string",
+      "description": "The amount of damage caused (must be fifty rupees or upwards)."
+    },
+    "property_description": {
+      "type": "string",
+      "description": "Description of the property affected."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "section 427 IPC",
+    "damage"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

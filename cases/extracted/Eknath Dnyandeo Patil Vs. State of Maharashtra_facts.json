@@ -1,0 +1,42 @@
+{
+  "template_used": "ipc_427",
+  "tier_1_determinative": {
+    "fields": {
+      "mischief_act": "s are that",
+      "damage_amount": "ordered to be paid under sub-section (1) may be recovered as a fine in accordance with the provisions of Secs"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": "(i) of the person exercising the right; or (ii) of any other person; and the right may be exercised in the case of any offence against the body"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.67 OF 1990",
+      "case_title": "Eknath Dnyandeo Patil vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "26th October, 2004",
+      "appellant_or_petitioner": "Eknath Dnyandeo Patil",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "V.M. KANADE, J.",
+      "counsel_for_appellant": "Mr. A.P. Mundargi",
+      "counsel_for_respondent": "Mr. D.P. Adsule",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 304 Part I, 324, 147, 148, 302, 149, 307, 326, 506"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

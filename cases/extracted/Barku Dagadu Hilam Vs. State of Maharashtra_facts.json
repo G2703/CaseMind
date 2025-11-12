@@ -1,0 +1,40 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No.525 of 2016",
+      "case_title": "Barkya @ Barku Dagadu Hilam vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "17th September 2019",
+      "appellant_or_petitioner": "Barkya @ Barku Dagadu Hilam, Prabhakar Mahadu Mukne",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A. M. Badar, J.",
+      "counsel_for_appellant": "Mrs. Sonia Miskin, Ms. Ameeta Kuttikrishnan",
+      "counsel_for_respondent": "Mr. A.R. Kapadnis",
+      "sections_invoked": [
+        "IPC 376(2)(g)"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Section 376(2)(g), Section 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "medical_examination_conducted": "yes",
+      "identification_parade_held": "yes",
+      "appeal_filed": "yes"
+    }
+  }
+}

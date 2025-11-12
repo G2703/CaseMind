@@ -1,0 +1,43 @@
+{
+  "template_used": "ipc_394",
+  "tier_1_determinative": {
+    "fields": {
+      "person_voluntarily_causes_hurt": "Yes, mentioned in case details",
+      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "injury_severity": "report is placed on record which indicates that the complainant suffered simple injuries"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "ABA No.3247 of 2022",
+      "case_title": "Ashish Shamsher Vaid vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "December 7, 2022",
+      "appellant_or_petitioner": "Ashish Shamsher Vaid",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "M. S. Karnik, J.",
+      "counsel_for_appellant": "Mr. Marmik Shah",
+      "counsel_for_respondent": "Mr. S. H. Yadav, APP",
+      "sections_invoked": [
+        "IPC 394"
+      ],
+      "case_type": "Anticipatory Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 394, IPC 326, IPC 324, IPC 323, IPC 504, IPC 506, IPC 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

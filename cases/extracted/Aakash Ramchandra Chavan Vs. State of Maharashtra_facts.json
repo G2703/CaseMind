@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": "tried to extract cash and valuables from him",
+      "threat_to_kill": "extending threat of killing him",
+      "weapon_used": "knife",
+      "injury_detail": "bleeding injury",
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "victim_identity": "Vijay Sadavate",
+      "previous_similar_incident": "when Mansoor shouted for help",
+      "medical_evidence": "treatment at Rajawadi Hospital",
+      "identification_parade": "Parade was conducted"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": "24th October 2009",
+      "incident_location": "Chembur Railway Station",
+      "victim_activity_before_incident": "when Mansoor shouted for help"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No.290 of 2014",
+      "case_title": "Aakash Ramchandra Chavan vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "29th August 2019",
+      "appellant_or_petitioner": "Aakash Ramchandra Chavan",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A. M. Badar, J.",
+      "counsel_for_appellant": "Mrs. N.S.K. Ayubi",
+      "counsel_for_respondent": "Mr. Amit Palkar",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 394, 397"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "yes",
+      "accused_fled_after_alarm": "yes",
+      "identification_parade_held": "yes"
+    }
+  }
+}

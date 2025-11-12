@@ -1,0 +1,44 @@
+{
+  "template_used": "ipc_427",
+  "tier_1_determinative": {
+    "fields": {
+      "mischief_act": "s are that one Prabhu and Sushma fell in love and got married and therefter they were staying with the parents of Prabhu",
+      "damage_amount": "d some fields"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": "including the residential part against his desire to own the same"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Confirmation Case No.2 of 2007",
+      "case_title": "The State of Maharashtra vs. Dilip Premnarayan Tiwari & Ors.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "1st November, 2007",
+      "appellant_or_petitioner": "The State of Maharashtra",
+      "respondent": "Dilip Premnarayan Tiwari, Sunil Ramashray Yadav, Manoj Tulshi Paswan",
+      "judges_coram": "Dr. S. Radhakrishnan, Smt. R.S. Dalvi",
+      "counsel_for_appellant": "Mr. S.R. Borulkar, Public Prosecutor with Mr. A.R. Patil (APP)",
+      "counsel_for_respondent": "Mr. Ramakant Patil Sr. Counsel with Mr. Shivraj Patil for Respondent-Accused No.1, Mr. S.N. Raj with Mr. S.L. Shukla for Respondent-Accused No.2, Mr. Sandesh D. Patil for Accused No.3",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 302, IPC 307, IPC 452"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "weapon_recovered": "yes",
+      "identification_parade_held": "yes"
+    }
+  }
+}

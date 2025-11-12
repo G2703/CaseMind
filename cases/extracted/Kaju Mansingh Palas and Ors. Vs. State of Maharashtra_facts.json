@@ -1,0 +1,49 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "is not made out in the present case",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL BAIL APPLICATION NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "threw stones at the informant and his brother",
+      "victim_age": "d to escape",
+      "motive_for_crime": "applicants"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL BAIL APPLICATION NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL BAIL APPLICATION NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Bail Application No.1533 of 2020",
+      "case_title": "Kaju Mansingh Palas and others vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "13th January 2021",
+      "appellant_or_petitioner": "Kaju Mansingh Palas and others",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "Prakash D. Naik, J.",
+      "counsel_for_appellant": "Mr.S.V.Marwadi i/by Mr.N.M.Nadar",
+      "counsel_for_respondent": "Mrs.M.R.Tidke, APP",
+      "sections_invoked": [
+        "IPC 398"
+      ],
+      "case_type": "Criminal Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 398"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes",
+      "bail_granted": "yes"
+    }
+  }
+}

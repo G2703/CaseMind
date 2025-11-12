@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": "during the course of incident in question",
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "victim_identity": null,
+      "previous_similar_incident": "in question took place in the night hours of 10/10/2014",
+      "medical_evidence": "adduced by the prosecution and argued that non- examination of injured Narayan Jadahv makes the prosecution case doubtful",
+      "identification_parade": "of the appellant/accused by P"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": "she and her husband were then admitted to the Sanjivini Hospital",
+      "victim_activity_before_incident": "in question took place in the night hours of 10/10/2014"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.799 OF 2016",
+      "case_title": "Dablu Arun Vishwas vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "26th September 2019",
+      "appellant_or_petitioner": "Dablu Arun Vishwas",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A.M. Badar J.",
+      "counsel_for_appellant": "Ms. Megha Bajoria",
+      "counsel_for_respondent": "Mr. Vinod Chate",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Sections 394, 397, 452 of the Indian Penal Code"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes",
+      "weapon_recovered": "yes"
+    }
+  }
+}

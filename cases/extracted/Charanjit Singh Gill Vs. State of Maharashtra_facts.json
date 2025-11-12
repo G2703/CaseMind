@@ -1,0 +1,42 @@
+{
+  "template_used": "ipc_392",
+  "tier_1_determinative": {
+    "fields": {
+      "theft_or_attempted_theft": "the Petitioner",
+      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "the Petitioner"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "property_description": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL WRIT PETITION NO. 5241 OF 2019",
+      "case_title": "Charanjit Singh Gill vs. The State of Maharashtra & Anr.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "21st February, 2024",
+      "appellant_or_petitioner": "Charanjit Singh Gill",
+      "respondent": "The State of Maharashtra & Anr.",
+      "judges_coram": "REVATI MOHITE DERE & MANJUSHA DESHPANDE, JJ.",
+      "counsel_for_appellant": "Mr. Anand Mishra i/b Mr. Ashok M. Saraogi",
+      "counsel_for_respondent": "Mr. V.B.Konde Deshmukh, Addl.P.P",
+      "sections_invoked": [
+        "IPC 392"
+      ],
+      "case_type": "Criminal Writ Petition",
+      "citation": null,
+      "acts_and_sections": "IPC 392"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

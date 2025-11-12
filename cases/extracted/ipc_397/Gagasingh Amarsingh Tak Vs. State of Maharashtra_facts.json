@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": "cash",
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": null,
+      "actus_reus_description": "of the robberors"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "victim_identity": "Shriniwas Shirole situated at Dhandri Shivar",
+      "previous_similar_incident": "of robbery with the aid of dangerous weapons took place in the night intervening 03",
+      "medical_evidence": "of PW7/Shabbir Hussain Ali Nagori",
+      "identification_parade": "parade of the arrested accused came to be conducted in presence of Panch Witness PW8/Munna Kasam"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": "Chhavani Police Station",
+      "victim_activity_before_incident": "of robbery with the aid of dangerous weapons took place in the night intervening 03"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.817 OF 2015",
+      "case_title": "Gagasingh Amarsingh Tak vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "7th January 2019",
+      "appellant_or_petitioner": "Gagasingh Amarsingh Tak",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A.M. BADAR, J.",
+      "counsel_for_appellant": "Ms. Nasreen Ayubi",
+      "counsel_for_respondent": "Mr. P.H. Gaikwad-Patil",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 394, 397, 398, 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "identification_parade_held": "yes"
+    }
+  }
+}

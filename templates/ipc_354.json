@@ -1,0 +1,136 @@
+{
+  "node_id": "ipc_354",
+  "label": "IPC 354",
+  "parent": "sexual_offense",
+  "sections": [
+    "354"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "assault_or_criminal_force_used",
+        "intent_to_outrage_modesty"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "victim_details",
+        "accused_details",
+        "nature_of_assault"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": [
+        "circumstances_of_offense"
+      ]
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "assault_or_criminal_force_used": {
+      "type": "boolean",
+      "description": "Whether assault or criminal force was used on a woman."
+    },
+    "intent_to_outrage_modesty": {
+      "type": "boolean",
+      "description": "Whether the act was done with intent to outrage her modesty."
+    },
+    "victim_details": {
+      "type": "string",
+      "description": "Details about the female victim."
+    },
+    "accused_details": {
+      "type": "string",
+      "description": "Details about the accused."
+    },
+    "nature_of_assault": {
+      "type": "string",
+      "description": "Description of the assault or criminal force used."
+    },
+    "circumstances_of_offense": {
+      "type": "string",
+      "description": "The circumstances under which the offense was committed."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "court_details": {
+      "type": "string",
+      "description": "Details of the court hearing the case."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "outraging modesty",
+    "criminal force on woman",
+    "assault on modesty"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

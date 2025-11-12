@@ -1,0 +1,37 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL WRIT PETITION NO.524 OF 2022",
+      "case_title": "Gokul Undrya Naik vs. The State of Maharashtra & Others",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "21st July, 2022",
+      "appellant_or_petitioner": "Gokul Undrya Naik",
+      "respondent": "The State of Maharashtra, Mahavir Kisanlal Kothari, Pramod Kisanlal Kothari",
+      "judges_coram": "M. G. Sewlikar, J.",
+      "counsel_for_appellant": "Mr. M. K. Kocharekar",
+      "counsel_for_respondent": "Mr. Tushar Sonawane, Mrs. J. S. Lohokare",
+      "sections_invoked": [
+        "IPC 379"
+      ],
+      "case_type": "Criminal Writ Petition",
+      "citation": null,
+      "acts_and_sections": "IPC 379"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

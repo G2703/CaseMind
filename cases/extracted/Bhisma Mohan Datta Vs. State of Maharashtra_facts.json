@@ -1,0 +1,44 @@
+{
+  "template_used": "ipc_376",
+  "tier_1_determinative": {
+    "fields": {
+      "sexual_act_description": "s in brief",
+      "absence_of_consent": "Not explicitly mentioned"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "aggravated_circumstances_of_rape": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "Criminal Appeal No.739 of 2015",
+      "case_title": "Bhisma Mohan Datta vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "4th February 2019",
+      "appellant_or_petitioner": "Bhisma Mohan Datta",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "A. M. Badar, J.",
+      "counsel_for_appellant": "Ms. Megha Bajoria",
+      "counsel_for_respondent": "Mr. S.V. Gavand",
+      "sections_invoked": [
+        "IPC 376"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code Sections 394, 452, 342, 34, 397, 343, 376"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "medical_examination_conducted": "yes",
+      "identification_parade_held": "yes"
+    }
+  }
+}

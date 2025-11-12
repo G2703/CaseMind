@@ -1,0 +1,151 @@
+{
+  "node_id": "criminal_case",
+  "label": "Criminal Case",
+  "parent": "legal_case",
+  "sections": [],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "ipc_sections_charged",
+        "nature_of_offense_category"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "accused_age",
+        "victim_age",
+        "motive_for_crime"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": [
+        "time_of_offense",
+        "place_of_offense"
+      ]
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "ipc_sections_charged": {
+      "type": "string",
+      "description": "The specific Indian Penal Code sections and/or other Acts applied (e.g., 'IPC 302, 316')."
+    },
+    "nature_of_offense_category": {
+      "type": "string",
+      "description": "The broad category of the offense (e.g., 'Violent Offense', 'Property Offense')."
+    },
+    "accused_age": {
+      "type": "integer",
+      "description": "The age of the accused at the time of the offense."
+    },
+    "victim_age": {
+      "type": "integer",
+      "description": "The age of the victim at the time of the offense."
+    },
+    "time_of_offense": {
+      "type": "string",
+      "description": "The approximate time of the crime (e.g., '10:00 PM', 'Midnight')."
+    },
+    "place_of_offense": {
+      "type": "string",
+      "description": "The location where the crime took place (e.g., 'dwelling house', 'public road')."
+    },
+    "motive_for_crime": {
+      "type": "string",
+      "description": "The driving factor for the crime (e.g., 'revenge', 'greed', 'matrimonial dispute')."
+    },
+    "police_station": {
+      "type": "string",
+      "description": "The police station where the FIR was registered."
+    },
+    "fir_number": {
+      "type": "string",
+      "description": "The First Information Report number."
+    },
+    "stage_of_trial_or_appeal": {
+      "type": "string",
+      "description": "The current judicial stage (e.g., 'Trial Court conviction', 'High Court Appeal')."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "offence",
+    "crime",
+    "conviction",
+    "acquittal",
+    "IPC",
+    "bail",
+    "POTA"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

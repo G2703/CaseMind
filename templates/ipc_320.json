@@ -1,0 +1,136 @@
+{
+  "node_id": "ipc_320",
+  "label": "IPC 320",
+  "parent": "assault",
+  "sections": [
+    "320"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "grievous_hurt_caused"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "victim_details",
+        "accused_details",
+        "nature_of_injury",
+        "weapon_used"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": [
+        "circumstances_of_assault"
+      ]
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "grievous_hurt_caused": {
+      "type": "boolean",
+      "description": "Whether grievous hurt was voluntarily caused."
+    },
+    "victim_details": {
+      "type": "string",
+      "description": "Details about the victim who suffered grievous hurt."
+    },
+    "accused_details": {
+      "type": "string",
+      "description": "Details about the accused who caused grievous hurt."
+    },
+    "nature_of_injury": {
+      "type": "string",
+      "description": "Description of the grievous hurt caused."
+    },
+    "weapon_used": {
+      "type": "string",
+      "description": "Description of any weapon or instrument used to cause grievous hurt."
+    },
+    "circumstances_of_assault": {
+      "type": "string",
+      "description": "The circumstances under which the grievous hurt was caused."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "court_details": {
+      "type": "string",
+      "description": "Details of the court hearing the case."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "voluntarily causing grievous hurt",
+    "serious injury",
+    "grievous assault"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

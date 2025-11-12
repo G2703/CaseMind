@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": "certificate of the first informant",
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION BAIL APPLICATION NO",
+      "victim_identity": null,
+      "previous_similar_incident": "had occurred on 24th May",
+      "medical_evidence": "Officer",
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": null,
+      "victim_activity_before_incident": "had occurred on 24th May"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO.289 OF 2024",
+      "case_title": "Arjun Selvam Pille vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "22nd January, 2024",
+      "appellant_or_petitioner": "Arjun Selvam Pille",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "N.J. JAMADAR, J.",
+      "counsel_for_appellant": "Mr. Keshav S. Chavan",
+      "counsel_for_respondent": "Mr. S.R. Agarkar",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 397, IPC 506(2), IPC 394 r/w Section 34, Maharashtra Police Act 37(1)(a) r/w 135"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

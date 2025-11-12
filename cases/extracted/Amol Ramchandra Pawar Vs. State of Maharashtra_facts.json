@@ -1,0 +1,47 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "and sentenced to suffer imprisonment for life and to pay fine of Rs",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "d about 22 years",
+      "victim_age": "d about 22 years",
+      "motive_for_crime": "the Appellant-accused Mr"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.1406 OF 2003",
+      "case_title": "Amol Ramchandra Pawar vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "21/11/2007",
+      "appellant_or_petitioner": "Amol Ramchandra Pawar",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "R.M.S. Khandepakar and S.R. Sathe, JJ.",
+      "counsel_for_appellant": "Mr. P.M. Pradhan",
+      "counsel_for_respondent": "Mr. P.S. Hingorani",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 302, IPC 397, IPC 201"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no"
+    }
+  }
+}

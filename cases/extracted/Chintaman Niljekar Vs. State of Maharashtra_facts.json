@@ -1,0 +1,49 @@
+{
+  "template_used": "criminal_case",
+  "tier_1_determinative": {
+    "fields": {
+      "ipc_sections_charged": "3(1)(r)(s)(w)(I)(II)",
+      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "accused_age": "2 --- 31-apeal-914-19",
+      "victim_age": "2 --- 31-apeal-914-19",
+      "motive_for_crime": "the Appellants"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO",
+      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO. 914 OF 2019",
+      "case_title": "Chintaman Niljekar & Anr. vs. The State of Maharashtra & Ors.",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "15th September, 2022",
+      "appellant_or_petitioner": "Chintaman Niljekar and Dipesh Bablu Chintaman Niljekar",
+      "respondent": "The State of Maharashtra, The Inspector of Police, Khadakpada Police Station, Minakshi Mahadev Doiphode",
+      "judges_coram": "PRAKASH D. NAIK, J.",
+      "counsel_for_appellant": "Mr. Rishi Bhuta a/w Mr. Anurag Ghag",
+      "counsel_for_respondent": "Mr. Devendranath Joshi for Respondent No.3, Mr. Arfan Sait, APP for the Respondent – State",
+      "sections_invoked": [
+        "SC/ST (Prevention of Atrocities) Act 3(2)(V)"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 143, IPC 147, IPC 148, IPC 324, IPC 354-B, IPC 506, IPC 294, IPC 394, SC/ST (Prevention of Atrocities) Act 3(1)(r)(s)(w)(I)(II), SC/ST (Prevention of Atrocities) Act 3(2)(V)"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes",
+      "appeal_filed": "yes"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "template_used": "ipc_397",
+  "tier_1_determinative": {
+    "fields": {
+      "attempt_to_extract_cash": null,
+      "threat_to_kill": null,
+      "weapon_used": null,
+      "injury_detail": null,
+      "actus_reus_description": null
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "number_of_perpetrators": "2024",
+      "victim_identity": null,
+      "previous_similar_incident": "ly circumstanced",
+      "medical_evidence": null,
+      "identification_parade": null
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {
+      "incident_date_time": null,
+      "incident_location": null,
+      "victim_activity_before_incident": "Andheri Police Station on first Monday of every month in between 11 am to 1 pm till the conclusion of the trial"
+    }
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO.578 OF 2024",
+      "case_title": "Manoj Kantilal Medhe vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "7 May 2024",
+      "appellant_or_petitioner": "Manoj Kantilal Medhe",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "N.J. Jamadar, J.",
+      "counsel_for_appellant": "Ms. Trupti M. Khamkar",
+      "counsel_for_respondent": "Mr. S.R. Aagarkar, APP",
+      "sections_invoked": [
+        "IPC 397"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 120B, IPC 379, IPC 397, IPC 34"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

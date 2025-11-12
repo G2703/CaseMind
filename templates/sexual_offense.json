@@ -1,0 +1,119 @@
+{
+  "node_id": "sexual_offense",
+  "label": "Sexual Offense",
+  "parent": "violent_offense",
+  "sections": [],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "consent_status",
+        "nature_of_sexual_act"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "age_of_victim",
+        "relationship_with_accused"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": []
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "consent_status": {
+      "type": "string",
+      "description": "Whether the act was with or without consent."
+    },
+    "age_of_victim": {
+      "type": "integer",
+      "description": "The age of the victim at the time of the offense."
+    },
+    "nature_of_sexual_act": {
+      "type": "string",
+      "description": "Specifics of the sexual act (e.g., 'penetrative', 'non-penetrative', 'oral')."
+    },
+    "relationship_with_accused": {
+      "type": "string",
+      "description": "The relationship between the victim and the accused (e.g., 'stranger', 'family member', 'acquaintance')."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "rape",
+    "POCSO",
+    "sexual assault"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}

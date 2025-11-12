@@ -1,0 +1,38 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO.1670 OF 2023",
+      "case_title": "Arshad Ali Chhotehussain Shaikh vs. State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "13 March 2024",
+      "appellant_or_petitioner": "Arshad Ali Chhotehussain Shaikh",
+      "respondent": "State of Maharashtra",
+      "judges_coram": "N.J. JAMADAR",
+      "counsel_for_appellant": "Mr. Kalam Shaikh with Ms. Sana Shaikh",
+      "counsel_for_respondent": "Mr. Shailesh S. Ghag, APP for State",
+      "sections_invoked": [
+        "IPC 376D"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "IPC 395, IPC 397, IPC 376D, IPC 354, IPC 354B, Indian Railways Act 147, Indian Railways Act 153"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

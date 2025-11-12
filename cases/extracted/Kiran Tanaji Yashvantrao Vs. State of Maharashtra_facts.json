@@ -1,0 +1,38 @@
+{
+  "template_used": "legal_case",
+  "tier_1_determinative": {
+    "fields": {}
+  },
+  "tier_2_material": {
+    "fields": {}
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "BAIL APPLICATION NO. 1473 OF 2022",
+      "case_title": "Kiran Tanaji Yashvantrao vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "January 25, 2023",
+      "appellant_or_petitioner": "Kiran Tanaji Yashvantrao",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "M. S. KARNIK, J.",
+      "counsel_for_appellant": "Mr. R.B. Patil i/b Mr. B.R. Patil",
+      "counsel_for_respondent": "Mr. S. H. Yadav, APP for the State",
+      "sections_invoked": [
+        "IPC 302"
+      ],
+      "case_type": "Bail Application",
+      "citation": null,
+      "acts_and_sections": "Indian Penal Code, 1860 - Sections 302, 392, 449"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "no",
+      "bail_granted": "yes"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "template_used": "ipc_399",
+  "tier_1_determinative": {
+    "fields": {
+      "making_any_preparation_to_commit_dacoity": "Not explicitly mentioned"
+    }
+  },
+  "tier_2_material": {
+    "fields": {
+      "nature_of_preparation": "JUDICATURE AT BOMBAY APPELLATE JURISDICTION CRIMINAL APPEAL NO"
+    }
+  },
+  "tier_3_contextual": {
+    "fields": {}
+  },
+  "tier_4_procedural": {
+    "fields": {
+      "case_number": "CRIMINAL APPEAL NO.696 OF 2006",
+      "case_title": "Abdul @ Aslam Salim Shaikh vs. The State of Maharashtra",
+      "court_name": "High Court of Judicature at Bombay",
+      "judgment_date": "17th April, 2007",
+      "appellant_or_petitioner": "Abdul @ Aslam Salim Shaikh",
+      "respondent": "The State of Maharashtra",
+      "judges_coram": "J.H. Bhatia, J.",
+      "counsel_for_appellant": "Mr. Abhaykumar Apte",
+      "counsel_for_respondent": "Ms. S.V. Gajre",
+      "sections_invoked": [
+        "IPC 399"
+      ],
+      "case_type": "Criminal Appeal",
+      "citation": null,
+      "acts_and_sections": "IPC 399, IPC 402, Arms Act 4, Arms Act 25"
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": {
+      "third_accused_acquitted": "no",
+      "accused_fled_after_alarm": "yes"
+    }
+  }
+}

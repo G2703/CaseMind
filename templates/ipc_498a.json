@@ -1,0 +1,135 @@
+{
+  "node_id": "ipc_498a",
+  "label": "Cruelty by Husband or Relatives (IPC 498A)",
+  "parent": "matrimonial_offense",
+  "sections": [
+    "IPC 498A"
+  ],
+  "fact_tiers": {
+    "tier_1_determinative": {
+      "fields": [
+        "cruelty_definition",
+        "husband_or_relative_of_husband",
+        "intention_to_drive_suicide_or_injury"
+      ]
+    },
+    "tier_2_material": {
+      "fields": [
+        "location_of_cruelty",
+        "nature_of_cruelty"
+      ]
+    },
+    "tier_3_contextual": {
+      "fields": [
+        "demand_for_property"
+      ]
+    },
+    "tier_4_procedural": {
+      "fields": [
+        "case_number",
+        "case_title",
+        "court_name",
+        "judgment_date",
+        "appellant_or_petitioner",
+        "respondent",
+        "judges_coram",
+        "counsel_for_appellant",
+        "counsel_for_respondent",
+        "sections_invoked",
+        "case_type",
+        "citation",
+        "acts_and_sections"
+      ]
+    }
+  },
+  "residual_details": {
+    "unclassified_facts": []
+  },
+  "field_definitions": {
+    "cruelty_definition": {
+      "type": "string",
+      "description": "Whether the act falls under explanation (a) or (b) of the section."
+    },
+    "husband_or_relative_of_husband": {
+      "type": "string",
+      "description": "The person committing the cruelty (husband or relative)."
+    },
+    "intention_to_drive_suicide_or_injury": {
+      "type": "boolean",
+      "description": "Cruelty that drives the woman to suicide or causes grave injury/danger to life/health."
+    },
+    "location_of_cruelty": {
+      "type": "string",
+      "description": "Where the acts of cruelty occurred (e.g., 'matrimonial home', 'parental home')."
+    },
+    "nature_of_cruelty": {
+      "type": "string",
+      "description": "Specifics of the physical or mental cruelty inflicted."
+    },
+    "demand_for_property": {
+      "type": "string",
+      "description": "The property or valuable security for which demand was made."
+    },
+    "date_of_complaint": {
+      "type": "date",
+      "description": "The date the complaint was filed."
+    },
+    "case_number": {
+      "type": "string",
+      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "case_title": {
+      "type": "string",
+      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "judgment_date": {
+      "type": "string",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "sections_invoked": {
+      "type": "array",
+      "description": "List of legal sections invoked in the case."
+    },
+    "case_type": {
+      "type": "string",
+      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "citation": {
+      "type": "string",
+      "description": "Legal citation for the case."
+    },
+    "acts_and_sections": {
+      "type": "string",
+      "description": "Acts and sections involved in the case."
+    }
+  },
+  "example_terms": [
+    "section 498A IPC",
+    "harassment for dowry"
+  ],
+  "suggested_section_mapping_confidence": 1.0
+}
