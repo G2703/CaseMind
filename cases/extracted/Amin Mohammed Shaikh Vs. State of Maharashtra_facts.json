@@ -1,54 +1,43 @@
 {
-  "template_used": "ipc_397",
   "tier_1_determinative": {
-    "fields": {
-      "attempt_to_extract_cash": null,
-      "threat_to_kill": "threatened him not to chase the said thief lest he would be killed",
-      "weapon_used": null,
-      "injury_detail": null,
-      "actus_reus_description": null
-    }
+    "attempt_to_extract_cash": "There was an attempt to steal a bag containing 77 gold bangles worth Rs.46,50,000/- from the victim.",
+    "threat_to_kill": "The victim was threatened with being killed if he continued to chase the thief, as a revolver was pointed at him.",
+    "weapon_used": "A revolver was used in the offense.",
+    "injury_detail": "There are no details of physical injuries to the victim mentioned.",
+    "actus_reus_description": "The act involved stealing a bag with gold bangles from the victim in a bus and threatening him with a revolver to prevent pursuit."
   },
   "tier_2_material": {
-    "fields": {
-      "number_of_perpetrators": "2023",
-      "victim_identity": null,
-      "previous_similar_incident": null,
-      "medical_evidence": null,
-      "identification_parade": null
-    }
+    "number_of_perpetrators": "The exact number is not specified, but it involves at least two people (the thief and the person with the revolver).",
+    "victim_identity": "The identity of the victim is not disclosed in the document.",
+    "previous_similar_incident": "The accused is described as a habitual offender with 9 crimes registered against him, including theft and robbery.",
+    "medical_evidence": "No medical evidence or treatment details are mentioned.",
+    "identification_parade": "There is no mention of an identification parade conducted."
   },
   "tier_3_contextual": {
-    "fields": {
-      "incident_date_time": null,
-      "incident_location": null,
-      "victim_activity_before_incident": "Andheri Police Station on first Monday of every month in between 11 am to 1 pm till the conclusion of the trial"
-    }
+    "incident_date_time": "The incident occurred on 19 July 2021.",
+    "incident_location": "The incident took place on a BEST Bus in Andheri, Mumbai.",
+    "victim_activity_before_incident": "The victim was traveling on a BEST Bus carrying a bag with gold ornaments."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "BAIL APPLICATION NO.4175 OF 2023",
-      "case_title": "Amin Mohammed Shaikh vs. State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "19 January 2024",
-      "appellant_or_petitioner": "Amin Mohammed Shaikh",
-      "respondent": "State of Maharashtra",
-      "judges_coram": "N.J. Jamadar, J.",
-      "counsel_for_appellant": "Mr. Nizamuddin Khan with Ms. Sheeba Khan, Ms. Shaba N. Khan",
-      "counsel_for_respondent": "Mrs. Geeta P. Mulekar, APP",
-      "sections_invoked": [
-        "IPC 397"
-      ],
-      "case_type": "Bail Application",
-      "citation": null,
-      "acts_and_sections": "IPC 120B, IPC 379, IPC 397, IPC 34"
-    }
+    "case_number": "BAIL APPLICATION NO.4175 OF 2023",
+    "case_title": "Amin Mohammed Shaikh vs. State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "19 January 2024",
+    "appellant_or_petitioner": "Amin Mohammed Shaikh",
+    "respondent": "State of Maharashtra",
+    "judges_coram": "N.J.JAMADAR, J.",
+    "counsel_for_appellant": "Mr. Nizamuddin Khan with Ms. Sheeba Khan, Ms. Shaba N. Khan",
+    "counsel_for_respondent": "Mrs. Geeta P. Mulekar, APP for State",
+    "sections_invoked": "Sections 120B, 379, 397 read with Section 34 of the Indian Penal Code",
+    "case_type": "Bail Application",
+    "citation": "2024:BHC-AS:2748",
+    "acts_and_sections": "Indian Penal Code Sections 120B, 379, 397, and 34"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "bail_granted": "yes"
-    }
-  }
+    "additional_facts": "The applicant has been in custody since 28 July 2021, and nothing has been recovered at his instance. The court noted the delay in reporting the robbery aspect and allowed bail due to prolonged incarceration and unlikelihood of early trial conclusion."
+  },
+  "template_id": "ipc_397",
+  "template_label": "Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:30:32.007679"
 }

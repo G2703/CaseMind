@@ -1,114 +1,160 @@
 {
   "node_id": "ipc_392",
   "label": "Robbery (IPC 392)",
-  "parent": "robbery",
   "sections": [
     "IPC 392"
   ],
-  "fact_tiers": {
-    "tier_1_determinative": {
-      "fields": [
-        "theft_or_attempted_theft",
-        "voluntary_causing_or_attempting_death_hurt_wrongful_restraint"
-      ]
+  "type": "json_schema",
+  "json_schema": {
+    "name": "robbery_ipc_392",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "tier_1_determinative": {
+          "type": "object",
+          "properties": {
+            "theft_or_attempted_theft": {
+              "type": "string",
+              "description": "Whether it was an actual theft or an attempt."
+            },
+            "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": {
+              "type": "string",
+              "description": "The specific act of violence or threat (death, hurt, or wrongful restraint)."
+            }
+          },
+          "required": [
+            "theft_or_attempted_theft",
+            "voluntary_causing_or_attempting_death_hurt_wrongful_restraint"
+          ],
+          "additionalProperties": false
+        },
+        "tier_2_material": {
+          "type": "object",
+          "properties": {
+            "property_description": {
+              "type": "string",
+              "description": "Description of the property stolen."
+            }
+          },
+          "required": [
+            "property_description"
+          ],
+          "additionalProperties": false
+        },
+        "tier_3_contextual": {
+          "type": "object",
+          "properties": {
+            "incident_location": {
+              "type": "string",
+              "description": "Location where the incident occurred"
+            },
+            "incident_date_time": {
+              "type": "string",
+              "description": "Date and time of the incident"
+            }
+          },
+          "required": [
+            "incident_location",
+            "incident_date_time"
+          ],
+          "additionalProperties": false
+        },
+        "tier_4_procedural": {
+          "type": "object",
+          "properties": {
+            "case_number": {
+              "type": "string",
+              "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+            },
+            "case_title": {
+              "type": "string",
+              "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+            },
+            "court_name": {
+              "type": "string",
+              "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+            },
+            "judgment_date": {
+              "type": "string",
+              "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+            },
+            "appellant_or_petitioner": {
+              "type": "string",
+              "description": "The name(s) of the appellant or petitioner."
+            },
+            "respondent": {
+              "type": "string",
+              "description": "The name(s) of the respondent."
+            },
+            "judges_coram": {
+              "type": "string",
+              "description": "The name(s) of the judge(s) who delivered the judgment."
+            },
+            "counsel_for_appellant": {
+              "type": "string",
+              "description": "The counsel representing the appellant/petitioner."
+            },
+            "counsel_for_respondent": {
+              "type": "string",
+              "description": "The counsel representing the respondent."
+            },
+            "sections_invoked": {
+              "type": "string",
+              "description": "List of legal sections invoked in the case."
+            },
+            "case_type": {
+              "type": "string",
+              "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+            },
+            "citation": {
+              "type": "string",
+              "description": "Legal citation for the case."
+            },
+            "acts_and_sections": {
+              "type": "string",
+              "description": "Acts and sections involved in the case."
+            }
+          },
+          "required": [
+            "case_number",
+            "case_title",
+            "court_name",
+            "judgment_date",
+            "appellant_or_petitioner",
+            "respondent",
+            "judges_coram",
+            "counsel_for_appellant",
+            "counsel_for_respondent",
+            "sections_invoked",
+            "case_type",
+            "citation",
+            "acts_and_sections"
+          ],
+          "additionalProperties": false
+        },
+        "residual_details": {
+          "type": "object",
+          "properties": {
+            "additional_facts": {
+              "type": "string",
+              "description": "Any other relevant facts not captured above"
+            }
+          },
+          "required": [
+            "additional_facts"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tier_1_determinative",
+        "tier_2_material",
+        "tier_3_contextual",
+        "tier_4_procedural",
+        "residual_details"
+      ],
+      "additionalProperties": false
     },
-    "tier_2_material": {
-      "fields": [
-        "property_description"
-      ]
-    },
-    "tier_3_contextual": {
-      "fields": []
-    },
-    "tier_4_procedural": {
-      "fields": [
-        "case_number",
-        "case_title",
-        "court_name",
-        "judgment_date",
-        "appellant_or_petitioner",
-        "respondent",
-        "judges_coram",
-        "counsel_for_appellant",
-        "counsel_for_respondent",
-        "sections_invoked",
-        "case_type",
-        "citation",
-        "acts_and_sections"
-      ]
-    }
-  },
-  "residual_details": {
-    "unclassified_facts": []
-  },
-  "field_definitions": {
-    "theft_or_attempted_theft": {
-      "type": "string",
-      "description": "Whether it was an actual theft or an attempt."
-    },
-    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": {
-      "type": "string",
-      "description": "The specific act of violence or threat (death, hurt, or wrongful restraint)."
-    },
-    "property_description": {
-      "type": "string",
-      "description": "Description of the property stolen."
-    },
-    "case_number": {
-      "type": "string",
-      "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
-    },
-    "case_title": {
-      "type": "string",
-      "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
-    },
-    "court_name": {
-      "type": "string",
-      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
-    },
-    "judgment_date": {
-      "type": "string",
-      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
-    },
-    "appellant_or_petitioner": {
-      "type": "string",
-      "description": "The name(s) of the appellant or petitioner."
-    },
-    "respondent": {
-      "type": "string",
-      "description": "The name(s) of the respondent."
-    },
-    "judges_coram": {
-      "type": "string",
-      "description": "The name(s) of the judge(s) who delivered the judgment."
-    },
-    "counsel_for_appellant": {
-      "type": "string",
-      "description": "The counsel representing the appellant/petitioner."
-    },
-    "counsel_for_respondent": {
-      "type": "string",
-      "description": "The counsel representing the respondent."
-    },
-    "sections_invoked": {
-      "type": "array",
-      "description": "List of legal sections invoked in the case."
-    },
-    "case_type": {
-      "type": "string",
-      "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
-    },
-    "citation": {
-      "type": "string",
-      "description": "Legal citation for the case."
-    },
-    "acts_and_sections": {
-      "type": "string",
-      "description": "Acts and sections involved in the case."
-    }
-  },
-  "example_terms": [
-    "section 392 IPC"
-  ],
-  "suggested_section_mapping_confidence": 1.0
+    "strict": true
+  }
 }

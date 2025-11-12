@@ -1,44 +1,31 @@
 {
-  "template_used": "ipc_376",
   "tier_1_determinative": {
-    "fields": {
-      "sexual_act_description": "s in brief",
-      "absence_of_consent": "Not explicitly mentioned"
-    }
+    "sexual_act_description": "The victim was raped first by accused no.1 Sunilkumar Nayak and then by appellant/accused no.4 Bhisma Mohan Datta.",
+    "absence_of_consent": "The victim was forcefully dragged into the house, threatened with a knife, and subsequently raped."
   },
   "tier_2_material": {
-    "fields": {
-      "aggravated_circumstances_of_rape": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION CRIMINAL APPEAL NO"
-    }
+    "aggravated_circumstances_of_rape": "The incident involved robbery and the use of a weapon (knife) to threaten the victim before committing the rape.",
+    "victim_age": "The age of the victim is not specified in the document.",
+    "relationship_to_accused": "The accused no.1 Sunilkumar Nayak was known to the victim's family, as he showed acquaintance with her family members by telling their names."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "The incident occurred at the victim's house in Katemanivali area of Kalyan.",
+    "incident_date_time": "25th March 2011, at about 2.30 p.m.",
+    "time_of_reporting": "The victim reported the incident after managing to free herself and calling for help from a neighbor. The exact delay in reporting is not specified, but she went to the police station on the same day."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "Criminal Appeal No.739 of 2015",
-      "case_title": "Bhisma Mohan Datta vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "4th February 2019",
-      "appellant_or_petitioner": "Bhisma Mohan Datta",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "A. M. Badar, J.",
-      "counsel_for_appellant": "Ms. Megha Bajoria",
-      "counsel_for_respondent": "Mr. S.V. Gavand",
-      "sections_invoked": [
-        "IPC 376"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "Indian Penal Code Sections 394, 452, 342, 34, 397, 343, 376"
-    }
+    "case_number": "CRIMINAL APPEAL NO.739 OF 2015",
+    "case_title": "BHISMA MOHAN DATTA vs. THE STATE OF MAHARASHTRA",
+    "court_name": "HIGH COURT OF JUDICATURE AT BOMBAY",
+    "judgment_date": "4th FEBRUARY 2019",
+    "appellant_or_petitioner": "BHISMA MOHAN DATTA",
+    "respondent": "THE STATE OF MAHARASHTRA"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "medical_examination_conducted": "yes",
-      "identification_parade_held": "yes"
-    }
-  }
+    "additional_facts": "The victim was alone at home when the incident occurred. Her husband was at work, and her daughter was at school. After the incident, the victim was medically examined, revealing physical injuries corroborating her testimony. The defense claimed the victim had an illicit relationship with accused no.1, which she denied."
+  },
+  "template_id": "ipc_376",
+  "template_label": "Rape (IPC 376)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:39:04.608711"
 }

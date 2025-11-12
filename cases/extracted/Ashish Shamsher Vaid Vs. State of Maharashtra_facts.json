@@ -1,43 +1,35 @@
 {
-  "template_used": "ipc_394",
   "tier_1_determinative": {
-    "fields": {
-      "person_voluntarily_causes_hurt": "Yes, mentioned in case details",
-      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
-    }
+    "person_voluntarily_causes_hurt": "Yes, it is alleged that the applicant and co-accused voluntarily caused hurt to the complainant.",
+    "in_committing_or_attempting_robbery": "Yes, the hurt was caused during the alleged robbery of a mobile phone, although the phone was immediately returned."
   },
   "tier_2_material": {
-    "fields": {
-      "injury_severity": "report is placed on record which indicates that the complainant suffered simple injuries"
-    }
+    "injury_severity": "The injury report indicates that the complainant suffered simple injuries."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "In front of Vaibhav Palace Society, Near Mega Mall, Link Road, Jogeshwari (W), Mumbai.",
+    "incident_date_time": "26/10/2022 at around 1.00 p.m."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "ABA No.3247 of 2022",
-      "case_title": "Ashish Shamsher Vaid vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "December 7, 2022",
-      "appellant_or_petitioner": "Ashish Shamsher Vaid",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "M. S. Karnik, J.",
-      "counsel_for_appellant": "Mr. Marmik Shah",
-      "counsel_for_respondent": "Mr. S. H. Yadav, APP",
-      "sections_invoked": [
-        "IPC 394"
-      ],
-      "case_type": "Anticipatory Bail Application",
-      "citation": null,
-      "acts_and_sections": "IPC 394, IPC 326, IPC 324, IPC 323, IPC 504, IPC 506, IPC 34"
-    }
+    "case_number": "Anticipatory Bail Application No.3247 of 2022",
+    "case_title": "Ashish Shamsher Vaid vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "December 7, 2022",
+    "appellant_or_petitioner": "Ashish Shamsher Vaid",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "M. S. Karnik, J.",
+    "counsel_for_appellant": "Mr. Marmik Shah",
+    "counsel_for_respondent": "Mr. S. H. Yadav, APP for State",
+    "sections_invoked": "Sections 394, 326, 324, 323, 504, 506 read with Section 34 of the Indian Penal Code, 1860",
+    "case_type": "Anticipatory Bail Application",
+    "citation": ": DECEMBER 7, 2022.",
+    "acts_and_sections": "Indian Penal Code, 1860"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "bail_granted": "yes"
-    }
-  }
+    "additional_facts": "The co-accused has been granted regular bail by the trial Court. The applicant is 21 years of age with no criminal antecedents. The vastara used in the assault has already been recovered."
+  },
+  "template_id": "ipc_394",
+  "template_label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:32:41.227215"
 }

@@ -1,48 +1,37 @@
 {
-  "template_used": "criminal_case",
   "tier_1_determinative": {
-    "fields": {
-      "ipc_sections_charged": ", under Section 4(a) of the Maharashtra Prohibition of Gambling Act and under Section 25(c) of the Indian Telegraph Act",
-      "nature_of_offense_category": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION ANTICIPATORY BAIL APPLICATION NO"
-    }
+    "ipc_sections_charged": "420, 465, 468, 471 read with 34 IPC, Section 4(a) of the Maharashtra Prohibition of Gambling Act, Section 25(c) of the Indian Telegraph Act",
+    "nature_of_offense_category": "Fraud and Gambling Offense"
   },
   "tier_2_material": {
-    "fields": {
-      "accused_age": "2 --- : 2 : 25",
-      "victim_age": "2 --- : 2 : 25",
-      "motive_for_crime": "the Applicant"
-    }
+    "accused_age": ": null",
+    "victim_age": "null",
+    "motive_for_crime": "null"
   },
   "tier_3_contextual": {
-    "fields": {
-      "time_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION ANTICIPATORY BAIL APPLICATION NO",
-      "place_of_offense": "JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION ANTICIPATORY BAIL APPLICATION NO"
-    }
+    "time_of_offense": "null",
+    "place_of_offense": "a flat in front of the MCA Cricket Stadium on Mumbai-Pune Expressway"
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "Anticipatory Bail Application No.3370 of 2023",
-      "case_title": "Aman Kumar Singh vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "31st January, 2024",
-      "appellant_or_petitioner": "Aman Kumar Singh",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "Sarang V. Kotwal, J.",
-      "counsel_for_appellant": "Mr. Farooq Sothi, Advocate a/w. Rupali Sawant i/b. S.P. Associates",
-      "counsel_for_respondent": "Smt. M.H. Mhatre, APP",
-      "sections_invoked": [
-        "IPC 420"
-      ],
-      "case_type": "Anticipatory Bail Application",
-      "citation": null,
-      "acts_and_sections": "IPC 420, IPC 465, IPC 468, IPC 471, IPC 34, Maharashtra Prohibition of Gambling Act 4(a), Indian Telegraph Act 25(c)"
-    }
+    "case_number": "Anticipatory Bail Application No.3370 of 2023",
+    "case_title": "Aman Kumar Singh vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "31st January, 2024",
+    "appellant_or_petitioner": "Aman Kumar Singh",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "SARANG V. KOTWAL, J.",
+    "counsel_for_appellant": "Mr. Farooq Sothi, Advocate a/w. Rupali Sawant i/b. S.P. Associates",
+    "counsel_for_respondent": "Smt. M.H. Mhatre, APP",
+    "sections_invoked": "Sections 420, 465, 468, 471 IPC, Section 4(a) Maharashtra Prohibition of Gambling Act, Section 25(c) Indian Telegraph Act",
+    "case_type": "Anticipatory Bail Application",
+    "citation": "null",
+    "acts_and_sections": "Indian Penal Code, Maharashtra Prohibition of Gambling Act, Indian Telegraph Act"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "bail_granted": "yes"
-    }
-  }
+    "additional_facts": "The FIR was lodged by Police Constable Nitin Lokhande from the Robbery Cell, Pimpri Chinchwad, following a raid on 26.5.2023. The Applicant was not named in the FIR, and there was no material indicating his direct or indirect involvement according to the learned APP. The Applicant's anticipatory bail was initially rejected by the Sessions Court based on incorrect submissions that he helped procure SIM cards."
+  },
+  "template_id": "criminal_case",
+  "template_label": "Criminal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:13:42.418683"
 }

@@ -91,7 +91,7 @@ Top-level
 - `cases/` — contains `input_files/` (raw inputs) and `extracted/` (JSON outputs)
 - `src/` — source code for the processing pipeline
 - `templates/` — JSON templates for different IPC sections and case categories
-- `ontology_schema.json` — hierarchical ontology used by `OntologyMatcher`
+- `Ontology_schema\ontology_schema.json` — hierarchical ontology used by `OntologyMatcher`
 - `requirements.txt` — Python dependencies
 - `README.md` — this file
 

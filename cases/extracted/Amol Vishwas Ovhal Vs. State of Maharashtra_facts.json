@@ -1,43 +1,35 @@
 {
-  "template_used": "ipc_392",
   "tier_1_determinative": {
-    "fields": {
-      "theft_or_attempted_theft": ", Appellate side",
-      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": ", Appellate side"
-    }
+    "theft_or_attempted_theft": "The incident involved an actual theft where gold and silver ornaments were looted from the jewellery shop and the residential bungalow of the victim, PW4 Shashiram Mulik.",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "The robbers were armed with sickles and used them to assault PW5 Sachin Mulik, causing him injuries. They also gagged and tied the victims with cloths."
   },
   "tier_2_material": {
-    "fields": {
-      "property_description": null
-    }
+    "property_description": "The property stolen included gold and silver ornaments from the jewellery shop and the residential bungalow, as well as mobile handsets."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "The incident occurred at the residential house and jewellery shop of PW4 Shashiram Mulik, located at Basveshwar Housing Society, Mali Vasti, Sangli.",
+    "incident_date_time": "The robbery took place at about 10.30 p.m. on 13th March 2012."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "CRIMINAL APPEAL NO.1472 OF 2018",
-      "case_title": "Amol Vishwas Ovhal vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "7th October 2019",
-      "appellant_or_petitioner": "Amol Vishwas Ovhal",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "A. M. BADAR, J.",
-      "counsel_for_appellant": "Mr.B.A.Lawate",
-      "counsel_for_respondent": "Mr.Vinod Chate",
-      "sections_invoked": [
-        "IPC 392"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "Indian Penal Code Sections 392, 342, 506 Part II, 394, 452, 347, 504"
-    }
+    "case_number": "CRIMINAL APPEAL NO.1472 OF 2018",
+    "case_title": "Amol Vishwas Ovhal vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "7th October 2019",
+    "appellant_or_petitioner": "Amol Vishwas Ovhal",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "A. M. BADAR, J.",
+    "counsel_for_appellant": "Mr.B.A.Lawate",
+    "counsel_for_respondent": "Mr.Vinod Chate, APP for State",
+    "sections_invoked": "Sections 392, 342, and 506 (Part II) of the Indian Penal Code",
+    "case_type": "Criminal Appeal",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code Sections 392, 342, 506 (Part II)"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "identification_parade_held": "yes"
-    }
-  }
+    "additional_facts": "The appellant was sentenced to 7 years rigorous imprisonment for the robbery, with additional sentences for other charges. The robbers posed as friends of PW5 Sachin Mulik to gain entry. The identification of the accused was carried out through a Test Identification Parade. The recovery of looted ornaments and weapons was conducted during the investigation."
+  },
+  "template_id": "ipc_392",
+  "template_label": "Robbery (IPC 392)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:14:35.077890"
 }

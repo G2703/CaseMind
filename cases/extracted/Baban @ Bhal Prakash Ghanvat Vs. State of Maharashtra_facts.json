@@ -1,42 +1,35 @@
 {
-  "template_used": "ipc_392",
   "tier_1_determinative": {
-    "fields": {
-      "theft_or_attempted_theft": "iginal accused Pune) Nos",
-      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "iginal accused Pune) Nos"
-    }
+    "theft_or_attempted_theft": "Theft of ornaments and cash from the complainant and his wife.",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "The wife was asked to remove her ornaments at knife point, but no grievous injury was caused."
   },
   "tier_2_material": {
-    "fields": {
-      "property_description": null
-    }
+    "property_description": "Ornaments and cash were taken from the complainant and his wife."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "Near Alandi, Pune, Maharashtra.",
+    "incident_date_time": "4th November 1998, around 8:20 PM."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "Criminal Appeal No.740 of 2002",
-      "case_title": "Baban @ Bhal Prakash Ghanvat & Anr. vs. State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "15th September, 2004",
-      "appellant_or_petitioner": "Baban @ Bhal Prakash Ghanvat, Suresh @ Shiva Vitthal Talekar, Shri Jaydras Ramdas Butte",
-      "respondent": "State of Maharashtra",
-      "judges_coram": "V.M. Kanade, J.",
-      "counsel_for_appellant": "Mr. Abhyankar Apte",
-      "counsel_for_respondent": "Mr. A.P. Shringarpure, APP",
-      "sections_invoked": [
-        "IPC 392"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "Indian Penal Code Sections 354, 392, 397, 34"
-    }
+    "case_number": "Criminal Appeal No.740 of 2002 and Criminal Appeal No.580 of 2002",
+    "case_title": "Baban @ Bhal Prakash Ghanvat & Anr. vs. State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "15th September 2004",
+    "appellant_or_petitioner": "Baban @ Bhal Prakash Ghanvat, Suresh @ Shiva Vitthal Talekar, and Jaydras Ramdas Butte",
+    "respondent": "State of Maharashtra",
+    "judges_coram": "V.M. Kanade, J.",
+    "counsel_for_appellant": "Mr. Abhyankar Apte",
+    "counsel_for_respondent": "Mr. A.P. Shringarpure, APP",
+    "sections_invoked": "Sections 354, 392, 397 read with section 34 of the IPC",
+    "case_type": "Criminal Appeal",
+    "citation": "",
+    "acts_and_sections": "Indian Penal Code, Sections 354, 392, 397 read with section 34"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no"
-    }
-  }
+    "additional_facts": "The accused were originally sentenced to 7 years of rigorous imprisonment, but the sentence was reduced to the period already undergone due to lack of evidence of grievous injury and recovery of the knife."
+  },
+  "template_id": "ipc_392",
+  "template_label": "Robbery (IPC 392)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:35:05.223292"
 }

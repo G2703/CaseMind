@@ -1,42 +1,35 @@
 {
-  "template_used": "ipc_394",
   "tier_1_determinative": {
-    "fields": {
-      "person_voluntarily_causes_hurt": "Not explicitly mentioned",
-      "in_committing_or_attempting_robbery": "Yes, mentioned in case details"
-    }
+    "person_voluntarily_causes_hurt": "Yes, the appellant Dattu Bhausing Chavan voluntarily caused hurt to the complainant Hamjubai and the victim Parubai.",
+    "in_committing_or_attempting_robbery": "Yes, the hurt was caused in the process of committing robbery, as the accused tied, threatened, and physically assaulted the complainant while taking her mother away and subsequently committing robbery."
   },
   "tier_2_material": {
-    "fields": {
-      "injury_severity": null
-    }
+    "injury_severity": "The injuries to the complainant were categorized as simple hurt, as she was kicked and tied up, but not grievously injured."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "The incident occurred in a field with standing crop of hybrid jawar near a cyclo transmission company, after the accused took the victims from Wadhe bus stop.",
+    "incident_date_time": "The incident took place on 23rd October 1999, sometime after 6:00 p.m."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "Criminal Appeal No. 907 of 2001",
-      "case_title": "Dattu Bhausing Chavan vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay, Bench at Aurangabad",
-      "judgment_date": "February 17, 2006",
-      "appellant_or_petitioner": "Dattu Bhausing Chavan",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "N. V. Dabholkar and Smt. V.K. Tahilramani, JJ.",
-      "counsel_for_appellant": "Miss Savita Suryawanshi, Advocate (appointed)",
-      "counsel_for_respondent": "Smt. Usha Kejariwal, APP",
-      "sections_invoked": [
-        "IPC 302"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "IPC 302, IPC 394, IPC 364, IPC 506 (II), IPC 201, IPC 323"
-    }
+    "case_number": "Criminal Appeal No. 907 of 2001",
+    "case_title": "Dattu Bhausing Chavan vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay, Bench at Aurangabad",
+    "judgment_date": "17th February, 2006",
+    "appellant_or_petitioner": "Dattu Bhausing Chavan",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "N. V. Dabholkar and Smt. V.K. Tahilramani, JJ.",
+    "counsel_for_appellant": "Miss Savita Suryawanshi, Advocate (appointed)",
+    "counsel_for_respondent": "Smt. Usha Kejariwal, APP",
+    "sections_invoked": "Sections 302, 394, 364, 506 (II), 201 and 323 of Indian Penal Code",
+    "case_type": "Criminal Appeal",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code Sections 302, 394, 364, 506 (II), 201, 323"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no"
-    }
-  }
+    "additional_facts": "The appellant was sentenced to life imprisonment and fined for murder, with additional sentences for other offenses. The incident involved the appellant deceiving the victim into performing a ritual ('Utara') and then abducting and murdering her. The complainant managed to escape and seek help, leading to the eventual discovery of the crime and arrest of the appellant. The trial involved numerous witnesses, including the complainant and others who assisted in the investigation."
+  },
+  "template_id": "ipc_394",
+  "template_label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T15:09:08.118142"
 }

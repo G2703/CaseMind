@@ -1,38 +1,34 @@
 {
-  "template_used": "legal_case",
   "tier_1_determinative": {
-    "fields": {}
+    "key_facts": "The appellants, Chetan Ramdas Dumbre and Nilesh Dnyaneshwar Vitekar, were convicted by the trial court for the murder and robbery of Bajirao Shankar Deokar and his wife, based on the alleged recovery of stolen ornaments. However, the High Court found that the identification and recovery of the Mangalsutra were unreliable due to inconsistencies in witness testimonies and procedural errors in the police investigation, leading to the acquittal of the appellants."
   },
   "tier_2_material": {
-    "fields": {}
+    "material_facts": "The deceased were retired teachers living in Vadgaon Anand, Pune. On the night of 20.06.2009, the appellants allegedly entered their house to commit robbery and murder. The prosecution's case relied heavily on the testimony of the deceased's son, PW-1, and the recovery of a Mangalsutra claimed to be sold by the accused to a jeweler. However, the trial court's reliance on this evidence was questioned due to procedural lapses in identifying the accused and the recovery of stolen property."
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "Vadgaon Anand, Dist. Pune",
+    "incident_date_time": "Intervening night of 20.06.2009 and 21.06.2009"
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "CRIMINAL APPEAL NO. 352 OF 2012",
-      "case_title": "Chetan Ramdas Dumbre & Nilesh Dnyaneshwar Vitekar vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "17.03.2022",
-      "appellant_or_petitioner": "Chetan Ramdas Dumbre & Nilesh Dnyaneshwar Vitekar",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "S.S. Shinde & N.R. Borkar, JJ.",
-      "counsel_for_appellant": "Mr. Aashish Satpute",
-      "counsel_for_respondent": "Mr. V.B. Kondedeshmukh",
-      "sections_invoked": [
-        "IPC 302"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "IPC 394, IPC 302, IPC 34"
-    }
+    "case_number": "Criminal Appeal No. 352 of 2012",
+    "case_title": "Chetan Ramdas Dumbre & Nilesh Dnyaneshwar Vitekar vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "17.03.2022",
+    "appellant_or_petitioner": "Chetan Ramdas Dumbre and Nilesh Dnyaneshwar Vitekar",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "S.S. Shinde & N.R. Borkar, JJ.",
+    "counsel_for_appellant": "Mr. Aashish Satpute",
+    "counsel_for_respondent": "Mr. V.B. Kondedeshmukh",
+    "sections_invoked": "Sections 394 and 302 read with 34 of IPC",
+    "case_type": "Criminal Appeal",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code, 1860 - Sections 394 and 302 read with 34"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "identification_parade_held": "yes"
-    }
-  }
+    "additional_facts": "The trial court had initially convicted the appellants based on the testimony of witnesses who allegedly saw the accused near the crime scene and the recovery of jewelry. However, the High Court observed that the evidence was not credible as there was no identification parade for unknown witnesses, and the jeweler's testimony was inconsistent. The acquittal was based on the lack of reliable evidence linking the accused to the crime."
+  },
+  "template_id": "legal_case",
+  "template_label": "Legal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:39:59.365849"
 }

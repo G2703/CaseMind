@@ -1,6 +1,6 @@
 {
   "openai_api_key": null,
-  "ontology_path": "ontology_schema.json",
+  "ontology_path": "Ontology_schema/ontology_schema.json",
   "templates_dir": "templates",
   "storage_dir": "cases/processed",
   "processing_settings": {

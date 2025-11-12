@@ -1,42 +1,35 @@
 {
-  "template_used": "ipc_392",
   "tier_1_determinative": {
-    "fields": {
-      "theft_or_attempted_theft": "Appellants Mr",
-      "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Appellants Mr"
-    }
+    "theft_or_attempted_theft": "Theft of cash",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Not explicitly mentioned, but implied threat or use of force in robbery"
   },
   "tier_2_material": {
-    "fields": {
-      "property_description": "involved is only Rs"
-    }
+    "property_description": "Cash of Rs.4080/-"
   },
   "tier_3_contextual": {
-    "fields": {}
+    "incident_location": "Greater Bombay",
+    "incident_date_time": "Not specified"
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "Criminal Appeal No. 479 of 2005",
-      "case_title": "Abdulwafa Abubakhar Khan & Anr vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "10th June, 2005",
-      "appellant_or_petitioner": "Abdulwafa Abubakhar Khan & Anr",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "SMT. V.K. TAHILRAMANI, J.",
-      "counsel_for_appellant": "Mr. M.H. Bandrekar",
-      "counsel_for_respondent": "Mr. Y.S. Shinde",
-      "sections_invoked": [
-        "IPC 392"
-      ],
-      "case_type": "Criminal Appeal",
-      "citation": null,
-      "acts_and_sections": "IPC 392, IPC 34"
-    }
+    "case_number": "CRIMINAL APPEAL NO. 479 OF 2005",
+    "case_title": "Abdulwafa Abubakhar Khan & Anr vs The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "10th June, 2005",
+    "appellant_or_petitioner": "Abdulwafa Abubakhar Khan & Anr",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "SMT. V.K. TAHILRAMANI, J.",
+    "counsel_for_appellant": "Mr. M.H. Bandrekar",
+    "counsel_for_respondent": "Mr. Y.S. Shinde",
+    "sections_invoked": "Section 392 r.w. Section 34 of IPC",
+    "case_type": "Criminal Appeal",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code (IPC) Section 392 read with Section 34"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no"
-    }
-  }
+    "additional_facts": "Appellant No.2 was in custody for more than two and a half years, and Appellant No.1 was in custody for about a year. Appellant No.1 is a young boy of 20 years with no antecedents. The sentence of imprisonment was reduced to the period already undergone, with a fine of Rs.500/- maintained for Appellant No.2 and increased to Rs.5000/- for Appellant No.1."
+  },
+  "template_id": "ipc_392",
+  "template_label": "Robbery (IPC 392)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T15:35:38.500510"
 }

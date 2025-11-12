@@ -1,48 +1,37 @@
 {
-  "template_used": "criminal_case",
   "tier_1_determinative": {
-    "fields": {
-      "ipc_sections_charged": "3(1)(ii) and Section 3(4) of the Maharashtra Control of Organized Crimes Act",
-      "nature_of_offense_category": "2020"
-    }
+    "ipc_sections_charged": "IPC Section 394 read with Section 34, Sections 3(1)(ii) and 3(4) of the Maharashtra Control of Organized Crimes Act, 1999",
+    "nature_of_offense_category": "Violent Offense"
   },
   "tier_2_material": {
-    "fields": {
-      "accused_age": "2 --- 45 ba 897 of 2020",
-      "victim_age": "2 --- 45 ba 897 of 2020",
-      "motive_for_crime": "Applicant"
-    }
+    "accused_age": ": null",
+    "victim_age": ": null",
+    "motive_for_crime": "The Applicant is alleged to be involved in organized crime as a gang leader, indicating a motive related to organized criminal activities."
   },
   "tier_3_contextual": {
-    "fields": {
-      "time_of_offense": "2020",
-      "place_of_offense": "2020"
-    }
+    "time_of_offense": "The offense occurred on 22nd December, 2017.",
+    "place_of_offense": "Mulshi dam, where the first informant was robbed."
   },
   "tier_4_procedural": {
-    "fields": {
-      "case_number": "BAIL APPLICATION NO.897 OF 2020",
-      "case_title": "Bhagwan Babu Margale vs. The State of Maharashtra",
-      "court_name": "High Court of Judicature at Bombay",
-      "judgment_date": "22nd June, 2022",
-      "appellant_or_petitioner": "Bhagwan Babu Margale",
-      "respondent": "The State of Maharashtra",
-      "judges_coram": "N.J. Jamadar",
-      "counsel_for_appellant": "Mr. Satyavrat Joshi",
-      "counsel_for_respondent": "Mr. Y.Y. Dabake",
-      "sections_invoked": [
-        "MCOCA 3(1)(ii)"
-      ],
-      "case_type": "Bail Application",
-      "citation": null,
-      "acts_and_sections": "IPC 394, IPC 34, MCOCA 3(1)(ii), MCOCA 3(4)"
-    }
+    "case_number": "BAIL APPLICATION NO.897 OF 2020",
+    "case_title": "Bhagwan Babu Margale vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "22nd June, 2022",
+    "appellant_or_petitioner": "Bhagwan Babu Margale",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "N.J. JAMADAR, J.",
+    "counsel_for_appellant": "Mr. Satyavrat Joshi",
+    "counsel_for_respondent": "Mr. Y.Y. Dabake, APP",
+    "sections_invoked": "Section 394 read with Section 34 of IPC; Sections 3(1)(ii) and 3(4) of MCOCA, 1999",
+    "case_type": "Bail Application",
+    "citation": ": null",
+    "acts_and_sections": "Indian Penal Code, Maharashtra Control of Organized Crimes Act, 1999"
   },
   "residual_details": {
-    "unclassified_facts": {
-      "third_accused_acquitted": "no",
-      "accused_fled_after_alarm": "no",
-      "bail_granted": "yes"
-    }
-  }
+    "additional_facts": "The Applicant was identified by the first informant under an hour of the occurrence and was apprehended red-handed. The applicant is alleged to have made a confession admissible under Section 18 of the MCOC Act, 1999. As many as 11 crimes have been registered against the applicant, with 9 cases involving robbery and dacoity."
+  },
+  "template_id": "criminal_case",
+  "template_label": "Criminal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:37:01.588999"
 }
