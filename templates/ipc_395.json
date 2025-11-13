@@ -1,56 +1,138 @@
 {
   "node_id": "ipc_395",
-  "label": "Punishment for dacoity (IPC 395)",
+  "label": "Dacoity (IPC 395)",
   "sections": [
-    "IPC 395"
+    "IPC 395",
+    "IPC 397",
+    "IPC 302"
   ],
   "type": "json_schema",
   "json_schema": {
-    "name": "punishment_for_dacoity_ipc_395",
+    "name": "dacoity_ipc_395",
     "schema": {
       "type": "object",
       "properties": {
         "tier_1_determinative": {
           "type": "object",
           "properties": {
-            "five_or_more_persons_committing_dacoity": {
+            "five_or_more_persons_involved": {
               "type": "string",
-              "description": "The requirement that five or more persons must be committing or attempting to commit dacoity."
+              "description": "Evidence that five or more persons were involved in committing dacoity."
+            },
+            "robbery_with_violence": {
+              "type": "string",
+              "description": "Whether robbery was committed with violence or threat of violence."
+            },
+            "weapons_used": {
+              "type": "string",
+              "description": "Types of weapons used during the dacoity."
+            },
+            "attempt_to_cause_death_or_grievous_hurt": {
+              "type": "string",
+              "description": "Whether there was attempt to cause death or grievous hurt during dacoity."
+            },
+            "common_intention": {
+              "type": "string",
+              "description": "Evidence of common intention among accused persons."
+            },
+            "actus_reus_description": {
+              "type": "string",
+              "description": "Detailed description of the criminal act of dacoity."
             }
           },
           "required": [
-            "five_or_more_persons_committing_dacoity"
+            "five_or_more_persons_involved",
+            "robbery_with_violence",
+            "weapons_used",
+            "attempt_to_cause_death_or_grievous_hurt",
+            "common_intention",
+            "actus_reus_description"
           ],
           "additionalProperties": false
         },
         "tier_2_material": {
           "type": "object",
           "properties": {
-            "property_stolen": {
+            "number_of_dacoits": {
               "type": "string",
-              "description": "Description of the property stolen."
+              "description": "Exact number of persons involved in the dacoity."
+            },
+            "victim_details": {
+              "type": "string",
+              "description": "Details of the victim(s) targeted in the dacoity."
+            },
+            "property_looted": {
+              "type": "string",
+              "description": "Description and value of property looted during dacoity."
+            },
+            "injuries_caused": {
+              "type": "string",
+              "description": "Details of injuries caused to victims during dacoity."
+            },
+            "modus_operandi": {
+              "type": "string",
+              "description": "Method and manner of committing the dacoity."
+            },
+            "identification_evidence": {
+              "type": "string",
+              "description": "Evidence for identification of accused persons."
+            },
+            "recovery_of_stolen_property": {
+              "type": "string",
+              "description": "Details of recovery of stolen property from accused."
+            },
+            "eyewitness_testimony": {
+              "type": "string",
+              "description": "Details of eyewitness testimony in the case."
             }
           },
           "required": [
-            "property_stolen"
+            "number_of_dacoits",
+            "victim_details",
+            "property_looted",
+            "injuries_caused",
+            "modus_operandi",
+            "identification_evidence",
+            "recovery_of_stolen_property",
+            "eyewitness_testimony"
           ],
           "additionalProperties": false
         },
         "tier_3_contextual": {
           "type": "object",
           "properties": {
-            "incident_location": {
-              "type": "string",
-              "description": "Location where the incident occurred"
-            },
             "incident_date_time": {
               "type": "string",
-              "description": "Date and time of the incident"
+              "description": "Date and time when the dacoity occurred."
+            },
+            "incident_location": {
+              "type": "string",
+              "description": "Specific location where the dacoity took place."
+            },
+            "victim_activity_before_incident": {
+              "type": "string",
+              "description": "What the victim was doing before the dacoity occurred."
+            },
+            "escape_route": {
+              "type": "string",
+              "description": "Route taken by dacoits to escape after the incident."
+            },
+            "police_investigation_details": {
+              "type": "string",
+              "description": "Details of police investigation and evidence collection."
+            },
+            "arrest_details": {
+              "type": "string",
+              "description": "Details of arrest of accused persons."
             }
           },
           "required": [
+            "incident_date_time",
             "incident_location",
-            "incident_date_time"
+            "victim_activity_before_incident",
+            "escape_route",
+            "police_investigation_details",
+            "arrest_details"
           ],
           "additionalProperties": false
         },
@@ -63,15 +145,15 @@
             },
             "case_title": {
               "type": "string",
-              "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+              "description": "The full case title with parties (e.g., 'Dulesh Vasuniya vs. State of Maharashtra')."
             },
             "court_name": {
               "type": "string",
-              "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+              "description": "The name of the court that delivered the judgment (e.g., 'High Court of Bombay')."
             },
             "judgment_date": {
               "type": "string",
-              "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+              "description": "The date the judgment was delivered."
             },
             "appellant_or_petitioner": {
               "type": "string",
@@ -99,7 +181,7 @@
             },
             "case_type": {
               "type": "string",
-              "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+              "description": "The type of case (e.g., 'Criminal Appeal')."
             },
             "citation": {
               "type": "string",
@@ -108,6 +190,14 @@
             "acts_and_sections": {
               "type": "string",
               "description": "Acts and sections involved in the case."
+            },
+            "trial_court_verdict": {
+              "type": "string",
+              "description": "Verdict given by the trial court."
+            },
+            "appellate_court_decision": {
+              "type": "string",
+              "description": "Decision of the appellate court."
             }
           },
           "required": [
@@ -123,7 +213,9 @@
             "sections_invoked",
             "case_type",
             "citation",
-            "acts_and_sections"
+            "acts_and_sections",
+            "trial_court_verdict",
+            "appellate_court_decision"
           ],
           "additionalProperties": false
         },
@@ -133,10 +225,20 @@
             "additional_facts": {
               "type": "string",
               "description": "Any other relevant facts not captured above"
+            },
+            "legal_precedents_cited": {
+              "type": "string",
+              "description": "Legal precedents and case laws cited in the judgment"
+            },
+            "sentencing_details": {
+              "type": "string",
+              "description": "Details of sentencing awarded to accused persons"
             }
           },
           "required": [
-            "additional_facts"
+            "additional_facts",
+            "legal_precedents_cited",
+            "sentencing_details"
           ],
           "additionalProperties": false
         }

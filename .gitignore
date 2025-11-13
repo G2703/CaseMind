@@ -9,6 +9,10 @@ env/
 # Raw input files (don't commit large or sensitive input directories)
 cases/input_files/
 
+# Logs directory
+logs/
+*.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

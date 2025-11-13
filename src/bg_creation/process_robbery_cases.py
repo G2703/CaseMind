@@ -55,7 +55,7 @@ def process_single_file(pdf_path):
 
 def main():
     # Directory containing the PDF files
-    robbery_dir = Path("cases\input_files\Cases\Rape\HC")
+    robbery_dir = Path("cases\input_files\Cases\Dacoity\HC")
     
     if not robbery_dir.exists():
         print(f"❌ Directory not found: {robbery_dir}")

@@ -128,12 +128,20 @@ class FactExtractor:
 **TIER 4 - PROCEDURAL FACTS**: Court metadata, case details, and procedural information
 **RESIDUAL DETAILS**: Any other relevant facts not captured above
 
-**EXTRACTION RULES**:
-1. Provide complete descriptive answers using full sentences
-2. Extract facts directly from the case text
-3. Be comprehensive and accurate
-4. If a field is not found in the text, use null
-5. Organize facts according to their legal significance
+**CRITICAL EXTRACTION RULES**:
+1. Write each extracted value as a complete, coherent sentence that makes sense on its own
+2. When concatenated together, all extracted facts should form a readable narrative summary
+3. Each fact should flow naturally into the next when combined
+4. Use transitional phrases and connecting words to ensure readability
+5. Extract facts directly from the case text with narrative coherence
+6. Be comprehensive and accurate while maintaining story flow
+7. If a field is not found in the text, use null
+8. Organize facts according to their legal significance
+9. Each extracted fact should contribute to a unified case story when all values are joined together
+
+**NARRATIVE COHERENCE EXAMPLE**:
+Instead of: "Rs. 500", "knife", "threatened"
+Write: "The accused stole Rs. 500 from the victim. A knife was used as a weapon during the robbery. The accused threatened the victim with serious harm."
 
 **LEGAL CASE DOCUMENT**:
 {text_sample}

@@ -72,6 +72,8 @@ class LegalCasePipeline:
             # Step 1: Convert PDF to Markdown (in memory)
             self.logger.info("Step 1: Converting PDF to Markdown")
             case_text = self.pdf_converter.extract_text_from_pdf(pdf_path)
+
+            print(case_text[:500])  # Debug: print first 500 characters of extracted text
             
             # Step 2: Complete extraction using integrated pipeline
             self.logger.info("Step 2: Running complete extraction pipeline")

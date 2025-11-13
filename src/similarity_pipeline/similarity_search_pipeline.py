@@ -1,19 +1,20 @@
 """
 Legal Case Similarity Search Pipeline
-Complete pipeline from PDF to finding top-k similar cases.
+Complete pipeline from PDF to finding similar cases with threshold-based cross-encoder filtering.
 
 Steps:
 1. Load the given PDF
 2. Convert it to markdown  
 3. Extract metadata
-4. select appropriate template
+4. Select appropriate template
 5. Load template
 6. Extract facts
 7. Form vector embedding
 8. Load stored vector embeddings
-9. Construct similarity
-10. Take top k similar cases
-11. Display names of these cases
+9. Construct similarity using cosine similarity
+10. Take top k similar cases (excluding duplicates)
+11. Re-rank top k cases using cross-encoder and filter by threshold
+12. Display cases with cross-encoder scores above threshold
 """
 
 import os
@@ -26,7 +27,7 @@ from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 from dotenv import load_dotenv
 from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder
 
 # Add the bg_creation directory to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'bg_creation'))
@@ -63,6 +64,12 @@ class SimilarityCaseSearchPipeline:
         self.top_k = int(os.getenv('TOP_K_SIMILAR_CASES', '5'))
         self.logger.info(f"Top K similar cases set to: {self.top_k}")
         
+        # Get cross-encoder configuration
+        self.cross_encoder_model_name = os.getenv('CROSS_ENCODER_MODEL', 'cross-encoder/ms-marco-MiniLM-L6-v2')
+        self.cross_encoder_threshold = float(os.getenv('CROSS_ENCODER_THRESHOLD', '0.0'))
+        self.logger.info(f"Cross-encoder model: {self.cross_encoder_model_name}")
+        self.logger.info(f"Cross-encoder threshold: {self.cross_encoder_threshold}")
+        
         # Initialize pipeline components
         self.pdf_converter = PDFToMarkdownConverter(self.config)
         self.metadata_extractor = MetadataExtractor(self.config.get('openai_api_key'))
@@ -78,6 +85,9 @@ class SimilarityCaseSearchPipeline:
         # Initialize SentenceTransformer model for similarity computation
         self.similarity_model = SentenceTransformer(embedding_model)
         
+        # Initialize CrossEncoder model for re-ranking (lazy loading)
+        self.cross_encoder = None
+        
         # Storage for loaded embeddings
         self.existing_embeddings = None
         self.existing_case_ids = None
@@ -85,6 +95,19 @@ class SimilarityCaseSearchPipeline:
         
     def setup_logging(self):
         """Setup logging configuration with reduced noise."""
+        # Check if logging should be disabled via environment variable
+        disable_logging = os.getenv('DISABLE_LOGGING', 'false').lower() in ('true', '1', 'yes', 'on')
+        
+        if disable_logging:
+            # Disable all logging by setting to CRITICAL level (highest)
+            logging.basicConfig(level=logging.CRITICAL)
+            self.logger.setLevel(logging.CRITICAL)
+            # Disable all specific loggers
+            logging.getLogger('extract_metadata').setLevel(logging.CRITICAL)
+            logging.getLogger('ontology_matcher').setLevel(logging.CRITICAL)
+            logging.getLogger('load_template').setLevel(logging.CRITICAL)
+            return
+        
         # Set up main logger
         logging.basicConfig(
             level=logging.WARNING,  # Only show warnings and errors by default
@@ -177,12 +200,13 @@ class SimilarityCaseSearchPipeline:
             self.logger.error(f"Failed to convert PDF to markdown: {e}")
             raise
     
-    def step3_to_6_extract_metadata_and_facts(self, markdown_text: str) -> Dict[str, Any]:
+    def step3_to_6_extract_metadata_and_facts(self, markdown_text: str, file_path: str = "") -> Dict[str, Any]:
         """
         Steps 3-6: Extract metadata, select template, load template, and extract facts.
         
         Args:
             markdown_text (str): Markdown text content
+            file_path (str): Path to the original case file for fallback inference
             
         Returns:
             Dict[str, Any]: Complete extraction result with facts
@@ -191,7 +215,7 @@ class SimilarityCaseSearchPipeline:
         
         try:
             # Use the integrated extraction method from the original pipeline
-            extraction_result = self.metadata_extractor.extract_metadata_and_facts(markdown_text)
+            extraction_result = self.metadata_extractor.extract_metadata_and_facts(markdown_text, file_path)
             
             if 'error' in extraction_result:
                 raise ValueError(f"Extraction failed: {extraction_result['error']}")
@@ -234,18 +258,18 @@ class SimilarityCaseSearchPipeline:
                 raise ValueError("No extracted facts found in extraction result")
             
             # Print the template structure that will be embedded
-            print("\n" + "="*80)
-            print("TEMPLATE BEING EMBEDDED")
-            print("="*80)
+            # print("\n" + "="*80)
+            # print("TEMPLATE BEING EMBEDDED")
+            # print("="*80)
             
-            print(f"Template ID: {extraction_result.get('template_used', 'Unknown')}")
-            print(f"Template Label: {extraction_result.get('template_label', 'Unknown')}")
-            print(f"Extraction Confidence: {extraction_result.get('confidence_score', 0):.3f}")
+            # print(f"Template ID: {extraction_result.get('template_used', 'Unknown')}")
+            # print(f"Template Label: {extraction_result.get('template_label', 'Unknown')}")
+            # print(f"Extraction Confidence: {extraction_result.get('confidence_score', 0):.3f}")
             
-            print("\nExtracted Facts Structure:")
-            print(json.dumps(facts, indent=2, ensure_ascii=False))
+            # print("\nExtracted Facts Structure:")
+            # print(json.dumps(facts, indent=2, ensure_ascii=False))
             
-            print("="*80)
+            # print("="*80)
             
             # Generate embedding using case embedder
             embedding_result = self.case_embedder.embed_case(facts, case_id)
@@ -348,52 +372,52 @@ class SimilarityCaseSearchPipeline:
                 similarities = similarities.numpy()
             
             # Print similarity matrix
-            print("\n" + "="*80)
-            print("SIMILARITY MATRIX (TENSOR)")
-            print("="*80)
-            print(f"Input case vs. {len(similarities)} existing cases")
-            print(f"Similarity range: [{similarities.min():.4f}, {similarities.max():.4f}]")
-            print(f"Mean similarity: {similarities.mean():.4f}")
-            print(f"Standard deviation: {similarities.std():.4f}")
+            # print("\n" + "="*80)
+            # print("SIMILARITY MATRIX (TENSOR)")
+            # print("="*80)
+            # print(f"Input case vs. {len(similarities)} existing cases")
+            # print(f"Similarity range: [{similarities.min():.4f}, {similarities.max():.4f}]")
+            # print(f"Mean similarity: {similarities.mean():.4f}")
+            # print(f"Standard deviation: {similarities.std():.4f}")
             
             # Print top 10 similarities with case names
-            print(f"\nTop 10 Highest Similarities:")
-            print("-" * 50)
+            # print(f"\nTop 10 Highest Similarities:")
+            # print("-" * 50)
             
-            # Get sorted indices
-            sorted_indices = np.argsort(similarities)[::-1]
+            # # Get sorted indices
+            # sorted_indices = np.argsort(similarities)[::-1]
             
-            for i, idx in enumerate(sorted_indices[:10]):
-                case_name = case_ids[idx] if case_ids else f"Case_{idx}"
-                # Truncate long case names for better display
-                display_name = case_name[:50] + "..." if len(case_name) > 50 else case_name
-                print(f"{i+1:2d}. {similarities[idx]:.4f} - {display_name}")
+            # for i, idx in enumerate(sorted_indices[:10]):
+            #     case_name = case_ids[idx] if case_ids else f"Case_{idx}"
+            #     # Truncate long case names for better display
+            #     display_name = case_name[:50] + "..." if len(case_name) > 50 else case_name
+            #     print(f"{i+1:2d}. {similarities[idx]:.4f} - {display_name}")
             
             # Print full similarity array (truncated if too long)
-            print(f"\nComplete Similarity Vector:")
-            print("-" * 30)
-            if len(similarities) <= 20:
-                # Print all if small enough
-                for i, sim in enumerate(similarities):
-                    case_name = case_ids[i] if case_ids else f"Case_{i}"
-                    display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
-                    print(f"[{i:2d}] {sim:.4f} - {display_name}")
-            else:
-                # Print first 10 and last 5
-                print("First 10 cases:")
-                for i in range(10):
-                    case_name = case_ids[i] if case_ids else f"Case_{i}"
-                    display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
-                    print(f"[{i:2d}] {similarities[i]:.4f} - {display_name}")
+            # print(f"\nComplete Similarity Vector:")
+            # print("-" * 30)
+            # if len(similarities) <= 20:
+            #     # Print all if small enough
+            #     for i, sim in enumerate(similarities):
+            #         case_name = case_ids[i] if case_ids else f"Case_{i}"
+            #         display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
+            #         print(f"[{i:2d}] {sim:.4f} - {display_name}")
+            # else:
+            #     # Print first 10 and last 5
+            #     print("First 10 cases:")
+            #     for i in range(10):
+            #         case_name = case_ids[i] if case_ids else f"Case_{i}"
+            #         display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
+            #         print(f"[{i:2d}] {similarities[i]:.4f} - {display_name}")
                 
-                print("...")
-                print(f"Last 5 cases:")
-                for i in range(len(similarities)-5, len(similarities)):
-                    case_name = case_ids[i] if case_ids else f"Case_{i}"
-                    display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
-                    print(f"[{i:2d}] {similarities[i]:.4f} - {display_name}")
+            #     print("...")
+            #     print(f"Last 5 cases:")
+            #     for i in range(len(similarities)-5, len(similarities)):
+            #         case_name = case_ids[i] if case_ids else f"Case_{i}"
+            #         display_name = case_name[:30] + "..." if len(case_name) > 30 else case_name
+            #         print(f"[{i:2d}] {similarities[i]:.4f} - {display_name}")
             
-            print("="*80)
+            # print("="*80)
             
             self.logger.info(f"Step 9 completed: Computed similarity with {len(similarities)} cases")
             self.logger.info(f"   Similarity range: [{similarities.min():.3f}, {similarities.max():.3f}]")
@@ -480,17 +504,270 @@ class SimilarityCaseSearchPipeline:
             self.logger.error(f"Failed to get top-k similar cases: {e}")
             raise
     
-    def step11_display_results(self, top_k_cases: List[Tuple[str, float]]) -> None:
+    def _load_cross_encoder(self):
+        """Load cross-encoder model lazily."""
+        if self.cross_encoder is None:
+            self.logger.info(f"Loading cross-encoder model: {self.cross_encoder_model_name}")
+            self.cross_encoder = CrossEncoder(self.cross_encoder_model_name)
+        return self.cross_encoder
+    
+    def _extract_facts_as_text(self, facts_dict: Dict[str, Any]) -> str:
         """
-        Step 11: Display names of top-k similar cases.
+        Extract fact values from a facts dictionary and concatenate them.
         
         Args:
-            top_k_cases (List[Tuple[str, float]]): Top-k similar cases
+            facts_dict (Dict[str, Any]): Dictionary containing extracted facts
+            
+        Returns:
+            str: Concatenated fact values separated by ". "
         """
-        self.logger.info(f"Step 11: Displaying results")
+        if not facts_dict:
+            return ""
+        
+        fact_values = []
+        
+        def extract_values_recursive(obj):
+            """Recursively extract string values from nested dictionary/list structures."""
+            if isinstance(obj, dict):
+                for value in obj.values():
+                    extract_values_recursive(value)
+            elif isinstance(obj, list):
+                for item in obj:
+                    extract_values_recursive(item)
+            elif isinstance(obj, str) and obj.strip():
+                # Only add non-empty strings
+                fact_values.append(obj.strip())
+        
+        extract_values_recursive(facts_dict)
+        
+        # Join with ". " and ensure proper sentence ending
+        result = ". ".join(fact_values)
+        if result and not result.endswith('.'):
+            result += "."
+        
+        return result
+    
+    def _load_case_facts(self, case_id: str) -> Dict[str, Any]:
+        """
+        Load facts for a specific case from the extracted files.
+        
+        Args:
+            case_id (str): Case identifier
+            
+        Returns:
+            Dict[str, Any]: Case facts dictionary
+        """
+        try:
+            # Try to find the case file in the extracted directory
+            cases_dir = Path("cases/extracted")
+            
+            # Look for files that match the case_id
+            possible_files = [
+                cases_dir / f"{case_id}_facts.json",
+                cases_dir / f"{case_id}.json"
+            ]
+            
+            # Also try direct match
+            for file_path in cases_dir.glob("*.json"):
+                if case_id in file_path.stem:
+                    possible_files.append(file_path)
+            
+            for file_path in possible_files:
+                if file_path.exists():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        return json.load(f)
+            
+            # If not found in files, try to get from metadata
+            if self.existing_metadata and 'case_texts' in self.existing_metadata:
+                case_text = self.existing_metadata['case_texts'].get(case_id, '')
+                if case_text:
+                    return json.loads(case_text)
+            
+            self.logger.warning(f"Could not load facts for case: {case_id}")
+            return {}
+            
+        except Exception as e:
+            self.logger.warning(f"Error loading facts for case {case_id}: {e}")
+            return {}
+    
+    def step11_cross_encoder_rerank(self, top_k_cases: List[Tuple[str, float]], 
+                                  input_facts: Dict[str, Any]) -> List[Tuple[str, float, float]]:
+        """
+        Step 11: Re-rank top-k cases using cross-encoder and filter by threshold.
+        
+        Args:
+            top_k_cases (List[Tuple[str, float]]): Top-k similar cases from cosine similarity
+            input_facts (Dict[str, Any]): Facts from the input case
+            
+        Returns:
+            List[Tuple[str, float, float]]: Cases above threshold with (case_id, cosine_similarity, cross_encoder_score)
+        """
+        self.logger.info(f"Step 11: Re-ranking top {len(top_k_cases)} cases using cross-encoder with threshold {self.cross_encoder_threshold}")
+        
+        try:
+            # Load cross-encoder model
+            cross_encoder = self._load_cross_encoder()
+            
+            # Extract input case facts as text
+            input_text = self._extract_facts_as_text(input_facts)
+            
+            if not input_text:
+                self.logger.warning("No facts extracted from input case, skipping cross-encoder re-ranking")
+                # Return original results with dummy cross-encoder scores, apply threshold to cosine similarity
+                filtered_results = [(case_id, cos_sim, cos_sim) for case_id, cos_sim in top_k_cases if cos_sim > self.cross_encoder_threshold]
+                return filtered_results
+            
+            self.logger.info(f"Input case facts text length: {len(input_text)} characters")
+            
+            # Prepare passages for cross-encoder
+            passages = []
+            case_info = []
+            
+            for case_id, cosine_sim in top_k_cases:
+                # Load case facts
+                case_facts = self._load_case_facts(case_id)
+                case_text = self._extract_facts_as_text(case_facts)
+                
+                if case_text:
+                    passages.append(case_text)
+                    case_info.append((case_id, cosine_sim, len(case_text)))
+                else:
+                    # If no facts found, use case_id as fallback
+                    passages.append(case_id.replace('_', ' '))
+                    case_info.append((case_id, cosine_sim, 0))
+                    self.logger.warning(f"No facts found for case {case_id}, using case name as fallback")
+            
+            if not passages:
+                self.logger.warning("No passages found for cross-encoder, returning original results")
+                filtered_results = [(case_id, cos_sim, cos_sim) for case_id, cos_sim in top_k_cases if cos_sim > self.cross_encoder_threshold]
+                return filtered_results
+            
+            # Print cross-encoder input information
+            # print("\n" + "="*80)
+            # print("CROSS-ENCODER RE-RANKING")
+            # print("="*80)
+            # print(f"Query (Input Case Facts): {input_text[:200]}{'...' if len(input_text) > 200 else ''}")
+            # print(f"Number of passages to rank: {len(passages)}")
+            # print(f"Threshold for similarity: {self.cross_encoder_threshold}")
+            # print("-" * 40)
+            
+            # Use cross-encoder to rank passages
+            ranks = cross_encoder.rank(input_text, passages)
+            
+            # Prepare results with both similarity scores and apply threshold filtering
+            cross_encoder_results = []
+            filtered_results = []
+            
+            # print("Cross-Encoder Ranking Results:")
+            for i, rank in enumerate(ranks):
+                passage_idx = rank['corpus_id']
+                cross_encoder_score = rank['score']
+                case_id, cosine_sim, text_length = case_info[passage_idx]
+                
+                cross_encoder_results.append((case_id, cosine_sim, cross_encoder_score))
+                
+                # Display ranking information
+                display_name = case_id.replace('_', ' ')[:60]
+                if len(case_id) > 60:
+                    display_name += "..."
+                
+                status = "ABOVE THRESHOLD" if cross_encoder_score > self.cross_encoder_threshold else "✗ BELOW THRESHOLD"
+                # print(f"{i+1:2d}. {display_name} [{status}]")
+                # print(f"    Cross-Encoder Score: {cross_encoder_score:.4f}")
+                # print(f"    Cosine Similarity: {cosine_sim:.4f}")
+                # print(f"    Facts Text Length: {text_length} chars")
+                
+                # Apply threshold filtering
+                if cross_encoder_score > self.cross_encoder_threshold:
+                    filtered_results.append((case_id, cosine_sim, cross_encoder_score))
+                # print()
+            
+            # print("="*80)
+            # print(f"THRESHOLD FILTERING RESULTS:")
+            # print(f"Total cases ranked: {len(cross_encoder_results)}")
+            # print(f"Cases above threshold ({self.cross_encoder_threshold}): {len(filtered_results)}")
+            # print("="*80)
+            
+            self.logger.info(f"Step 11 completed: Re-ranked {len(top_k_cases)} cases, {len(filtered_results)} cases above threshold")
+            
+            return filtered_results
+            
+        except Exception as e:
+            self.logger.error(f"Failed to re-rank with cross-encoder: {e}")
+            # Fallback to original results with threshold applied to cosine similarity
+            self.logger.info("Falling back to cosine similarity results with threshold filtering")
+            filtered_results = [(case_id, cos_sim, cos_sim) for case_id, cos_sim in top_k_cases if cos_sim > self.cross_encoder_threshold]
+            return filtered_results
+    
+    def display_input_case_summary(self, extraction_result: Dict[str, Any]) -> None:
+        """
+        Display the input case summary and metadata before similarity analysis.
+        
+        Args:
+            extraction_result (Dict[str, Any]): Complete extraction result with facts and metadata
+        """
+        print("\n" + "="*80)
+        print("INPUT CASE SUMMARY & METADATA")
+        print("="*80)
+        
+        # Display case metadata
+        metadata = extraction_result.get('metadata', {})
+        print("\nCASE METADATA:")
+        print("-" * 40)
+        print(f"📋 Case Title: {metadata.get('case_title', 'Unknown')}")
+        print(f"🏛️  Court: {metadata.get('court_name', 'Unknown')}")
+        print(f"📅 Date: {metadata.get('judgment_date', 'Unknown')}")
+        print(f"📝 Template Used: {extraction_result.get('template_label', 'Unknown')}")
+        print(f"🎯 Template ID: {extraction_result.get('template_used', 'Unknown')}")
+        print(f"📊 Matching Confidence: {extraction_result.get('confidence_score', 0):.3f}")
+        
+        # Display legal sections if available
+        sections = metadata.get('sections_invoked', [])
+        if sections:
+            if isinstance(sections, str):
+                print(f"⚖️  Legal Sections: {sections}")
+            elif isinstance(sections, list):
+                print(f"⚖️  Legal Sections: {', '.join(sections)}")
+        
+        # Display most appropriate section
+        most_appropriate = metadata.get('most_appropriate_section', 'Unknown')
+        if most_appropriate and most_appropriate != 'Unknown':
+            print(f"📌 Primary Section: {most_appropriate}")
+        
+        # Extract and display case summary (concatenation of all extracted facts)
+        extracted_facts = extraction_result.get('extracted_facts', {})
+        if extracted_facts:
+            case_summary = self._extract_facts_as_text(extracted_facts)
+            if case_summary:
+                print("\nCASE FACTS SUMMARY:")
+                print("-" * 40)
+                # Display full summary without truncation
+                print(f"📄 {case_summary}")
+                print(f"\n[Full summary length: {len(case_summary)} characters]")
+            else:
+                print("\nCASE FACTS SUMMARY:")
+                print("-" * 40)
+                print("📄 No facts summary could be extracted")
+        else:
+            print("\nCASE FACTS SUMMARY:")
+            print("-" * 40)
+            print("📄 No extracted facts available")
         
         print("\n" + "="*80)
-        print("ANALYSIS RESULTS")
+        print("PROCEEDING WITH SIMILARITY ANALYSIS...")
+        print("="*80)
+    
+    def step12_display_results(self, filtered_cases: List[Tuple[str, float, float]]) -> None:
+        """
+        Step 12: Display cases that passed the cross-encoder threshold filtering.
+        
+        Args:
+            filtered_cases (List[Tuple[str, float, float]]): Cases above threshold with (case_id, cosine_sim, cross_encoder_score)
+        """
+        self.logger.info(f"Step 12: Displaying final results")
+        
+        print("\n" + "="*80)
+        print("FINAL ANALYSIS RESULTS")
         print("="*80)
         
         # Display template information if available
@@ -516,55 +793,77 @@ class SimilarityCaseSearchPipeline:
                 if most_appropriate:
                     print(f"  Primary Section: {most_appropriate}")
         
-        print(f"\nTOP {len(top_k_cases)} MOST SIMILAR LEGAL CASES:")
-        print("-" * 80)
-        
-        for i, (case_id, similarity_score) in enumerate(top_k_cases, 1):
-            # Clean up case name for display
-            display_name = case_id.replace('_', ' ').title()
+        if filtered_cases:
+            print(f"\n{len(filtered_cases)} SIMILAR LEGAL CASES (ABOVE THRESHOLD {self.cross_encoder_threshold}):")
+            print("-" * 80)
             
-            print(f"{i:2d}. {display_name}")
-            print(f"    Similarity Score: {similarity_score:.4f}")
-            
-            # Try to get additional metadata if available
-            if self.existing_metadata and 'case_texts' in self.existing_metadata:
-                case_text = self.existing_metadata['case_texts'].get(case_id, '')
-                if case_text:
-                    try:
-                        case_data = json.loads(case_text)
-                        if 'tier_4_procedural' in case_data:
-                            procedural = case_data['tier_4_procedural']
-                            if 'case_title' in procedural:
-                                print(f"    Case Title: {procedural['case_title']}")
-                            if 'court_name' in procedural:
-                                print(f"    Court: {procedural['court_name']}")
-                            if 'judgment_date' in procedural:
-                                print(f"    Date: {procedural['judgment_date']}")
-                    except:
-                        pass
-            
-            print()
+            for i, (case_id, cosine_similarity, cross_encoder_score) in enumerate(filtered_cases, 1):
+                # Clean up case name for display
+                display_name = case_id.replace('_', ' ').title()
+                
+                print(f"{i:2d}. {display_name}")
+                print(f"    Cross-Encoder Score: {cross_encoder_score:.4f}")
+                print(f"    Cosine Similarity: {cosine_similarity:.4f}")
+                
+                # Load case facts and display summary
+                case_facts = self._load_case_facts(case_id)
+                if case_facts:
+                    case_summary = self._extract_facts_as_text(case_facts)
+                    if case_summary:
+                        # Truncate very long summaries for better readability
+                        max_summary_length = 500
+                        if len(case_summary) > max_summary_length:
+                            case_summary = case_summary[:max_summary_length] + "..."
+                        print(f"    Summary: {case_summary}")
+                    else:
+                        print("    Summary: No facts summary available")
+                else:
+                    print("    Summary: Unable to load case facts")
+                
+                # Try to get additional metadata if available
+                if self.existing_metadata and 'case_texts' in self.existing_metadata:
+                    case_text = self.existing_metadata['case_texts'].get(case_id, '')
+                    if case_text:
+                        try:
+                            case_data = json.loads(case_text)
+                            if 'tier_4_procedural' in case_data:
+                                procedural = case_data['tier_4_procedural']
+                                if 'case_title' in procedural:
+                                    print(f"    Case Title: {procedural['case_title']}")
+                                if 'court_name' in procedural:
+                                    print(f"    Court: {procedural['court_name']}")
+                                if 'judgment_date' in procedural:
+                                    print(f"    Date: {procedural['judgment_date']}")
+                        except:
+                            pass
+                
+                print()
+        else:
+            print(f"\nNO CASES FOUND ABOVE THRESHOLD ({self.cross_encoder_threshold})")
+            print("Consider lowering the threshold or reviewing the input case.")
+            print("-" * 80)
         
         print("="*80)
-        self.logger.info(f"Step 11 completed: Results displayed")
+        self.logger.info(f"Step 12 completed: Final results displayed")
     
-    def run_complete_pipeline(self, pdf_path: str, case_id: str = None) -> List[Tuple[str, float]]:
+    def run_complete_pipeline(self, pdf_path: str, case_id: str = None) -> List[Tuple[str, float, float]]:
         """
-        Run the complete similarity search pipeline.
+        Run the complete similarity search pipeline with cross-encoder re-ranking.
         
         Args:
             pdf_path (str): Path to input PDF file
             case_id (str): Optional case identifier
             
         Returns:
-            List[Tuple[str, float]]: Top-k similar cases
+            List[Tuple[str, float, float]]: Cases above threshold with (case_id, cosine_sim, cross_encoder_score)
         """
         self.logger.info(f"Starting Complete Similarity Search Pipeline")
         self.logger.info(f"Input PDF: {pdf_path}")
         self.logger.info(f"Top K: {self.top_k}")
-        print("\n" + "="*80)
-        print("LEGAL CASE SIMILARITY SEARCH PIPELINE")
-        print("="*80)
+        self.logger.info(f"Cross-encoder threshold: {self.cross_encoder_threshold}")
+        # print("\n" + "="*80)
+        # print("LEGAL CASE SIMILARITY SEARCH PIPELINE")
+        # print("="*80)
         
         try:
             # Step 1: Load PDF
@@ -574,7 +873,7 @@ class SimilarityCaseSearchPipeline:
             markdown_text = self.step2_convert_to_markdown(validated_pdf_path)
             
             # Steps 3-6: Extract metadata, template matching, and facts (combined)
-            extraction_result = self.step3_to_6_extract_metadata_and_facts(markdown_text)
+            extraction_result = self.step3_to_6_extract_metadata_and_facts(markdown_text, validated_pdf_path)
             
             # Store extraction result for display
             self._extraction_result = extraction_result
@@ -585,6 +884,9 @@ class SimilarityCaseSearchPipeline:
             # Step 8: Load stored vector embeddings
             existing_embeddings, existing_case_ids, metadata_dict = self.step8_load_stored_embeddings()
             
+            # Display input case summary before similarity analysis
+            self.display_input_case_summary(extraction_result)
+            
             # Step 9: Compute similarity
             similarities = self.step9_compute_similarity(new_embedding, existing_embeddings, existing_case_ids)
             
@@ -594,11 +896,16 @@ class SimilarityCaseSearchPipeline:
             top_k_cases = self.step10_get_top_k_similar(similarities, existing_case_ids, 
                                                       test_case_id=actual_case_id, 
                                                       input_pdf_path=pdf_path)
-            # Step 11: Display results
-            self.step11_display_results(top_k_cases)
+            
+            # Step 11: Cross-encoder re-ranking with threshold filtering
+            input_facts = extraction_result.get('extracted_facts', {})
+            filtered_cases = self.step11_cross_encoder_rerank(top_k_cases, input_facts)
+            
+            # Step 12: Display final results
+            self.step12_display_results(filtered_cases)
             
             self.logger.info(f"Pipeline completed successfully!")
-            return top_k_cases
+            return filtered_cases
             
         except Exception as e:
             self.logger.error(f"Pipeline failed: {e}")

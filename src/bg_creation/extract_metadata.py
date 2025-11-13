@@ -183,12 +183,19 @@ For most_appropriate_section (MOST IMPORTANT):
 
 SEVERITY HIERARCHY (select higher severity if multiple sections):
 - Capital offenses: IPC 302 (murder), IPC 396 (dacoity with murder)
-- Sexual offenses: IPC 376 (rape), POCSO 4/6 (sexual assault), IPC 354 (molestation)
+- Sexual offenses: IPC 376 (rape), POCSO 4/6 (sexual assault), IPC 354 (molestation)  
 - Violence: IPC 307 (attempt murder), IPC 304 (culpable homicide), IPC 326 (grievous hurt)
-- Robbery/Dacoity: IPC 395 (dacoity), IPC 394 (robbery with hurt), IPC 392 (robbery)
+- Robbery/Dacoity: IPC 397 (dacoity with attempt to cause death), IPC 395 (dacoity), IPC 394 (robbery with hurt), IPC 392 (robbery)
 - Kidnapping: IPC 363 (kidnapping), IPC 364 (kidnapping to murder)
 - Property crimes: IPC 379 (theft), IPC 420 (cheating), IPC 384 (extortion)
 - Simple offenses: IPC 323 (hurt), IPC 341 (wrongful restraint)
+
+SPECIFIC GUIDANCE FOR DACOITY CASES:
+- If case mentions "dacoity", "five or more persons", "group robbery", or "gang crime", look for IPC 395/397
+- IPC 395: Basic dacoity (5+ persons committing robbery)
+- IPC 397: Dacoity with attempt to cause death or grievous hurt (higher severity)
+- If both IPC 395 and IPC 397 are present, choose IPC 397 as most_appropriate_section
+- If dacoity with murder (IPC 302), choose IPC 302 as most severe
 
 DECISION LOGIC:
 1. If case involves multiple sections, choose the one with highest legal severity
@@ -199,7 +206,10 @@ DECISION LOGIC:
 Examples:
 - Case with IPC 376, IPC 363, IPC 506 → most_appropriate_section: "IPC 376" (rape is most severe)
 - Case with IPC 394, IPC 397, IPC 323 → most_appropriate_section: "IPC 397" (highest severity in robbery category)
+- Case with IPC 395, IPC 34, IPC 323 → most_appropriate_section: "IPC 395" (dacoity is most severe)
+- Case with IPC 397, IPC 395, IPC 302 → most_appropriate_section: "IPC 302" (murder trumps dacoity)
 - Case with only IPC 323, IPC 341 → most_appropriate_section: "IPC 323" (hurt more serious than restraint)
+- Dacoity case with multiple sections → Look for IPC 395 (dacoity) or IPC 397 (dacoity with death attempt)
 
 Other instructions:
 - Be precise and extract exact text as it appears
@@ -207,6 +217,83 @@ Other instructions:
 - If multiple judges, include all names
         """
         return prompt
+    
+    def _infer_section_from_text(self, case_text: str) -> Optional[str]:
+        """
+        Infer the most appropriate section from case text using pattern matching.
+        This is a fallback when LLM extraction fails.
+        
+        Args:
+            case_text (str): Case document text
+            
+        Returns:
+            Optional[str]: Inferred section or None
+        """
+        text_lower = case_text.lower()
+        
+        # Dacoity patterns
+        dacoity_patterns = [
+            'dacoity', 'five or more persons', 'group robbery', 'gang crime',
+            'section 395', 'ipc 395', '395', 'section 397', 'ipc 397', '397'
+        ]
+        
+        # Murder patterns  
+        murder_patterns = [
+            'murder', 'section 302', 'ipc 302', '302', 'causing death'
+        ]
+        
+        # Rape patterns
+        rape_patterns = [
+            'rape', 'section 376', 'ipc 376', '376', 'sexual assault', 'pocso'
+        ]
+        
+        # Robbery patterns
+        robbery_patterns = [
+            'robbery', 'section 392', 'ipc 392', '392', 'section 394', 'ipc 394', '394'
+        ]
+        
+        # Check patterns in order of severity
+        if any(pattern in text_lower for pattern in murder_patterns):
+            return "IPC 302"
+        elif any(pattern in text_lower for pattern in rape_patterns):
+            return "IPC 376"
+        elif 'section 397' in text_lower or 'ipc 397' in text_lower or '397' in text_lower:
+            return "IPC 397"  # Dacoity with death attempt (higher severity)
+        elif any(pattern in text_lower for pattern in dacoity_patterns):
+            return "IPC 395"  # Basic dacoity
+        elif any(pattern in text_lower for pattern in robbery_patterns):
+            return "IPC 392"
+        
+        return None
+    
+    def _infer_section_from_path(self, file_path: str) -> Optional[str]:
+        """
+        Infer the most appropriate section from file path.
+        This is a fallback when both LLM extraction and text analysis fail.
+        
+        Args:
+            file_path (str): Path to the case file
+            
+        Returns:
+            Optional[str]: Inferred section or None
+        """
+        path_lower = file_path.lower()
+        
+        # Check directory structure for case type hints
+        if 'dacoity' in path_lower:
+            return "IPC 395"  # Default to basic dacoity
+        elif 'rape' in path_lower:
+            return "IPC 376"
+        elif 'murder' in path_lower:
+            return "IPC 302"
+        elif 'robbery' in path_lower:
+            return "IPC 392"
+        elif 'theft' in path_lower:
+            return "IPC 379"
+        elif 'kidnapping' in path_lower:
+            return "IPC 363"
+        
+        return None
     
     def _create_metadata_prompt(self, case_text: str) -> str:
         """
@@ -264,7 +351,7 @@ JSON Response:
 """
         return prompt
     
-    def extract_metadata_and_facts(self, case_text: str) -> Dict[str, Any]:
+    def extract_metadata_and_facts(self, case_text: str, file_path: str = "") -> Dict[str, Any]:
         """
         Complete pipeline: Extract metadata, load appropriate template, and extract facts.
         
@@ -283,14 +370,26 @@ JSON Response:
             self.logger.info("Step 1: Extracting metadata")
             metadata = self.extract_metadata(case_text)
             
+            # print(metadata)
+
             if not metadata.most_appropriate_section:
                 self.logger.warning("No most appropriate section found in metadata")
-                return {
-                    'metadata': asdict(metadata),
-                    'template_used': None,
-                    'extracted_facts': None,
-                    'error': 'No appropriate section identified'
-                }
+                # Try to infer from case text or file path
+                inferred_section = self._infer_section_from_text(case_text)
+                if not inferred_section and file_path:
+                    inferred_section = self._infer_section_from_path(file_path)
+                    
+                if inferred_section:
+                    self.logger.info(f"Inferred section from analysis: {inferred_section}")
+                    metadata.most_appropriate_section = inferred_section
+                    metadata.sections_invoked = [inferred_section] if not metadata.sections_invoked else metadata.sections_invoked
+                else:
+                    return {
+                        'metadata': asdict(metadata),
+                        'template_used': None,
+                        'extracted_facts': None,
+                        'error': 'No appropriate section identified'
+                    }
             
             # Step 2: Load template based on most appropriate section
             self.logger.info(f"Step 2: Loading template for section: {metadata.most_appropriate_section}")

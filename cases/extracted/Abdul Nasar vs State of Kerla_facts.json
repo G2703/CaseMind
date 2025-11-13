@@ -1,31 +1,31 @@
 {
   "tier_1_determinative": {
     "sexual_act_description": "The accused committed rape upon the child victim in a room in his house.",
-    "absence_of_consent": "The act falls under clause 6 of absence of consent as the victim was a minor, aged about 9 years."
+    "absence_of_consent": "The child victim was a 9-year-old girl, indicating her inability to give legal consent."
   },
   "tier_2_material": {
-    "aggravated_circumstances_of_rape": "The rape was followed by murder, as the accused strangled and killed the child victim after committing the sexual assault.",
+    "aggravated_circumstances_of_rape": "The rape was followed by the murder of the child victim, and the act was committed by the accused who was alone with the victim.",
     "victim_age": "9 years old",
     "relationship_to_accused": "The child victim was a friend of the daughter of the accused."
   },
   "tier_3_contextual": {
-    "incident_location": "The incident occurred in the house of the accused, located on the side of the panchayat road at Ponnamkallu in Amarambalam Village.",
-    "incident_date_time": "The incident occurred on 4th April, 2012, at around 6:45 am.",
-    "time_of_reporting": "The incident was reported on 4th April, 2012, at 7:00 pm. The delay was because the child victim went missing and a search was conducted before reporting."
+    "incident_location": "The incident occurred in the house of the accused, situated on the side of the panchayat road at Ponnamkallu, Amarambalam Village.",
+    "incident_date_time": "4th April, 2012, at around 6:45 am.",
+    "time_of_reporting": "The incident was reported on 4th April, 2012, at 7:00 pm. The delay in reporting was due to the initial efforts to trace the missing child."
   },
   "tier_4_procedural": {
-    "case_number": "Criminal Appeal Nos. 1122-1123 of 2018",
+    "case_number": "Criminal Appeal No(s). 1122-1123 of 2018",
     "case_title": "Abdul Nassar v. State of Kerala & Anr.",
     "court_name": "Supreme Court of India",
     "judgment_date": "07 January 2025",
-    "appellant_or_petitioner": "Abdul Nassar",
+    "appellant_or_petitioner": "Abdul Nassar (legal heirs after his death)",
     "respondent": "State of Kerala & Anr."
   },
   "residual_details": {
-    "additional_facts": "The accused attempted to conceal the body of the victim beneath a cot and later in the bathroom. He also attempted to dispose of the body in a septic tank. The investigation included forensic evidence such as DNA matching, which linked the accused to the crime. The accused was sentenced to death for murder under Section 302 IPC and to 7 years of rigorous imprisonment for rape under Section 376 IPC. The conviction was based on circumstantial evidence, and the case was appealed to the Supreme Court after the High Court confirmed the death sentence."
+    "additional_facts": "The prosecution presented evidence including DNA matching the accused with semen found on the victim's clothing, and multiple pieces of circumstantial evidence linking the accused to the crime scene. The trial court initially sentenced the accused to death, which was confirmed by the High Court. The accused died during the pendency of the appeal, and his legal heirs continued the appeal to clear his name."
   },
   "template_id": "ipc_376",
   "template_label": "Rape (IPC 376)",
   "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T17:22:13.543217"
+  "extraction_timestamp": "2025-11-13T12:43:59.210199"
 }
