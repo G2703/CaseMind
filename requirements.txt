@@ -27,6 +27,8 @@ pytest-cov>=4.1.0
 black>=23.0.0
 flake8>=6.0.0
 fitz
+google-generativeai
+PyMuPDF=1.26.6
 
 # Previously used libraries (commented out after simplification):
 # PyMuPDF>=1.23.0          # PDF processing - not currently used

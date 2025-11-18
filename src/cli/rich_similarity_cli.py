@@ -22,7 +22,8 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.align import Align
 
 from src.similarity_pipeline.similarity_search_pipeline import SimilarityCaseSearchPipeline
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class RichSimilarityCLI:
     """Professional CLI for legal case similarity analysis with modern gradient design."""
