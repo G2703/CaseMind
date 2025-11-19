@@ -1,0 +1,34 @@
+{
+  "tier_1_determinative": {
+    "making_any_preparation_to_commit_dacoity": "Yes, the accused were found assembling with the intention to commit dacoity, as evidenced by the informant's report and their conversation about reducing the crowd and keeping weapons ready."
+  },
+  "tier_2_material": {
+    "nature_of_preparation": "The accused were observed planning the dacoity in Zhaveri Bazar, with specific instructions to wait until the crowd reduced and to keep weapons ready."
+  },
+  "tier_3_contextual": {
+    "incident_location": "Zhaveri Bazar, Trimurti Market, Mumbai",
+    "incident_date_time": "28th March, 2001, around 5:30 PM to 7:15 PM"
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No.696 of 2006",
+    "case_title": "Abdul @ Aslam Salim Shaikh vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "17th April, 2007",
+    "appellant_or_petitioner": "Abdul @ Aslam Salim Shaikh",
+    "respondent": "State of Maharashtra",
+    "judges_coram": "J.H. Bhatia, J.",
+    "counsel_for_appellant": "Mr. Abhaykumar Apte",
+    "counsel_for_respondent": "Ms. S.V. Gajre",
+    "sections_invoked": "IPC 399, IPC 402, Section 4 r/w Section 25 of the Arms Act",
+    "case_type": "Criminal Appeal",
+    "citation": ":2007 (4) BomCR 730",
+    "acts_and_sections": "Indian Penal Code Sections 399, 402; Arms Act Section 4 r/w Section 25"
+  },
+  "residual_details": {
+    "additional_facts": "The appellant was not found in possession of any weapon and the prosecution failed to prove any notification under Section 4 of the Arms Act for the area in question. The appellant's conviction under the Arms Act was set aside, but the conviction under IPC sections 399 and 402 was maintained."
+  },
+  "template_id": "ipc_399",
+  "template_label": "Making preparation to commit dacoity (IPC 399)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T15:37:00.988214"
+}

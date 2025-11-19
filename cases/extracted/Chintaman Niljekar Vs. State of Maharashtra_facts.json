@@ -1,0 +1,35 @@
+{
+  "tier_1_determinative": {
+    "person_voluntarily_causes_hurt": "Yes, Dipesh Niljekar assaulted the complainant and her nephew.",
+    "in_committing_or_attempting_robbery": "Yes, during the incident, Dipesh Niljekar snatched the complainant's Mangalsutra."
+  },
+  "tier_2_material": {
+    "injury_severity": "The injuries are described as simple, with no indication of grievous harm."
+  },
+  "tier_3_contextual": {
+    "incident_location": "The incident occurred at the location where the complainant's son was lighting crackers, presumably near their residence.",
+    "incident_date_time": "The incident occurred on 26th February 2019, with further altercations on 3rd March 2019."
+  },
+  "tier_4_procedural": {
+    "case_number": "CRIMINAL APPEAL NO. 914 OF 2019",
+    "case_title": "Chintaman Niljekar and Dipesh Bablu Chintaman Niljekar vs. The State of Maharashtra and Others",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "15th September, 2022",
+    "appellant_or_petitioner": "Chintaman Niljekar and Dipesh Bablu Chintaman Niljekar",
+    "respondent": "The State of Maharashtra, The Inspector of Police, Khadakpada Police Station, Minakshi Mahadev Doiphode",
+    "judges_coram": "PRAKASH D. NAIK, J.",
+    "counsel_for_appellant": "Mr. Rishi Bhuta with Mr. Anurag Ghag",
+    "counsel_for_respondent": "Mr. Devendranath Joshi for Respondent No.3 and Mr. Arfan Sait, APP for the State",
+    "sections_invoked": "IPC Sections 143, 147, 148, 324, 354-B, 506, 294, 394; SC/ST Act Sections 3(1)(r)(s)(w)(I)(II), 3(2)(V)",
+    "case_type": "Criminal Appeal",
+    "citation": "",
+    "acts_and_sections": "Indian Penal Code and Scheduled Caste and Scheduled Tribe (Prevention of Atrocities) Act"
+  },
+  "residual_details": {
+    "additional_facts": "There are cross FIRs filed by the parties against each other with similar allegations. The appellants were granted interim relief during the appeal process."
+  },
+  "template_id": "ipc_394",
+  "template_label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:46:34.060249"
+}

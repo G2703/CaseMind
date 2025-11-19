@@ -1,0 +1,252 @@
+{
+  "node_id": "dacoity_enhanced",
+  "label": "Enhanced Dacoity Template",
+  "sections": [
+    "IPC 395",
+    "IPC 397", 
+    "IPC 34"
+  ],
+  "type": "json_schema",
+  "json_schema": {
+    "name": "dacoity_enhanced",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "tier_1_determinative": {
+          "type": "object",
+          "properties": {
+            "five_or_more_persons_committing_dacoity": {
+              "type": "string",
+              "description": "Evidence that five or more persons were involved in committing or attempting to commit dacoity."
+            },
+            "robbery_with_violence": {
+              "type": "string", 
+              "description": "Evidence of robbery committed with violence or threat of immediate violence."
+            },
+            "common_intention": {
+              "type": "string",
+              "description": "Evidence of common intention among accused persons to commit dacoity together."
+            },
+            "weapons_used": {
+              "type": "string",
+              "description": "Types and details of weapons used during the dacoity."
+            },
+            "attempt_to_cause_death_or_grievous_hurt": {
+              "type": "string", 
+              "description": "Whether there was attempt to cause death or grievous hurt during the dacoity."
+            }
+          },
+          "required": [
+            "five_or_more_persons_committing_dacoity",
+            "robbery_with_violence",
+            "common_intention", 
+            "weapons_used",
+            "attempt_to_cause_death_or_grievous_hurt"
+          ],
+          "additionalProperties": false
+        },
+        "tier_2_material": {
+          "type": "object",
+          "properties": {
+            "property_stolen": {
+              "type": "string",
+              "description": "Detailed description of the property stolen during dacoity."
+            },
+            "number_of_dacoits": {
+              "type": "string",
+              "description": "Exact number of persons involved in the dacoity offense."
+            },
+            "victim_details": {
+              "type": "string",
+              "description": "Details of victims targeted in the dacoity."
+            },
+            "injuries_caused": {
+              "type": "string",
+              "description": "Details of physical injuries caused to victims."
+            },
+            "modus_operandi": {
+              "type": "string", 
+              "description": "Method and manner of committing the dacoity."
+            },
+            "identification_evidence": {
+              "type": "string",
+              "description": "Evidence used for identification of accused persons."
+            },
+            "recovery_of_stolen_property": {
+              "type": "string",
+              "description": "Details of recovery of stolen property from accused."
+            },
+            "eyewitness_testimony": {
+              "type": "string",
+              "description": "Details of eyewitness testimony in the case."
+            }
+          },
+          "required": [
+            "property_stolen",
+            "number_of_dacoits",
+            "victim_details",
+            "injuries_caused",
+            "modus_operandi", 
+            "identification_evidence",
+            "recovery_of_stolen_property",
+            "eyewitness_testimony"
+          ],
+          "additionalProperties": false
+        },
+        "tier_3_contextual": {
+          "type": "object",
+          "properties": {
+            "incident_location": {
+              "type": "string",
+              "description": "Specific location where the dacoity occurred."
+            },
+            "incident_date_time": {
+              "type": "string",
+              "description": "Date and time when the dacoity took place."
+            },
+            "victim_activity_before_incident": {
+              "type": "string",
+              "description": "Activities of victims before the dacoity incident."
+            },
+            "escape_route": {
+              "type": "string",
+              "description": "Route taken by accused to escape after the dacoity."
+            },
+            "police_investigation_details": {
+              "type": "string",
+              "description": "Comprehensive details of police investigation process."
+            },
+            "arrest_details": {
+              "type": "string", 
+              "description": "Circumstances and details of arrest of accused persons."
+            }
+          },
+          "required": [
+            "incident_location",
+            "incident_date_time",
+            "victim_activity_before_incident",
+            "escape_route",
+            "police_investigation_details",
+            "arrest_details"
+          ],
+          "additionalProperties": false
+        },
+        "tier_4_procedural": {
+          "type": "object",
+          "properties": {
+            "case_number": {
+              "type": "string",
+              "description": "The case number (e.g., 'Crl. Appeal No.1192/2011')."
+            },
+            "case_title": {
+              "type": "string",
+              "description": "The full case title with parties (e.g., 'A.K. Goel vs. State of Delhi')."
+            },
+            "court_name": {
+              "type": "string",
+              "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+            },
+            "judgment_date": {
+              "type": "string",
+              "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+            },
+            "appellant_or_petitioner": {
+              "type": "string",
+              "description": "The name(s) of the appellant or petitioner."
+            },
+            "respondent": {
+              "type": "string",
+              "description": "The name(s) of the respondent."
+            },
+            "judges_coram": {
+              "type": "string",
+              "description": "The name(s) of the judge(s) who delivered the judgment."
+            },
+            "counsel_for_appellant": {
+              "type": "string",
+              "description": "The counsel representing the appellant/petitioner."
+            },
+            "counsel_for_respondent": {
+              "type": "string",
+              "description": "The counsel representing the respondent."
+            },
+            "sections_invoked": {
+              "type": "string",
+              "description": "Comprehensive list of IPC sections, special acts, and legal provisions invoked."
+            },
+            "case_type": {
+              "type": "string",
+              "description": "The type of case (e.g., 'Criminal Appeal', 'Writ Petition')."
+            },
+            "citation": {
+              "type": "string",
+              "description": "Legal citation for the case."
+            },
+            "acts_and_sections": {
+              "type": "string",
+              "description": "Detailed breakdown of primary and ancillary legal provisions with section numbers."
+            },
+            "trial_court_verdict": {
+              "type": "string",
+              "description": "Original verdict given by the trial court."
+            },
+            "appellate_court_decision": {
+              "type": "string",
+              "description": "Final decision of the appellate court."
+            }
+          },
+          "required": [
+            "case_number",
+            "case_title",
+            "court_name",
+            "judgment_date",
+            "appellant_or_petitioner",
+            "respondent",
+            "judges_coram",
+            "counsel_for_appellant",
+            "counsel_for_respondent",
+            "sections_invoked",
+            "case_type",
+            "citation",
+            "acts_and_sections",
+            "trial_court_verdict",
+            "appellate_court_decision"
+          ],
+          "additionalProperties": false
+        },
+        "residual_details": {
+          "type": "object",
+          "properties": {
+            "additional_facts": {
+              "type": "string",
+              "description": "Any other relevant facts not captured above."
+            },
+            "legal_precedents_cited": {
+              "type": "string",
+              "description": "Legal precedents and case laws cited in the judgment."
+            },
+            "sentencing_details": {
+              "type": "string",
+              "description": "Detailed information about sentences awarded to accused persons."
+            }
+          },
+          "required": [
+            "additional_facts",
+            "legal_precedents_cited",
+            "sentencing_details"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tier_1_determinative",
+        "tier_2_material",
+        "tier_3_contextual",
+        "tier_4_procedural",
+        "residual_details"
+      ],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
+}

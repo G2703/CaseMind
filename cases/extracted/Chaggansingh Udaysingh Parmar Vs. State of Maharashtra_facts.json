@@ -1,0 +1,36 @@
+{
+  "tier_1_determinative": {
+    "dishonest_intention": "The accused entered the house of the complainant and committed robbery, indicating a dishonest intention.",
+    "moving_movable_property": "Gold ornaments worth Rs.9,37,500/- were taken away, indicating movement of movable property.",
+    "in_building_tent_or_vessel": "The theft occurred in the house of the complainant, which is a place used for human dwelling."
+  },
+  "tier_2_material": {
+    "property_description": "Gold ornaments worth Rs.9,37,500/-."
+  },
+  "tier_3_contextual": {
+    "incident_location": "The theft occurred in the house of the complainant in Mumbai.",
+    "incident_date_time": "The FIR was registered on 7th October 2020."
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Application No.1080 of 2021",
+    "case_title": "Chaggansingh Udaysing Parmar vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "4th March 2024",
+    "appellant_or_petitioner": "Chaggansingh Udaysing Parmar",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "PRAKASH D. NAIK AND N.R. BORKAR, JJ.",
+    "counsel_for_appellant": "Mr. Manish N. Jain with Ritu G. Gehlot, Nidhi G. Kherodiya, and Prasad D. Mundhe i/by S.M. Jain Associates",
+    "counsel_for_respondent": "Mr. A.S. Shalgaonkar, APP",
+    "sections_invoked": "IPC 380, 454, 457",
+    "case_type": "Criminal Application",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code sections 380, 454, 457"
+  },
+  "residual_details": {
+    "additional_facts": "Accused Aslam Israel Shaikh @ Qureshi was arrested on 13th March 2021. Chaggansingh Parmar was arrested on 13th March 2021 and later granted bail on 23rd March 2021. The applicant was allegedly the receiver of stolen property, but there was no cogent evidence against him."
+  },
+  "template_id": "ipc_380",
+  "template_label": "Theft in dwelling house (IPC 380)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:39:19.357067"
+}

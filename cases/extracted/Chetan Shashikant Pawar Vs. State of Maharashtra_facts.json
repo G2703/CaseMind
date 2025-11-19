@@ -1,0 +1,43 @@
+{
+  "tier_1_determinative": {
+    "attempt_to_extract_cash": "The applicant and co-accused committed robbery, implying an attempt to extract cash or valuables.",
+    "threat_to_kill": "There is no specific mention of a threat to kill, but grievous hurt was caused during the robbery.",
+    "weapon_used": "The document does not specify the weapon used in the offense.",
+    "injury_detail": "The complainant suffered grievous hurt during the robbery.",
+    "actus_reus_description": "The applicant and co-accused committed robbery and caused grievous hurt to the complainant."
+  },
+  "tier_2_material": {
+    "number_of_perpetrators": "The applicant and at least one co-accused, Satish Mali, are mentioned, indicating multiple perpetrators.",
+    "victim_identity": "The document refers to the victim as the complainant, but does not provide a specific name.",
+    "previous_similar_incident": "There is no mention of previous similar incidents involving the accused.",
+    "medical_evidence": "The document does not provide specific medical evidence or treatment details.",
+    "identification_parade": "There is no mention of an identification parade being conducted."
+  },
+  "tier_3_contextual": {
+    "incident_date_time": "The crime was registered in Crime No. 280 of 2020, indicating it occurred in 2020.",
+    "incident_location": "The incident took place in the jurisdiction of Yeola City Police Station.",
+    "victim_activity_before_incident": "The document does not specify what the victim was doing before the incident."
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Bail Application No. 1316 of 2022",
+    "case_title": "Chetan Shashikant Pawar vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "9 January 2023",
+    "appellant_or_petitioner": "Chetan Shashikant Pawar",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "N.R. Borkar, J.",
+    "counsel_for_appellant": "Mr. N.G. Rokade",
+    "counsel_for_respondent": "Mr. S.S. Hulke, APP",
+    "sections_invoked": "Sections 394, 397, 341, 120-B r/w. 34 of the Indian Penal Code",
+    "case_type": "Criminal Bail Application",
+    "citation": "There is no specific legal citation provided in the document.",
+    "acts_and_sections": "Indian Penal Code, Sections 394, 397, 341, 120-B r/w. 34"
+  },
+  "residual_details": {
+    "additional_facts": "The court granted bail to the applicant on the basis of identical allegations against the co-accused, who was previously released on bail."
+  },
+  "template_id": "ipc_397",
+  "template_label": "Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:45:24.230097"
+}

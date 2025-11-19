@@ -1,0 +1,43 @@
+{
+  "tier_1_determinative": {
+    "attempt_to_extract_cash": "The co-accused tried to snatch away the mobile phone handset from the injured.",
+    "threat_to_kill": "Co-accused Sahil Shaikh gave blows by means of a knife on the chest and stomach of the injured, which indicates a threat to cause grievous harm.",
+    "weapon_used": "Knife",
+    "injury_detail": "The injured received blows on the chest and stomach by means of a knife.",
+    "actus_reus_description": "The applicant and co-accused committed robbery and caused grievous hurt while snatching a mobile phone."
+  },
+  "tier_2_material": {
+    "number_of_perpetrators": "Two perpetrators were involved: Danish Pirmohammad Pathan (applicant) and co-accused Sahil Shaikh.",
+    "victim_identity": "The first informant and his father-in-law, who were taking a walk near Noora Bazar Junction Dumping Station.",
+    "previous_similar_incident": "There are antecedents against the applicant which dis-entitle him from bail.",
+    "medical_evidence": "The history narrated before the Medical Officer noted the injuries caused by the knife attack.",
+    "identification_parade": "In the FIR, the applicant and co-accused were named as the alleged robbers, although initial reports mentioned two unknown persons."
+  },
+  "tier_3_contextual": {
+    "incident_date_time": "2nd July, 2023, at about 1.15 am",
+    "incident_location": "Near Noora Bazar Junction Dumping Station, Antop Hill",
+    "victim_activity_before_incident": "The victims were taking a walk after dinner."
+  },
+  "tier_4_procedural": {
+    "case_number": "CR No.230 of 2023",
+    "case_title": "Danish Pirmohammad Pathan vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "4th March, 2024",
+    "appellant_or_petitioner": "Danish Pirmohammad Pathan",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "N. J. Jamadar, J.",
+    "counsel_for_appellant": "Mr. V. S. Tiwari, a/w Priya Muthupandi and Priti Tiwari",
+    "counsel_for_respondent": "Mr. Shailesh Ghag, APP for the State/Respondent",
+    "sections_invoked": "Sections 397, 394, and 202 read with Section 34 of the Indian Penal Code, 1860",
+    "case_type": "Bail Application",
+    "citation": "",
+    "acts_and_sections": "Indian Penal Code, 1860 - Sections 397, 394, and 202 read with Section 34"
+  },
+  "residual_details": {
+    "additional_facts": "The applicant has been in custody since 2nd July, 2023, and is 19 years of age. The applicant's role was catching hold of the injured, while co-accused Sahil Shaikh carried out the knife attack and theft."
+  },
+  "template_id": "ipc_397",
+  "template_label": "Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T15:08:36.675305"
+}
