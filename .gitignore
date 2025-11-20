@@ -8,6 +8,7 @@ env/
 
 # Raw input files (don't commit large or sensitive input directories)
 cases/input_files/
+cases/test_ingest/
 
 # Logs directory
 logs/
