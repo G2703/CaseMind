@@ -79,15 +79,12 @@ class DataIngestionPipeline:
         logger.info(f"Starting ingestion for: {file_path.name}")
         
         try:
-            # Step 5a: Convert PDF to Markdown
+            # Step 1: Convert PDF to Markdown
             logger.info(f"Converting PDF to markdown: {file_path.name}")
             raw_text = self.pdf_converter.extract_text_from_pdf(str(file_path))
             markdown_text = self.pdf_converter.clean_text(raw_text)
             
-            # Step 5b: Load PDF (for validation and fallback)
-            # self.pdf_loader.load(file_path)
-            
-            # Step 6: Extract metadata from markdown
+            # Step 2: Extract metadata from markdown (first API call)
             metadata_dict = await self.metadata_extractor.extract(markdown_text, file_path)
             
             # Generate case ID
@@ -101,17 +98,66 @@ class DataIngestionPipeline:
                 ]
             })
             
-            # Step 7: Select template
+            # Step 3: Check for duplicates BEFORE fact extraction (saves 1 API call if duplicate)
+            duplicate_status = self.duplicate_checker.check(file_path, metadata_dict)
+            
+            if duplicate_status.is_duplicate:
+                logger.warning(f"Case already exists (duplicate): {duplicate_status.existing_case_id}")
+                logger.info(f"Skipping fact extraction to save API costs")
+                
+                # Fetch existing case data from database to get embeddings and facts
+                existing_doc = self.store.get_document_by_id(duplicate_status.existing_case_id)
+                
+                if existing_doc:
+                    existing_meta = existing_doc.get('meta', {})
+                    facts_summary = existing_meta.get('facts_summary', '')
+                    
+                    # Get embeddings from existing document
+                    embedding_facts_result = self.store.get_embedding_by_id(
+                        duplicate_status.existing_case_id, 
+                        'embedding_facts'
+                    )
+                    embedding_metadata_result = self.store.get_embedding_by_id(
+                        duplicate_status.existing_case_id, 
+                        'embedding_metadata'
+                    )
+                    
+                    return IngestResult(
+                        case_id=duplicate_status.existing_case_id,
+                        document_id=duplicate_status.existing_case_id,
+                        status=ProcessingStatus.SKIPPED_DUPLICATE,
+                        metadata=metadata,
+                        facts_summary=facts_summary,
+                        embedding_facts=embedding_facts_result,
+                        embedding_metadata=embedding_metadata_result,
+                        error_message=None
+                    )
+                else:
+                    # Fallback if we can't find the existing document
+                    logger.warning(f"Could not fetch existing document: {duplicate_status.existing_case_id}")
+                    return IngestResult(
+                        case_id=case_id,
+                        document_id=duplicate_status.existing_case_id,
+                        status=ProcessingStatus.SKIPPED_DUPLICATE,
+                        metadata=metadata,
+                        facts_summary="",
+                        embedding_facts=None,
+                        embedding_metadata=None,
+                        error_message=None
+                    )
+            
+            # Step 4: Select template
             template = self.template_selector.select(metadata_dict)
             
-            # Step 8: Extract facts from markdown
+            # Step 5: Extract facts from markdown (second API call - only if not duplicate)
+            logger.info(f"No duplicate found, proceeding with fact extraction")
             facts_dict = await self.fact_extractor.extract(markdown_text, template)
             facts = ExtractedFacts(**facts_dict)
             
-            # Step 9: Generate facts summary
+            # Step 6: Generate facts summary
             facts_summary = facts.to_summary_text()
             
-            # Step 10: Calculate dual embeddings
+            # Step 7: Calculate dual embeddings
             complete_metadata = {
                 **metadata_dict,
                 'template_id': template.template_id,
@@ -127,7 +173,7 @@ class DataIngestionPipeline:
             
             embeddings = self.embedder.embed_document_dual(facts_summary, complete_metadata)
             
-            # Step 11: Store in database
+            # Step 8: Store in database
             file_hash = compute_file_hash(file_path)
             document_id = case_id
             

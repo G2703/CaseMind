@@ -229,10 +229,14 @@ class PGVectorDocumentStore(IDocumentStore):
             embedding_list = embedding.tolist()
             
             # Build query with optional exclusion
-            exclude_clause = "AND id != %s" if exclude_id else ""
-            params = [json.dumps(embedding_list), top_k]
             if exclude_id:
-                params.insert(1, exclude_id)
+                exclude_clause = "AND id != %s"
+                # Params order: embedding (for score), exclude_id, embedding (for order), top_k
+                params = [json.dumps(embedding_list), exclude_id, json.dumps(embedding_list), top_k]
+            else:
+                exclude_clause = ""
+                # Params order: embedding (for score), embedding (for order), top_k
+                params = [json.dumps(embedding_list), json.dumps(embedding_list), top_k]
             
             query_sql = f"""
             SELECT 
@@ -277,6 +281,41 @@ class PGVectorDocumentStore(IDocumentStore):
         except psycopg2.Error as e:
             logger.error(f"Failed to get document by ID: {e}")
             raise DocumentStoreError(f"Get document failed: {e}")
+    
+    def get_embedding_by_id(self, doc_id: str, embedding_field: str = 'embedding_facts') -> Optional[np.ndarray]:
+        """
+        Retrieve embedding vector for a document by ID.
+        
+        Args:
+            doc_id: Document ID
+            embedding_field: Which embedding to retrieve ('embedding_facts' or 'embedding_metadata')
+            
+        Returns:
+            numpy array of embedding or None if not found
+        """
+        try:
+            query_sql = f"""
+            SELECT {embedding_field}::text
+            FROM haystack_documents
+            WHERE id = %s;
+            """
+            
+            with self.connection.cursor() as cursor:
+                cursor.execute(query_sql, (doc_id,))
+                result = cursor.fetchone()
+                
+            if result and result[0]:
+                # PostgreSQL vector is returned as string "[0.1, 0.2, ...]"
+                # Parse it to list and convert to numpy array
+                vector_str = result[0].strip()
+                if vector_str.startswith('[') and vector_str.endswith(']'):
+                    vector_list = json.loads(vector_str)
+                    return np.array(vector_list, dtype=np.float32)
+            return None
+            
+        except (psycopg2.Error, json.JSONDecodeError, ValueError) as e:
+            logger.error(f"Failed to get embedding by ID: {e}")
+            return None
     
     def check_duplicate(self, file_hash: str) -> Optional[Dict[str, Any]]:
         """Check if document with given file hash exists."""

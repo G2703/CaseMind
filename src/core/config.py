@@ -63,7 +63,7 @@ class Config:
         self.ranker_model = os.getenv('RANKER_MODEL', 'cross-encoder/ms-marco-MiniLM-L-6-v2')
         
         # Pipeline configuration
-        self.top_k = int(os.getenv('TOP_K_SIMILAR_CASES', '3'))
+        self.top_k = int(os.getenv('TOP_K_SIMILAR_CASES', '5'))
         self.cross_encoder_threshold = float(os.getenv('CROSS_ENCODER_THRESHOLD', '0.0'))
         
         # OpenAI configuration

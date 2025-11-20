@@ -43,7 +43,7 @@ class SimilaritySearchPipeline:
         self.cross_encoder = CrossEncoder(ranker_model)
         
         # Get configuration
-        self.top_k = self.config.get("TOP_K_SIMILAR_CASES", 3)
+        self.top_k = self.config.get("TOP_K_SIMILAR_CASES", 5)
         self.threshold = self.config.get("CROSS_ENCODER_THRESHOLD", 0.0)
         # Try to initialize lightweight Haystack-compatible nodes (adapter pattern)
         try:
