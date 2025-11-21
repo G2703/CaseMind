@@ -221,16 +221,22 @@ class SimilarCase:
 @dataclass
 class SimilaritySearchResult:
     """Result of similarity search pipeline."""
-    input_case: IngestResult
+    query_file: str
+    input_case: Optional[IngestResult]
     similar_cases: List[SimilarCase]
-    total_retrieved: int
     total_above_threshold: int
+    search_mode: str = "facts"
+    total_retrieved: int = 0
+    error_message: Optional[str] = None
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
         return {
-            'input_case': self.input_case.to_dict(),
+            'query_file': self.query_file,
+            'input_case': self.input_case.to_dict() if self.input_case else None,
             'similar_cases': [case.to_dict() for case in self.similar_cases],
             'total_retrieved': self.total_retrieved,
             'total_above_threshold': self.total_above_threshold,
+            'search_mode': self.search_mode,
+            'error_message': self.error_message,
         }

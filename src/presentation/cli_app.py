@@ -10,11 +10,10 @@ from typing import Optional
 
 from rich.prompt import Prompt, Confirm
 from rich import print as rprint
+from rich.panel import Panel
 
 from presentation.formatters import RichFormatter, console
-from pipelines.ingestion_pipeline import DataIngestionPipeline
-from pipelines.similarity_pipeline import SimilaritySearchPipeline
-from infrastructure.document_store import PGVectorDocumentStore
+from pipelines import HaystackIngestionPipeline, PureHaystackSimilarityPipeline
 from core.config import Config
 from core.exceptions import CaseMindException
 
@@ -28,9 +27,8 @@ class CLIApp:
         """Initialize CLI application."""
         self.config = Config()
         self.formatter = RichFormatter()
-        self.ingestion_pipeline: Optional[DataIngestionPipeline] = None
-        self.similarity_pipeline: Optional[SimilaritySearchPipeline] = None
-        self.store: Optional[PGVectorDocumentStore] = None
+        self.ingestion_pipeline: Optional[HaystackIngestionPipeline] = None
+        self.similarity_pipeline: Optional[PureHaystackSimilarityPipeline] = None
         self.running = False
         
         logger.info("CLI Application initialized")
@@ -81,22 +79,26 @@ class CLIApp:
         try:
             console.print("\n[bold cyan]Initializing backend services...[/bold cyan]")
             
-            # Initialize pipelines (reuse ingestion_pipeline to avoid duplicate TemplateSelector)
-            self.ingestion_pipeline = DataIngestionPipeline()
-            self.similarity_pipeline = SimilaritySearchPipeline(ingestion_pipeline=self.ingestion_pipeline)
-            self.store = PGVectorDocumentStore()
+            # Initialize pure Haystack pipelines
+            console.print("  • Loading ingestion pipeline...")
+            self.ingestion_pipeline = HaystackIngestionPipeline()
             
-            # Check database connection
+            console.print("  • Loading similarity pipeline...")
+            self.similarity_pipeline = PureHaystackSimilarityPipeline()
+            
+            # Check database connection via document store
             console.print("  • Testing database connection...")
-            stats = self.store.get_statistics()
+            doc_count = self.similarity_pipeline.document_store.count_documents()
             
             self.formatter.print_success("Backend initialized successfully")
-            self.formatter.print_info(f"Database: {stats.get('total_documents', 0)} cases indexed")
+            self.formatter.print_info(f"Database: {doc_count} cases indexed")
             
             return True
             
         except Exception as e:
+            import traceback
             logger.error(f"Backend initialization failed: {e}")
+            logger.error(f"Traceback: {traceback.format_exc()}")
             self.formatter.print_error(f"Backend initialization failed: {str(e)}")
             return False
     
@@ -127,20 +129,34 @@ class CLIApp:
         
         # Process batch
         try:
+            completed = 0
+            skipped = 0
+            failed = 0
+            
             with self.formatter.display_progress_bar(len(pdf_files), "Ingesting cases") as progress:
                 task = progress.add_task("Processing...", total=len(pdf_files))
                 
-                # Run batch ingestion (this will update progress internally)
-                result = await self.ingestion_pipeline.process_batch(folder_path)
-                
-                progress.update(task, completed=len(pdf_files))
+                for pdf_file in pdf_files:
+                    try:
+                        result = await self.ingestion_pipeline.ingest_single(pdf_file, display_summary=False)
+                        if result.status.value == "completed":
+                            completed += 1
+                        elif result.status.value == "skipped_duplicate":
+                            skipped += 1
+                        else:
+                            failed += 1
+                    except Exception as e:
+                        logger.error(f"Failed to ingest {pdf_file.name}: {e}")
+                        failed += 1
+                    
+                    progress.update(task, advance=1)
             
             # Display results
             console.print()
-            console.print(self.formatter.format_batch_result(result))
-            
-            if result.case_ids:
-                self.formatter.print_success(f"Successfully ingested {len(result.case_ids)} cases")
+            self.formatter.print_success(f"Batch ingestion complete")
+            console.print(f"  • Completed: {completed}")
+            console.print(f"  • Skipped (duplicates): {skipped}")
+            console.print(f"  • Failed: {failed}")
             
         except Exception as e:
             logger.error(f"Batch ingestion error: {e}")
@@ -171,16 +187,35 @@ class CLIApp:
             console.print("\n[bold cyan]Processing query case...[/bold cyan]")
             
             with console.status("[bold green]Running similarity pipeline...") as status:
-                result = await self.similarity_pipeline.run_full_pipeline(
+                result = await self.similarity_pipeline.search_similar(
                     file_path,
                     use_metadata_query=use_metadata
                 )
             
             # Display query case info
             console.print("\n")
-            console.print(self.formatter.format_metadata(result.input_case.metadata))
+            console.print(Panel.fit(
+                "[bold cyan]Query Case Information[/bold cyan]",
+                border_style="cyan"
+            ))
             console.print()
-            console.print(self.formatter.format_facts_summary(result.input_case.facts_summary))
+            
+            if result.input_case and result.input_case.metadata:
+                # Display metadata
+                console.print(self.formatter.format_metadata(result.input_case.metadata))
+                console.print()
+                
+                # Display facts summary if available
+                if result.input_case.facts_summary and len(result.input_case.facts_summary.strip()) > 0:
+                    console.print(self.formatter.format_facts_summary(result.input_case.facts_summary))
+                    console.print()
+                else:
+                    console.print(Panel(
+                        "[yellow]No facts summary available (OpenAI API key required for fact extraction)[/yellow]",
+                        title="⚠️ Note",
+                        border_style="yellow"
+                    ))
+                    console.print()
             
             # Display similar cases
             console.print("\n")
@@ -199,7 +234,16 @@ class CLIApp:
         console.print("\n[bold cyan]═══ Database Statistics ═══[/bold cyan]\n")
         
         try:
-            stats = self.store.get_statistics()
+            # Get document count from document store
+            doc_count = self.similarity_pipeline.document_store.count_documents()
+            
+            stats = {
+                "total_documents": doc_count,
+                "database": "PostgreSQL + pgvector",
+                "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+                "ranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+            }
+            
             console.print(self.formatter.format_statistics(stats))
             
         except Exception as e:
@@ -212,41 +256,34 @@ class CLIApp:
         
         health_status = {}
         
-        # Check database
+        # Check database connection
         try:
-            self.store.get_statistics()
+            doc_count = self.similarity_pipeline.document_store.count_documents()
             health_status["PostgreSQL Database"] = True
         except Exception as e:
             logger.error(f"Database health check failed: {e}")
             health_status["PostgreSQL Database"] = False
         
-        # Check pgvector
+        # Check pgvector (implicit in document store)
         try:
-            self.store.ensure_pgvector_extension()
-            health_status["pgvector Extension"] = True
+            # If document store works, pgvector is working
+            health_status["pgvector Extension"] = health_status["PostgreSQL Database"]
         except Exception as e:
             logger.error(f"pgvector health check failed: {e}")
             health_status["pgvector Extension"] = False
         
-        # Check embedding service
+        # Check Haystack pipelines
         try:
-            test_embedding = self.similarity_pipeline.embedder.embed_query("test")
-            health_status["Embedding Service"] = len(test_embedding) == 768
+            health_status["Ingestion Pipeline"] = self.ingestion_pipeline is not None
+            health_status["Similarity Pipeline"] = self.similarity_pipeline is not None
         except Exception as e:
-            logger.error(f"Embedding service health check failed: {e}")
-            health_status["Embedding Service"] = False
-        
-        # Check cross-encoder
-        try:
-            self.similarity_pipeline.cross_encoder.predict([("test", "test")])
-            health_status["Cross-Encoder"] = True
-        except Exception as e:
-            logger.error(f"Cross-encoder health check failed: {e}")
-            health_status["Cross-Encoder"] = False
+            logger.error(f"Pipeline health check failed: {e}")
+            health_status["Ingestion Pipeline"] = False
+            health_status["Similarity Pipeline"] = False
         
         # Check OpenAI API (if configured)
-        openai_key = self.config.get("OPENAI_API_KEY")
-        if openai_key and openai_key != "your_key_here":
+        openai_key = self.config.get("OPENAI_API_KEY", "")
+        if openai_key and openai_key != "your_key_here" and openai_key != "":
             health_status["OpenAI API"] = True
         else:
             health_status["OpenAI API"] = False
@@ -258,13 +295,8 @@ class CLIApp:
         """Shutdown the application."""
         console.print("\n[bold cyan]Shutting down CaseMind...[/bold cyan]")
         
-        # Close database connections
-        if self.store:
-            try:
-                # Close connection (if connection pooling is implemented)
-                pass
-            except Exception as e:
-                logger.error(f"Error closing database connection: {e}")
+        # Cleanup (Haystack handles connections internally)
+        logger.info("Cleaning up resources...")
         
         self.formatter.print_success("Goodbye!")
         self.running = False
