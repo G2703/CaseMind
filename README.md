@@ -1,22 +1,25 @@
 # CaseMind - Legal Case Similarity Search 🔍⚖️
 
-AI-powered similarity search system for legal cases using Haystack, PostgreSQL, and pgvector.
+AI-powered similarity search system for legal cases using **Haystack 2.0**, PostgreSQL, and pgvector.
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PostgreSQL](https://img.shields.io/badge/postgresql-14+-blue.svg)](https://www.postgresql.org/)
+[![Haystack](https://img.shields.io/badge/haystack-2.0+-green.svg)](https://haystack.deepset.ai/)
 
 ---
 
 ## 🌟 Features
 
+- **🔥 Haystack 2.0 Integration**: Production-ready AI orchestration framework
 - **Dual Embedding Architecture**: Separate embeddings for case facts and metadata
 - **Batch Processing**: Ingest entire folders of legal cases efficiently
 - **Smart Duplicate Detection**: Avoid re-indexing cases using file hash and case ID
-- **Cross-Encoder Re-ranking**: High-accuracy similarity scoring
+- **Cross-Encoder Re-ranking**: High-accuracy similarity scoring with Haystack rankers
 - **Template-Based Extraction**: Structured fact extraction using legal ontology
 - **Rich CLI Interface**: Beautiful terminal UI with progress tracking
-- **Two-Pipeline Design**: Separate ingestion and search workflows
+- **Pipeline Architecture**: Declarative Haystack Pipelines with automatic optimization
 - **PostgreSQL + pgvector**: Scalable vector similarity search with ACID guarantees
+- **Modular Components**: Easy to extend with Haystack's component ecosystem
 
 ---
 
@@ -91,10 +94,31 @@ See **[DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md)** for complete architecture detai
 
 ## 📚 Documentation
 
+- **[HAYSTACK_INTEGRATION.md](HAYSTACK_INTEGRATION.md)**: **⭐ NEW!** Complete Haystack 2.0 integration guide
 - **[QUICKSTART.md](QUICKSTART.md)**: Complete setup guide for all platforms
 - **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)**: Implementation details
 - **[DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md)**: Architecture and design patterns
-- **[README_HAYSTACK.md](README_HAYSTACK.md)**: Haystack-specific documentation
+- **[README_HAYSTACK.md](README_HAYSTACK.md)**: Legacy Haystack documentation
+
+### Migration to Haystack 2.0
+
+CaseMind now uses **Haystack 2.0** for component-based AI orchestration. Benefits:
+
+✅ **Production-Ready**: Battle-tested components from Haystack ecosystem  
+✅ **Extensible**: Easy integration with 50+ Haystack components  
+✅ **Observable**: Built-in pipeline visualization and logging  
+✅ **Backward Compatible**: Existing code works with minimal changes  
+
+**Quick Test**:
+```bash
+# Test Haystack components
+python src/scripts/test_haystack_migration.py
+
+# View migration details
+python src/scripts/haystack_migration_report.py
+```
+
+See **[HAYSTACK_INTEGRATION.md](HAYSTACK_INTEGRATION.md)** for complete migration guide.
 
 ---
 

@@ -99,7 +99,7 @@ class ExtractedFacts:
             return values
         
         all_values = extract_values(self.to_dict())
-        return ". ".join(all_values) + "." if all_values else ""
+        return " ".join(all_values) + " " if all_values else ""
 
 
 @dataclass
