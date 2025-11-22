@@ -12,12 +12,11 @@ from haystack import Pipeline, Document
 from haystack.components.embedders import SentenceTransformersTextEmbedder
 from haystack.components.rankers import TransformersSimilarityRanker
 from haystack_integrations.document_stores.pgvector import PgvectorDocumentStore
-from haystack_integrations.components.retrievers.pgvector import PgvectorEmbeddingRetriever
 
 from core.config import Config
 from core.models import SimilaritySearchResult, SimilarCase, IngestResult, ProcessingStatus
 from pipelines.haystack_ingestion_pipeline import HaystackIngestionPipeline
-from pipelines.haystack_custom_nodes import ThresholdFilterNode
+from pipelines.haystack_custom_nodes import ThresholdFilterNode, FactsEmbeddingRetriever
 
 logger = logging.getLogger(__name__)
 
@@ -45,7 +44,7 @@ class PureHaystackSimilarityPipeline:
         self.document_store = self.ingestion_pipeline.document_store
         
         # Configuration
-        self.top_k_retrieval = self.config.top_k * 3  # Retrieve 3x for reranking
+        self.top_k_retrieval = self.config.top_k   # Retrieve 3x for reranking
         self.top_k_final = self.config.top_k
         self.threshold = self.config.cross_encoder_threshold
         
@@ -55,7 +54,7 @@ class PureHaystackSimilarityPipeline:
         logger.info("PureHaystackSimilarityPipeline initialized")
     
     def _build_retrieval_pipeline(self):
-        """Build Haystack pipeline for similarity search."""
+        """Build Haystack pipeline for similarity search using facts embeddings."""
         
         # 1. Text Embedder (for query)
         text_embedder = SentenceTransformersTextEmbedder(
@@ -63,8 +62,8 @@ class PureHaystackSimilarityPipeline:
             progress_bar=False
         )
         
-        # 2. Retriever (cosine similarity via PgVector)
-        retriever = PgvectorEmbeddingRetriever(
+        # 2. Facts Embedding Retriever (searches on 'embedding' column with facts)
+        retriever = FactsEmbeddingRetriever(
             document_store=self.document_store,
             top_k=self.top_k_retrieval
         )
@@ -92,7 +91,7 @@ class PureHaystackSimilarityPipeline:
         self.retrieval_pipeline.connect("retriever.documents", "ranker.documents")
         self.retrieval_pipeline.connect("ranker.documents", "threshold_filter.documents")
         
-        logger.info("Retrieval pipeline built: text_embedder → retriever → ranker → threshold_filter")
+        logger.info("Retrieval pipeline built: text_embedder → facts_retriever → ranker → threshold_filter")
     
     async def search_similar(
         self,
@@ -120,6 +119,7 @@ class PureHaystackSimilarityPipeline:
         logger.info("Phase 1: Ingesting query document")
         ingest_result = await self.ingestion_pipeline.ingest_single(file_path)
         
+        # Handle failed ingestion
         if ingest_result.status == ProcessingStatus.FAILED:
             return SimilaritySearchResult(
                 query_file=str(file_path),
@@ -130,8 +130,24 @@ class PureHaystackSimilarityPipeline:
                 error_message=ingest_result.error_message
             )
         
+        # Log if document was a duplicate (but continue with similarity search)
+        if ingest_result.status == ProcessingStatus.SKIPPED_DUPLICATE:
+            logger.info("Query document is a duplicate, using existing data for similarity search")
+        
         # Phase 2: Prepare query text
         logger.info("Phase 2: Preparing query for retrieval")
+        
+        # Check if metadata is available
+        if ingest_result.metadata is None:
+            logger.error("Metadata is None, cannot build query")
+            return SimilaritySearchResult(
+                query_file=str(file_path),
+                input_case=ingest_result,
+                similar_cases=[],
+                total_above_threshold=0,
+                search_mode="facts" if not use_metadata_query else "metadata",
+                error_message="No metadata available for query"
+            )
         
         if use_metadata_query:
             # Build metadata query from case metadata

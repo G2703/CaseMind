@@ -1,14 +1,14 @@
 {
   "tier_1_determinative": {
-    "theft_or_attempted_theft": "The incident involved an actual theft where gold and silver ornaments were looted from the jewellery shop and the residential bungalow of the victim, PW4 Shashiram Mulik.",
-    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "The robbers were armed with sickles and used them to assault PW5 Sachin Mulik, causing him injuries. They also gagged and tied the victims with cloths."
+    "theft_or_attempted_theft": "theft",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "hurt"
   },
   "tier_2_material": {
-    "property_description": "The property stolen included gold and silver ornaments from the jewellery shop and the residential bungalow, as well as mobile handsets."
+    "property_description": "gold and silver ornaments, mobile handsets"
   },
   "tier_3_contextual": {
-    "incident_location": "The incident occurred at the residential house and jewellery shop of PW4 Shashiram Mulik, located at Basveshwar Housing Society, Mali Vasti, Sangli.",
-    "incident_date_time": "The robbery took place at about 10.30 p.m. on 13th March 2012."
+    "incident_location": "Suyog bungalow, Basveshwar Housing Society, Mali Vasti, Sangli",
+    "incident_date_time": "13th March 2012, about 10.30 p.m."
   },
   "tier_4_procedural": {
     "case_number": "CRIMINAL APPEAL NO.1472 OF 2018",
@@ -19,17 +19,13 @@
     "respondent": "The State of Maharashtra",
     "judges_coram": "A. M. BADAR, J.",
     "counsel_for_appellant": "Mr.B.A.Lawate",
-    "counsel_for_respondent": "Mr.Vinod Chate, APP for State",
-    "sections_invoked": "Sections 392, 342, and 506 (Part II) of the Indian Penal Code",
+    "counsel_for_respondent": "Mr.Vinod Chate",
+    "sections_invoked": "Sections 392, 342 and 506 (Part II) of the Indian Penal Code",
     "case_type": "Criminal Appeal",
-    "citation": "/",
+    "citation": null,
     "acts_and_sections": "Indian Penal Code Sections 392, 342, 506 (Part II)"
   },
   "residual_details": {
-    "additional_facts": "The appellant was sentenced to 7 years rigorous imprisonment for the robbery, with additional sentences for other charges. The robbers posed as friends of PW5 Sachin Mulik to gain entry. The identification of the accused was carried out through a Test Identification Parade. The recovery of looted ornaments and weapons was conducted during the investigation."
-  },
-  "template_id": "ipc_392",
-  "template_label": "Robbery (IPC 392)",
-  "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T14:14:35.077890"
+    "additional_facts": "The robbers were armed with weapons like sickles. They assaulted the victims and tied them up before fleeing."
+  }
 }

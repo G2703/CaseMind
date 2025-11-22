@@ -9,6 +9,8 @@ from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 from rich.markdown import Markdown
 from rich.text import Text
+from rich.align import Align
+from rich import box
 
 from core.models import CaseMetadata, ExtractedFacts, SimilarCase, BatchIngestResult
 
@@ -18,15 +20,49 @@ console = Console()
 class RichFormatter:
     """Formats output using Rich library for beautiful CLI."""
     
+    # Professional color scheme
+    colors = {
+        'primary': "#c2edff",
+        'secondary': "#dbcffe",
+        'success': '#34d399',
+        'warning': '#fbbf24',
+        'error': '#f87171',
+        'info': "#61a8ff",
+        'text': '#f8fafc',
+        'muted': '#9ca3af',
+        'accent': '#10b981',
+        'gold': '#f59e0b',
+    }
+    
     @staticmethod
     def display_welcome():
-        """Display welcome banner."""
-        welcome_text = """
-# CaseMind Legal Similarity Search
-
-AI-powered similarity search for legal cases using Haystack + pgvector
-        """
-        console.print(Panel(Markdown(welcome_text), border_style="bold blue"))
+        """Display welcome screen with ASCII art logo."""
+        console.clear()
+        
+        logo = Text()
+        logo.append("╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗\n", style=RichFormatter.colors['primary'])
+        logo.append("║                                                                                                         ║\n", style=RichFormatter.colors['primary'])
+        logo.append("║                                                                                                         ║\n", style=RichFormatter.colors['primary'])
+        logo.append("║                     ██████╗ █████╗ ███████╗███████╗███╗   ███╗██╗███╗   ██╗██████╗                      ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                    ██╔════╝██╔══██╗██╔════╝██╔════╝████╗ ████║██║████╗  ██║██╔══██╗                     ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                    ██║     ███████║███████╗█████╗  ██╔████╔██║██║██╔██╗ ██║██║  ██║                     ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                    ██║     ██╔══██║╚════██║██╔══╝  ██║╚██╔╝██║██║██║╚██╗██║██║  ██║                     ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                    ╚██████╗██║  ██║███████║███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝                     ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                     ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝                      ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║                                                                                                         ║\n", style=RichFormatter.colors['primary'])
+        logo.append("║                                    Legal Similarity Search & Analysis                                   ║\n", style=RichFormatter.colors['secondary'])
+        logo.append("║                              AI-Powered Case Matching with Haystack + pgvector                         ║\n", style=RichFormatter.colors['secondary'])
+        logo.append("║                                                                                                         ║\n", style=RichFormatter.colors['primary'])
+        logo.append("║               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━            ║\n", style=RichFormatter.colors['primary'])
+        logo.append("║                                                  Features                                               ║\n", style=RichFormatter.colors['text'])
+        logo.append("║                                                                                                         ║\n", style=f"bold {RichFormatter.colors['primary']}")
+        logo.append("║  • Semantic similarity using dual embeddings           • Cross-encoder re-ranking for precision         ║\n", style=RichFormatter.colors['info'])
+        logo.append("║  • Intelligent threshold-based filtering               • PostgreSQL + pgvector for fast search          ║\n", style=RichFormatter.colors['info'])
+        logo.append("║                                                                                                         ║\n", style=RichFormatter.colors['primary'])
+        logo.append("╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝", style=RichFormatter.colors['primary'])
+        
+        console.print(Align.center(logo))
+        console.print()
     
     @staticmethod
     def display_menu():
@@ -108,9 +144,32 @@ AI-powered similarity search for legal cases using Haystack + pgvector
         )
     
     @staticmethod
+    def get_similarity_color(score: float) -> str:
+        """Get color for similarity score."""
+        if score >= 0.9:
+            return RichFormatter.colors['success']
+        elif score >= 0.8:
+            return RichFormatter.colors['accent']
+        elif score >= 0.7:
+            return RichFormatter.colors['info']
+        elif score >= 0.6:
+            return RichFormatter.colors['gold']
+        elif score >= 0.5:
+            return RichFormatter.colors['warning']
+        else:
+            return RichFormatter.colors['error']
+    
+    @staticmethod
+    def get_similarity_bar(score: float, width: int = 20) -> str:
+        """Create visual bar for similarity score."""
+        filled = int(score * width)
+        empty = width - filled
+        return '█' * filled + '░' * empty
+    
+    @staticmethod
     def format_similar_cases(similar_cases: List[SimilarCase]) -> Table:
         """
-        Format similar cases as a table.
+        Format similar cases as a table with visual bars.
         
         Args:
             similar_cases: List of SimilarCase objects
@@ -118,29 +177,44 @@ AI-powered similarity search for legal cases using Haystack + pgvector
         Returns:
             Rich Table
         """
-        table = Table(title="🔍 Similar Cases", show_lines=True)
+        table = Table(
+            title="🔍 Similar Cases",
+            show_lines=True,
+            box=box.ROUNDED,
+            border_style=RichFormatter.colors['primary'],
+            header_style=f"bold {RichFormatter.colors['primary']}"
+        )
         
-        table.add_column("Rank", style="cyan bold", width=6)
-        table.add_column("Case Title", style="white", width=40)
-        table.add_column("Court", style="green", width=20)
-        table.add_column("Date", style="blue", width=12)
-        table.add_column("Sections", style="magenta", width=15)
-        table.add_column("Score", style="yellow", width=10)
+        table.add_column("Rank", justify="center", style="bold", width=6)
+        table.add_column("Case Title", style=RichFormatter.colors['text'], width=30)
+        table.add_column("Court", style=RichFormatter.colors['text'], width=18)
+        table.add_column("Sections", style=RichFormatter.colors['text'], width=12)
+        table.add_column("CE Score", justify="center", width=10)
+        table.add_column("Visual", justify="left", width=12)
+        table.add_column("Cosine", justify="center", width=8)
         
         for i, case in enumerate(similar_cases, 1):
-            sections = ', '.join(case.sections_invoked[:3])  # Show first 3
-            if len(case.sections_invoked) > 3:
+            sections = ', '.join(case.sections_invoked[:2])  # Show first 2
+            if len(case.sections_invoked) > 2:
                 sections += "..."
             
-            score_color = "green" if case.cross_encoder_score > 0.7 else "yellow"
+            # Get colors and bars
+            ce_color = RichFormatter.get_similarity_color(case.cross_encoder_score)
+            cos_color = RichFormatter.get_similarity_color(case.cosine_similarity)
+            bar = RichFormatter.get_similarity_bar(case.cross_encoder_score, width=8)
+            
+            # Truncate case title
+            title = case.case_title[:28] + "..." if len(case.case_title) > 28 else case.case_title
+            court = case.court_name[:16] + "..." if len(case.court_name) > 16 else case.court_name
             
             table.add_row(
                 str(i),
-                case.case_title[:40] + "..." if len(case.case_title) > 40 else case.case_title,
-                case.court_name[:20],
-                case.judgment_date,
+                title,
+                court,
                 sections,
-                f"[{score_color}]{case.cross_encoder_score:.3f}[/{score_color}]"
+                f"[{ce_color}]{case.cross_encoder_score:.3f}[/{ce_color}]",
+                f"[{ce_color}]{bar}[/{ce_color}]",
+                f"[{cos_color}]{case.cosine_similarity:.3f}[/{cos_color}]"
             )
         
         return table

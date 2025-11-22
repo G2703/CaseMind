@@ -1,35 +1,30 @@
 {
   "tier_1_determinative": {
-    "mischief_act": "Withdrawal of TADA charges to facilitate the release of Veerappan's associates from judicial custody.",
-    "damage_amount": "Not applicable as this is not a financial damage case but a legal and procedural issue."
+    "key_facts": "The State Government of Karnataka yielded to Veerappan's demands to withdraw TADA charges against his associates to facilitate their release, following the kidnapping of a popular film actor. The Public Prosecutor's application for withdrawal of charges lacked material evidence of independent application of mind in public interest, leading to the court granting consent for withdrawal of TADA charges, which was later deemed invalid as it did not meet the requirements of Section 321."
   },
   "tier_2_material": {
-    "property_description": "The legal charges under TADA against Veerappan's associates were affected."
+    "material_facts": "Veerappan, a notorious criminal, kidnapped film actor Rajkumar and demanded the withdrawal of TADA charges against his associates and their release. The State Government agreed to these demands, and the Public Prosecutor filed an application under Section 321 of the Code of Criminal Procedure to withdraw the charges, despite ongoing trials and recorded witness evidence."
   },
   "tier_3_contextual": {
-    "incident_location": "The incident relates to the border region between Karnataka and Tamil Nadu, specifically involving the Designated Court at Mysore and Chennai.",
-    "incident_date_time": "The events unfolded around the abduction on 30th July 2000, and subsequent court orders on 19th August 2000 and 28th August 2000."
+    "incident_location": "Farmhouse (abduction of Rajkumar) and Mysore (court proceedings)",
+    "incident_date_time": "July 30, 2000 (abduction of Rajkumar)"
   },
   "tier_4_procedural": {
-    "case_number": "Not explicitly mentioned in the provided text.",
-    "case_title": "Abdul Karim v. State of Karnataka and Ors.",
+    "case_number": null,
+    "case_title": "ABDUL KARIM v. STATE OF KARNATAKA AND ORS.",
     "court_name": "Supreme Court of India",
     "judgment_date": "November 7, 2000",
     "appellant_or_petitioner": "Abdul Karim",
-    "respondent": "State of Karnataka and Others",
-    "judges_coram": "S.P. Bharucha, D.P. Mohapatra, and Y.K. Sabharwal, JJ.",
-    "counsel_for_appellant": "Not explicitly mentioned in the provided text.",
-    "counsel_for_respondent": "Not explicitly mentioned in the provided text.",
-    "sections_invoked": "Section 321 of the Code of Criminal Procedure, Terrorist and Disruptive Activities Act (TADA), National Security Act (NSA)",
+    "respondent": "State of Karnataka and others",
+    "judges_coram": "S.P. Bharucha, D.P. Mohapatra, Y.K. Sabharwal",
+    "counsel_for_appellant": null,
+    "counsel_for_respondent": null,
+    "sections_invoked": "Section 321 of the Code of Criminal Procedure, 1973",
     "case_type": "Criminal Appeal",
     "citation": "[2000] SUPP. 4 S.C.R. 382",
-    "acts_and_sections": "Code of Criminal Procedure, 1973; Terrorist and Disruptive Activities Act; National Security Act"
+    "acts_and_sections": "Terrorist and Disruptive Activities Act (TADA), Indian Penal Code (IPC), Arms Act, Explosive Substances Act, National Security Act (NSA)"
   },
   "residual_details": {
-    "additional_facts": "Veerappan, a notorious criminal, kidnapped popular film actor Rajkumar. The State Government conceded to Veerappan's demands to withdraw TADA charges against his associates to ensure Rajkumar's release. The Supreme Court criticized the actions of the State Government and the Public Prosecutor for not independently assessing the public interest."
-  },
-  "template_id": "ipc_427",
-  "template_label": "Mischief causing damage (IPC 427)",
-  "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T18:00:30.384031"
+    "additional_facts": "The application for withdrawal was made during an ongoing trial with evidence from 51 witnesses. The Special Public Prosecutor argued that other charges under the Arms Act and Explosive Substances Act covered provisions of TADA, and that the Central Government had already withdrawn the central enactment of TADA."
+  }
 }

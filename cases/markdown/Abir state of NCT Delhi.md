@@ -1,9 +1,3 @@
-# Abir state of NCT Delhi
-
-## Case Information
-
-## Document Content
-
 A
 B
 C
@@ -27,9 +21,7 @@ rr.1220-1225 – By order dtd.15.11.12 issued by the Hon’ble
 President of India on a mercy petition, the sentence of death awarded to the appellant was modified to imprisonment for life with the requirements that he would remain in prison for the whole of remainder of his natural life without parole and any remission in the term of imprisonment–Impugned order passed by the
 Director General of Prisons declined furlough to the appellant referring to the saidconditions of the order dtd. 15.11.12 –
 Challenged before High Court, writ petition dismissed –On appeal,
-
-## Held
-
+held: In the 2018 Rules, the eligibility requirement to obtain furlough is of ‘3 Annual good conduct reports’ and not ‘3 Annual good conduct remissions’ – The expressions employed in Clause (I) of
 Rule 1223 cannot be read to mean that the prisoner ought to earn
 ‘good conduct remissions’ – Earning rewards is not equivalent to earning remissions – When furlough is an incentive towards good jail conduct, even if the person is otherwise not to get any remission and has to remain in prison for whole of the reminder of his natural life, that does not mean that his right to seek furlough is foreclosed
 – Even if he would spend some time on furlough, that will not come to his aid so as to seek remission because of the fact that he has to remain in prison for whole of the reminder of his natural life –
@@ -53,9 +45,7 @@ Court and the order of the Director General of Prisons are set aside
 Criminal law – Grant of furlough – Held:In furlough, the prisoner is deemed to be serving the sentence inasmuch as the period of furlough is not reduced from actual serving period – The conduct is predominantly decisive of entitlement towards furlough.
 Criminal Law – Delhi Prison Rules, 2018 – Parole and furlough – Distinction between – Discussed.
 Allowing the appeal, the Court
-
-## Held
-
+HELD: 1.1 Furlough is defined in Section 2(h) of the Delhi
 Prison Act, 2000. Chapter XIX of the Delhi Prison Rules, 2018
 deals with the matters concerning parole and furlough. The objectives of parole and furlough are set forth in Rules 1197 to
 1200 thereof. The specific subject of furlough is further dealt with in Rules 1220 to 1225 of the said Rules of 2018. [Paras 9.1-
@@ -143,9 +133,7 @@ H
 1171
 Case Law Reference
 [2015] 14 SCR 613
-
-## Held
-
+held inapplicable
 Para 6.5
 [2017] 11 SCR 571
 referred to
@@ -621,3 +609,4 @@ as passed by the High Court of Delhi and the order dated 21.10.2019 as passed by
 Janakpuri, New Delhi are set aside; and the case of the appellant for grant of furlough is restored for reconsideration of the said Director
 General of Prisons. For that matter, a fresh report may be requisitioned from the jail authorities and the matter may be proceeded in accordance with law. We would expect the Director General of Prisons to take a decision in the matter expeditiously, preferably within two months from today.
 Divya Pandey
+Appeal allowed.

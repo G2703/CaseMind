@@ -1,16 +1,18 @@
 {
   "tier_1_determinative": {
-    "ipc_sections_charged": "IPC 302",
-    "nature_of_offense_category": "Violent Offense"
+    "death_caused": "Yes",
+    "intention_to_cause_death": "Yes"
   },
   "tier_2_material": {
-    "accused_age": "22 years",
-    "victim_age": "14 years",
-    "motive_for_crime": "The accused had misbehaved with the victim, suggesting a possible motive related to inappropriate conduct."
+    "victim_details": "Enjaline, niece of Mrs. Gress",
+    "accused_details": "Amol Ramchandra Pawar, aged about 22 years, residing at Ambilsa Nagar, V.D.Gunjal Chawl, J.H.Road, Mulund (West), Mumbai-400 080",
+    "weapon_used": "Sickle"
   },
   "tier_3_contextual": {
-    "time_of_offense": "Approximately between 12:00 noon to 4:00 PM",
-    "place_of_offense": "RPF Quarters, Building No.34, Block No.21, Station Road, Mulund, Mumbai"
+    "motive": "Misbehaving with the victim, possibly indicating personal animosity or intent",
+    "circumstances_of_killing": "Victim was found with bleeding injuries near her neck and shoulder, lying in a pool of blood and dead in the kitchen",
+    "incident_location": "RPF Quarters, Building No.34, Block No.21, Station Road, Mulund, Mumbai",
+    "incident_date_time": "11/04/2001"
   },
   "tier_4_procedural": {
     "case_number": "CRIMINAL APPEAL NO.1406 OF 2003",
@@ -18,20 +20,9 @@
     "court_name": "High Court of Judicature at Bombay",
     "judgment_date": "21/11/2007",
     "appellant_or_petitioner": "Amol Ramchandra Pawar",
-    "respondent": "The State of Maharashtra",
-    "judges_coram": "R.M.S. Khandeparkar and S.R. Sathe, JJ.",
-    "counsel_for_appellant": "Mr. P.M. Pradhan",
-    "counsel_for_respondent": "Mr. P.S. Hingorani",
-    "sections_invoked": "302, 397, 201 IPC",
-    "case_type": "Criminal Appeal",
-    "citation": "/2007",
-    "acts_and_sections": "Indian Penal Code Sections 302, 397, 201"
+    "respondent": "The State of Maharashtra"
   },
   "residual_details": {
-    "additional_facts": "The case involved the murder of a 14-year-old girl named Enjaline, who was found with multiple injuries including stab wounds, incised wounds, and burn marks. The accused was arrested after witnesses testified about his previous inappropriate behavior towards the victim. The case was based on circumstantial evidence as there was no direct witness to the murder. A sickle was used in the crime and was recovered based on the accused's statement. The prosecution examined 12 witnesses, and the accused was convicted based on circumstantial evidence."
-  },
-  "template_id": "criminal_case",
-  "template_label": "Criminal Case",
-  "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T14:14:09.182782"
+    "additional_facts": "The accused was convicted by the Additional Sessions Judge, Greater Mumbai in Sessions Case No.720 of 2001. The cause of death was suffocation due to smothering, compression of neck, multiple stab and incised wounds, and multiple burn injuries. The accused was arrested on 05/05/2001 and made a statement leading to the recovery of keys, a T-shirt, jeans, and the sickle."
+  }
 }

@@ -1,9 +1,3 @@
-# - Raka @ Rakesh Kumar vs State of UP
-
-## Case Information
-
-## Document Content
-
 Neutral Citation No. - 2025:AHC-LKO:9844
 Court No. - 14
 Case :- CRIMINAL APPEAL No. - 681 of 2024
@@ -44,9 +38,7 @@ In case of breach of any of the above conditions, the
 
 --- Page 3 ---
 prosecution shall be at liberty to move bail cancellation application before this Court.
-
-## Order
-
+Order Date :- 14.2.2025
 GS
 Digitally signed by :-
 GHAN SHYAM

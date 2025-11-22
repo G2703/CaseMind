@@ -1,9 +1,3 @@
-# Abdul Haq Shaikh V State of MAHA
-
-## Case Information
-
-## Document Content
-
 1 of 19
 218-apeal-23-20 (Judgment)
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
@@ -20,13 +14,9 @@ Smt. M. R. Tidke, APP for State/Respondent No.1.
 Ms. Jai V. Kanade (Appointed Advocate) a/w. Rahul Shirgavkar for
 Respondent No.2.
 __________
-
-## Coram
-
+CORAM : SARANG V. KOTWAL, J.
 DATE : 8th DECEMBER 2022
-
-## Judgment
-
+JUDGMENT :
 1.
 The Appellant has challenged the Judgment and order dated 02/05/2019, passed by learned Special Judge under POCSO
 Act, Greater Bombay in POCSO Special Case No.191 of 2018. The

@@ -1,9 +1,3 @@
-# Abdulwafa Abubakhar Khan Vs. State of Maharashtra
-
-## Case Information
-
-## Document Content
-
 (-1-)
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
@@ -21,9 +15,9 @@ The State of Maharashtra ...Respondent
 Mr. M.H. Bandrekar, Advocate for Appellants
 Mr. Y.S. Shinde, A.P.P. for State.
 .....
-
-## Coram
-
+CORAM:
+CORAM:
+CORAM: SMT. V.K. TAHILRAMANI, J.
 SMT. V.K. TAHILRAMANI, J.
 SMT. V.K. TAHILRAMANI, J.
 DATED: 10TH JUNE, 2005
@@ -36,9 +30,7 @@ P. C.:-
 the learned A.P.P. for the State.
 2. The appellants i.e. original accused Nos. 1 and
 2 have filed this appeal challenging the judgment and
-
-## Order
-
+order dated 21.3.2005 passed by the 8th Ad-hoc
 Additional Sessions Judge, Greater Bombay at Sewree.
 By the said judgment and order both the appellants
 have been convicted under Section 392 r.w. Section
@@ -61,9 +53,7 @@ making submission in the present appeal only in
 respect of sentence. As the learned advocate for the
 appellants has restricted his submission only to the
 quantum of sentence, by consent of both sides, this
-
-## Appeal Details
-
+appeal is disposed of at the admission stage itself.
 4. The appellants are involved in a robbery of cash
 of Rs.4080/-. Thus, it is seen that total value of
 the property involved is only Rs.4080/-. As far as
@@ -126,9 +116,9 @@ The State of Maharashtra ...Respondent
 Mr. M.H. Bandrekar, Advocate for Applicants
 Mr. Y.S. Shinde, A.P.P. for State.
 .....
-
-## Coram
-
+CORAM:
+CORAM:
+CORAM: SMT. V.K. TAHILRAMANI, J.
 SMT. V.K. TAHILRAMANI, J.
 SMT. V.K. TAHILRAMANI, J.
 DATED: 10TH JUNE, 2005

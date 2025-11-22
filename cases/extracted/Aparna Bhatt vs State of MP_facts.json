@@ -1,0 +1,32 @@
+{
+  "tier_1_determinative": {
+    "assault_or_criminal_force_used": "Yes",
+    "intent_to_outrage_modesty": "Yes"
+  },
+  "tier_2_material": {
+    "victim_details": "The victim is a female survivor of a sexual offence.",
+    "accused_details": "The accused was found guilty of a sexual offence.",
+    "nature_of_assault": "The accused committed acts that criminalize outraging the modesty of a woman."
+  },
+  "tier_3_contextual": {
+    "circumstances_of_offense": "The offense involved a bail condition where the accused was required to have the survivor tie a rakhi on him, which was deemed inappropriate and potentially traumatizing for the survivor."
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No. 329 of 2021",
+    "case_title": "Aparna Bhat & Ors. v. State of Madhya Pradesh & Anr.",
+    "court_name": "Supreme Court of India",
+    "judgment_date": "March 18, 2021",
+    "appellant_or_petitioner": "Aparna Bhat & Ors.",
+    "respondent": "State of Madhya Pradesh & Anr.",
+    "judges_coram": "A. M. Khanwilkar and S. Ravindra Bhat, JJ.",
+    "counsel_for_appellant": null,
+    "counsel_for_respondent": null,
+    "sections_invoked": "IPC 354",
+    "case_type": "Criminal Appeal",
+    "citation": "[2021] 4 S.C.R. 479",
+    "acts_and_sections": "IPC 354"
+  },
+  "residual_details": {
+    "additional_facts": "The judgment emphasized the inappropriateness of using cultural practices like rakhi tying as conditions for bail in cases of sexual offences, highlighting the risk of perpetuating gender stereotypes and secondary trauma to survivors."
+  }
+}

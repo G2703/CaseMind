@@ -1,35 +1,31 @@
 {
   "tier_1_determinative": {
-    "theft_or_attempted_theft": "Actual theft of cash amounting to Rs.14 lakhs.",
-    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Assault on the complainant and one other person during the robbery."
+    "theft_or_attempted_theft": "theft",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "assaulted the complainant and one another"
   },
   "tier_2_material": {
-    "property_description": "Cash amount of Rs.14 lakhs."
+    "property_description": "cash amount of Rs.14 lakhs"
   },
   "tier_3_contextual": {
-    "incident_location": "Western Express Highway, Andheri Bridge, Andheri (East), Mumbai.",
-    "incident_date_time": "30th October 2017, at about 5:45 p.m."
+    "incident_location": "Western Express Highway, Andheri Bridge, Andheri (East), Mumbai",
+    "incident_date_time": "30th October 2017 at about 5:45 p.m."
   },
   "tier_4_procedural": {
-    "case_number": "CRIMINAL BAIL APPLICATION NO.1774 OF 2022",
+    "case_number": "C.R. No. 564 of 2017",
     "case_title": "Akshay Eknath Kokate vs. State of Maharashtra",
     "court_name": "High Court of Judicature at Bombay",
     "judgment_date": "5th September 2023",
     "appellant_or_petitioner": "Akshay Eknath Kokate",
     "respondent": "State of Maharashtra",
-    "judges_coram": "REVATI MOHITE DERE, J.",
+    "judges_coram": "REVATI MOHITE DERE , J.",
     "counsel_for_appellant": "Mr. Shaikh Abdul Kalam a/w Ms. Sana Shaikh",
-    "counsel_for_respondent": "Ms. P. P. Shinde, A.P.P for the Respondent – State",
+    "counsel_for_respondent": "Ms. P. P. Shinde, A.P.P",
     "sections_invoked": "Sections 392 r/w 34 of the Indian Penal Code",
     "case_type": "Criminal Bail Application",
-    "citation": "",
-    "acts_and_sections": "Indian Penal Code, Section 392 read with Section 34"
+    "citation": null,
+    "acts_and_sections": "Indian Penal Code, Sections 392 and 34"
   },
   "residual_details": {
-    "additional_facts": "The applicant was identified in a Test Identification Parade by the complainant. The applicant allegedly purchased a motorcycle with the stolen amount. The applicant has been in custody since November 2017, and no witnesses have been examined in the trial yet."
-  },
-  "template_id": "ipc_392",
-  "template_label": "Robbery (IPC 392)",
-  "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T14:13:07.063106"
+    "additional_facts": "The applicant was identified in the Test Identification Parade. He purchased a motorcycle with the amount received. The applicant has been in custody since November 2017. The trial has not commenced, and no witnesses have been examined."
+  }
 }

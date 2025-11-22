@@ -1,0 +1,28 @@
+{
+  "tier_1_determinative": {
+    "death_caused": "Yes",
+    "intention_to_cause_death": "Yes"
+  },
+  "tier_2_material": {
+    "victim_details": "Not specified",
+    "accused_details": "Atbir",
+    "weapon_used": "Not specified"
+  },
+  "tier_3_contextual": {
+    "motive": "Not specified",
+    "circumstances_of_killing": "Not specified",
+    "incident_location": "Not specified",
+    "incident_date_time": "Not specified"
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No. 714 of 2022",
+    "case_title": "ATBIR v. STATE OF NCT OF DELHI",
+    "court_name": "Supreme Court of India",
+    "judgment_date": "April 29, 2022",
+    "appellant_or_petitioner": "Atbir",
+    "respondent": "State of NCT of Delhi"
+  },
+  "residual_details": {
+    "additional_facts": "The appellant's sentence of death was modified to life imprisonment without parole and remission by a Presidential order dated 15.11.2012. The main legal issue was whether the appellant could be granted furlough despite this order."
+  }
+}

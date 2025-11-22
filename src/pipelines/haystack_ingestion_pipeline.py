@@ -14,14 +14,15 @@ from datetime import datetime
 from haystack import Pipeline, Document
 from haystack.components.extractors import LLMMetadataExtractor
 from haystack.components.generators.chat import OpenAIChatGenerator
-from haystack.components.embedders import SentenceTransformersDocumentEmbedder
 from haystack_integrations.document_stores.pgvector import PgvectorDocumentStore
-from haystack.components.writers import DocumentWriter
 from haystack.utils import Secret
 
 from core.config import Config
 from core.models import IngestResult, ProcessingStatus, CaseMetadata
-from pipelines.haystack_custom_nodes import DuplicateCheckNode, TemplateLoaderNode, FactExtractorNode
+from pipelines.haystack_custom_nodes import (
+    MarkdownSaverNode, TemplateSaverNode, DuplicateCheckNode, 
+    TemplateLoaderNode, FactExtractorNode, DualEmbedderNode
+)
 
 # Import PDF to Markdown converter
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'raw_code', 'bg_creation'))
@@ -163,39 +164,44 @@ Use null for optional fields if not found.
             raise_on_failure=False
         )
         
-        # 2. Duplicate Checker
+        # 2. Markdown Saver
+        markdown_saver = MarkdownSaverNode(output_dir="cases/markdown")
+        
+        # 3. Duplicate Checker
         duplicate_checker = DuplicateCheckNode(document_store=self.document_store)
         
-        # 3. Template Loader
+        # 4. Template Loader
         template_loader = TemplateLoaderNode(templates_dir=str(self.config.templates_dir))
         
-        # 4. Fact Extractor
+        # 5. Fact Extractor
         fact_extractor = FactExtractorNode(api_key=self.config.openai_api_key)
         
-        # 5. Document Embedder
-        embedder = SentenceTransformersDocumentEmbedder(
-            model="sentence-transformers/all-mpnet-base-v2",
-            progress_bar=False
-        )
+        # 6. Template Saver
+        template_saver = TemplateSaverNode(output_dir="cases/extracted")
         
-        # 6. Document Writer
-        writer = DocumentWriter(document_store=self.document_store)
+        # 7. Dual Embedder (creates facts + metadata embeddings and stores to DB)
+        dual_embedder = DualEmbedderNode(
+            document_store=self.document_store,
+            model="sentence-transformers/all-mpnet-base-v2"
+        )
         
         # Add components to pipeline
         self.pipeline.add_component("metadata_extractor", metadata_extractor)
+        self.pipeline.add_component("markdown_saver", markdown_saver)
         self.pipeline.add_component("duplicate_checker", duplicate_checker)
         self.pipeline.add_component("template_loader", template_loader)
         self.pipeline.add_component("fact_extractor", fact_extractor)
-        self.pipeline.add_component("embedder", embedder)
-        self.pipeline.add_component("writer", writer)
+        self.pipeline.add_component("template_saver", template_saver)
+        self.pipeline.add_component("dual_embedder", dual_embedder)
         
         # Connect components
-        self.pipeline.connect("metadata_extractor.documents", "duplicate_checker.documents")
+        self.pipeline.connect("metadata_extractor.documents", "markdown_saver.documents")
+        self.pipeline.connect("markdown_saver.documents", "duplicate_checker.documents")
         self.pipeline.connect("duplicate_checker.documents", "template_loader.documents")
         self.pipeline.connect("template_loader.documents", "fact_extractor.documents")
         self.pipeline.connect("template_loader.template", "fact_extractor.template")
-        self.pipeline.connect("fact_extractor.documents", "embedder.documents")
-        self.pipeline.connect("embedder.documents", "writer.documents")
+        self.pipeline.connect("fact_extractor.documents", "template_saver.documents")
+        self.pipeline.connect("template_saver.documents", "dual_embedder.documents")
         
         logger.info("Pipeline built successfully")
     
@@ -257,7 +263,54 @@ Use null for optional fields if not found.
             duplicate_status = result.get("duplicate_checker", {}).get("is_duplicate", False)
             
             if duplicate_status:
-                logger.warning("Document is a duplicate, skipping storage")
+                logger.warning("Document is a duplicate, retrieving existing data from database")
+                
+                # Retrieve existing document from database
+                try:
+                    import psycopg2
+                    from psycopg2.extras import RealDictCursor
+                    
+                    conn_str = f"postgresql://{self.config.db_user}:{self.config.db_password}@{self.config.db_host}:{self.config.db_port}/{self.config.db_name}"
+                    conn = psycopg2.connect(conn_str)
+                    cursor = conn.cursor(cursor_factory=RealDictCursor)
+                    
+                    cursor.execute("""
+                        SELECT id, content, meta 
+                        FROM haystack_documents 
+                        WHERE meta->>'file_hash' = %s
+                        LIMIT 1
+                    """, (file_hash,))
+                    
+                    existing = cursor.fetchone()
+                    cursor.close()
+                    conn.close()
+                    
+                    if existing:
+                        meta = existing['meta'] or {}
+                        metadata = CaseMetadata(
+                            case_title=meta.get("case_title", "Unknown"),
+                            court_name=meta.get("court_name", "Unknown"),
+                            judgment_date=meta.get("judgment_date", "Unknown"),
+                            sections_invoked=meta.get("sections_invoked", []),
+                            most_appropriate_section=meta.get("most_appropriate_section", "Unknown"),
+                            case_id=existing['id']
+                        )
+                        
+                        return IngestResult(
+                            case_id=existing['id'],
+                            document_id=existing['id'],
+                            status=ProcessingStatus.SKIPPED_DUPLICATE,
+                            metadata=metadata,
+                            facts_summary=existing['content'] or "",
+                            embedding_facts=None,
+                            embedding_metadata=None,
+                            error_message=None
+                        )
+                    
+                except Exception as e:
+                    logger.error(f"Failed to retrieve duplicate document: {e}")
+                
+                # Fallback if database retrieval fails
                 return IngestResult(
                     case_id="",
                     document_id="",
@@ -285,54 +338,11 @@ Use null for optional fields if not found.
                     error_message="Fact extraction failed"
                 )
             
-            # Get number of documents written
-            written_docs = result.get("writer", {}).get("documents_written", 0)
+            # Check if dual embedding was successful
+            dual_embedder_docs = result.get("dual_embedder", {}).get("documents", [])
             
-            if written_docs > 0:
-                # Documents were written successfully
-                # Get the document with metadata (from metadata_extractor, the first component)
-                # All metadata flows through the pipeline, so we can use the early stage output
-                metadata_docs = result.get("metadata_extractor", {}).get("documents", [])
-                
-                if not metadata_docs or len(metadata_docs) == 0:
-                    logger.error("No documents in metadata_extractor output")
-                    raise ValueError("No documents found in metadata_extractor output")
-                
-                processed_doc = metadata_docs[0]
-                logger.info("Retrieved document metadata from metadata_extractor output")
-                
-                # Get facts summary from fact_extractor if available
-                fact_docs = result.get("fact_extractor", {}).get("documents", [])
-                facts_summary = ""
-                if fact_docs and len(fact_docs) > 0:
-                    facts_summary = fact_docs[0].meta.get("facts_summary", "")
-                    logger.info(f"Retrieved facts summary ({len(facts_summary)} chars)")
-                
-                # Extract metadata for result
-                case_id = processed_doc.meta.get("case_id", processed_doc.id)
-                metadata = CaseMetadata(
-                    case_title=processed_doc.meta.get("case_title", "Unknown"),
-                    court_name=processed_doc.meta.get("court_name", "Unknown"),
-                    judgment_date=processed_doc.meta.get("judgment_date", "Unknown"),
-                    sections_invoked=processed_doc.meta.get("sections_invoked", []),
-                    most_appropriate_section=processed_doc.meta.get("most_appropriate_section", "Unknown"),
-                    case_id=case_id
-                )
-                
-                logger.info(f"Successfully ingested case: {case_id}")
-                
-                return IngestResult(
-                    case_id=case_id,
-                    document_id=processed_doc.id,
-                    status=ProcessingStatus.COMPLETED,
-                    metadata=metadata,
-                    facts_summary=facts_summary,  # Use the facts_summary we retrieved earlier
-                    embedding_facts=None,  # Embedding is in database, not in this object
-                    embedding_metadata=None,  # Single embedding in this version
-                    error_message=None
-                )
-            else:
-                logger.warning("Document was not written to store")
+            if not dual_embedder_docs or len(dual_embedder_docs) == 0:
+                logger.error("Dual embedding failed, document not stored")
                 return IngestResult(
                     case_id="",
                     document_id="",
@@ -341,8 +351,44 @@ Use null for optional fields if not found.
                     facts_summary="",
                     embedding_facts=None,
                     embedding_metadata=None,
-                    error_message="Failed to write to document store"
+                    error_message="Dual embedding failed"
                 )
+            
+            # Get the embedded document (which has all metadata)
+            embedded_doc = dual_embedder_docs[0]
+            
+            # Get facts summary from embedded document (DualEmbedderNode sets doc.content to facts_summary)
+            facts_summary = embedded_doc.content if embedded_doc.content else ""
+            
+            # Also try to get from metadata if content is empty
+            if not facts_summary or len(facts_summary.strip()) == 0:
+                facts_summary = embedded_doc.meta.get("facts_summary", "")
+            
+            logger.info(f"Retrieved facts summary ({len(facts_summary)} chars)")
+            
+            # Extract metadata from the embedded document
+            case_id = embedded_doc.meta.get("case_id", embedded_doc.id)
+            metadata = CaseMetadata(
+                case_title=embedded_doc.meta.get("case_title", "Unknown"),
+                court_name=embedded_doc.meta.get("court_name", "Unknown"),
+                judgment_date=embedded_doc.meta.get("judgment_date", "Unknown"),
+                sections_invoked=embedded_doc.meta.get("sections_invoked", []),
+                most_appropriate_section=embedded_doc.meta.get("most_appropriate_section", "Unknown"),
+                case_id=case_id
+            )
+            
+            logger.info(f"Successfully ingested case: {case_id}")
+            
+            return IngestResult(
+                case_id=case_id,
+                document_id=embedded_doc.id,
+                status=ProcessingStatus.COMPLETED,
+                metadata=metadata,
+                facts_summary=facts_summary,
+                embedding_facts=None,  # Stored in DB 'embedding' column
+                embedding_metadata=None,  # Stored in DB 'embedding_metadata' column
+                error_message=None
+            )
                 
         except Exception as e:
             logger.error(f"Unexpected error during ingestion of {file_path.name}: {e}")

@@ -1,17 +1,9 @@
-# Abdul @ Aslam Salim Shaikh Vs. State of Maharashtra
-
-## Case Information
-
-## Document Content
-
 [1]
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
 APPELLATE JURISDICTION
 CRIMINAL APPEAL NO.696 OF 2006
 Abdul @ Aslam Salim Shaikh
-
-## Present
-
+presently lodged at
 Kolhapur Central Prison,
 Kalamba, Kolhapur. ..Appellant
 V/s
@@ -19,9 +11,9 @@ The State of Maharashtra ..Respondent.
 Mr. Abhaykumar Apte, Advocate Appointed for the
 appellant.
 Ms. S.V. Gajre, APP for the State.
-
-## Coram
-
+CORAM : J.H. BHATIA, J.
+CORAM : J.H. BHATIA, J.
+CORAM : J.H. BHATIA, J.
 
 DATE : 17TH APRIL, 2007.
 DATE : 17TH APRIL, 2007.
@@ -112,9 +104,7 @@ appellant is going to be released shortly after
 undergoing the complete sentence, including the
 sentenced awarded for the offence including Arms Act,
 the learned Counsel for the appellant did not press the
-
-## Appeal Details
-
+appeal to the extent of charges under section 399 and
 402 of IPC. However, he pointed out that the conviction
 under section 4 r/w section 25 of the Arms Act cannot be
 sustained for two reasons. Firstly,the accused was not

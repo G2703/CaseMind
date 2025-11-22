@@ -16,6 +16,117 @@ logger = logging.getLogger(__name__)
 
 
 @component
+class MarkdownSaverNode:
+    """
+    Haystack component that saves markdown content to disk.
+    Saves to cases/markdown folder.
+    """
+    
+    def __init__(self, output_dir: str = "cases/markdown"):
+        """
+        Initialize markdown saver.
+        
+        Args:
+            output_dir: Directory to save markdown files
+        """
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f"MarkdownSaverNode initialized with output_dir: {output_dir}")
+    
+    @component.output_types(documents=List[Document])
+    def run(self, documents: List[Document]) -> dict:
+        """
+        Save markdown content to disk.
+        
+        Args:
+            documents: List of Haystack Documents with markdown content
+            
+        Returns:
+            dict with documents (unchanged)
+        """
+        if not documents:
+            return {"documents": []}
+        
+        doc = documents[0]
+        
+        try:
+            # Get filename from metadata
+            original_filename = doc.meta.get("original_filename", "unknown.pdf")
+            base_name = Path(original_filename).stem
+            output_file = self.output_dir / f"{base_name}.md"
+            
+            # Save markdown content
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(doc.content)
+            
+            logger.info(f"Saved markdown to: {output_file}")
+            
+        except Exception as e:
+            logger.error(f"Failed to save markdown: {e}")
+        
+        return {"documents": documents}
+
+
+@component
+class TemplateSaverNode:
+    """
+    Haystack component that saves filled template to disk.
+    Saves to cases/extracted folder.
+    """
+    
+    def __init__(self, output_dir: str = "cases/extracted"):
+        """
+        Initialize template saver.
+        
+        Args:
+            output_dir: Directory to save filled templates
+        """
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f"TemplateSaverNode initialized with output_dir: {output_dir}")
+    
+    @component.output_types(documents=List[Document])
+    def run(self, documents: List[Document]) -> dict:
+        """
+        Save filled template to disk.
+        
+        Args:
+            documents: List of Haystack Documents with extracted facts
+            
+        Returns:
+            dict with documents (unchanged)
+        """
+        if not documents:
+            return {"documents": []}
+        
+        doc = documents[0]
+        
+        try:
+            # Get extracted facts from metadata
+            extracted_facts = doc.meta.get("extracted_facts", {})
+            
+            if not extracted_facts:
+                logger.warning("No extracted facts to save")
+                return {"documents": documents}
+            
+            # Get filename from metadata
+            original_filename = doc.meta.get("original_filename", "unknown.pdf")
+            base_name = Path(original_filename).stem
+            output_file = self.output_dir / f"{base_name}_facts.json"
+            
+            # Save filled template as JSON
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(extracted_facts, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"Saved filled template to: {output_file}")
+            
+        except Exception as e:
+            logger.error(f"Failed to save template: {e}")
+        
+        return {"documents": documents}
+
+
+@component
 class DuplicateCheckNode:
     """
     Haystack component that checks if document already exists in database.
@@ -54,15 +165,29 @@ class DuplicateCheckNode:
             logger.warning("No file_hash in document metadata, cannot check for duplicates")
             return {"documents": documents, "is_duplicate": False}
         
-        # Query document store for existing hash
+        # Query document store for existing hash using direct SQL
         try:
-            existing_docs = self.document_store.filter_documents(
-                filters={"field": "meta.file_hash", "operator": "==", "value": file_hash}
-            )
+            import psycopg2
             
-            if existing_docs:
-                logger.info(f"Duplicate found: {existing_docs[0].id}")
-                return {"documents": documents, "is_duplicate": True}
+            conn_str = str(self.document_store.connection_string.resolve_value())
+            conn = psycopg2.connect(conn_str)
+            cursor = conn.cursor()
+            
+            # Check if document with this file_hash already exists
+            cursor.execute("""
+                SELECT id FROM haystack_documents 
+                WHERE meta->>'file_hash' = %s
+                LIMIT 1
+            """, (file_hash,))
+            
+            existing = cursor.fetchone()
+            cursor.close()
+            conn.close()
+            
+            if existing:
+                logger.info(f"Duplicate found with file_hash: {file_hash}")
+                # Return empty documents list to stop pipeline execution
+                return {"documents": [], "is_duplicate": True}
             else:
                 logger.info("No duplicate found")
                 return {"documents": documents, "is_duplicate": False}
@@ -276,8 +401,8 @@ class FactExtractorNode:
             doc.meta["extracted_facts"] = facts
             doc.meta["facts_summary"] = facts_summary
             
-            # Update document content to facts summary for embedding
-            doc.content = facts_summary
+            # DO NOT replace doc.content - DualEmbedderNode will handle it
+            # Keep original content intact for now
             
             logger.info("Facts extracted successfully")
             return {"documents": [doc], "success": True}
@@ -291,16 +416,22 @@ class FactExtractorNode:
             return {"documents": [], "success": False}
     
     def _generate_facts_summary(self, facts: dict) -> str:
-        """Generate human-readable summary from extracted facts."""
+        """Generate human-readable summary from extracted facts by concatenating all non-null values."""
         summary_parts = []
         
-        for tier_name, tier_data in facts.items():
-            if isinstance(tier_data, dict):
-                for key, value in tier_data.items():
-                    if value and value != "null":
-                        summary_parts.append(f"{key}: {value}")
+        def extract_values(obj):
+            """Recursively extract all non-null values from nested structure."""
+            if isinstance(obj, dict):
+                for value in obj.values():
+                    extract_values(value)
+            elif isinstance(obj, list):
+                for item in obj:
+                    extract_values(item)
+            elif obj is not None and str(obj).strip() and str(obj).lower() != "null":
+                summary_parts.append(str(obj))
         
-        return "\n".join(summary_parts) if summary_parts else "No facts extracted"
+        extract_values(facts)
+        return " ".join(summary_parts) if summary_parts else "No facts extracted"
 
 
 @component
@@ -343,4 +474,253 @@ class ThresholdFilterNode:
         
         logger.info(f"Filtered {len(documents)} documents to {len(filtered)} above threshold {self.threshold}")
         return {"documents": filtered}
+
+
+@component
+class DualEmbedderNode:
+    """
+    Haystack component that creates two embeddings per document:
+    1. Facts embedding (from extracted facts template)
+    2. Metadata embedding (from concatenated metadata fields)
+    
+    Also handles storing both embeddings to PostgreSQL.
+    """
+    
+    def __init__(self, document_store: PgvectorDocumentStore, model: str = "sentence-transformers/all-mpnet-base-v2"):
+        """
+        Initialize dual embedder.
+        
+        Args:
+            document_store: PgvectorDocumentStore instance
+            model: Sentence transformer model name
+        """
+        from sentence_transformers import SentenceTransformer
+        
+        self.document_store = document_store
+        self.model_name = model
+        self.model = SentenceTransformer(model)
+        logger.info(f"DualEmbedderNode initialized with model: {model}")
+    
+    def _format_template_as_text(self, facts: dict) -> str:
+        """
+        Format the entire extracted facts template as text for embedding.
+        Includes all fields and values from the filled template.
+        """
+        parts = []
+        
+        def extract_all_text(obj, prefix=""):
+            """Recursively extract all text from nested structure."""
+            if isinstance(obj, dict):
+                for key, value in obj.items():
+                    new_prefix = f"{prefix}.{key}" if prefix else key
+                    extract_all_text(value, new_prefix)
+            elif isinstance(obj, list):
+                for i, item in enumerate(obj):
+                    extract_all_text(item, f"{prefix}[{i}]")
+            elif obj is not None and str(obj).strip():
+                parts.append(f"{prefix}: {obj}")
+        
+        extract_all_text(facts)
+        return " | ".join(parts) if parts else ""
+    
+    def _format_metadata_as_text(self, meta: dict) -> str:
+        """
+        Format metadata fields as concatenated text for embedding.
+        """
+        metadata_fields = []
+        
+        # Extract key metadata fields
+        if meta.get('case_title'):
+            metadata_fields.append(meta['case_title'])
+        if meta.get('court_name'):
+            metadata_fields.append(meta['court_name'])
+        if meta.get('judgment_date'):
+            metadata_fields.append(meta['judgment_date'])
+        if meta.get('sections_invoked'):
+            sections = meta['sections_invoked']
+            if isinstance(sections, list):
+                metadata_fields.extend(sections)
+            else:
+                metadata_fields.append(str(sections))
+        if meta.get('most_appropriate_section'):
+            metadata_fields.append(meta['most_appropriate_section'])
+        
+        return " ".join(metadata_fields)
+    
+    @component.output_types(documents=List[Document])
+    def run(self, documents: List[Document]) -> dict:
+        """
+        Create dual embeddings and store to database.
+        
+        Args:
+            documents: List of Haystack Documents with extracted facts
+            
+        Returns:
+            dict with documents (embeddings stored in DB)
+        """
+        if not documents:
+            return {"documents": []}
+        
+        doc = documents[0]
+        
+        try:
+            # Extract facts and metadata
+            extracted_facts = doc.meta.get("extracted_facts", {})
+            facts_summary = doc.meta.get("facts_summary", "")
+            
+            # 1. Create facts embedding (from full template)
+            facts_text = self._format_template_as_text(extracted_facts)
+            if not facts_text:
+                logger.warning("No facts text to embed, using content")
+                facts_text = doc.content
+            
+            facts_embedding = self.model.encode(facts_text, convert_to_numpy=True)
+            logger.info(f"Created facts embedding from full template (dim: {len(facts_embedding)})")
+            
+            # 2. Create metadata embedding
+            metadata_text = self._format_metadata_as_text(doc.meta)
+            metadata_embedding = self.model.encode(metadata_text, convert_to_numpy=True)
+            logger.info(f"Created metadata embedding (dim: {len(metadata_embedding)})")
+            
+            # 3. Update doc.content to facts_summary for display/retrieval purposes
+            if facts_summary and len(facts_summary.strip()) > 0:
+                doc.content = facts_summary
+                logger.info(f"Set doc.content to facts_summary ({len(facts_summary)} chars)")
+            elif facts_text:
+                # Fallback: use formatted facts text if summary is empty
+                doc.content = facts_text[:1000]  # Limit to reasonable length
+                logger.warning(f"Facts summary empty, using formatted facts text ({len(doc.content)} chars)")
+            else:
+                doc.content = "No facts extracted"
+                logger.warning("Both facts_summary and facts_text are empty")
+            
+            # 4. Store both embeddings to PostgreSQL
+            # Haystack's writer only handles the 'embedding' column, so we need custom SQL
+            import psycopg2
+            from psycopg2.extras import Json
+            import numpy as np
+            
+            conn_str = str(self.document_store.connection_string.resolve_value())
+            conn = psycopg2.connect(conn_str)
+            cursor = conn.cursor()
+            
+            # Prepare document data
+            doc_id = doc.id
+            content = doc.content
+            meta_json = Json(doc.meta)
+            
+            # Insert/Update with both embeddings
+            cursor.execute("""
+                INSERT INTO haystack_documents (id, content, meta, embedding, embedding_metadata)
+                VALUES (%s, %s, %s, %s, %s)
+                ON CONFLICT (id) DO UPDATE
+                SET content = EXCLUDED.content,
+                    meta = EXCLUDED.meta,
+                    embedding = EXCLUDED.embedding,
+                    embedding_metadata = EXCLUDED.embedding_metadata;
+            """, (doc_id, content, meta_json, facts_embedding.tolist(), metadata_embedding.tolist()))
+            
+            conn.commit()
+            cursor.close()
+            conn.close()
+            
+            logger.info(f"Successfully stored document with dual embeddings: {doc_id}")
+            
+            return {"documents": [doc]}
+            
+        except Exception as e:
+            logger.error(f"Failed to create dual embeddings: {e}")
+            return {"documents": []}
+
+
+@component
+class FactsEmbeddingRetriever:
+    """
+    Custom retriever that searches using the 'embedding' column (facts embedding).
+    This is the default search mode - searching based on case facts.
+    """
+    
+    def __init__(self, document_store: PgvectorDocumentStore, top_k: int = 10):
+        """
+        Initialize facts embedding retriever.
+        
+        Args:
+            document_store: PgvectorDocumentStore instance
+            top_k: Number of documents to retrieve
+        """
+        self.document_store = document_store
+        self.top_k = top_k
+        logger.info(f"FactsEmbeddingRetriever initialized with top_k={top_k}")
+    
+    @component.output_types(documents=List[Document])
+    def run(self, query_embedding: List[float], filters: Optional[Dict[str, Any]] = None) -> dict:
+        """
+        Retrieve documents using facts embedding (standard embedding column).
+        
+        Args:
+            query_embedding: Query embedding vector
+            filters: Optional filters for document retrieval
+            
+        Returns:
+            dict with retrieved documents
+        """
+        try:
+            import psycopg2
+            from psycopg2.extras import RealDictCursor
+            
+            conn_str = str(self.document_store.connection_string.resolve_value())
+            conn = psycopg2.connect(conn_str)
+            cursor = conn.cursor(cursor_factory=RealDictCursor)
+            
+            # Query using facts embedding (standard 'embedding' column)
+            # Note: We search on 'embedding' which contains facts embedding
+            query_vector = query_embedding
+            
+            # Build SQL query
+            sql = """
+                SELECT id, content, meta, 
+                       1 - (embedding <=> %s::vector) AS score
+                FROM haystack_documents
+                WHERE embedding IS NOT NULL
+            """
+            
+            params = [query_vector]
+            
+            # Add filters if provided (simplified - you may need more complex filter handling)
+            if filters:
+                # Handle basic 'id' filter
+                if 'field' in filters and filters['field'] == 'id':
+                    operator = filters.get('operator', '!=')
+                    value = filters.get('value')
+                    if operator == '!=':
+                        sql += " AND id != %s"
+                        params.append(value)
+            
+            sql += f" ORDER BY score DESC LIMIT {self.top_k}"
+            
+            cursor.execute(sql, params)
+            rows = cursor.fetchall()
+            
+            # Convert to Haystack Documents
+            documents = []
+            for row in rows:
+                doc = Document(
+                    id=row['id'],
+                    content=row['content'],
+                    meta=row['meta'] or {},
+                    score=float(row['score'])
+                )
+                # Store cosine similarity in meta for later use
+                doc.meta['score'] = float(row['score'])
+                documents.append(doc)
+            
+            cursor.close()
+            conn.close()
+            
+            logger.info(f"Retrieved {len(documents)} documents using facts embedding")
+            return {"documents": documents}
+            
+        except Exception as e:
+            logger.error(f"Facts embedding retrieval failed: {e}")
+            return {"documents": []}
 

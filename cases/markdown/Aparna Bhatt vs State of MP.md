@@ -1,9 +1,3 @@
-# Aparna Bhatt vs State of MP
-
-## Case Information
-
-## Document Content
-
 A
 B
 C
@@ -46,9 +40,7 @@ characteristics or roles by reason only of her or his membership in a particular
 Administration of justice: Role of the courts – Judges can play a significant role in ridding the justice system of harmful stereotypes – They have an important responsibility to base their decisions on law and facts in evidence, and not engage in gender stereotyping – This requires judges to identify gender stereotyping,
 and identify how the application, enforcement or perpetuation of these stereotypes discriminates against women or denies them equal access to justice – Stereotyping might compromise the impartiality of a judge’s decision and affect his or her views about witness credibility or the culpability of the accused person – The stereotype of the ideal sexual assault victim disqualifies several accounts of lived experiences of sexual assault – Rape myths undermine the credibility of those women who are seen to deviate too far from stereotyped notions of chastity, resistance to rape, having visible physical injuries, behaving a certain way, reporting the offence immediately, etc. – Judicial stereotyping – Judicial Bias.
 Disposing of the appeal, the Court
-
-## Held
-
+HELD : 1. Women often experience obstacles in gaining access to mechanisms of redress, including legal aid, counselling services and shelters. They are re-victimized and exposed to
 
 --- Page 3 ---
 A
@@ -912,3 +904,4 @@ True impartiality does not require that the judge have no sympathies or opinions
 former Chief Justice of Canada, in her Speech Judging in a Democratic State https://
 www.scc-csc.ca/judges-juges/spe-dis/bm-2004-06-03-eng.aspx#fnb10
 Devika Gujral
+Appeal disposed of.

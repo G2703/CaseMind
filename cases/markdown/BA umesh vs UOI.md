@@ -1,9 +1,3 @@
-# BA umesh vs UOI
-
-## Case Information
-
-## Document Content
-
 A
 B
 C
@@ -29,9 +23,7 @@ Award of death sentence in a rape and murder case – Commutation sought on the 
 Governor and the President during the said period – Time taken by the authorities and the functionaries cannot be termed as “inordinate delay” – Thus, it cannot be said that there was delay in deciding the mercy petition – As regards solitary confinement, segregation of a convict from the day when he was awarded death sentence till his mercy petition was disposed of, would be in violation of law laid down in Sunil Batra’s case – On facts, incarceration of the accused in solitary confinement and segregation from 2006 to 2013 was without the sanction of law and completely opposed to the principles laid down by this Court –Period of solitary confinement is for about
 10 years – Letter by the medical professional show ill effects on the well-being of the accused due to incarceration in solitary confinement – Thus, to meet the ends of justice, the death sentence commuted to life imprisonment for minimum 30 years.
 Allowing the appeal, the Court
-
-## Held
-
+HELD: 1.1 Undue long delay in execution of death sentence would entitle the condemned prisoner to pray for commuting the death sentence to that of life imprisonment. The alleged period in the instant matter is of two years and three months i.e., starting
 
 --- Page 2 ---
 A
@@ -264,9 +256,7 @@ F
 G
 H
 635
-
-## Appeal Details
-
+appeal by this Court or rejection of application for special leave to appeal. The relevant instructions in that behalf read as under: -
 “I. A convict under sentence of death shall be allowed,
 if he has not already submitted a petition for mercy, for the preparation and submission of a petition for mercy,
 seven days after, and exclusive of, the date on which the Superintendent of Jail informs him of the dismissal by the Supreme Court of his appeal or of his application for special leave to appeal to the Supreme Court.
@@ -727,9 +717,7 @@ Court cannot reopen the conclusion already reached but may consider the question
 if the convict files a mercy petition to the Governor/President,
 it is incumbent on the authorities to dispose of the same expeditiously. Though no time limit can be fixed for the
 Governor and the President, it is the duty of the executive to expedite the matter at every stage, viz., calling for the records,
-
-## Order
-
+orders and documents filed in the court, preparation of the note for approval of the Minister concerned, and the ultimate decision of the constitutional authorities. This court, in
 Triveniben7, further held that in doing so, if it is established that there was prolonged delay in the execution of death sentence, it is an important and relevant consideration for determining whether the sentence should be allowed to be executed or not.
 48. Accordingly, if there is undue, unexplained and inordinate delay in execution due to pendency of mercy petitions or the executive as well as the constitutional authorities have failed to take note of/consider the relevant aspects, this Court is well within its powers under Article 32 to hear the grievance of the
 B. A. UMESH v. UNION OF INDIA & ORS.
@@ -931,9 +919,7 @@ State of Maharashtra13, the sentence of imprisonment for life shall mean till th
 29. Before we part, we must observe that the instruction quoted in paragraph 3(f) of this Judgment leads to an incongruous situation.
 According to it, the mercy petition must be filed within seven days of the disposal of the appeal or dismissal of special leave petition. A convicted accused is entitled to file a review petition within thirty days. An anomalous situation, like the present one, may arise where even before the review is filed, the mercy petition is required to be filed. The concerned instruction requires suitable modification so as to enable the convicted accused to file mercy petition after exhaustion of remedies in Court of law.
 Nidhi Jain
-
-## Appeal Details
-
+Appeal allowed.
 (Assisted by : Shashwat Jain, LCRA)
 B. A. UMESH v. UNION OF INDIA & ORS.
 [UDAY UMESH LALIT, CJI.

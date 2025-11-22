@@ -1,35 +1,28 @@
 {
   "tier_1_determinative": {
-    "mischief_act": "Causing damage to a motorcycle during a quarrel.",
-    "damage_amount": "Not specified, but the damage was significant enough to be included in a police complaint."
+    "death_caused": "Yes",
+    "intention_to_cause_death": "Yes"
   },
   "tier_2_material": {
-    "property_description": "Motorcycle belonging to Yogesh Chayal."
+    "victim_details": "Yogesh Chayal",
+    "accused_details": "Harsh @ Tonu Mhaske, Sahil Mhaske, Udesh Chandel, Babu Maniyar, Raju Kerala, Tonu Paikrao, Sattu Rajput, Maruti Ghorpade, Yogesh Bodke, Bhurya",
+    "weapon_used": "Knife and sickle"
   },
   "tier_3_contextual": {
-    "incident_location": "Nashik, Maharashtra.",
+    "motive": "Grudge due to previous chase by the complainant and victim",
+    "circumstances_of_killing": "The victim was assaulted by a group with weapons following a quarrel",
+    "incident_location": "Nashik",
     "incident_date_time": "15th November, 2020"
   },
   "tier_4_procedural": {
-    "case_number": "Criminal Bail Application No. 191 of 2022 and Criminal Bail Application No. 3090 of 2021",
-    "case_title": "Akshay Rajendra Parache versus The State of Maharashtra",
+    "case_number": "C.R. No.555 of 2020",
+    "case_title": "Akshay Rajendra Parache vs The State of Maharashtra",
     "court_name": "High Court of Judicature at Bombay",
     "judgment_date": "20th October, 2022",
-    "appellant_or_petitioner": "Akshay Rajendra Parache and Harsh Kishor Babu",
-    "respondent": "The State of Maharashtra",
-    "judges_coram": "Prakash D. Naik, J.",
-    "counsel_for_appellant": "Mr. Aniket Vagal a/w Mr. Kunal Pednekar for Akshay Rajendra Parache; Mr. Hitesh Shah for Harsh Kishor Babu.",
-    "counsel_for_respondent": "Mr. N. B. Patil, APP for the State.",
-    "sections_invoked": "Sections 302, 395, 397, 143, 147, 148, 149 of IPC and MCOC Act sections",
-    "case_type": "Criminal Bail Application",
-    "citation": "",
-    "acts_and_sections": "Indian Penal Code (IPC) sections 302, 395, 397, 143, 147, 148, 149 and Maharashtra Control of Organised Crime Act (MCOC Act) sections 3(1)(i), 3(1)(ii), 3(2), 3(3), and 3(4)"
+    "appellant_or_petitioner": "Akshay Rajendra Parache, Harsh Kishor Babu",
+    "respondent": "The State of Maharashtra"
   },
   "residual_details": {
-    "additional_facts": "The applicants were part of a group accused of organized crime activities including robbery, theft, and extortion. A significant aspect of the case involves the alleged involvement of the accused in a gang and their activities, leading to serious charges under the MCOC Act. The bail applications were allowed due to lack of evidence directly linking the applicants to the crime scene or the assault."
-  },
-  "template_id": "ipc_427",
-  "template_label": "Mischief causing damage (IPC 427)",
-  "extraction_confidence": 1.0,
-  "extraction_timestamp": "2025-11-12T14:13:25.630309"
+    "additional_facts": "The incident involved a gang led by Harsh @ Tonu Mhaske, and MCOC Act provisions were invoked. The accused were allegedly part of a crime syndicate involved in robbery, theft, and extortion."
+  }
 }

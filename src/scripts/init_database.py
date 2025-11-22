@@ -79,6 +79,56 @@ def ensure_pgvector(config: Config) -> bool:
         return False
 
 
+def add_metadata_embedding_column(config: Config) -> bool:
+    """
+    Add metadata_embedding column to support dual embeddings.
+    
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        console.print("[bold cyan]Adding metadata_embedding column...[/bold cyan]")
+        
+        conn_str = get_connection_string(config)
+        conn = psycopg2.connect(conn_str)
+        cursor = conn.cursor()
+        
+        # Check if column already exists
+        cursor.execute("""
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_name='haystack_documents' AND column_name='embedding_metadata';
+        """)
+        
+        if cursor.fetchone():
+            console.print("[bold yellow]![/bold yellow] metadata_embedding column already exists")
+        else:
+            # Add metadata embedding column
+            cursor.execute("""
+                ALTER TABLE haystack_documents 
+                ADD COLUMN embedding_metadata vector(768);
+            """)
+            
+            # Create index for metadata embedding
+            cursor.execute("""
+                CREATE INDEX IF NOT EXISTS haystack_documents_embedding_metadata_idx 
+                ON haystack_documents 
+                USING hnsw (embedding_metadata vector_cosine_ops)
+                WITH (m = 16, ef_construction = 64);
+            """)
+            
+            conn.commit()
+            console.print("[bold green]✓[/bold green] metadata_embedding column added")
+        
+        cursor.close()
+        conn.close()
+        return True
+        
+    except Exception as e:
+        console.print(f"[bold red]✗[/bold red] Failed to add metadata_embedding column: {str(e)}")
+        return False
+
+
 def create_schema(config: Config) -> bool:
     """
     Create database schema using Haystack's PgvectorDocumentStore.
@@ -91,7 +141,8 @@ def create_schema(config: Config) -> bool:
         
         conn_str = get_connection_string(config)
         
-        # Initialize document store (this creates the table)
+        # Initialize document store (this creates the table with embedding column)
+        # The 'embedding' column is for facts, we'll add 'embedding_metadata' separately
         store = PgvectorDocumentStore(
             connection_string=Secret.from_token(conn_str),
             table_name="haystack_documents",
@@ -106,7 +157,7 @@ def create_schema(config: Config) -> bool:
             }
         )
         
-        console.print("[bold green]✓[/bold green] Database schema created")
+        console.print("[bold green]✓[/bold green] Database schema created (facts embedding column)")
         return True
         
     except Exception as e:
@@ -116,7 +167,7 @@ def create_schema(config: Config) -> bool:
 
 def verify_setup(config: Config) -> bool:
     """
-    Verify database setup.
+    Verify database setup with dual embeddings.
     
     Returns:
         True if verification successful, False otherwise
@@ -136,10 +187,28 @@ def verify_setup(config: Config) -> bool:
         # Count documents
         doc_count = store.count_documents()
         
+        # Verify both embedding columns exist
+        conn = psycopg2.connect(conn_str)
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_name='haystack_documents' 
+            AND column_name IN ('embedding', 'embedding_metadata')
+            ORDER BY column_name;
+        """)
+        columns = [row[0] for row in cursor.fetchall()]
+        cursor.close()
+        conn.close()
+        
         console.print(f"[bold green]✓[/bold green] Database verified")
         console.print(f"  • Total documents: {doc_count}")
         console.print(f"  • Table: haystack_documents")
         console.print(f"  • Embedding dimension: 768")
+        console.print(f"  • Embedding columns: {', '.join(columns)}")
+        
+        if 'embedding_metadata' not in columns:
+            console.print("[bold yellow]![/bold yellow] Warning: embedding_metadata column not found")
         
         return True
         
@@ -181,6 +250,11 @@ def main():
     # Step 3: Create schema
     if not create_schema(config):
         console.print("\n[bold red]Initialization failed at schema creation.[/bold red]")
+        return False
+    
+    # Step 3.5: Add metadata embedding column
+    if not add_metadata_embedding_column(config):
+        console.print("\n[bold red]Initialization failed at adding metadata embedding column.[/bold red]")
         return False
     
     # Step 4: Verify setup

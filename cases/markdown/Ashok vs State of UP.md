@@ -1,9 +1,3 @@
-# Ashok vs State of UP
-
-## Case Information
-
-## Document Content
-
 [2024] 12 S.C.R. 335 : 2024 INSC 919
 Ashok
 v.
@@ -29,9 +23,8 @@ of death sentence against the appellant, for the offences
 punishable u/ss.376, 302, 201 as also the 1989 Act – High
 Court upheld the conviction, however reduced the sentence
 to life imprisonment – Correctness:
-
-## Held
-
+Held: Evidence of victim’s cousin, the only eyewitness, cannot be
+held to be of sterling quality – It is unsafe to base conviction only
 on his testimony – At the most, it can be the evidence of the last
 seen together – As regards, the recovery of articles at instance of
 the appellant, the prosecution failed to prove that the recovery was
@@ -74,9 +67,7 @@ Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989.
 [Paras 12, 13, 14-17, 19, 21-24]
 Code of Criminal Procedure, 1973 – s.313(5) – Power to examine
 accused – Role of the public prosecutor:
-
-## Held
-
+Held: Under sub-Section (5) of s.313 (sub-Section (5) of s.351 of
 Bharatiya Nagarik Suraksha Sanhita, 2023), the court is entitled to
 secure the assistance of the public prosecutor and the advocate
 representing the accused to prepare the questions to be put in the
@@ -95,9 +86,7 @@ is made to assist the Court – Bharatiya Nagarik Suraksha Sanhita,
 Ashok v. State of Uttar Pradesh
 Constitution of India – Arts.21 and 39A – Equal justice and free
 legal aid – Failure to provide legal aid to the accused – Effect:
-
-## Held
-
+Held: Right to get legal aid is a fundamental right of the accused,
 guaranteed by Art.21 – Even u/s.303 CrPC, every accused has
 a right to be defended by a pleader of his choice – Under s.304
 CrPC, it is the duty of the Court to ensure that a legal aid lawyer
@@ -115,9 +104,7 @@ Criminal trial – Role of the Public Prosecutor and appointment
 of legal aid lawyers – Issuance of directions regarding the
 role of the Public Prosecutor and appointment of legal aid
 lawyers:
-
-## Held
-
+Held:	 (i)
 Duty of the Court to ensure that proper legal aid is
 provided to an accused;
 (ii)
@@ -221,9 +208,8 @@ Respondent.
 340
 [2024] 12 S.C.R.
 Digital Supreme Court Reports
-
-## Judgment
-
+Judgment / Order of the Supreme Court
+Judgment
 Abhay S. Oka, J.
 FACTUAL ASPECT
 1.
@@ -642,9 +628,7 @@ of six weeks from today.”
 (emphasis added)
 The second decision is in the case of M.H. Hoskot v. State of
 Maharashtra.4 In paragraphs 14 and 25 of the decision, this Court
-
-## Held
-
+held thus:
 4
 [1979] 1 SCR 192 : (1978) 3 SCC 544
 
@@ -675,9 +659,7 @@ he has not the wherewithal to pay the admission fee?” ”
 (emphasis added)
 “25. If a prisoner sentenced to imprisonment, is virtually
 unable to exercise his constitutional and statutory right of
-
-## Appeal Details
-
+appeal, inclusive of special leave to appeal, for want of legal
 assistance, there is implicit in the Court under Article 142,
 read with Articles 21 and 39-A of the Constitution, power
 to assign counsel for such imprisoned individual “for doing
@@ -971,9 +953,7 @@ provided is of a good quality. If the legal aid advocate provided
 to an accused is not competent enough to conduct the trial
 efficiently, the rights of the accused will be violated.
 24.	 For the reasons recorded earlier, the appeal is allowed. The impugned
-
-## Judgment
-
+judgments and orders are set aside, and the appellant is acquitted
 of offences alleged against him. The bail bonds of the appellant
 stand cancelled.
 25.	 A copy of this judgment shall be forwarded to all State Legal Services

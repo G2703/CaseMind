@@ -1,9 +1,3 @@
-# Akshay Eknath Kokate Vs. State of Maharashtra
-
-## Case Information
-
-## Document Content
-
 2-ba.1774.2022.doc
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
 CRIMINAL APPELLATE JURISDICTION
@@ -19,9 +13,7 @@ Mr. Shaikh Abdul Kalam a/w Ms. Sana Shaikh, for the Applicant.
 Ms. P. P. Shinde, A.P.P for the Respondent – State.
 PSI – Prakash Shirdhankar, Andheri Police Station, Mumbai, is present.
 
-
-## Coram
-
+CORAM : REVATI MOHITE DERE , J.
 DATE : 5th SEPTEMBER 2023
 P.C. :
 1.
@@ -67,9 +59,7 @@ N. S. Chitnis
 
 --- Page 4 ---
 2-ba.1774.2022.doc
-
-## Order
-
+ORDER
 i)
 The applicant be enlarged on bail, on executing PR
 Bond in the sum of Rs. 25,000/- with one or two sureties in the like amount;

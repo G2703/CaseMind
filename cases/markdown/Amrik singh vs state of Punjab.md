@@ -1,9 +1,3 @@
-# Amrik singh vs state of Punjab
-
-## Case Information
-
-## Document Content
-
 A
 B
 C
@@ -23,9 +17,7 @@ Criminal Trial: Test Identification Parade-TIP – Non-conduct of – Effect of,
 would play an important role – However, there were some contradictions in the first statement of the complainant recorded in the form of FIR and in the deposition before the court, thus, TIP
 was necessary – It would not be safe and/or prudent to convict the accused solely on the basis of their identification for the first time in the Court – Conviction of the accused is unsustainable – Judgment and order of the trial court as well as of the High Court is quashed and set aside – Penal Code, 1860 - ss. 302 r/w s. 34, s. 392.
 Allowing the appeals, the Court
-
-## Held
-
+HELD: 1.1 It is required to be noted that the appellants-
 accused have been convicted mainly on the identification of the accused by PW1 in the Court Room and on the recovery of Rs.1
 lakh each from the accused persons which were recovered from the places suggested by the accused. Thus, the conviction of the accused in the instant case is solely on the identification of the accused by PW1 in the court room. Prior thereto no TIP has been conducted by the Investigating Agency. [Para 6][458-G-H]
 [2022] 7 S.C.R. 451
@@ -110,9 +102,7 @@ The Judgment of the Court was delivered by
 M. R. SHAH, J.
 1. Feeling aggrieved and dissatisfied with the impugned judgment and order dated 01.04.2011 passed by the High Court of Punjab and
 Haryana at Chandigarh in Criminal Appeal No.645 of 2004 and Criminal
-
-## Appeal Details
-
+Appeal No.563 of 2004 by which the Division Bench of the High Court has dismissed the said appeals preferred by the accused and has confirmed the conviction and sentence passed by the learned Trial Court convicting the accused Amrik Singh and Subhash Chander for the offences punishable under Section 302 read with Section 34 and Section
 392 of the IPC, the accused Amrik Singh and Subhash Chander have preferred the present appeals.
 2. That the appellant herein was charged along with one Subhash
 Chander and Pritpal Singh for committing robbery and murdering one
@@ -160,9 +150,7 @@ SUPREME COURT REPORTS
 [2022] 7 S.C.R.
 2.2 Feeling aggrieved and dissatisfied with the judgment and order of conviction and sentence by the learned Trial Court convicting the accused for the offence punishable under Sections 302/34 and 392 IPC,
 the accused Amrik Singh and Subhash Chander preferred the Criminal
-
-## Appeal Details
-
+Appeal No.645-DB of 2004 and Criminal Appeal No.563 of 2004 before the High Court. By the impugned judgment and order the High Court has dismissed the said appeals and has confirmed the order of conviction and sentence passed by the learned Trial Court. The judgment and order passed by the High Court is the subject matter of present appeals.
 3. Ms. Roohina Dua, learned counsel appearing on behalf of the accused has vehemently submitted that in the facts and circumstances of the case and on the evidence on record both, the learned Trial Court as well as the High Court have committed serious error in convicting the accused for the offence punishable under Section 302 read with Section
 34 and Section 392 IPC respectively.
 3.1 It is submitted that as such the appellants have been convicted on the deposition of PW1 – original complainant – informant and the identification of the accused in the Court by PW1.
@@ -343,9 +331,7 @@ Trial Court as well as the High Court convicting the accused for the offences pu
 The accused are acquitted from the charges for which they were tried. The appellants – accused be released forthwith, if they are not required in any other case.
 The Appeals are allowed accordingly.
 Nidhi Jain
-
-## Appeal Details
-
+Appeals allowed.
 (Assisted by : Shashwat Jain, LCRA)
 AMRIK SINGH v. THE STATE OF PUNJAB
 [M. R. SHAH, J.]
