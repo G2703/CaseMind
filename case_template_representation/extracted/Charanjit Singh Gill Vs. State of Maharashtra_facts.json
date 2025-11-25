@@ -1,0 +1,35 @@
+{
+  "tier_1_determinative": {
+    "theft_or_attempted_theft": "Theft of a taxi.",
+    "voluntary_causing_or_attempting_death_hurt_wrongful_restraint": "Forcible removal of taxi from the driver's custody."
+  },
+  "tier_2_material": {
+    "property_description": "Taxi bearing No. MH01-BT-2614."
+  },
+  "tier_3_contextual": {
+    "incident_location": "Nirmal Nagar, Mumbai.",
+    "incident_date_time": "6th October, 2019."
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Writ Petition No. 5241 of 2019",
+    "case_title": "Charanjit Singh Gill vs. The State of Maharashtra & Anr.",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "21st February, 2024",
+    "appellant_or_petitioner": "Charanjit Singh Gill",
+    "respondent": "The State of Maharashtra & Anr.",
+    "judges_coram": "Revati Mohite Dere & Manjusha Deshpande, JJ.",
+    "counsel_for_appellant": "Mr. Anand Mishra i/b Mr. Ashok M. Saraogi",
+    "counsel_for_respondent": "Mr. V.B.Konde Deshmukh, Addl.P.P",
+    "sections_invoked": "IPC 392",
+    "case_type": "Criminal Writ Petition",
+    "citation": ".doc",
+    "acts_and_sections": "IPC 392"
+  },
+  "residual_details": {
+    "additional_facts": "The petition was disposed of with liberty to file an appropriate proceeding before the appropriate forum/Court as maintainable in law. The court did not go into the merits of the petitioner's complaint."
+  },
+  "template_id": "ipc_392",
+  "template_label": "Robbery (IPC 392)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:39:31.944414"
+}

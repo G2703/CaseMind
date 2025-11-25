@@ -1,0 +1,2477 @@
+{
+  "templates": [
+    {
+      "node_id": "legal_case",
+      "label": "Legal Case",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "parties_name",
+            "court_name",
+            "case_number_year"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "judgment_date",
+            "appellant_or_petitioner",
+            "respondent"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "judges_coram",
+            "counsel_for_appellant_or_petitioner",
+            "counsel_for_respondent"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": [
+            "court_type",
+            "appeal_or_original_jurisdiction",
+            "disposition_of_case"
+          ]
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "parties_name": {
+          "type": "string",
+          "description": "The names of the main parties (e.g., 'A.K. Goel vs. State of Delhi')."
+        },
+        "court_name": {
+          "type": "string",
+          "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+        },
+        "case_number_year": {
+          "type": "string",
+          "description": "The case number and year (e.g., 'Crl. Appeal No.1192/2011')."
+        },
+        "judgment_date": {
+          "type": "date",
+          "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+        },
+        "appellant_or_petitioner": {
+          "type": "string",
+          "description": "The name(s) of the appellant or petitioner."
+        },
+        "respondent": {
+          "type": "string",
+          "description": "The name(s) of the respondent."
+        },
+        "judges_coram": {
+          "type": "string",
+          "description": "The name(s) of the judge(s) who delivered the judgment."
+        },
+        "counsel_for_appellant_or_petitioner": {
+          "type": "string",
+          "description": "The counsel representing the appellant/petitioner."
+        },
+        "counsel_for_respondent": {
+          "type": "string",
+          "description": "The counsel representing the respondent."
+        },
+        "court_type": {
+          "type": "string",
+          "description": "Whether it's a Supreme Court, High Court, or Trial Court judgment."
+        },
+        "appeal_or_original_jurisdiction": {
+          "type": "string",
+          "description": "The nature of the jurisdiction (e.g., 'Criminal Appeal', 'Writ Petition')."
+        },
+        "disposition_of_case": {
+          "type": "string",
+          "description": "The final outcome (e.g., 'Appeal Dismissed', 'Conviction converted')."
+        }
+      },
+      "example_terms": [
+        "case",
+        "appeal",
+        "trial",
+        "writ petition",
+        "revision application"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "criminal_case",
+      "label": "Criminal Case",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "ipc_sections_charged",
+            "nature_of_offense_category"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "accused_age",
+            "victim_age",
+            "time_of_offense",
+            "place_of_offense"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "motive_for_crime"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": [
+            "police_station",
+            "fir_number",
+            "stage_of_trial_or_appeal"
+          ]
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "ipc_sections_charged": {
+          "type": "string",
+          "description": "The specific Indian Penal Code sections and/or other Acts applied (e.g., 'IPC 302, 316')."
+        },
+        "nature_of_offense_category": {
+          "type": "string",
+          "description": "The broad category of the offense (e.g., 'Violent Offense', 'Property Offense')."
+        },
+        "accused_age": {
+          "type": "integer",
+          "description": "The age of the accused at the time of the offense."
+        },
+        "victim_age": {
+          "type": "integer",
+          "description": "The age of the victim at the time of the offense."
+        },
+        "time_of_offense": {
+          "type": "string",
+          "description": "The approximate time of the crime (e.g., '10:00 PM', 'Midnight')."
+        },
+        "place_of_offense": {
+          "type": "string",
+          "description": "The location where the crime took place (e.g., 'dwelling house', 'public road')."
+        },
+        "motive_for_crime": {
+          "type": "string",
+          "description": "The driving factor for the crime (e.g., 'revenge', 'greed', 'matrimonial dispute')."
+        },
+        "police_station": {
+          "type": "string",
+          "description": "The police station where the FIR was registered."
+        },
+        "fir_number": {
+          "type": "string",
+          "description": "The First Information Report number."
+        },
+        "stage_of_trial_or_appeal": {
+          "type": "string",
+          "description": "The current judicial stage (e.g., 'Trial Court conviction', 'High Court Appeal')."
+        }
+      },
+      "example_terms": [
+        "offence",
+        "crime",
+        "conviction",
+        "acquittal",
+        "IPC",
+        "bail",
+        "POTA"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "violent_offense",
+      "label": "Violent Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "nature_of_injury",
+            "weapon_used"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "number_of_accused",
+            "victim_relationship_with_accused"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "nature_of_injury": {
+          "type": "string",
+          "description": "Medical description of the harm caused (e.g., 'simple hurt', 'grievous hurt', 'burn injuries')."
+        },
+        "weapon_used": {
+          "type": "string",
+          "description": "The object or means used to cause harm (e.g., 'knife', 'lathi', 'kerosene')."
+        },
+        "number_of_accused": {
+          "type": "integer",
+          "description": "The total count of individuals charged with the offense."
+        },
+        "victim_relationship_with_accused": {
+          "type": "string",
+          "description": "The nature of the relationship (e.g., 'stranger', 'spouse', 'neighbor')."
+        }
+      },
+      "example_terms": [
+        "murder",
+        "grievous hurt",
+        "rape",
+        "kidnapping"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "sexual_offense",
+      "label": "Sexual Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "consent_status",
+            "age_of_victim"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_sexual_act",
+            "relationship_with_accused"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "consent_status": {
+          "type": "string",
+          "description": "Whether the act was with or without consent."
+        },
+        "age_of_victim": {
+          "type": "integer",
+          "description": "The age of the victim at the time of the offense."
+        },
+        "nature_of_sexual_act": {
+          "type": "string",
+          "description": "Specifics of the sexual act (e.g., 'penetrative', 'non-penetrative', 'oral')."
+        },
+        "relationship_with_accused": {
+          "type": "string",
+          "description": "The relationship between the victim and the accused (e.g., 'stranger', 'family member', 'acquaintance')."
+        }
+      },
+      "example_terms": [
+        "rape",
+        "POCSO",
+        "sexual assault"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_376",
+      "label": "Rape (IPC 376)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "consent_status",
+            "age_of_victim"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_sexual_act",
+            "relationship_with_accused"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "resistance_offered"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "resistance_offered": {
+          "type": "boolean",
+          "description": "Whether the victim actively resisted the act."
+        }
+      },
+      "example_terms": [
+        "section 376 IPC",
+        "aggravated rape"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_363",
+      "label": "Kidnapping (IPC 363)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "taking_or_enticing_a_minor",
+            "out_of_lawful_guardianship"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "motive_for_kidnapping",
+            "relationship_with_minor"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "taking_or_enticing_a_minor": {
+          "type": "boolean",
+          "description": "Whether the minor was taken or induced to leave."
+        },
+        "out_of_lawful_guardianship": {
+          "type": "boolean",
+          "description": "Whether the act was without the consent of the guardian."
+        },
+        "motive_for_kidnapping": {
+          "type": "string",
+          "description": "The reason behind the kidnapping (e.g., 'forced marriage', 'ransom')."
+        },
+        "relationship_with_minor": {
+          "type": "string",
+          "description": "Relationship between the accused and the minor (e.g., 'acquaintance', 'stranger')."
+        }
+      },
+      "example_terms": [
+        "section 363 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_354a",
+      "label": "Sexual Harassment (IPC 354A)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "sexual_harassment_act",
+            "against_a_woman"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "physical_contact_and_advances",
+            "demand_or_request_for_sexual_favours",
+            "showing_pornography_against_will",
+            "making_sexually_coloured_remarks"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "sexual_harassment_act": {
+          "type": "string",
+          "description": "The specific nature of the harassment defined under the section."
+        },
+        "against_a_woman": {
+          "type": "boolean",
+          "description": "Whether the victim is a woman."
+        },
+        "physical_contact_and_advances": {
+          "type": "boolean",
+          "description": "Whether the offense involves unwelcome physical contact and advances."
+        },
+        "demand_or_request_for_sexual_favours": {
+          "type": "boolean",
+          "description": "Whether the offense involves a demand or request for sexual favours."
+        },
+        "showing_pornography_against_will": {
+          "type": "boolean",
+          "description": "Whether the offense involves showing pornography against the will of a woman."
+        },
+        "making_sexually_coloured_remarks": {
+          "type": "boolean",
+          "description": "Whether the offense involves making sexually coloured remarks."
+        }
+      },
+      "example_terms": [
+        "section 354A IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "assault",
+      "label": "Assault/Hurt",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "act_causing_hurt",
+            "intention_or_knowledge"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_hurt"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "act_causing_hurt": {
+          "type": "string",
+          "description": "The specific act done to cause hurt."
+        },
+        "intention_or_knowledge": {
+          "type": "string",
+          "description": "The intent or knowledge element ('voluntarily')."
+        },
+        "nature_of_hurt": {
+          "type": "string",
+          "description": "Medical description of the injury (must not be grievous)."
+        }
+      },
+      "example_terms": [
+        "simple hurt",
+        "grievous hurt"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_323",
+      "label": "Voluntarily causing hurt (IPC 323)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "act_causing_hurt",
+            "intention_or_knowledge"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_hurt"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {},
+      "example_terms": [
+        "section 323 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_324",
+      "label": "Voluntarily causing hurt by dangerous weapons (IPC 324)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "act_causing_hurt",
+            "dangerous_weapon_or_means"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_hurt"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "dangerous_weapon_or_means": {
+          "type": "string",
+          "description": "The nature of the weapon or means used (e.g., 'fire', 'cutting instrument', 'poison')."
+        }
+      },
+      "example_terms": [
+        "section 324 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_307",
+      "label": "Attempt to Murder (IPC 307)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "intent_or_knowledge_to_cause_death",
+            "act_towards_commission_of_murder"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "injury_sustained"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "intent_or_knowledge_to_cause_death": {
+          "type": "boolean",
+          "description": "Whether the accused acted with the intention or knowledge requisite for murder."
+        },
+        "act_towards_commission_of_murder": {
+          "type": "string",
+          "description": "The specific act done towards causing death."
+        },
+        "injury_sustained": {
+          "type": "string",
+          "description": "Description of the injury, if any, caused to the victim."
+        }
+      },
+      "example_terms": [
+        "section 307 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_304_p2",
+      "label": "Culpable Homicide not amounting to Murder (IPC 304 Part II)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "knowledge_of_consequence",
+            "death_caused_without_intention"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "sudden_fight_in_passion",
+            "accused_intoxication"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "weapon_used"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "knowledge_of_consequence": {
+          "type": "boolean",
+          "description": "Whether the accused had knowledge that his act was likely to cause death, but without the intention to cause death."
+        },
+        "death_caused_without_intention": {
+          "type": "boolean",
+          "description": "Whether the act caused death, but fell outside the scope of murder (e.g., due to an exception to S. 300)."
+        }
+      },
+      "example_terms": [
+        "section 304 Part II IPC",
+        "knowledge of consequence"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_316",
+      "label": "Causing death of quick unborn child (IPC 316)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "victim_pregnancy_status",
+            "act_amounting_to_culpable_homicide"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "child_outcome_ipc_316"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "act_amounting_to_culpable_homicide": {
+          "type": "boolean",
+          "description": "Whether the act committed by the accused was of such a nature as to constitute culpable homicide (e.g., S. 304)."
+        }
+      },
+      "example_terms": [
+        "section 316 IPC",
+        "quick child",
+        "stillborn"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_306",
+      "label": "Abetment of Suicide (IPC 306)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "cause_of_suicide",
+            "abetment_act"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "suicide_method",
+            "relationship_with_deceased"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "motive_dowry_demand"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "suicide_method": {
+          "type": "string",
+          "description": "The method used by the deceased to commit suicide (e.g., 'hanging', 'self-immolation')."
+        },
+        "relationship_with_deceased": {
+          "type": "string",
+          "description": "The nature of the relationship between the accused and the deceased (e.g., 'spouse', 'business partner', 'relative')."
+        },
+        "abetment_act": {
+          "type": "string",
+          "description": "The specific act of instigation, conspiracy, or intentional aid that led to the suicide."
+        }
+      },
+      "example_terms": [
+        "section 306 IPC",
+        "driven to suicide",
+        "instigation"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "property_offense",
+      "label": "Property Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "property_nature",
+            "loss_or_damage_caused"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_type",
+            "property_owner"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "property_nature": {
+          "type": "string",
+          "description": "The nature of the property involved (e.g., 'movable' or 'immovable')."
+        },
+        "loss_or_damage_caused": {
+          "type": "string",
+          "description": "Description of the loss or damage sustained."
+        },
+        "property_owner": {
+          "type": "string",
+          "description": "The identity of the person in legal possession of the property."
+        },
+        "property_type": {
+          "type": "string",
+          "description": "The type of property involved (e.g., 'cash', 'jewelry', 'vehicle', 'land')."
+        }
+      },
+      "example_terms": [
+        "stolen property",
+        "extortion",
+        "mischief"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "theft",
+      "label": "Theft",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "dishonest_intention",
+            "moving_movable_property",
+            "out_of_possession_of_person"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_description",
+            "force_used_or_not"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "dishonest_intention": {
+          "type": "boolean",
+          "description": "Whether the taking was with dishonest intention."
+        },
+        "moving_movable_property": {
+          "type": "boolean",
+          "description": "Whether the property was moved."
+        },
+        "out_of_possession_of_person": {
+          "type": "boolean",
+          "description": "Whether the property was taken out of any person's possession."
+        },
+        "property_description": {
+          "type": "string",
+          "description": "Detailed description of the stolen property."
+        },
+        "force_used_or_not": {
+          "type": "boolean",
+          "description": "Whether any force or threat was involved (distinguishes from robbery/extortion)."
+        }
+      },
+      "example_terms": [
+        "stealing",
+        "dishonest intention"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_380",
+      "label": "Theft in dwelling house (IPC 380)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "location_type"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "location_type": {
+          "type": "string",
+          "description": "The property must be a building, tent, or vessel used for dwelling or custody of property."
+        }
+      },
+      "example_terms": [
+        "section 380 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_427",
+      "label": "Mischief causing damage (IPC 427)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "intention_or_knowledge_to_cause_damage",
+            "damage_amount_over_fifty_rupees"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_description"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "intention_or_knowledge_to_cause_damage": {
+          "type": "boolean",
+          "description": "Whether the accused intended or knew that damage would result."
+        },
+        "damage_amount_over_fifty_rupees": {
+          "type": "string",
+          "description": "The amount of damage caused (must be fifty rupees or upwards)."
+        }
+      },
+      "example_terms": [
+        "section 427 IPC",
+        "damage"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "robbery",
+      "label": "Robbery and Extortion",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "theft_or_extortion",
+            "use_of_immediate_force_or_fear_of_death_or_hurt"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "weapon_used"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "theft_or_extortion": {
+          "type": "string",
+          "description": "Whether the offense was committed as a 'theft' or 'extortion'."
+        },
+        "use_of_immediate_force_or_fear_of_death_or_hurt": {
+          "type": "boolean",
+          "description": "Whether the immediate fear of death, hurt, or wrongful restraint was caused/attempted."
+        }
+      },
+      "example_terms": [
+        "armed robbery",
+        "extortion"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_392",
+      "label": "Robbery (IPC 392)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "theft_or_extortion",
+            "use_of_immediate_force_or_fear_of_death_or_hurt"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "time_of_robbery"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "time_of_robbery": {
+          "type": "string",
+          "description": "Whether the robbery was committed 'on the highway' and 'between sunset and sunrise'."
+        }
+      },
+      "example_terms": [
+        "section 392 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_394",
+      "label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "voluntary_causing_hurt",
+            "person_concerned_in_robbery"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "voluntary_causing_hurt": {
+          "type": "boolean",
+          "description": "Whether the accused voluntarily caused hurt."
+        },
+        "person_concerned_in_robbery": {
+          "type": "boolean",
+          "description": "Whether the person causing hurt was the robber or any other person jointly concerned in the robbery."
+        }
+      },
+      "example_terms": [
+        "section 394 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_397",
+      "label": "Robbery or dacoity, with attempt to cause death or grievous hurt (IPC 397)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "offender_uses_deadly_weapon",
+            "grievous_hurt_or_death_attempted",
+            "at_time_of_committing_robbery_or_dacoity"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "weapon_description"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "offender_uses_deadly_weapon": {
+          "type": "boolean",
+          "description": "Whether the offender used or attempted to use any deadly weapon."
+        },
+        "grievous_hurt_or_death_attempted": {
+          "type": "boolean",
+          "description": "Whether the offender voluntarily causes or attempts to cause death or grievous hurt."
+        },
+        "at_time_of_committing_robbery_or_dacoity": {
+          "type": "boolean",
+          "description": "Whether the act occurred at the time of committing or attempting to commit robbery/dacoity."
+        },
+        "weapon_description": {
+          "type": "string",
+          "description": "Description of the deadly weapon (e.g., 'loaded gun', 'sharp knife')."
+        }
+      },
+      "example_terms": [
+        "section 397 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_384",
+      "label": "Extortion (IPC 384)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "fear_of_injury_induced",
+            "delivery_of_property_forced"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_extorted"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "fear_of_injury_induced": {
+          "type": "boolean",
+          "description": "Whether the person was put in fear of any injury."
+        },
+        "delivery_of_property_forced": {
+          "type": "boolean",
+          "description": "Whether the delivery of any property or valuable security was dishonestly induced."
+        },
+        "property_extorted": {
+          "type": "string",
+          "description": "Description of the property extorted."
+        }
+      },
+      "example_terms": [
+        "section 384 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "dacoity",
+      "label": "Dacoity",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "five_or_more_persons_committing_dacoity"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_stolen"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "five_or_more_persons_committing_dacoity": {
+          "type": "boolean",
+          "description": "The requirement that five or more persons must be committing or attempting to commit dacoity."
+        },
+        "property_stolen": {
+          "type": "string",
+          "description": "Description of the property stolen."
+        }
+      },
+      "example_terms": [
+        "gang",
+        "armed group"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_395",
+      "label": "Punishment for dacoity (IPC 395)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "five_or_more_persons_committing_dacoity"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {},
+      "example_terms": [
+        "section 395 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "trespass",
+      "label": "Trespass",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "entry_or_stay_without_permission",
+            "intention_to_commit_offense_or_intimidate_insult_annoy"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "property_location_or_type"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "entry_or_stay_without_permission": {
+          "type": "string",
+          "description": "Whether the entry was unlawful or the stay became unlawful."
+        },
+        "intention_to_commit_offense_or_intimidate_insult_annoy": {
+          "type": "string",
+          "description": "The intent element: to commit an offense, or to intimidate, insult, or annoy the person in possession."
+        },
+        "property_location_or_type": {
+          "type": "string",
+          "description": "The nature of the property trespassed upon."
+        }
+      },
+      "example_terms": [
+        "house-breaking",
+        "criminal trespass"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_452",
+      "label": "House-trespass after preparation for hurt, assault or wrongful restraint (IPC 452)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "house_trespass_committed",
+            "preparation_for_hurt_assault_or_restraint"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "house_trespass_committed": {
+          "type": "boolean",
+          "description": "Whether the criminal trespass amounts to house-trespass."
+        },
+        "preparation_for_hurt_assault_or_restraint": {
+          "type": "boolean",
+          "description": "Whether preparation was made for causing hurt, assault, or wrongful restraint."
+        }
+      },
+      "example_terms": [
+        "section 452 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_457",
+      "label": "Lurking house-trespass or house-breaking by night in order to commit offence punishable with imprisonment (IPC 457)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "trespass_nature",
+            "night_time",
+            "intention_to_commit_punishable_offence"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "specific_offence_intended"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "trespass_nature": {
+          "type": "string",
+          "description": "The mode of entry/concealment ('lurking' or 'house-breaking')."
+        },
+        "night_time": {
+          "type": "boolean",
+          "description": "Whether the act was committed between sunset and sunrise."
+        },
+        "intention_to_commit_punishable_offence": {
+          "type": "boolean",
+          "description": "The intent to commit any offense punishable with imprisonment."
+        },
+        "specific_offence_intended": {
+          "type": "string",
+          "description": "The specific offense intended to be committed."
+        }
+      },
+      "example_terms": [
+        "section 457 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "preparatory_offense",
+      "label": "Preparatory Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "preparation_for_offense"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "material_collected"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "preparation_for_offense": {
+          "type": "string",
+          "description": "The act of preparation (e.g., 'collecting arms', 'planning')."
+        },
+        "material_collected": {
+          "type": "string",
+          "description": "Specific materials or instruments prepared for the crime."
+        }
+      },
+      "example_terms": [
+        "conspiracy",
+        "preparation"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_399",
+      "label": "Making preparation to commit dacoity (IPC 399)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "preparation_for_dacoity_made"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "preparation_for_dacoity_made": {
+          "type": "boolean",
+          "description": "Whether any preparation was made for the purpose of committing dacoity."
+        }
+      },
+      "example_terms": [
+        "section 399 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_402",
+      "label": "Assembling for purpose of committing dacoity (IPC 402)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "assembling_five_or_more_persons"
+          ]
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "assembling_five_or_more_persons": {
+          "type": "boolean",
+          "description": "Whether five or more persons assembled for the purpose of committing dacoity."
+        }
+      },
+      "example_terms": [
+        "section 402 IPC"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "other_offense",
+      "label": "Other Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": []
+        },
+        "tier_2_material": {
+          "fields": []
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {},
+      "example_terms": [
+        "miscellaneous"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "terrorism_offense",
+      "label": "Terrorism Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "terrorist_act_definition",
+            "unlawful_possession_of_arms"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "material_or_device_used"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "intent_or_knowledge"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "terrorist_act_definition": {
+          "type": "string",
+          "description": "The specific definition of the terrorist act satisfied."
+        },
+        "unlawful_possession_of_arms": {
+          "type": "string",
+          "description": "Details of the arms or ammunition possessed ('unauthorized arms')."
+        },
+        "intent_or_knowledge": {
+          "type": "string",
+          "description": "The knowledge or intent to further a terrorist organization's activities."
+        },
+        "material_or_device_used": {
+          "type": "string",
+          "description": "The explosive substance or device used/possessed."
+        }
+      },
+      "example_terms": [
+        "POTA",
+        "UAPA",
+        "terrorist funding"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "matrimonial_offense",
+      "label": "Matrimonial Offense",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "marital_status",
+            "relationship_between_parties"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "duration_of_marriage"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "marital_status": {
+          "type": "string",
+          "description": "Current status of the marriage ('subsisting', 'divorced')."
+        },
+        "relationship_between_parties": {
+          "type": "string",
+          "description": "Specific relation (e.g., 'husband', 'mother-in-law')."
+        },
+        "duration_of_marriage": {
+          "type": "string",
+          "description": "Length of time the marriage has subsisted."
+        }
+      },
+      "example_terms": [
+        "dowry death",
+        "cruelty",
+        "DV Act"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "ipc_498a",
+      "label": "Cruelty by Husband or Relatives (IPC 498A)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "subjected_to_cruelty",
+            "cruelty_by_husband_or_relative",
+            "dowry_demand_motive"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_cruelty",
+            "injury_caused_to_life_or_health"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": [
+            "death_caused_by_suicide"
+          ]
+        },
+        "tier_4_procedural": {
+          "fields": [
+            "complaint_filed_by_woman_or_relative"
+          ]
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "subjected_to_cruelty": {
+          "type": "boolean",
+          "description": "Whether the woman was subjected to cruelty."
+        },
+        "cruelty_by_husband_or_relative": {
+          "type": "boolean",
+          "description": "Whether the accused is the husband or a relative of the husband."
+        },
+        "nature_of_cruelty": {
+          "type": "string",
+          "description": "Description of the mental or physical harassment."
+        },
+        "injury_caused_to_life_or_health": {
+          "type": "boolean",
+          "description": "Whether the cruelty was likely to drive the woman to suicide or cause grave injury/danger to life/health."
+        },
+        "death_caused_by_suicide": {
+          "type": "boolean",
+          "description": "If the cruelty led to the woman committing suicide."
+        },
+        "complaint_filed_by_woman_or_relative": {
+          "type": "boolean",
+          "description": "Whether the complaint was filed by the aggrieved woman or a family member on her behalf."
+        }
+      },
+      "example_terms": [
+        "section 498A IPC",
+        "harassment for dowry"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "domestic_violence_act",
+      "label": "Protection of Women from Domestic Violence Act (PWDVA)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "domestic_relationship",
+            "respondent_identity",
+            "domestic_violence_occurrence"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "nature_of_domestic_violence",
+            "relief_sought"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": [
+            "date_of_application_for_PWDVA"
+          ]
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "domestic_relationship": {
+          "type": "boolean",
+          "description": "Whether the applicant and respondent are in a domestic relationship."
+        },
+        "respondent_identity": {
+          "type": "string",
+          "description": "The identity of the respondent (e.g., 'husband', 'mother-in-law')."
+        },
+        "domestic_violence_occurrence": {
+          "type": "boolean",
+          "description": "Whether an act of domestic violence has occurred."
+        },
+        "nature_of_domestic_violence": {
+          "type": "string",
+          "description": "The type of violence (e.g., 'physical', 'emotional', 'economic')."
+        },
+        "relief_sought": {
+          "type": "string",
+          "description": "The specific relief asked for (e.g., 'Protection Order', 'Residence Order', 'Monetary Relief')."
+        },
+        "date_of_application_for_PWDVA": {
+          "type": "date",
+          "description": "Date when the PWDVA application was filed."
+        }
+      },
+      "example_terms": [
+        "domestic incident report",
+        "protection officer"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "pvdva_maintenance",
+      "label": "Monetary Relief under PWDVA (S. 20)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "quantum_of_monetary_relief",
+            "ground_for_monetary_relief"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "applicant_financial_status",
+            "respondent_financial_status"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": [
+            "date_of_order_for_monetary_relief"
+          ]
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "quantum_of_monetary_relief": {
+          "type": "string",
+          "description": "The amount of monetary relief granted."
+        },
+        "ground_for_monetary_relief": {
+          "type": "string",
+          "description": "The basis of the relief (e.g., 'loss of earnings', 'medical expenses')."
+        },
+        "date_of_order_for_monetary_relief": {
+          "type": "date",
+          "description": "The date the monetary relief order was passed."
+        }
+      },
+      "example_terms": [
+        "monetary relief",
+        "loss of earnings"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "family_law_dispute",
+      "label": "Family Law Dispute",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "act_under_which_relief_sought",
+            "relationship_between_parties"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "children_involved",
+            "financial_assets_in_dispute"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "act_under_which_relief_sought": {
+          "type": "string",
+          "description": "The governing law (e.g., 'Hindu Marriage Act', 'Guardians and Wards Act')."
+        },
+        "children_involved": {
+          "type": "boolean",
+          "description": "Whether minor children are involved in the dispute."
+        },
+        "financial_assets_in_dispute": {
+          "type": "string",
+          "description": "Details about shared or disputed financial assets."
+        }
+      },
+      "example_terms": [
+        "divorce petition",
+        "custody battle"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "maintenance_proceedings",
+      "label": "Maintenance Proceedings",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "applicant_financial_status",
+            "respondent_financial_status",
+            "quantum_of_maintenance_ordered"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "grounds_for_seeking_maintenance",
+            "date_of_application_for_maintenance",
+            "previous_maintenance_orders"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "applicant_financial_status": {
+          "type": "string",
+          "description": "Details about the applicant's occupation, income, and assets."
+        },
+        "respondent_financial_status": {
+          "type": "string",
+          "description": "Details about the respondent's occupation, income, and assets."
+        },
+        "date_of_application_for_maintenance": {
+          "type": "date",
+          "description": "Date when the maintenance application was filed."
+        },
+        "grounds_for_seeking_maintenance": {
+          "type": "string",
+          "description": "The legal or factual basis for the maintenance claim (e.g., 'no source of income', 'illness')."
+        },
+        "previous_maintenance_orders": {
+          "type": "string",
+          "description": "Details of any prior maintenance orders (e.g., under DV Act)."
+        },
+        "quantum_of_maintenance_ordered": {
+          "type": "string",
+          "description": "The amount of maintenance granted or denied."
+        }
+      },
+      "example_terms": [
+        "section 24 HMA",
+        "pendente lite",
+        "interim maintenance"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "crpc_125_maintenance",
+      "label": "Maintenance under CrPC 125",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "neglect_or_refusal_to_maintain",
+            "person_unable_to_maintain_themselves"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "quantum_of_maintenance_ordered"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "neglect_or_refusal_to_maintain": {
+          "type": "boolean",
+          "description": "Whether the respondent neglected or refused to maintain the applicant."
+        },
+        "person_unable_to_maintain_themselves": {
+          "type": "string",
+          "description": "The category of the applicant (e.g., 'wife', 'minor child', 'parent')."
+        }
+      },
+      "example_terms": [
+        "section 125 CrPC",
+        "neglect"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    },
+    {
+      "node_id": "hma_24_maintenance",
+      "label": "Maintenance Pendente Lite (HMA 24)",
+      "fact_tiers": {
+        "tier_1_determinative": {
+          "fields": [
+            "applicant_has_no_independent_income",
+            "amount_of_income_for_support"
+          ]
+        },
+        "tier_2_material": {
+          "fields": [
+            "costs_of_proceedings_granted"
+          ]
+        },
+        "tier_3_contextual": {
+          "fields": []
+        },
+        "tier_4_procedural": {
+          "fields": []
+        }
+      },
+      "residual_details": {
+        "unclassified_facts": []
+      },
+      "field_definitions": {
+        "applicant_has_no_independent_income": {
+          "type": "boolean",
+          "description": "Whether the applicant has no independent income sufficient for their support."
+        },
+        "amount_of_income_for_support": {
+          "type": "string",
+          "description": "The amount fixed for support (pendente lite)."
+        },
+        "costs_of_proceedings_granted": {
+          "type": "string",
+          "description": "The amount granted for the expenses of the proceedings."
+        }
+      },
+      "example_terms": [
+        "section 24 HMA",
+        "pendente lite",
+        "interim maintenance"
+      ],
+      "suggested_section_mapping_confidence": 1.0
+    }
+  ],
+  "field_definitions": {
+    "parties_name": {
+      "type": "string",
+      "description": "The names of the main parties (e.g., 'A.K. Goel vs. State of Delhi')."
+    },
+    "court_name": {
+      "type": "string",
+      "description": "The name of the court that delivered the judgment (e.g., 'High Court of Delhi')."
+    },
+    "case_number_year": {
+      "type": "string",
+      "description": "The case number and year (e.g., 'Crl. Appeal No.1192/2011')."
+    },
+    "judgment_date": {
+      "type": "date",
+      "description": "The date the judgment was delivered (e.g., '15th March, 2012')."
+    },
+    "appellant_or_petitioner": {
+      "type": "string",
+      "description": "The name(s) of the appellant or petitioner."
+    },
+    "respondent": {
+      "type": "string",
+      "description": "The name(s) of the respondent."
+    },
+    "judges_coram": {
+      "type": "string",
+      "description": "The name(s) of the judge(s) who delivered the judgment."
+    },
+    "counsel_for_appellant_or_petitioner": {
+      "type": "string",
+      "description": "The counsel representing the appellant/petitioner."
+    },
+    "counsel_for_respondent": {
+      "type": "string",
+      "description": "The counsel representing the respondent."
+    },
+    "court_type": {
+      "type": "string",
+      "description": "Whether it's a Supreme Court, High Court, or Trial Court judgment."
+    },
+    "appeal_or_original_jurisdiction": {
+      "type": "string",
+      "description": "The nature of the jurisdiction (e.g., 'Criminal Appeal', 'Writ Petition')."
+    },
+    "disposition_of_case": {
+      "type": "string",
+      "description": "The final outcome (e.g., 'Appeal Dismissed', 'Conviction converted')."
+    },
+    "ipc_sections_charged": {
+      "type": "string",
+      "description": "The specific Indian Penal Code sections and/or other Acts applied (e.g., 'IPC 302, 316')."
+    },
+    "nature_of_offense_category": {
+      "type": "string",
+      "description": "The broad category of the offense (e.g., 'Violent Offense', 'Property Offense')."
+    },
+    "accused_age": {
+      "type": "integer",
+      "description": "The age of the accused at the time of the offense."
+    },
+    "victim_age": {
+      "type": "integer",
+      "description": "The age of the victim at the time of the offense."
+    },
+    "time_of_offense": {
+      "type": "string",
+      "description": "The approximate time of the crime (e.g., '10:00 PM', 'Midnight')."
+    },
+    "place_of_offense": {
+      "type": "string",
+      "description": "The location where the crime took place (e.g., 'dwelling house', 'public road')."
+    },
+    "motive_for_crime": {
+      "type": "string",
+      "description": "The driving factor for the crime (e.g., 'revenge', 'greed', 'matrimonial dispute')."
+    },
+    "police_station": {
+      "type": "string",
+      "description": "The police station where the FIR was registered."
+    },
+    "fir_number": {
+      "type": "string",
+      "description": "The First Information Report number."
+    },
+    "stage_of_trial_or_appeal": {
+      "type": "string",
+      "description": "The current judicial stage (e.g., 'Trial Court conviction', 'High Court Appeal')."
+    },
+    "nature_of_injury": {
+      "type": "string",
+      "description": "Medical description of the harm caused (e.g., 'simple hurt', 'grievous hurt', 'burn injuries')."
+    },
+    "weapon_used": {
+      "type": "string",
+      "description": "The object or means used to cause harm (e.g., 'knife', 'lathi', 'kerosene')."
+    },
+    "number_of_accused": {
+      "type": "integer",
+      "description": "The total count of individuals charged with the offense."
+    },
+    "victim_relationship_with_accused": {
+      "type": "string",
+      "description": "The nature of the relationship (e.g., 'stranger', 'spouse', 'neighbor')."
+    },
+    "consent_status": {
+      "type": "string",
+      "description": "Whether the act was with or without consent."
+    },
+    "age_of_victim": {
+      "type": "integer",
+      "description": "The age of the victim at the time of the offense."
+    },
+    "nature_of_sexual_act": {
+      "type": "string",
+      "description": "Specifics of the sexual act (e.g., 'penetrative', 'non-penetrative', 'oral')."
+    },
+    "relationship_with_accused": {
+      "type": "string",
+      "description": "The relationship between the victim and the accused (e.g., 'stranger', 'family member', 'acquaintance')."
+    },
+    "resistance_offered": {
+      "type": "boolean",
+      "description": "Whether the victim actively resisted the act."
+    },
+    "taking_or_enticing_a_minor": {
+      "type": "boolean",
+      "description": "Whether the minor was taken or induced to leave."
+    },
+    "out_of_lawful_guardianship": {
+      "type": "boolean",
+      "description": "Whether the act was without the consent of the guardian."
+    },
+    "motive_for_kidnapping": {
+      "type": "string",
+      "description": "The reason behind the kidnapping (e.g., 'forced marriage', 'ransom')."
+    },
+    "relationship_with_minor": {
+      "type": "string",
+      "description": "Relationship between the accused and the minor (e.g., 'acquaintance', 'stranger')."
+    },
+    "sexual_harassment_act": {
+      "type": "string",
+      "description": "The specific nature of the harassment defined under the section."
+    },
+    "against_a_woman": {
+      "type": "boolean",
+      "description": "Whether the victim is a woman."
+    },
+    "physical_contact_and_advances": {
+      "type": "boolean",
+      "description": "Whether the offense involves unwelcome physical contact and advances."
+    },
+    "demand_or_request_for_sexual_favours": {
+      "type": "boolean",
+      "description": "Whether the offense involves a demand or request for sexual favours."
+    },
+    "showing_pornography_against_will": {
+      "type": "boolean",
+      "description": "Whether the offense involves showing pornography against the will of a woman."
+    },
+    "making_sexually_coloured_remarks": {
+      "type": "boolean",
+      "description": "Whether the offense involves making sexually coloured remarks."
+    },
+    "act_causing_hurt": {
+      "type": "string",
+      "description": "The specific act done to cause hurt."
+    },
+    "intention_or_knowledge": {
+      "type": "string",
+      "description": "The intent or knowledge element ('voluntarily')."
+    },
+    "nature_of_hurt": {
+      "type": "string",
+      "description": "Medical description of the injury (must not be grievous)."
+    },
+    "dangerous_weapon_or_means": {
+      "type": "string",
+      "description": "The nature of the weapon or means used (e.g., 'fire', 'cutting instrument', 'poison')."
+    },
+    "intent_or_knowledge_to_cause_death": {
+      "type": "boolean",
+      "description": "Whether the accused acted with the intention or knowledge requisite for murder."
+    },
+    "act_towards_commission_of_murder": {
+      "type": "string",
+      "description": "The specific act done towards causing death."
+    },
+    "injury_sustained": {
+      "type": "string",
+      "description": "Description of the injury, if any, caused to the victim."
+    },
+    "property_nature": {
+      "type": "string",
+      "description": "The nature of the property involved (e.g., 'movable' or 'immovable')."
+    },
+    "loss_or_damage_caused": {
+      "type": "string",
+      "description": "Description of the loss or damage sustained."
+    },
+    "property_owner": {
+      "type": "string",
+      "description": "The identity of the person in legal possession of the property."
+    },
+    "property_type": {
+      "type": "string",
+      "description": "The type of property involved (e.g., 'cash', 'jewelry', 'vehicle', 'land')."
+    },
+    "dishonest_intention": {
+      "type": "boolean",
+      "description": "Whether the taking was with dishonest intention."
+    },
+    "moving_movable_property": {
+      "type": "boolean",
+      "description": "Whether the property was moved."
+    },
+    "out_of_possession_of_person": {
+      "type": "boolean",
+      "description": "Whether the property was taken out of any person's possession."
+    },
+    "property_description": {
+      "type": "string",
+      "description": "Detailed description of the stolen property."
+    },
+    "force_used_or_not": {
+      "type": "boolean",
+      "description": "Whether any force or threat was involved (distinguishes from robbery/extortion)."
+    },
+    "location_type": {
+      "type": "string",
+      "description": "The property must be a building, tent, or vessel used for dwelling or custody of property."
+    },
+    "intention_or_knowledge_to_cause_damage": {
+      "type": "boolean",
+      "description": "Whether the accused intended or knew that damage would result."
+    },
+    "damage_amount_over_fifty_rupees": {
+      "type": "string",
+      "description": "The amount of damage caused (must be fifty rupees or upwards)."
+    },
+    "theft_or_extortion": {
+      "type": "string",
+      "description": "Whether the offense was committed as a 'theft' or 'extortion'."
+    },
+    "use_of_immediate_force_or_fear_of_death_or_hurt": {
+      "type": "boolean",
+      "description": "Whether the immediate fear of death, hurt, or wrongful restraint was caused/attempted."
+    },
+    "time_of_robbery": {
+      "type": "string",
+      "description": "Whether the robbery was committed 'on the highway' and 'between sunset and sunrise'."
+    },
+    "voluntary_causing_hurt": {
+      "type": "boolean",
+      "description": "Whether the accused voluntarily caused hurt."
+    },
+    "person_concerned_in_robbery": {
+      "type": "boolean",
+      "description": "Whether the person causing hurt was the robber or any other person jointly concerned in the robbery."
+    },
+    "offender_uses_deadly_weapon": {
+      "type": "boolean",
+      "description": "Whether the offender used or attempted to use any deadly weapon."
+    },
+    "grievous_hurt_or_death_attempted": {
+      "type": "boolean",
+      "description": "Whether the offender voluntarily causes or attempts to cause death or grievous hurt."
+    },
+    "at_time_of_committing_robbery_or_dacoity": {
+      "type": "boolean",
+      "description": "Whether the act occurred at the time of committing or attempting to commit robbery/dacoity."
+    },
+    "weapon_description": {
+      "type": "string",
+      "description": "Description of the deadly weapon (e.g., 'loaded gun', 'sharp knife')."
+    },
+    "fear_of_injury_induced": {
+      "type": "boolean",
+      "description": "Whether the person was put in fear of any injury."
+    },
+    "delivery_of_property_forced": {
+      "type": "boolean",
+      "description": "Whether the delivery of any property or valuable security was dishonestly induced."
+    },
+    "property_extorted": {
+      "type": "string",
+      "description": "Description of the property extorted."
+    },
+    "five_or_more_persons_committing_dacoity": {
+      "type": "boolean",
+      "description": "The requirement that five or more persons must be committing or attempting to commit dacoity."
+    },
+    "property_stolen": {
+      "type": "string",
+      "description": "Description of the property stolen."
+    },
+    "preparation_for_offense": {
+      "type": "string",
+      "description": "The act of preparation (e.g., 'collecting arms', 'planning')."
+    },
+    "material_collected": {
+      "type": "string",
+      "description": "Specific materials or instruments prepared for the crime."
+    },
+    "preparation_for_dacoity_made": {
+      "type": "boolean",
+      "description": "Whether any preparation was made for the purpose of committing dacoity."
+    },
+    "assembling_five_or_more_persons": {
+      "type": "boolean",
+      "description": "Whether five or more persons assembled for the purpose of committing dacoity."
+    },
+    "entry_or_stay_without_permission": {
+      "type": "string",
+      "description": "Whether the entry was unlawful or the stay became unlawful."
+    },
+    "intention_to_commit_offense_or_intimidate_insult_annoy": {
+      "type": "string",
+      "description": "The intent element: to commit an offense, or to intimidate, insult, or annoy the person in possession."
+    },
+    "property_location_or_type": {
+      "type": "string",
+      "description": "The nature of the property trespassed upon."
+    },
+    "house_trespass_committed": {
+      "type": "boolean",
+      "description": "Whether the criminal trespass amounts to house-trespass."
+    },
+    "preparation_for_hurt_assault_or_restraint": {
+      "type": "boolean",
+      "description": "Whether preparation was made for causing hurt, assault, or wrongful restraint."
+    },
+    "trespass_nature": {
+      "type": "string",
+      "description": "The mode of entry/concealment ('lurking' or 'house-breaking')."
+    },
+    "night_time": {
+      "type": "boolean",
+      "description": "Whether the act was committed between sunset and sunrise."
+    },
+    "intention_to_commit_punishable_offence": {
+      "type": "boolean",
+      "description": "The intent to commit any offense punishable with imprisonment."
+    },
+    "specific_offence_intended": {
+      "type": "string",
+      "description": "The specific offense intended to be committed."
+    },
+    "terrorist_act_definition": {
+      "type": "string",
+      "description": "The specific definition of the terrorist act satisfied."
+    },
+    "unlawful_possession_of_arms": {
+      "type": "string",
+      "description": "Details of the arms or ammunition possessed ('unauthorized arms')."
+    },
+    "intent_or_knowledge": {
+      "type": "string",
+      "description": "The knowledge or intent to further a terrorist organization's activities."
+    },
+    "material_or_device_used": {
+      "type": "string",
+      "description": "The explosive substance or device used/possessed."
+    },
+    "marital_status": {
+      "type": "string",
+      "description": "Current status of the marriage ('subsisting', 'divorced')."
+    },
+    "relationship_between_parties": {
+      "type": "string",
+      "description": "Specific relation (e.g., 'husband', 'mother-in-law')."
+    },
+    "duration_of_marriage": {
+      "type": "string",
+      "description": "Length of time the marriage has subsisted."
+    },
+    "subjected_to_cruelty": {
+      "type": "boolean",
+      "description": "Whether the woman was subjected to cruelty."
+    },
+    "cruelty_by_husband_or_relative": {
+      "type": "boolean",
+      "description": "Whether the accused is the husband or a relative of the husband."
+    },
+    "nature_of_cruelty": {
+      "type": "string",
+      "description": "Description of the mental or physical harassment."
+    },
+    "injury_caused_to_life_or_health": {
+      "type": "boolean",
+      "description": "Whether the cruelty was likely to drive the woman to suicide or cause grave injury/danger to life/health."
+    },
+    "death_caused_by_suicide": {
+      "type": "boolean",
+      "description": "If the cruelty led to the woman committing suicide."
+    },
+    "complaint_filed_by_woman_or_relative": {
+      "type": "boolean",
+      "description": "Whether the complaint was filed by the aggrieved woman or a family member on her behalf."
+    },
+    "domestic_relationship": {
+      "type": "boolean",
+      "description": "Whether the applicant and respondent are in a domestic relationship."
+    },
+    "respondent_identity": {
+      "type": "string",
+      "description": "The identity of the respondent (e.g., 'husband', 'mother-in-law')."
+    },
+    "domestic_violence_occurrence": {
+      "type": "boolean",
+      "description": "Whether an act of domestic violence has occurred."
+    },
+    "nature_of_domestic_violence": {
+      "type": "string",
+      "description": "The type of violence (e.g., 'physical', 'emotional', 'economic')."
+    },
+    "relief_sought": {
+      "type": "string",
+      "description": "The specific relief asked for (e.g., 'Protection Order', 'Residence Order', 'Monetary Relief')."
+    },
+    "date_of_application_for_PWDVA": {
+      "type": "date",
+      "description": "Date when the PWDVA application was filed."
+    },
+    "quantum_of_monetary_relief": {
+      "type": "string",
+      "description": "The amount of monetary relief granted."
+    },
+    "ground_for_monetary_relief": {
+      "type": "string",
+      "description": "The basis of the relief (e.g., 'loss of earnings', 'medical expenses')."
+    },
+    "date_of_order_for_monetary_relief": {
+      "type": "date",
+      "description": "The date the monetary relief order was passed."
+    },
+    "act_under_which_relief_sought": {
+      "type": "string",
+      "description": "The governing law (e.g., 'Hindu Marriage Act', 'Guardians and Wards Act')."
+    },
+    "children_involved": {
+      "type": "boolean",
+      "description": "Whether minor children are involved in the dispute."
+    },
+    "financial_assets_in_dispute": {
+      "type": "string",
+      "description": "Details about shared or disputed financial assets."
+    },
+    "applicant_financial_status": {
+      "type": "string",
+      "description": "Details about the applicant's occupation, income, and assets."
+    },
+    "respondent_financial_status": {
+      "type": "string",
+      "description": "Details about the respondent's occupation, income, and assets."
+    },
+    "date_of_application_for_maintenance": {
+      "type": "date",
+      "description": "Date when the maintenance application was filed."
+    },
+    "grounds_for_seeking_maintenance": {
+      "type": "string",
+      "description": "The legal or factual basis for the maintenance claim (e.g., 'no source of income', 'illness')."
+    },
+    "previous_maintenance_orders": {
+      "type": "string",
+      "description": "Details of any prior maintenance orders (e.g., under DV Act)."
+    },
+    "quantum_of_maintenance_ordered": {
+      "type": "string",
+      "description": "The amount of maintenance granted or denied."
+    },
+    "neglect_or_refusal_to_maintain": {
+      "type": "boolean",
+      "description": "Whether the respondent neglected or refused to maintain the applicant."
+    },
+    "person_unable_to_maintain_themselves": {
+      "type": "string",
+      "description": "The category of the applicant (e.g., 'wife', 'minor child', 'parent')."
+    },
+    "applicant_has_no_independent_income": {
+      "type": "boolean",
+      "description": "Whether the applicant has no independent income sufficient for their support."
+    },
+    "amount_of_income_for_support": {
+      "type": "string",
+      "description": "The amount fixed for support (pendente lite)."
+    },
+    "costs_of_proceedings_granted": {
+      "type": "string",
+      "description": "The amount granted for the expenses of the proceedings."
+    },
+    "dowry_demand_motive": {
+      "type": "boolean",
+      "description": "Whether the harassment/cruelty was linked to an illegal demand for property or valuable security (dowry)."
+    },
+    "cause_of_suicide": {
+      "type": "string",
+      "description": "The nature of the instigation or circumstances that drove the deceased to commit suicide (e.g., 'continuous harassment', 'financial dispute', 'matrimonial cruelty')."
+    },
+    "victim_pregnancy_status": {
+      "type": "string",
+      "description": "The stage of the victim's pregnancy at the time of the offense (e.g., 'nine months pregnant')."
+    },
+    "child_outcome_ipc_316": {
+      "type": "string",
+      "description": "The outcome for the unborn child (e.g., 'stillborn child', 'died after birth')."
+    },
+    "accused_intoxication": {
+      "type": "boolean",
+      "description": "Whether the accused was in an inebriated state at the time of the incident."
+    },
+    "sudden_fight_in_passion": {
+      "type": "boolean",
+      "description": "Whether the act was committed in the heat of passion upon a sudden quarrel (Exception 4 to S. 300)."
+    },
+    "knowledge_of_consequence": {
+      "type": "boolean",
+      "description": "Whether the accused had knowledge that his act was likely to cause death, but without the intention to cause death."
+    },
+    "death_caused_without_intention": {
+      "type": "boolean",
+      "description": "Whether the act caused death, but fell outside the scope of murder (e.g., due to an exception to S. 300)."
+    },
+    "act_amounting_to_culpable_homicide": {
+      "type": "boolean",
+      "description": "Whether the act committed by the accused was of such a nature as to constitute culpable homicide (e.g., S. 304)."
+    },
+    "suicide_method": {
+      "type": "string",
+      "description": "The method used by the deceased to commit suicide (e.g., 'hanging', 'self-immolation')."
+    },
+    "relationship_with_deceased": {
+      "type": "string",
+      "description": "The nature of the relationship between the accused and the deceased (e.g., 'spouse', 'business partner', 'relative')."
+    },
+    "abetment_act": {
+      "type": "string",
+      "description": "The specific act of instigation, conspiracy, or intentional aid that led to the suicide."
+    }
+  },
+  "changes": [
+    "legal_case.example_cases_count",
+    "criminal_case.example_cases_count",
+    "violent_offense.example_cases_count",
+    "violent_offense.children",
+    "matrimonial_offense.example_cases_count",
+    "ipc_498a.example_cases_count",
+    "ipc_304_p2",
+    "ipc_316",
+    "ipc_306",
+    "field_definitions.dowry_demand_motive",
+    "field_definitions.cause_of_suicide",
+    "field_definitions.victim_pregnancy_status",
+    "field_definitions.child_outcome_ipc_316",
+    "field_definitions.accused_intoxication",
+    "field_definitions.sudden_fight_in_passion",
+    "field_definitions.knowledge_of_consequence",
+    "field_definitions.death_caused_without_intention",
+    "field_definitions.act_amounting_to_culpable_homicide",
+    "field_definitions.suicide_method",
+    "field_definitions.relationship_with_deceased",
+    "field_definitions.abetment_act",
+    "templates.ipc_498a",
+    "templates.ipc_304_p2",
+    "templates.ipc_316",
+    "templates.ipc_306"
+  ]
+}

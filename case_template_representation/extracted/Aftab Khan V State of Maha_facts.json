@@ -1,0 +1,31 @@
+{
+  "tier_1_determinative": {
+    "sexual_act_description": "The appellant removed the victim's pyjama and his jeans, and put his private part on her private part, but the evidence was insufficient to conclude penetrative intercourse.",
+    "absence_of_consent": "The victim was 5 to 6 years old, which under Section 375 IPC implies lack of consent due to her age."
+  },
+  "tier_2_material": {
+    "aggravated_circumstances_of_rape": "The victim was a minor, aged between 5 to 6 years, which attracts aggravated punishment under POCSO.",
+    "victim_age": "5 to 6 years old",
+    "relationship_to_accused": "The accused took the victim to his shop, indicating a possible acquaintance, but the exact relationship is not specified."
+  },
+  "tier_3_contextual": {
+    "incident_location": "The incident occurred at the appellant's shop.",
+    "incident_date_time": "The incident took place on 11 May 2012.",
+    "time_of_reporting": "The exact time of reporting is not specified, but the medical examination was conducted on the same day."
+  },
+  "tier_4_procedural": {
+    "case_number": "CRIMINAL APPEAL NO. 870 OF 2014",
+    "case_title": "Aftab Mustaq Khan vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "06.10.2022",
+    "appellant_or_petitioner": "Aftab Mustaq Khan",
+    "respondent": "The State of Maharashtra"
+  },
+  "residual_details": {
+    "additional_facts": "The trial court initially sentenced the appellant to life imprisonment under Section 376 IPC, but the High Court altered the conviction to attempt to commit rape under Section 376 read with 511 IPC, sentencing him to 10 years of rigorous imprisonment. The medical examination found the victim's private parts slightly reddish, but no conclusive evidence of penetration was available. The appellant was aged about 18 to 19 years at the time of the incident."
+  },
+  "template_id": "ipc_376",
+  "template_label": "Rape (IPC 376)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T18:03:07.388584"
+}
