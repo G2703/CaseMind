@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "case_title": "AJAY KUMAR GHOSHAL ETC. V. STATE OF BIHAR & ANR.",
+    "court": "Supreme Court of India",
+    "bench": "DIPAK MISRA AND R. BANUMATHI, JJ.",
+    "date_of_judgement": "2017-01-31",
+    "case_number": "Criminal Appeal Nos. 119-122 of 2017",
+    "type_of_case": "Criminal Appeal",
+    "ipc_sections": [
+      "Section 304B",
+      "Section 34",
+      "Section 302",
+      "Section 201",
+      "Section 498A",
+      "Section 120B"
+    ],
+    "other_statutes": [
+      "Code of Criminal Procedure, 1973 (CrPC) s. 386",
+      "Section 386 (b) Cr.P.C.",
+      "Section 386(b)(i) Cr.P.C.",
+      "Section 313 Cr.P.C.",
+      "Dowry Prohibition Act, Sections 3",
+      "Dowry Prohibition Act, Section 4",
+      "Chapter XXXV of the Code",
+      "Section 461",
+      "Section 462",
+      "Section 465 (1)"
+    ],
+    "lower_court_history": {
+      "trial_court_verdict": "Convicted all appellants/accused persons on 06.04.2015 and sentenced them on 09.04.2015. Sentences included: ten years imprisonment for conviction under Section 304B read with Section 120B IPC; rigorous imprisonment for five years and a fine of Rs. 10,000/- each for conviction under Section 201 IPC; and rigorous imprisonment for two years for conviction under Section 4 of the Dowry Prohibition Act.",
+      "high_court_verdict": "Set aside the judgment of conviction and sentence recorded by the trial court and directed the retrial of Session Trial No. 14 of 2008/637 of 2008 against the appellants."
+    }
+  },
+  "case_facts": {
+    "prosecution_version": "On May 15, 2007, Asim Kumar Chatarjee (PW-5) filed a complaint stating his sister, Bandhavi @ Bani Ghoshal, was married to Raj Kumar, son of Ajay Kumar Ghoshal, on February 3, 2007. He alleged that the husband (Raj Kumar), father-in-law (Ajay Kumar Ghoshal), and mother-in-law (Munmun Ghoshal) demanded dowry, and upon his inability to fulfill the demands, they tortured his deceased sister mentally and physically. On May 15, 2007, PW-5 received information that his sister died in her matrimonial home in suspicious circumstances. He went to Bhagalpur, saw the dead body, and noticed that her wrist veins were cut, and her body had marks of hanging, assault, and electrocution. An FIR was registered, and a charge-sheet was later filed under Sections 302, 304B, 201, 498A, 120B IPC, and Sections 3 and 4 of the Dowry Prohibition Act.",
+    "defence_version": "The appellants (accused) preferred separate appeals against their conviction and sentence. Their counsel submitted that the High Court, as the First Appellate Court, should have appreciated the evidence on its own merits, and it erred in remitting the matter back to the trial court to proceed afresh, arguing that the order for a de novo trial would cause serious prejudice to the accused-appellants.",
+    "timeline_of_events": [
+      "03.02.2007: Bandhavi @ Bani Ghoshal was married to Raj Kumar.",
+      "15.05.2007: Deceased Bandhavi @ Bani Ghoshal died in her matrimonial home.",
+      "15.05.2007: Asim Kumar Chatarjee (PW-5) filed a complaint.",
+      "FIR No.281 of 2007 registered at Kotwali (Tilkamanjhi) P.S.",
+      "After completion of investigation: Charge-sheet filed against the appellants.",
+      "06.04.2015: Trial court pronounced judgment of conviction.",
+      "09.04.2015: Trial court passed the judgment of sentence.",
+      "28.08.2015: High Court passed the common final order setting aside the trial court's judgment and directing retrial.",
+      "JANUARY 31, 2017: Supreme Court delivered judgment on the Criminal Appeals."
+    ],
+    "incident_location": "Matrimonial home of the deceased in Bhagalpur",
+    "motive_alleged": "Demand for dowry"
+  },
+  "issues_for_determination": [
+    "Whether the High Court was justified in setting aside the trial court's judgment and directing a retrial of the dowry death case, based on alleged lapses in investigation or trial conduct.",
+    "Whether the alleged irregularities pointed out by the High Court resulted in a miscarriage of justice necessitating retrial.",
+    "Whether the High Court, as the First Appellate Court, was duty-bound to examine the evidence and arrive at an independent finding rather than remitting the matter for a fresh trial."
+  ],
+  "evidence": {
+    "witness_testimonies": [
+      {
+        "witness_id": "PW-5",
+        "name": "Asim Kumar Chatarjee",
+        "role": "Complainant/Brother of the deceased",
+        "summary": "Filed the complaint on 15.05.2007, stating his sister was married on 03.02.2007, was subjected to dowry demands and torture, and died in suspicious circumstances, observing marks of cut wrist veins, hanging, assault, and electrocution on her dead body."
+      }
+    ],
+    "medical_evidence": "The complainant noticed that his sister's wrist veins were cut, and her body had the marks of hanging, assault, and electrocution.",
+    "forensic_evidence": "",
+    "documentary_evidence": [
+      "Complaint filed by Asim Kumar Chatarjee (PW-5)",
+      "FIR registered as Kotwali (Tilkamanjhi) P.S. Case No.281 of 2007",
+      "Charge-sheet filed against the appellants",
+      "Judgment dated 06.04.2015 (Conviction) of the trial court",
+      "Judgment dated 09.04.2015 (Sentence) of the trial court",
+      "Impugned common final order dated 28.08.2015 of the High Court"
+    ],
+    "recovery_and_seizure": "",
+    "expert_opinions": "",
+    "investigation_findings": "The charge-sheet was filed against the appellants under Sections 302, 304B, 201, 498A, 120B IPC and Sections 3 and 4 of Dowry Prohibition Act."
+  },
+  "arguments": {
+    "prosecution": "The counsel for the State and the counsel for the complainant submitted that the evidence available on record is sufficient to sustain the conviction of the accused-appellants.",
+    "defence": "The learned counsel for the appellants submitted that the High Court, being the First Appellate Court, should have appreciated the evidence on its own merits, and it erred in remitting the matter back to the trial court to proceed afresh, arguing that the order for a de novo trial would cause serious prejudice to the accused-appellants."
+  },
+  "reasoning": {
+    "analysis_of_evidence": "The High Court had pointed out certain lapses in the investigation or 'conduct of trial' but failed to state how such alleged lapses resulted in a miscarriage of justice necessitating retrial. The Supreme Court noted that the High Court, being the First Appellate Court, was duty bound to examine the evidence and arrive at an independent finding and examine whether such lapses actually affected the prosecution case or resulted in a failure of justice. The Supreme Court also found that the High Court had not properly appreciated the ratio laid down in *Nar Singh vs. State of Haryana* (2015) 1 SCC 496, as a retrial from the stage of Section 313 Cr.P.C. is only warranted in cases where the failure to question the accused on incriminating evidence has resulted in serious prejudice.",
+    "credibility_assessment": "The High Court's order directing retrial was found unsustainable because it failed to state how the lapses resulted in a miscarriage of justice, which is an exceptional prerequisite for ordering a retrial.",
+    "legal_principles_applied": "The power to order a retrial under Section 386(b)(i) Cr.P.C. is to be exercised only in exceptional cases where the appellate court is satisfied that the omission or irregularity has occasioned in a failure of justice. Circumstances warranting retrial include: the trial court having no jurisdiction, trial being vitiated by serious illegality or irregularity on account of the misconception of the nature of proceedings, irregularity resulting in a miscarriage of justice, or the original trial being unsatisfactory due to wrong admission/rejection of evidence or refusal to hear certain witnesses. A 'de novo' trial, meaning a 'new trial' ordered by an appellate court, should be the last resort limited to extreme exigency to avert 'a failure of justice'.",
+    "circumstantial_chain": "",
+    "court_findings": "The High Court erred in remitting the matter back to the trial court for a fresh trial. The High Court had not shown how the alleged lapses resulted in a miscarriage of justice. The High Court erred in applying the ratio laid down in *Nar Singh's case*. The appellate court, when an appeal is preferred against conviction and sentence, is duty bound to consider the evidence on record and independently arrive at a conclusion."
+  },
+  "judgement": {
+    "final_decision": "Appeals allowed. The High Court's impugned judgment setting aside the conviction and directing retrial is set aside.",
+    "sentence_or_bail_conditions": "",
+    "directions": "The matter is remitted back to the High Court for consideration of the matter afresh. The High Court shall afford sufficient opportunity to the accused-appellants and the prosecution and also to the informant, Asim Kumar Chatarjee (brother of the deceased), (in terms of Section 301 Cr.P.C.) and proceed with the matter afresh in accordance with law."
+  }
+}

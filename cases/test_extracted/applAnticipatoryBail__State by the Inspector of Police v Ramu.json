@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "case_title": "STATE BY THE INSPECTOR OF POLICE V. B. RAMU",
+    "court": "Supreme Court of India",
+    "bench": "B.R. GAVAI AND SANDEEP MEHTA, JJ.",
+    "date_of_judgement": "2024-02-12",
+    "case_number": "Criminal Appeal No. 801 of 2024",
+    "type_of_case": "Criminal Appeal",
+    "ipc_sections": [],
+    "other_statutes": [
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act) s. 8(c)",
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act) s. 20(b)(ii)(c)",
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act) s. 29(1)",
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act) s. 37",
+      "Code of Criminal Procedure, 1973 (CrPC) s. 438"
+    ],
+    "lower_court_history": {
+      "trial_court_verdict": "Unknown",
+      "high_court_verdict": "Anticipatory bail granted to the respondent-accused."
+    }
+  },
+  "case_facts": {
+    "prosecution_version": "The respondent-accused was indicted as a conspirator for the procurement/supply of a huge quantity of narcotic substance, specifically 232.5 kg of Ganja, which is multiple times the commercial quantity. An FIR was registered against him for offences punishable under Sections 8(c), 20(b)(ii)(c) and 29(1) of the NDPS Act. The High Court granted him anticipatory bail under Section 438 CrPC.",
+    "defence_version": "The respondent-accused was granted anticipatory bail by the High Court, which was subject to various conditions, including the requirement to deposit a sum of Rs. 30,000/- to the credit of the registered Tamil Nadu Advocate Clerk Association, Chennai. The defence relied on the High Court's order granting bail.",
+    "timeline_of_events": [
+      "FIR registered for offences under the NDPS Act.",
+      "High Court granted anticipatory bail to the respondent-accused.",
+      "Charge-sheet filed against the respondent-accused along with other accused persons.",
+      "12 February 2024: Supreme Court delivered judgment on the Criminal Appeal."
+    ],
+    "incident_location": "Unknown",
+    "motive_alleged": "Conspiracy for procurement/supply of Ganja."
+  },
+  "issues_for_determination": [
+    "Whether the High Court was justified in granting anticipatory bail to the respondent-accused in connection with a case involving the recovery of commercial quantity of a narcotic substance, without recording the mandatory satisfaction in terms of the rider contained in Section 37 of the NDPS Act.",
+    "Whether the condition imposed by the High Court for depositing money to a private association while granting anticipatory bail was justified and in accordance with the principles governing bail jurisprudence."
+  ],
+  "evidence": {
+    "witness_testimonies": [],
+    "medical_evidence": "",
+    "forensic_evidence": "",
+    "documentary_evidence": [
+      "FIR registered for offences u/ss. 8(c), 20(b)(ii)(c) and 29(1), Narcotic Drugs and Psychotropic Substances Act, 1985.",
+      "Impugned order of the High Court granting anticipatory bail.",
+      "Charge-sheet filed after investigation."
+    ],
+    "recovery_and_seizure": "Recovery of a huge quantity of narcotic substance (232.5 kg of Ganja).",
+    "expert_opinions": "",
+    "investigation_findings": "The charge-sheet has been filed against the respondent-accused along with other accused persons, fortifying the plea of the State counsel that the accused was indicted as being the conspirator for procurement/supply of the Ganja."
+  },
+  "arguments": {
+    "prosecution": "The Public Prosecutor opposed the prayer for anticipatory bail, arguing that in a case involving the recovery of commercial quantity of a narcotic substance, the Court is obligated to record a satisfaction in terms of Section 37 of the NDPS Act. The charge-sheet having been filed indicates that the Court could not have recorded a satisfaction that the accused was prima facie not guilty. The High Court's order was cryptic, perverse, and failed to record the mandatory satisfaction.",
+    "defence": "The High Court granted anticipatory bail to the respondent-accused subject to conditions, implying the defence successfully argued for the accused's release, or that the Court was satisfied with the prima facie case against the accused not being made out."
+  },
+  "reasoning": {
+    "analysis_of_evidence": "The Court noted that the quantity of Ganja recovered (232.5 kg) was multiple times the commercial quantity. Therefore, the High Court was mandatorily required to record the satisfaction as per Section 37 of the NDPS Act, especially when the Public Prosecutor opposed the bail plea and the charge-sheet had been filed.",
+    "credibility_assessment": "The Court found that the impugned order of the learned Single Judge of the High Court was 'cryptic and perverse on the face of the record' for two reasons: firstly, it failed to record the mandatory satisfaction required by Section 37 of the NDPS Act; and secondly, it imposed a condition (deposit of Rs. 30,000/- to the Tamil Nadu Advocate Clerk Association) which was 'totally alien to the principles governing bail jurisprudence and is nothing short of perversity'.",
+    "legal_principles_applied": "For entertaining a prayer for bail (regular or anticipatory) in a case involving the recovery of a commercial quantity of narcotic drug or psychotropic substance, the Court must mandatorily record the satisfaction in terms of the rider contained in **Section 37 of the NDPS Act**. This requires the Court to be satisfied that there are **reasonable grounds for believing** that the accused is **not guilty** of such offence and that he is **not likely to commit any offence** while on bail. Bail conditions must not be arbitrary or irrelevant to the case or the principles of bail jurisprudence.",
+    "circumstantial_chain": "The fact that a huge quantity (232.5 kg) of commercial substance was recovered and a charge-sheet had been filed makes the case fall squarely under the rigor of Section 37 of the NDPS Act. The High Court's failure to adhere to the mandatory conditions of Section 37 rendered the bail order legally unsustainable.",
+    "court_findings": "The High Court was not justified in granting anticipatory bail. The order was perverse and cryptic for failing to record the satisfaction under Section 37 of the NDPS Act and for imposing an arbitrary condition for the deposit of money to a private association."
+  },
+  "judgement": {
+    "final_decision": "Appeal allowed. The impugned order of the High Court granting anticipatory bail is quashed and set aside.",
+    "sentence_or_bail_conditions": "The respondent-accused shall surrender before the learned trial court within a period of 10 days from the date of the Supreme Court's order.",
+    "directions": ""
+  }
+}

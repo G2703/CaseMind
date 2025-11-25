@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "case_title": "AAKASH RAMCHANDRA CHAVAN V. THE STATE OF MAHARASHTRA",
+    "court": "High Court of Judicature at Bombay, Criminal Appellate Jurisdiction",
+    "bench": "A. M. BADAR, J.",
+    "date_of_judgement": "2019-08-29",
+    "case_number": "CRIMINAL APPEAL NO.290 OF 2014",
+    "type_of_case": "Criminal Appeal",
+    "ipc_sections": [
+      "Section 394",
+      "Section 397"
+    ],
+    "other_statutes": [],
+    "lower_court_history": {
+      "trial_court_verdict": "Conviction and resultant sentence imposed for the offence punishable under Section 394 read with Section 397 of the Indian Penal Code. Appellant/accused no.2 sentenced to suffer rigorous imprisonment for 7 years apart from direction to pay fine of Rs.5,000/- and in default to undergo rigorous imprisonment for 6 months.",
+      "high_court_verdict": "Unknown"
+    }
+  },
+  "case_facts": {
+    "prosecution_version": "The First Informant, Vijay Sadavate (PW-1), and his friend Mansoor alighted from a local train at Chembur Railway Station around 11:30 p.m. on 24th October 2009. While walking by the railway track, three accused persons approached them. One accused grabbed PW-1's collar, threatened to kill him, and tried to extract cash and valuables, striking him with a knife on the back of his head, causing a bleeding injury. Another accused caught and pushed Mansoor. The accused fled when the victims shouted for help. Earlier that night, the same accused persons waylaid PW-2 Pradeep Pawar, demanding his wrist watch. A scuffle ensued, during which one accused assaulted PW-2 with a knife, causing a bleeding injury to his right palm, and his right index finger ring fell down.",
+    "defence_version": "The defence of the accused persons was one of total denial. The appellant's advocate argued that nothing was looted from either victim, the prosecution's evidence suffered from discrepancies, and no weapons were seized during the investigation, which should entitle the appellant/accused no.2 to acquittal.",
+    "timeline_of_events": [
+      "24th October 2009: Incident involving PW-2 Pradeep Pawar took place.",
+      "24th October 2009: Incident involving PW-1 Vijay Sadavate took place around 11.30 p.m.",
+      "Report lodged, resulting in registration of Crime No. 57 of 2010.",
+      "Accused persons arrested and charge-sheeted.",
+      "19th September 2011: Trial court passed judgment and order.",
+      "29th August 2019: High Court pronounced judgment on the Criminal Appeal."
+    ],
+    "incident_location": "By the side of the railway track, after alighting at Chembur Railway Station, Mumbai (vicinity of Chembur local Railway Station)",
+    "motive_alleged": "Robbery/Attempted Robbery"
+  },
+  "issues_for_determination": [
+    "Whether the conviction and resultant sentence imposed upon the appellant/accused no.2 for the offence punishable under Section 394 read with Section 397 of the Indian Penal Code is warranted.",
+    "Whether the evidence of the injured witnesses, PW1 Vijay Sadavate and PW2 Pradeep Pawar, is reliable.",
+    "Whether the absence of recovery of weapons or looted property from the appellant is fatal to the prosecution's case."
+  ],
+  "evidence": {
+    "witness_testimonies": [
+      {
+        "witness_id": "PW-1",
+        "name": "Vijay Sadavate",
+        "role": "First Informant/Victim of attempted robbery",
+        "summary": "Deposed that one accused caught his collar, threatened him with a knife, and struck him on the head while trying to extract cash. Identified appellant/accused no.2 in the dock as one of the robbers who pushed his friend Mansoor, but admitted seeing the accused at the police station when lodging the report."
+      },
+      {
+        "witness_id": "PW-2",
+        "name": "Pradeep Pawar",
+        "role": "Victim of attempted robbery/assault",
+        "summary": "Stated that three accused persons accosted him and directed him to remove his watch, and he was assaulted with a knife, sustaining a bleeding injury to his right palm, causing his finger ring to fall down. Duly identified the appellant/accused no.2 in the dock as one of the robbers."
+      },
+      {
+        "witness_id": "PW-5",
+        "name": "Dr.Sandeep Kedar",
+        "role": "Medical Practitioner",
+        "summary": "Medically treated PW-1 Vijay Sadavate, who suffered a contused lacerated wound on the occipital area and a similar wound on the right hand."
+      },
+      {
+        "witness_id": "PW-7",
+        "name": "Dr.Nitin More",
+        "role": "Medical Practitioner",
+        "summary": "Medically treated PW-2 Pradeep Pawar, who suffered an injury on the right hand at the base of the thumb."
+      },
+      {
+        "witness_id": "PW-8",
+        "name": "Hiralal Parmeshwar",
+        "role": "Panch witness",
+        "summary": "Deposed that during the inspection of the spot, blood stains were found on stones and one finger ring was seized vide Panchnama Exhibit 64."
+      }
+    ],
+    "medical_evidence": "PW-1 Vijay Sadavate suffered a contused lacerated wound on the occipital area and a similar wound on the right hand. PW-2 Pradeep Pawar suffered an injury on the right hand at the base of the thumb. This medical evidence supports the injured witnesses' version regarding the attempt to rob them and the resulting injuries.",
+    "forensic_evidence": "",
+    "documentary_evidence": [
+      "Panchnama Exhibit 64",
+      "Report lodged at Chembur Police Station (resulted in registration of Crime No. 57 of 2010)"
+    ],
+    "recovery_and_seizure": "Blood stains were found on stones and one finger ring was seized vide Panchnama Exhibit 64 during the inspection of the spot of the incident. The Court noted that since the case was one of attempted robbery, recovery of property was not required.",
+    "expert_opinions": "",
+    "investigation_findings": "The investigation established that the accused persons waylaid and assaulted PW2 Pradeep Pawar before accosting and assaulting PW1 Vijay Sadavate, leading to their arrest and charge-sheet."
+  },
+  "arguments": {
+    "prosecution": "The prosecution's case relies on the consistent testimony of the two injured victims, PW-1 and PW-2, whose presence at the scene is indisputable. The dock identification by both witnesses is substantive evidence, which should be relied upon even if the Test Identification Parade evidence is discarded. Medical evidence and the spot panchnama corroborate the victims' version of the assault and the events. As the offense is attempted robbery, the non-recovery of the weapon or property is irrelevant.",
+    "defence": "The appellant argued that the prosecution failed to prove the charges, as nothing was actually looted, the evidence suffered from discrepancies, and no weapons were seized during the investigation. The defence maintained a stance of total denial."
+  },
+  "reasoning": {
+    "analysis_of_evidence": "The Court found the case rested primarily on the testimony of the two injured witnesses, PW-1 and PW-2, whose presence on the scene was undoubted. Minor discrepancies in the time of the train's arrival were considered inconsequential. Medical evidence (PW-5 and PW-7) strongly supported the victims' version of the assault and injuries. The spot panchnama (PW-8) further corroborated the incident by showing blood stains and the seizure of the finger ring belonging to PW-2.",
+    "credibility_assessment": "The dock identification of the appellant/accused no.2 by both victims constitutes substantive evidence. Since the incident occurred in the vicinity of a local railway station, the victims had ample opportunity to see the robbers. Therefore, the dock identification was held to be reliable and could not be discarded, even if the Test Identification Parade evidence was disregarded due to the possibility of the victims seeing the accused at the police station.",
+    "legal_principles_applied": "Dock identification is substantive evidence. The offense of attempted robbery (Section 394/397 IPC) does not mandate the recovery of looted property. The use of a knife to cause injury during the commission of the attempted robbery established the use of a deadly weapon, satisfying the requirement of Section 397 IPC.",
+    "circumstantial_chain": "The evidence presented a complete and reliable chain: injured victims (PW-1 and PW-2) identified the appellant; medical evidence corroborated the assault; and the panchnama confirmed the events at the spot, thereby establishing that the appellant/accused no.2 attempted to commit robbery using a deadly weapon.",
+    "court_findings": "The prosecution successfully established that the appellant/accused no.2 had attempted to commit robbery and had used a deadly weapon in that attempt. No interference in the trial court's judgment was warranted."
+  },
+  "judgement": {
+    "final_decision": "Appeal dismissed. Conviction and sentence upheld.",
+    "sentence_or_bail_conditions": "The appellant/accused no.2 was sentenced to suffer rigorous imprisonment for 7 years and pay a fine of Rs.5,000/-, and in default to undergo rigorous imprisonment for 6 months.",
+    "directions": ""
+  }
+}
