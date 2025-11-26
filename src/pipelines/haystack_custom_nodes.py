@@ -7,6 +7,7 @@ import logging
 import hashlib
 import json
 import openai
+from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from haystack import component, Document
@@ -104,20 +105,35 @@ class TemplateSaverNode:
         try:
             # Get extracted facts from metadata
             extracted_facts = doc.meta.get("extracted_facts", {})
-            
+
             if not extracted_facts:
                 logger.warning("No extracted facts to save")
                 return {"documents": documents}
-            
+
+            # Ensure template metadata fields are present in the saved template
+            # Use values from document metadata when available, with sensible fallbacks
+            extracted_facts["template_id"] = doc.meta.get("template_id", "")
+            extracted_facts["template_label"] = doc.meta.get("template_label", extracted_facts.get("template_label", ""))
+            # extraction_confidence may come from multiple keys; fall back to 0.0 if missing
+            extracted_facts["extraction_confidence"] = doc.meta.get(
+                "extraction_confidence",
+                doc.meta.get("confidence_score", extracted_facts.get("extraction_confidence", 0.0))
+            )
+            # extraction_timestamp: prefer explicit meta value, otherwise use current UTC timestamp
+            extracted_facts["extraction_timestamp"] = doc.meta.get(
+                "extraction_timestamp",
+                datetime.utcnow().isoformat() + "Z"
+            )
+
             # Get filename from metadata
             original_filename = doc.meta.get("original_filename", "unknown.pdf")
             base_name = Path(original_filename).stem
             output_file = self.output_dir / f"{base_name}_facts.json"
-            
+
             # Save filled template as JSON
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(extracted_facts, f, indent=2, ensure_ascii=False)
-            
+
             logger.info(f"Saved filled template to: {output_file}")
             
         except Exception as e:
@@ -335,11 +351,24 @@ class FactExtractorNode:
         Template Schema:
         {schema_str}
 
-        Guidelines:
-        - Extract facts according to the schema structure
-        - Return ONLY valid JSON matching the schema
-        - Use null for missing information
-        - Be precise and factual
+        **EXTRACTION GUIDELINES**:
+
+        **TIER 1 - DETERMINATIVE FACTS**: Core facts that determine guilt, liability, or legal outcomes
+        **TIER 2 - MATERIAL FACTS**: Facts that significantly affect rights, duties, or case outcome  
+        **TIER 3 - CONTEXTUAL FACTS**: Environmental and circumstantial details
+        **TIER 4 - PROCEDURAL FACTS**: Court metadata, case details, and procedural information
+        **RESIDUAL DETAILS**: Any other relevant facts not captured above
+
+        **CRITICAL EXTRACTION RULES**:
+        1. Write each extracted value as a complete, coherent sentence that makes sense on its own
+        2. When concatenated together, all extracted facts should form a readable narrative summary
+        3. Each fact should flow naturally into the next when combined
+        4. Use transitional phrases and connecting words to ensure readability
+        5. Extract facts directly from the case text with narrative coherence
+        6. Be comprehensive and accurate while maintaining story flow
+        7. If a field is not found in the text, use null
+        8. Organize facts according to their legal significance
+        9. Each extracted fact should contribute to a unified case story when all values are joined together
 
         Legal Case Text:
         {text}
