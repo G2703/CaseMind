@@ -1,4 +1,4 @@
-# Dual Embedding System Implementation
+ Dual Embedding System Implementation
 
 ## Overview
 Implemented a dual-embedding system that stores TWO separate embeddings per legal case document:

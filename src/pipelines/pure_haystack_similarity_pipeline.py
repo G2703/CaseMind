@@ -95,15 +95,13 @@ class PureHaystackSimilarityPipeline:
     
     async def search_similar(
         self,
-        file_path: Path,
-        use_metadata_query: bool = False
+        file_path: Path
     ) -> SimilaritySearchResult:
         """
-        Search for similar cases using pure Haystack pipeline.
+        Search for similar cases using pure Haystack pipeline with hybrid scoring.
         
         Args:
             file_path: Path to query PDF file
-            use_metadata_query: If True, search by metadata instead of facts
             
         Returns:
             SimilaritySearchResult with similar cases
@@ -115,9 +113,9 @@ class PureHaystackSimilarityPipeline:
         
         logger.info(f"Starting similarity search for: {file_path.name}")
         
-        # Phase 1: Ingest query document
-        logger.info("Phase 1: Ingesting query document")
-        ingest_result = await self.ingestion_pipeline.ingest_single(file_path)
+        # Phase 1: Ingest query document (in-memory only, no DB storage)
+        logger.info("Phase 1: Ingesting query document (in-memory mode)")
+        ingest_result = await self.ingestion_pipeline.ingest_single(file_path, store_in_db=False)
         
         # Handle failed ingestion
         if ingest_result.status == ProcessingStatus.FAILED:
@@ -126,16 +124,12 @@ class PureHaystackSimilarityPipeline:
                 input_case=None,
                 similar_cases=[],
                 total_above_threshold=0,
-                search_mode="facts" if not use_metadata_query else "metadata",
+                search_mode="facts",
                 error_message=ingest_result.error_message
             )
         
-        # Log if document was a duplicate (but continue with similarity search)
-        if ingest_result.status == ProcessingStatus.SKIPPED_DUPLICATE:
-            logger.info("Query document is a duplicate, using existing data for similarity search")
-        
-        # Phase 2: Prepare query text
-        logger.info("Phase 2: Preparing query for retrieval")
+        # Phase 2: Prepare query text using facts
+        logger.info("Phase 2: Preparing facts query for retrieval")
         
         # Check if metadata is available
         if ingest_result.metadata is None:
@@ -145,23 +139,17 @@ class PureHaystackSimilarityPipeline:
                 input_case=ingest_result,
                 similar_cases=[],
                 total_above_threshold=0,
-                search_mode="facts" if not use_metadata_query else "metadata",
+                search_mode="facts",
                 error_message="No metadata available for query"
             )
         
-        if use_metadata_query:
-            # Build metadata query from case metadata
+        # Use facts summary for query (fallback to metadata if no facts)
+        search_text = ingest_result.facts_summary
+        if not search_text or len(search_text.strip()) == 0:
+            logger.warning("No facts summary available, using metadata for search")
             meta = ingest_result.metadata
             sections = ' '.join(meta.sections_invoked) if meta.sections_invoked else ''
             search_text = f"{sections} {meta.court_name} {meta.case_title}"
-        else:
-            # Use facts summary for query (fallback to metadata if no facts)
-            search_text = ingest_result.facts_summary
-            if not search_text or len(search_text.strip()) == 0:
-                logger.warning("No facts summary available, using metadata for search")
-                meta = ingest_result.metadata
-                sections = ' '.join(meta.sections_invoked) if meta.sections_invoked else ''
-                search_text = f"{sections} {meta.court_name} {meta.case_title}"
         
         logger.info(f"Query text length: {len(search_text)} characters")
         
@@ -169,13 +157,13 @@ class PureHaystackSimilarityPipeline:
         logger.info("Phase 3: Running Haystack retrieval pipeline")
         
         try:
-            # Build filters to exclude query document
+            # Build filters to exclude query document by file_hash
             filters = None
-            if ingest_result.case_id:
+            if ingest_result.file_hash:
                 filters = {
-                    "field": "id",
+                    "field": "file_hash",
                     "operator": "!=",
-                    "value": ingest_result.document_id
+                    "value": ingest_result.file_hash
                 }
             
             # Run pipeline
@@ -197,16 +185,21 @@ class PureHaystackSimilarityPipeline:
                 input_case=ingest_result,
                 similar_cases=[],
                 total_above_threshold=0,
-                search_mode="facts" if not use_metadata_query else "metadata",
+                search_mode="facts",
                 error_message=f"Retrieval failed: {str(e)}"
             )
         
-        # Phase 4: Convert to SimilarCase objects
-        logger.info("Phase 4: Formatting results")
+        # Phase 4: Convert to SimilarCase objects and filter out query case
+        logger.info("Phase 4: Formatting results and filtering query case")
         
         similar_cases = []
         for doc in filtered_documents:
             meta = doc.meta or {}
+            
+            # Skip if this is the query case itself (by file_hash)
+            if ingest_result.file_hash and meta.get('file_hash') == ingest_result.file_hash:
+                logger.info(f"Filtering out query case from results: {meta.get('case_title', 'Unknown')}")
+                continue
             
             # Extract scores
             cross_encoder_score = float(doc.score) if hasattr(doc, 'score') else 0.0
@@ -233,7 +226,7 @@ class PureHaystackSimilarityPipeline:
             input_case=ingest_result,
             similar_cases=similar_cases,
             total_above_threshold=len(similar_cases),
-            search_mode="metadata" if use_metadata_query else "metadata",
+            search_mode="facts",
             error_message=None
         )
         

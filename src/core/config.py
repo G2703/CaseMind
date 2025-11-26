@@ -66,6 +66,10 @@ class Config:
         self.top_k = int(os.getenv('TOP_K_SIMILAR_CASES', '5'))
         self.cross_encoder_threshold = float(os.getenv('CROSS_ENCODER_THRESHOLD', '0.0'))
         
+        # Hybrid search weights
+        self.hybrid_search_alpha = float(os.getenv('HYBRID_SEARCH_ALPHA', '0.7'))
+        self.hybrid_search_beta = float(os.getenv('HYBRID_SEARCH_BETA', '0.3'))
+        
         # OpenAI configuration
         self.openai_api_key = os.getenv('OPENAI_API_KEY', file_config.get('openai_api_key', ''))
         
@@ -97,5 +101,7 @@ class Config:
             'ranker_model': self.ranker_model,
             'top_k': self.top_k,
             'cross_encoder_threshold': self.cross_encoder_threshold,
+            'hybrid_search_alpha': self.hybrid_search_alpha,
+            'hybrid_search_beta': self.hybrid_search_beta,
             'embedding_dim': self.embedding_dim,
         }

@@ -86,9 +86,9 @@ class CLIApp:
             console.print("  • Loading similarity pipeline...")
             self.similarity_pipeline = PureHaystackSimilarityPipeline()
             
-            # Check database connection via document store
+            # Check database connection and count legal_cases
             console.print("  • Testing database connection...")
-            doc_count = self.similarity_pipeline.document_store.count_documents()
+            doc_count = self.ingestion_pipeline.count_legal_cases()
             
             self.formatter.print_success("Backend initialized successfully")
             self.formatter.print_info(f"Database: {doc_count} cases indexed")
@@ -174,23 +174,12 @@ class CLIApp:
             self.formatter.print_error(f"File not found: {file_path}")
             return
         
-        # Search mode
-        console.print("\n[bold cyan]Search Mode:[/bold cyan]")
-        console.print("  1. Search by Case Facts (default)")
-        console.print("  2. Search by Case Metadata (case name, court, sections)")
-        
-        search_mode = Prompt.ask("Select search mode", choices=["1", "2"], default="1")
-        use_metadata = (search_mode == "2")
-        
-        # Run similarity search
+        # Run similarity search (always uses case facts with hybrid scoring)
         try:
             console.print("\n[bold cyan]Processing query case...[/bold cyan]")
             
             with console.status("[bold green]Running similarity pipeline...") as status:
-                result = await self.similarity_pipeline.search_similar(
-                    file_path,
-                    use_metadata_query=use_metadata
-                )
+                result = await self.similarity_pipeline.search_similar(file_path)
             
             # Display query case info
             console.print("\n")
@@ -234,15 +223,13 @@ class CLIApp:
         console.print("\n[bold cyan]═══ Database Statistics ═══[/bold cyan]\n")
         
         try:
-            # Get document count from document store
-            doc_count = self.similarity_pipeline.document_store.count_documents()
+            # Get statistics from legal_cases table
+            stats = self.ingestion_pipeline.get_legal_cases_statistics()
             
-            stats = {
-                "total_documents": doc_count,
-                "database": "PostgreSQL + pgvector",
-                "embedding_model": "sentence-transformers/all-mpnet-base-v2",
-                "ranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
-            }
+            # Add additional metadata
+            stats["database"] = "PostgreSQL + pgvector"
+            stats["embedding_model"] = "sentence-transformers/all-mpnet-base-v2"
+            stats["ranker_model"] = "cross-encoder/ms-marco-MiniLM-L-6-v2"
             
             console.print(self.formatter.format_statistics(stats))
             
@@ -256,18 +243,21 @@ class CLIApp:
         
         health_status = {}
         
-        # Check database connection
+        # Check database connection and legal_cases table
         try:
-            doc_count = self.similarity_pipeline.document_store.count_documents()
+            case_count = self.ingestion_pipeline.count_legal_cases()
             health_status["PostgreSQL Database"] = True
+            health_status["legal_cases Table"] = True
         except Exception as e:
             logger.error(f"Database health check failed: {e}")
             health_status["PostgreSQL Database"] = False
+            health_status["legal_cases Table"] = False
         
-        # Check pgvector (implicit in document store)
+        # Check pgvector extension
         try:
             # If document store works, pgvector is working
-            health_status["pgvector Extension"] = health_status["PostgreSQL Database"]
+            self.similarity_pipeline.document_store.count_documents()
+            health_status["pgvector Extension"] = True
         except Exception as e:
             logger.error(f"pgvector health check failed: {e}")
             health_status["pgvector Extension"] = False

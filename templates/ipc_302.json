@@ -1,7 +1,9 @@
 {
   "node_id": "ipc_302",
   "label": "IPC 302",
-  "sections": ["IPC 302"],
+  "sections": [
+    "IPC 302"
+  ],
   "type": "json_schema",
   "json_schema": {
     "name": "murder_ipc_302",
@@ -11,56 +13,92 @@
         "tier_1_determinative": {
           "type": "object",
           "properties": {
-            "death_caused": {"type": "string", "description": "Whether death was caused to the victim"},
-            "intention_to_cause_death": {"type": "string", "description": "Whether there was intention to cause death or knowledge that the act is likely to cause death"}
+            "death_caused": {
+              "type": "string",
+              "description": "Whether death was caused to the victim"
+            },
+            "intention_to_cause_death": {
+              "type": "string",
+              "description": "Whether there was intention to cause death or knowledge that the act is likely to cause death"
+            }
           },
-          "required": ["death_caused", "intention_to_cause_death"],
+          "required": [
+            "death_caused",
+            "intention_to_cause_death"
+          ],
           "additionalProperties": false
         },
         "tier_2_material": {
           "type": "object",
           "properties": {
-            "victim_details": {"type": "string", "description": "Details about the victim including name and other identifying information"},
-            "accused_details": {"type": "string", "description": "Details about the accused including name and other identifying information"},
-            "weapon_used": {"type": "string", "description": "Description of the weapon or instrument used to cause death"}
+            "victim_details": {
+              "type": "string",
+              "description": "Details about the victim including name and other identifying information"
+            },
+            "accused_details": {
+              "type": "string",
+              "description": "Details about the accused including name and other identifying information"
+            },
+            "weapon_used": {
+              "type": "string",
+              "description": "Description of the weapon or instrument used to cause death"
+            }
           },
-          "required": ["victim_details", "accused_details", "weapon_used"],
+          "required": [
+            "victim_details",
+            "accused_details",
+            "weapon_used"
+          ],
           "additionalProperties": false
         },
         "tier_3_contextual": {
           "type": "object",
           "properties": {
-            "motive": {"type": "string", "description": "The motive behind the murder"},
-            "circumstances_of_killing": {"type": "string", "description": "The circumstances under which the killing took place"},
-            "incident_location": {"type": "string", "description": "Location where the incident occurred"},
-            "incident_date_time": {"type": "string", "description": "Date and time of the incident"}
+            "motive": {
+              "type": "string",
+              "description": "The motive behind the murder"
+            },
+            "circumstances_of_killing": {
+              "type": "string",
+              "description": "The circumstances under which the killing took place"
+            },
+            "incident_location": {
+              "type": "string",
+              "description": "Location where the incident occurred"
+            },
+            "incident_date_time": {
+              "type": "string",
+              "description": "Date and time of the incident"
+            }
           },
-          "required": ["motive", "circumstances_of_killing", "incident_location", "incident_date_time"],
-          "additionalProperties": false
-        },
-        "tier_4_procedural": {
-          "type": "object",
-          "properties": {
-            "case_number": {"type": "string", "description": "The case number"},
-            "case_title": {"type": "string", "description": "The full case title with parties"},
-            "court_name": {"type": "string", "description": "The name of the court that delivered the judgment"},
-            "judgment_date": {"type": "string", "description": "The date the judgment was delivered"},
-            "appellant_or_petitioner": {"type": "string", "description": "The name(s) of the appellant or petitioner"},
-            "respondent": {"type": "string", "description": "The name(s) of the respondent"}
-          },
-          "required": ["case_number", "case_title", "court_name", "judgment_date", "appellant_or_petitioner", "respondent"],
+          "required": [
+            "motive",
+            "circumstances_of_killing",
+            "incident_location",
+            "incident_date_time"
+          ],
           "additionalProperties": false
         },
         "residual_details": {
           "type": "object",
           "properties": {
-            "additional_facts": {"type": "string", "description": "Any other relevant facts not captured above"}
+            "additional_facts": {
+              "type": "string",
+              "description": "Any other relevant facts not captured above"
+            }
           },
-          "required": ["additional_facts"],
+          "required": [
+            "additional_facts"
+          ],
           "additionalProperties": false
         }
       },
-      "required": ["tier_1_determinative", "tier_2_material", "tier_3_contextual", "tier_4_procedural", "residual_details"],
+      "required": [
+        "tier_1_determinative",
+        "tier_2_material",
+        "tier_3_contextual",
+        "residual_details"
+      ],
       "additionalProperties": false
     },
     "strict": true

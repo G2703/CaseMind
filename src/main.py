@@ -18,10 +18,10 @@ from core.config import Config
 
 def main():
     """Main application entry point."""
-    # Setup logging (disabled)
+    # Setup logging
     config = Config()
     log_level = config.get("LOG_LEVEL", "INFO")
-    setup_logging(log_level, disable=True)
+    setup_logging(log_level, disable=False)
     
     logger = logging.getLogger(__name__)
     logger.info("Starting CaseMind application")

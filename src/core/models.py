@@ -154,9 +154,17 @@ class IngestResult:
     status: ProcessingStatus
     metadata: CaseMetadata
     facts_summary: str
-    embedding_facts: np.ndarray
-    embedding_metadata: np.ndarray
+    embedding_facts: Optional[np.ndarray] = None
+    embedding_metadata: Optional[np.ndarray] = None
+    # Additional embeddings for in-memory search (when store_in_db=False)
+    embedding_case_facts: Optional[np.ndarray] = None
+    embedding_issues: Optional[np.ndarray] = None
+    embedding_evidence: Optional[np.ndarray] = None
+    embedding_arguments: Optional[np.ndarray] = None
+    embedding_reasoning: Optional[np.ndarray] = None
+    embedding_judgement: Optional[np.ndarray] = None
     error_message: Optional[str] = None
+    file_hash: Optional[str] = None
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary (excluding embeddings)."""
@@ -164,7 +172,7 @@ class IngestResult:
             'case_id': self.case_id,
             'document_id': self.document_id,
             'status': self.status.value,
-            'metadata': self.metadata.to_dict(),
+            'metadata': self.metadata.to_dict() if self.metadata else {},
             'facts_summary': self.facts_summary,
             'error_message': self.error_message,
         }
