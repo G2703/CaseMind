@@ -1,0 +1,35 @@
+{
+  "tier_1_determinative": {
+    "person_voluntarily_causes_hurt": "Yes, the accused allegedly assaulted the complainant with a chain and stones.",
+    "in_committing_or_attempting_robbery": "Yes, the incident involved the loss of Rs.1500/- from the complainant during the assault."
+  },
+  "tier_2_material": {
+    "injury_severity": "The complainant suffered injuries on his back, head, and limbs. The severity is not specified as grievous or simple in the document."
+  },
+  "tier_3_contextual": {
+    "incident_location": "Near Rambaug, Kalyan",
+    "incident_date_time": "The incident allegedly occurred at 11:45 p.m. on an unspecified date."
+  },
+  "tier_4_procedural": {
+    "case_number": "CRIMINAL APPEAL NO.802 OF 2004",
+    "case_title": "The State of Maharashtra vs. Bhika Rambhau Ekaankar & Others",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "24th February, 2020",
+    "appellant_or_petitioner": "The State of Maharashtra",
+    "respondent": "Bhika Rambhau Ekaankar, Pradip Pralhad Jadhav, Rajesh Sudam Jadhav, Dattatraya Saadu Bagul",
+    "judges_coram": "K.R. Shriram, J.",
+    "counsel_for_appellant": "Ms. Anamika Malhotra, APP for appellant-State",
+    "counsel_for_respondent": "None for respondents",
+    "sections_invoked": "341, 324, 394 read with 34 of the IPC",
+    "case_type": "Criminal Appeal",
+    "citation": "/",
+    "acts_and_sections": "Indian Penal Code Sections 341, 324, 394 read with 34"
+  },
+  "residual_details": {
+    "additional_facts": "The case involved previous enmity between the complainant and accused no.4. There were civil proceedings and several complaints filed between the parties. The trial court acquitted the accused, citing lack of evidence and contradictions in witness testimonies."
+  },
+  "template_id": "ipc_394",
+  "template_label": "Voluntarily causing hurt in committing robbery (IPC 394)",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:38:12.109067"
+}

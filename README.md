@@ -1,4 +1,199 @@
-# CaseMind — Legal AI Framework for IPC Case Processing
+# CaseMind - Legal Case Similarity Search 🔍⚖️
+
+AI-powered similarity search system for legal cases using **Haystack 2.0**, PostgreSQL, and pgvector.
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-14+-blue.svg)](https://www.postgresql.org/)
+[![Haystack](https://img.shields.io/badge/haystack-2.0+-green.svg)](https://haystack.deepset.ai/)
+
+---
+
+## 🌟 Features
+
+- **🔥 Haystack 2.0 Integration**: Production-ready AI orchestration framework
+- **Dual Embedding Architecture**: Separate embeddings for case facts and metadata
+- **Batch Processing**: Ingest entire folders of legal cases efficiently
+- **Smart Duplicate Detection**: Avoid re-indexing cases using file hash and case ID
+- **Cross-Encoder Re-ranking**: High-accuracy similarity scoring with Haystack rankers
+- **Template-Based Extraction**: Structured fact extraction using legal ontology
+- **Rich CLI Interface**: Beautiful terminal UI with progress tracking
+- **Pipeline Architecture**: Declarative Haystack Pipelines with automatic optimization
+- **PostgreSQL + pgvector**: Scalable vector similarity search with ACID guarantees
+- **Modular Components**: Easy to extend with Haystack's component ecosystem
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9+
+- PostgreSQL 14+
+- OpenAI API key
+
+### Installation (Windows - Automated)
+
+```powershell
+# 1. Clone repository
+git clone <repository-url>
+cd CaseMind
+
+# 2. Run automated setup (as Administrator)
+.\setup_postgres.ps1
+
+# 3. Configure environment
+cp .env.example .env
+# Edit .env with your credentials and OpenAI API key
+
+# 4. Install Python dependencies
+pip install -r requirements.txt
+
+# 5. Validate setup
+python validate_setup.py
+
+# 6. Run application
+python src/main.py
+```
+
+### Installation (Linux/macOS - Manual)
+
+See **[QUICKSTART.md](QUICKSTART.md)** for detailed manual setup instructions.
+
+---
+
+## 📋 Usage Examples
+
+### Batch Ingestion
+```
+Select option: 1
+Enter folder path: cases/input_files/
+✓ Processed: 45 / 50
+```
+
+### Find Similar Cases
+```
+Select option: 2
+Enter query PDF: cases/test_case.pdf
+Found 3 similar cases (scores: 0.89, 0.76, 0.63)
+```
+
+---
+
+## 🏗️ Architecture
+
+**Layered Architecture with SOLID Principles**
+
+- **Presentation**: CLI with Rich UI
+- **Pipelines**: Ingestion & Similarity Search orchestrators
+- **Services**: PDF loader, extractors, embedders, duplicate checker
+- **Infrastructure**: PostgreSQL + pgvector document store
+- **Core**: Interfaces, models, configuration, exceptions
+
+See **[DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md)** for complete architecture details.
+
+---
+
+## 📚 Documentation
+
+- **[HAYSTACK_INTEGRATION.md](HAYSTACK_INTEGRATION.md)**: **⭐ NEW!** Complete Haystack 2.0 integration guide
+- **[QUICKSTART.md](QUICKSTART.md)**: Complete setup guide for all platforms
+- **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)**: Implementation details
+- **[DESIGN_DOCUMENT.md](DESIGN_DOCUMENT.md)**: Architecture and design patterns
+- **[README_HAYSTACK.md](README_HAYSTACK.md)**: Legacy Haystack documentation
+
+### Migration to Haystack 2.0
+
+CaseMind now uses **Haystack 2.0** for component-based AI orchestration. Benefits:
+
+✅ **Production-Ready**: Battle-tested components from Haystack ecosystem  
+✅ **Extensible**: Easy integration with 50+ Haystack components  
+✅ **Observable**: Built-in pipeline visualization and logging  
+✅ **Backward Compatible**: Existing code works with minimal changes  
+
+**Quick Test**:
+```bash
+# Test Haystack components
+python src/scripts/test_haystack_migration.py
+
+# View migration details
+python src/scripts/haystack_migration_report.py
+```
+
+See **[HAYSTACK_INTEGRATION.md](HAYSTACK_INTEGRATION.md)** for complete migration guide.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Haystack 2.0+**: NLP pipeline framework
+- **PostgreSQL 14+ with pgvector**: Vector database
+- **OpenAI GPT-4**: Metadata/fact extraction
+- **Sentence Transformers**: Embeddings (all-mpnet-base-v2)
+- **Cross-Encoder**: Re-ranking (ms-marco-MiniLM-L6-v2)
+- **PyMuPDF**: PDF processing
+- **Rich**: Terminal UI
+
+---
+
+## 🔧 Configuration
+
+Key settings in `.env`:
+
+```bash
+POSTGRES_HOST=localhost
+POSTGRES_DB=casemind
+OPENAI_API_KEY=sk-your-key
+TOP_K_SIMILAR_CASES=3
+CROSS_ENCODER_THRESHOLD=0.0
+```
+
+---
+
+## 🧪 Validation
+
+```bash
+# Validate complete setup
+python validate_setup.py
+
+# Initialize database
+python src/scripts/init_database.py
+```
+
+---
+
+## 📊 Performance
+
+- **Ingestion**: 20-40 seconds per case
+- **Similarity Search**: 2-5 seconds
+- **Vector Retrieval**: <1 second (HNSW index)
+
+---
+
+## 🐛 Troubleshooting
+
+See **[QUICKSTART.md](QUICKSTART.md)** for detailed troubleshooting guide.
+
+Common issues:
+- Database connection → Check PostgreSQL service
+- pgvector not found → Install extension
+- OpenAI API errors → Verify API key
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+## 🙏 Acknowledgments
+
+Built using Haystack, pgvector, Sentence Transformers, and Rich.
+
+**For the legal tech community** ❤️⚖️
+
+---
+
+# CaseMind - Original README — Legal AI Framework for IPC Case Processing
 
 CaseMind is a lightweight legal case processing framework focused on extracting structured facts from court case documents (PDFs or text) using an AI-backed template system. The project was built to process Indian Penal Code (IPC) cases and organize facts into a 4-tier hierarchy suitable for downstream analysis and similarity/search applications.
 

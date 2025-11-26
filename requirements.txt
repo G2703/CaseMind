@@ -1,50 +1,55 @@
-# Legal AI Framework Requirements - Simplified
+# CaseMind - Legal Case Similarity Search System
+# Python 3.9+ Required
 
+# ========================================================================
 # Core AI/ML Libraries
-openai>=1.0.0
-sentence-transformers>=2.2.0
-scikit-learn>=1.3.0
-numpy>=1.24.0
-pandas>=2.0.0
-torch>=2.0.0
+# ========================================================================
+openai>=1.0.0                          # LLM API for metadata/fact extraction
+sentence-transformers>=5.0.0           # Embedding models (5.0+ required for Haystack 2.20+ backend param)
+transformers>=4.30.0                   # Transformer models and cross-encoders
+torch>=2.0.0                           # PyTorch backend
+numpy>=1.24.0                          # Numerical computing
+scikit-learn>=1.3.0                    # ML utilities
 
-# Visualization Libraries
-matplotlib>=3.7.0
-seaborn>=0.12.0
+# ========================================================================
+# Haystack Framework 2.0+
+# ========================================================================
+haystack-ai>=2.0.0                     # Core Haystack framework
+pgvector-haystack                      # Haystack PgvectorDocumentStore integration
 
-# Scientific Computing
-scipy>=1.10.0
+# ========================================================================
+# Database and Storage
+# ========================================================================
+psycopg2-binary>=2.9.9                 # PostgreSQL adapter
+pgvector>=0.2.0                        # PostgreSQL vector extension Python client
 
-# Environment Management
-python-dotenv>=1.0.0
+# ========================================================================
+# PDF Processing
+# ========================================================================
+PyMuPDF>=1.23.0                        # PDF text extraction (fitz)
 
-# CLI and Terminal UI
-rich>=13.0.0
+# ========================================================================
+# Configuration and Environment
+# ========================================================================
+python-dotenv>=1.0.0                   # Environment variable management
 
+# ========================================================================
+# CLI and UI
+# ========================================================================
+rich>=13.0.0                           # Rich terminal UI
+
+# ========================================================================
+# Utilities
+# ========================================================================
+pathlib>=1.0.1                         # Path handling (usually built-in)
+
+# ========================================================================
 # Development and Testing (Optional)
-pytest>=7.0.0
-pytest-cov>=4.1.0
-black>=23.0.0
-flake8>=6.0.0
-fitz
-google-generativeai
-PyMuPDF=1.26.6
+# ========================================================================
+pytest>=7.0.0                          # Testing framework
+pytest-cov>=4.1.0                      # Coverage reporting
+pytest-asyncio>=0.21.0                 # Async test support
+black>=23.0.0                          # Code formatting
+flake8>=6.0.0                          # Linting
+mypy>=1.0.0                            # Type checking
 
-# Previously used libraries (commented out after simplification):
-# PyMuPDF>=1.23.0          # PDF processing - not currently used
-# PyPDF2>=3.0.0            # PDF processing - not currently used
-# google-generativeai>=0.3.0  # Gemini API - not currently used
-# pandas>=2.0.0            # Data processing - not currently used
-# numpy>=1.24.0            # Numerical computing - not currently used
-# scipy>=1.11.0            # Scientific computing - not currently used
-# matplotlib>=3.7.0        # Plotting - not currently used
-# regex>=2023.0.0          # Advanced regex - removed from code
-# nltk>=3.8.0              # NLP toolkit - not currently used
-# spacy>=3.7.0             # NLP framework - not currently used
-# sentence-transformers>=2.2.0  # Embeddings - not currently used
-# faiss-cpu>=1.7.4         # Vector search - not currently used
-# pydantic>=2.0.0          # Data validation - removed from code
-# tqdm>=4.65.0             # Progress bars - not currently used
-# loguru>=0.7.0            # Advanced logging - using built-in logging
-# pyyaml>=6.0.1            # YAML parsing - not currently used
-# configparser>=6.0.0      # Config parsing - not currently used

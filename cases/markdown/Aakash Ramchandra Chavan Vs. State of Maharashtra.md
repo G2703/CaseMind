@@ -1,9 +1,3 @@
-# Aakash Ramchandra Chavan Vs. State of Maharashtra
-
-## Case Information
-
-## Document Content
-
 208-APPEAL-290-2014-J.doc
 IN THE HIGH COURT OF JUDICATURE AT BOMBAY
 CRIMINAL APPELLATE JURISDICTION
@@ -15,15 +9,11 @@ THE STATE OF MAHARASHTRA
 )...RESPONDENT
 Mrs.N.S.K.Ayubi, Advocate for the Appellant.
 Mr.Amit Palkar, APP for the Respondent ­ State.
-
-## Coram
-
+CORAM :  A. M. BADAR, J.
 DATE     :  RESERVED ON 28th AUGUST 2019
 
 PRONOUNCED ON 29th AUGUST 2019
-
-## Judgment
-
+JUDGMENT :
 1
 By this appeal, the appellant/accused no.2 in Sessions
 Case No.135 of 2010 decided along with Sessions Case No.596 of
@@ -36,9 +26,7 @@ read   with   Section   397   of   the   Indian   Penal   Code.     Th
 Rs.5,000/­ and in default to undergo rigorous imprisonment  for 6
 months vide the impugned judgment and order.
 2
-
-## Facts
-
+Facts, in brief, leading to the prosecution and resultant conviction of the appellant/accused no.2 in Sessions Case No.135
 of 2010 are thus :
 (a)
 First Informant Vijay Sadavate boarded the local train on
@@ -146,9 +134,7 @@ Test Identification Parade is discarded because of possibility of seeing
 In   the   light   of   the   foregoing   discussion,   the prosecution   has   successfully   established   that   the   appellant/
 accused   no.2   had   attempted   to   commit   robbery   and   in   that attempt,   had   used   deadly   weapon.     No   interference   in   the impugned judgment and order, as such, is warranted.  Therefore,
 the order :
-
-## Order
-
+ORDER
 The appeal is dismissed.
 (A. M. BADAR, J.)
 avk 10/10

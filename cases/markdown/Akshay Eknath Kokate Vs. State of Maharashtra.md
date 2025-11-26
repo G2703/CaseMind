@@ -1,0 +1,103 @@
+2-ba.1774.2022.doc
+IN THE HIGH COURT OF JUDICATURE AT BOMBAY
+CRIMINAL APPELLATE JURISDICTION
+CRIMINAL BAIL APPLICATION NO.1774 OF 2022
+Akshay Eknath Kokate
+
+...Applicant
+Versus
+State of Maharashtra
+
+...Respondent
+Mr. Shaikh Abdul Kalam a/w Ms. Sana Shaikh, for the Applicant.
+Ms. P. P. Shinde, A.P.P for the Respondent – State.
+PSI – Prakash Shirdhankar, Andheri Police Station, Mumbai, is present.
+
+CORAM : REVATI MOHITE DERE , J.
+DATE : 5th SEPTEMBER 2023
+P.C. :
+1.
+Heard learned counsel for the parties.
+2.
+This is the second bail application preferred by the applicant, seeking his enlargement on bail in connection with C.R.
+No. 564 of 2017 registered with the Andheri Police Station, Mumbai,
+for the alleged offences punishable under Sections 392 r/w 34 of the
+Indian Penal Code. The first bail application of the applicant was withdrawn by the learned counsel for the applicant, as the Court was
+N. S. Chitnis
+1/6
+NISHA
+SANDEEP
+CHITNIS
+Digitally signed by
+NISHA SANDEEP
+CHITNIS
+Date: 2023.09.07
+11:45:17 +0530
+
+--- Page 2 ---
+2-ba.1774.2022.doc not inclined to enlarge the applicant on bail. The said application was accordingly dismissed as withdrawn. The same is recorded in the order dated 25th July 2019, passed in Criminal Bail Application
+No.2508 of 2019.
+3.
+Perused the papers. The incident is alleged to have taken place on 30th October 2017 at about 5:45 p.m. on the Western
+Express Highway, Andheri Bridge, Andheri (East), Mumbai. It is alleged that the complainant alongwith his employee - Sandeep were proceeding on the said highway, after collecting cash amount of Rs.14
+lakhs odd. It is alleged that the applicant alongwith other co-accused committed robbery of the said amount and in the process assaulted the complainant and one another and ran away. Pursuant thereto, the aforesaid C.R was registered as against the applicant and others. It appears that in the Test Identification Parade, the applicant was identified by the complainant. It is the prosecution case that from the amount received by the applicant, he purchased a motorcycle on 10th
+November 2017. The applicant is in custody since November 2017,
+N. S. Chitnis
+2/6
+
+--- Page 3 ---
+2-ba.1774.2022.doc with no prospect of the trial commencing. Although, charge is framed in the said case, not a single witness has been examined by the prosecution, till date.
+4.
+The applicant has filed an affidavit-cum-undertaking dated
+26th August 2023 duly affirmed before the Jailor, Mumbai Central
+Prison. In the said affidavit-cum-undertaking, the applicant has stated that if released on bail, he will attend the trial Court on all the dates of hearing and will co-operate in the expeditious disposal of the trial,
+which is pending before the Dindoshi Sessions Court. The applicant has also undertaken to attend the concerned police station as and when directed by this Court and of not breaching any of the conditions that may be imposed by this Court.
+5.
+Considering the aforesaid, the application is allowed and the applicant is enlarged on bail, on the following terms and conditions:-
+N. S. Chitnis
+3/6
+
+--- Page 4 ---
+2-ba.1774.2022.doc
+ORDER
+i)
+The applicant be enlarged on bail, on executing PR
+Bond in the sum of Rs. 25,000/- with one or two sureties in the like amount;
+(ii)
+The applicant shall attend the concerned Police
+Station on the first Saturday of every month from 10:00
+a.m. to 1:00 p.m. till the conclusion of the trial, unless the date of the Trial Court falls on Saturday;
+(iii)
+The applicant shall not tamper with the evidence or attempt to influence or contact the complainant, witnesses or any person concrned with the case;
+(iv)
+The applicant shall inform his latest place of residence and mobile contact number immediately after being released and/or change of residence or mobile details,
+if any, from time to fime to the Court seized of the matter
+N. S. Chitnis
+4/6
+
+--- Page 5 ---
+2-ba.1774.2022.doc and to the Investigating Officer of the concerned Police
+Station;
+(v)
+The applicant to cooperate with the conduct of the trial and attend the trial Court on all dates, unless exempted;
+(vi)
+The applicant shall file an undertaking with regard to clauses (ii) to (v) in the trial Court, within two weeks of his release;
+(vii)
+If there is a breach of any of the aforesaid conditions,
+the prosecution shall be at liberty to seek cancellation of the applicant’s bail.
+6.
+The application is allowed in the aforesaid terms and is accordingly disposed of.
+N. S. Chitnis
+5/6
+
+--- Page 6 ---
+2-ba.1774.2022.doc
+7.
+It is made clear that the observations made herein are prima facie, and the trial Court shall decide the case on its own meris,
+in accordance with law, uninfluenced by the observations made in this order.
+8.
+All concerned to act on the authenticated copy of this order.
+
+REVATI MOHITE DERE , J.
+N. S. Chitnis
+6/6

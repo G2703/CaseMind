@@ -1,0 +1,34 @@
+{
+  "tier_1_determinative": {
+    "key_facts": "The appellant was convicted of offences under Sections 10 read with 9(i) of the POCSO Act and Section 323 of the Indian Penal Code, but acquitted of offences under Sections 376, 504, and 506 of the IPC and Sections 5(h) read with 6 of the POCSO Act."
+  },
+  "tier_2_material": {
+    "material_facts": "The victim, a female child residing in Village Talavade, was accosted by the appellant on her way to school. He allegedly took her to a nearby nala, pressed her mouth, showed her a knife, and she became unconscious. Upon regaining consciousness, she found herself in a state suggesting forcible sexual intercourse. The event led to the registration of Crime No.6 of 2013."
+  },
+  "tier_3_contextual": {
+    "incident_location": "Village Talavade, Lanja Taluka, Ratnagiri District",
+    "incident_date_time": "1st February 2013, at about 10.00 a.m."
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No.156 of 2015",
+    "case_title": "Aarif Mahamadkhan Maldar vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "3rd January 2019",
+    "appellant_or_petitioner": "Aarif Mahamadkhan Maldar",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "A. M. Badar, J.",
+    "counsel_for_appellant": "Mr. Ganesh Bhujbal",
+    "counsel_for_respondent": "Mr. P.H. Gaikwad-Patil, APP",
+    "sections_invoked": "Sections 10 read with 9(i) of the POCSO Act, Section 323 of the IPC, Sections 376, 504, 506 of the IPC, Sections 5(h) read with 6 of the POCSO Act",
+    "case_type": "Criminal Appeal",
+    "citation": null,
+    "acts_and_sections": "Protection of Children from Sexual Offences Act, Indian Penal Code"
+  },
+  "residual_details": {
+    "additional_facts": "The victim reported the incident to her maternal aunt and then to the Police Station Lanja. The appellant was found sitting near her legs when she regained consciousness, and she was in a semi-nude condition."
+  },
+  "template_id": "legal_case",
+  "template_label": "Legal Case",
+  "extraction_confidence": 0.0,
+  "extraction_timestamp": "2025-11-25T07:21:32Z"
+}

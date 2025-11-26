@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "case_title": "A. DEIVENDRAN V. STATE OF TAMIL NADU",
+    "court": "Supreme Court of India",
+    "bench": "G.N. RAY AND G.B. PATTANAIK, JJ.",
+    "date_of_judgement": "1997-10-21",
+    "case_number": "Criminal Appeal No. 987 of 1997",
+    "type_of_case": "Criminal Appeal",
+    "ipc_sections": [
+      "Section 302",
+      "Section 326",
+      "Section 411",
+      "Section 120B",
+      "Section 148",
+      "Section 449",
+      "Section 34"
+    ],
+    "other_statutes": [
+      "Criminal Procedure Code, 1973 (CrPC) Section 306",
+      "Criminal Procedure Code, 1973 (CrPC) Section 307",
+      "Criminal Procedure Code, 1973 (CrPC) Section 460",
+      "Criminal Procedure Code, 1973 (CrPC) Section 10(3)",
+      "Evidence Act, 1872 Section 3",
+      "Evidence Act, 1872 Section 114"
+    ],
+    "lower_court_history": {
+      "trial_court_verdict": "Sessions Judge, Madurai (Sessions Case No. 91 of 1994) convicted A. Devendran (death sentence), R. Pandian, and R. Thungamalai (life imprisonment) under Sections 120B, 148, 449, 302/34, and 326/34 IPC. Accused Bellaithai was acquitted. Accused Mohd. Rafiq was granted pardon.",
+      "high_court_verdict": "The High Court of Madras (Criminal Appeal No. 717 of 1995) upheld the conviction and death sentence of A. Devendran under Section 302 IPC, and affirmed the conviction and sentence of all three appellants under Sections 120B, 449, 326/34 IPC."
+    }
+  },
+  "case_facts": {
+    "prosecution_version": "The main accused, A. Devendran, along with the other accused, including the approver (PW-1), hatched a conspiracy to commit robbery in the house of PW-5 after learning about the jewels and cash inside from accused No. 2 (R. Pandian). Accused No. 2 obtained information about the house's topography and inmates' movements from his mother, accused No. 5 (Bellaithai), who worked there. On 24.11.1992, the accused persons, armed with a gun, pistol, knife, and ropes, entered the house through the chimney. Inside, Devendran twisted the neck of one old lady, causing her death, while accused No. 3 (R. Thungamalai) tied her legs. Devendran then strangulated a second old lady with a piece of cloth while the second accused (R. Pandian) held her legs, leading to her death. When the car driver, Nagarajan, entered the house, Devendran shot him dead. The accused then stole jewellery and other items and escaped.",
+    "defence_version": "The appellants contended that the order of the Chief Judicial Magistrate granting pardon to the co-accused (Mohd. Rafiq/PW-1) after the case was committed to the Sessions Court was without jurisdiction and illegal, and not curable under Section 460(g) CrPC, rendering PW-1's evidence inadmissible. They also argued that non-compliance with Section 306(4)(a) CrPC vitiated the proceedings. If the approver's evidence is excluded, the residuary evidence, including the recovery of some ornaments from R. Pandian and R. Thungamalai after two months, is insufficient to establish the charges beyond reasonable doubt. It was further argued that the murder of three persons, under the given circumstances, did not justify the imposition of the death sentence as a 'rarest of rare' case.",
+    "timeline_of_events": [
+      "24.11.1992: Date of occurrence of the offence (robbery and multiple murders).",
+      "FIR was lodged, and a charge sheet was submitted.",
+      "The Magistrate committed the five accused for trial to the Court of Sessions.",
+      "14.11.1994: Chief Judicial Magistrate granted pardon to accused Mohd. Rafiq (MR), who was then examined as PW-1 (approver).",
+      "The Sessions Judge convicted Devendran, R. Pandian, and R. Thungamalai.",
+      "The High Court upheld the conviction and death sentence of Devendran.",
+      "OCTOBER 21, 1997: Date of Supreme Court Judgment."
+    ],
+    "incident_location": "House of PW-5",
+    "motive_alleged": "To commit robbery/dacoity for jewels and cash."
+  },
+  "issues_for_determination": [
+    "Whether the order of the Chief Judicial Magistrate granting pardon to the co-accused after the commitment of the case to the Sessions Court was without jurisdiction and illegal, and whether the evidence of the approver (PW-1) can be relied upon.",
+    "Whether non-compliance with Section 306(4)(a) CrPC is necessary when pardon is granted under Section 307 CrPC after commitment.",
+    "Whether the conviction of the main accused, A. Devendran, under Sections 302 and 326 IPC can be sustained on the residuary evidence, excluding the evidence of the approver.",
+    "Whether the recovery of stolen jewellery from the two other accused is sufficient to convict them for murder by drawing the presumption under Section 114, Illustration (a) of the Evidence Act.",
+    "Whether the case against the main accused, A. Devendran, falls within the 'rarest of rare cases' justifying the imposition of the death sentence."
+  ],
+  "evidence": {
+    "witness_testimonies": [
+      {
+        "witness_id": "PW-1",
+        "name": "Mohd. Rafiq",
+        "role": "Approver (originally an accused)",
+        "summary": "Unfolded the conspiracy and the roles of the accused in committing the robbery and murder. The Court ultimately excluded his evidence due to jurisdictional error in granting pardon."
+      },
+      {
+        "witness_id": "PW-2",
+        "name": "",
+        "role": "Young girl in the house/Ocular witness",
+        "summary": "Provided ocular evidence establishing the commission of the offence and the strangulation of the two old ladies. She was inside the house at the time of the occurrence."
+      },
+      {
+        "witness_id": "PW-5",
+        "name": "",
+        "role": "Ocular witness/Informant",
+        "summary": "Provided ocular evidence establishing the commission of the offence, though the witness had not seen the assailants."
+      },
+      {
+        "witness_id": "PW-9",
+        "name": "Assistant Medical Officer",
+        "role": "Medical Officer",
+        "summary": "Conducted the post-mortem examination on the dead body of Nagarajan (car driver) and found death was due to injuries from a revolver shot."
+      },
+      {
+        "witness_id": "PW-11",
+        "name": "Dr. R. Anandan",
+        "role": "Medical Officer",
+        "summary": "Conducted the post-mortem examination on the dead body of Deivammal (one old lady) and found death was due to strangulation and smothering."
+      },
+      {
+        "witness_id": "PW-24",
+        "name": "Ballistic expert",
+        "role": "Expert witness",
+        "summary": "Stated that the empty cartridges (MO-79) must have been fired by using the pistol (MO-2) seized from the house of the main accused, A. Devendran."
+      }
+    ],
+    "medical_evidence": "The medical evidence from the post-mortem reports confirmed that the two old ladies died due to strangulation/smothering, and the car driver, Nagarajan, died from injuries caused by a revolver shot. This evidence corroborated the ocular account of PW-2.",
+    "forensic_evidence": "The Ballistic expert (PW-24) established that the pistol (MO-2) recovered from the main accused's house was the weapon used to fire the empty cartridges (MO-79) found at the scene, linking the weapon to the death of the car driver.",
+    "documentary_evidence": [
+      "FIR",
+      "Report of the Ballistic expert (Exhibit P-24)",
+      "Mazahar (under which MO-2 pistol was seized)"
+    ],
+    "recovery_and_seizure": "Stolen jewellery was recovered from the house of the main accused, A. Devendran, on his statement two days after the incident, and was identified. Arms, including the pistol (MO-2) and empty cartridges, were also recovered from his house. Mere recovery of some jewellery belonging to the informant was made from the two other accused (R. Pandian and R. Thungamalai) after two months of the occurrence.",
+    "expert_opinions": "The Ballistic expert's opinion confirmed the link between the pistol recovered from the main accused, A. Devendran, and the empty cartridges found at the scene of the crime.",
+    "investigation_findings": "The investigation established that the appellant caused the death of three persons and stole jewellery from the house. The initial conviction was based on the fact that A. Devendran was the primary perpetrator."
+  },
+  "arguments": {
+    "prosecution": "The grant of pardon by the Chief Judicial Magistrate, even after commitment, should not be set aside on mere technical grounds, as no prejudice was caused. The approver's evidence is fully corroborated by independent materials like medical evidence, the ballistic report, the evidence of the young girl (PW-2), and the recoveries made. Since the murder and robbery formed part of the same transaction, possession of stolen ornaments by the accused establishes guilt for both under Section 114 of the Evidence Act. Furthermore, the merciless killing of two ladies and the driver indicates a depraved mind, justifying the death sentence in this rarest of rare case.",
+    "defence": "The order of the Chief Judicial Magistrate granting pardon after the case was committed to the Sessions Court was a total lack of jurisdiction, not a curable irregularity under Section 460(g) CrPC, rendering the approver's evidence inadmissible. Without the approver's evidence, the prosecution's case fails, as the residuary evidence is insufficient to prove the charges, particularly against the co-accused. The recovery of property after two months from the co-accused only points to possession of stolen property, not murder. The circumstances of the deaths do not place the crime in the 'rarest of rare' category, and therefore, the death sentence must be commuted."
+  },
+  "reasoning": {
+    "analysis_of_evidence": "The Court concluded that the Chief Judicial Magistrate had no jurisdiction to grant pardon after the case was committed to the Sessions Court under Section 307 CrPC, and this error was not curable under Section 460(g) CrPC. Consequently, the approver's evidence (PW-1) was excluded. The conviction of the main accused, A. Devendran, was sustained on the residuary evidence: the ocular evidence of PW-2 and PW-5, the corroborating medical and ballistic evidence, and the recovery of stolen property from him two days after the incident, which raised a presumption under Section 114 of the Evidence Act. However, the evidence against the co-accused, R. Pandian and R. Thungamalai, was found insufficient for the murder charge, as the recovery of property from them two months later was only sufficient for conviction under Section 411 IPC.",
+    "credibility_assessment": "The Court rejected the High Court's view that the jurisdictional error in granting pardon was curable. The Court distinguished the scope of pardon under Section 306 (before commitment) and Section 307 (after commitment), affirming that the power rests exclusively with the court to which the case is committed. The Court also held that the approver's statement was not wholly exculpatory, but its jurisdictional invalidity led to its exclusion.",
+    "legal_principles_applied": "The power to tender pardon after commitment lies exclusively with the Court of Sessions under Section 307 CrPC. A Magistrate cannot exercise this power, and such an act constitutes a total lack of jurisdiction, not a curable irregularity under Section 460(g) CrPC. Non-compliance with Section 306(4)(a) CrPC is not mandatory when pardon is granted under Section 307 CrPC. A presumption under Section 114, Illustration (a) of the Evidence Act, linking the possession of stolen articles to murder, can be drawn if the recovery is made soon after the incident. For the death sentence, the 'rarest of rare' doctrine requires the act to be diabolical, ghastly, or gruesome, and the death of multiple persons alone is not determinative.",
+    "circumstantial_chain": "Excluding the approver's evidence, a complete chain of circumstances was established against A. Devendran through: the presence of ocular witnesses, medical evidence supporting strangulation and shooting, the recovery of the murder weapon (pistol) linked by ballistic evidence to the shooting death, and the timely recovery of stolen property from his person, which, coupled with the nature of the crime, supported conviction for murder and robbery. The chain was broken for the co-accused on the murder charge due to the two-month gap in the recovery of stolen property.",
+    "court_findings": "The Court found that the order granting pardon was without jurisdiction and excluded the approver's evidence. A. Devendran was found guilty of murder (302), house-trespass (449), and voluntarily causing grievous hurt (326) but did not deserve the death penalty. R. Pandian and R. Thungamalai were found guilty only of receiving stolen property (411 IPC)."
+  },
+  "judgement": {
+    "final_decision": "Appeal partly allowed. Conviction of A. Devendran under Section 302 IPC upheld, but the death sentence was commuted to life imprisonment. Convictions of R. Pandian and R. Thungamalai under Sections 120B, 449, 302/34, and 326/34 IPC were set aside, and they were convicted instead under Section 411 IPC.",
+    "sentence_or_bail_conditions": "The death sentence awarded to A. Devendran was commuted to life imprisonment. He was also convicted under Section 326 IPC and sentenced to rigorous imprisonment for three years, with all sentences directed to run concurrently. R. Pandian and R. Thungamalai were convicted under Section 411 IPC and sentenced to undergo rigorous imprisonment for three years each.",
+    "directions": "The sentences against the main accused, A. Devendran, are directed to run concurrently."
+  }
+}

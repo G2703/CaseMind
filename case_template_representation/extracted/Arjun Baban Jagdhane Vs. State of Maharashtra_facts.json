@@ -1,0 +1,37 @@
+{
+  "tier_1_determinative": {
+    "ipc_sections_charged": "Prevention of Corruption Act, Sections 7, 12, 13(1)(d) read with 13(2)",
+    "nature_of_offense_category": "Corruption Offense"
+  },
+  "tier_2_material": {
+    "accused_age": ": Not specified",
+    "victim_age": "Not applicable",
+    "motive_for_crime": "Demand for bribe to release an individual from police custody"
+  },
+  "tier_3_contextual": {
+    "time_of_offense": "Evening, around 06:30 PM",
+    "place_of_offense": "Vashi Railway Police Station, complainant's house"
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No. 472 of 2007, Criminal Appeal No. 460 of 2007",
+    "case_title": "Arjun Baban Jagdhane vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "05th January 2024",
+    "appellant_or_petitioner": "Arjun Baban Jagdhane, Jagannath Shivram Jadhav",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "Prakash D. Naik, J.",
+    "counsel_for_appellant": "Mr. Ujwal Agandsurve (Appeal No. 460 of 2007), Mr. P. R. Arjunwadkar (Criminal Appeal No. 472 of 2007)",
+    "counsel_for_respondent": "Ms. Pallavi N. Dabholkar, APP",
+    "sections_invoked": "Prevention of Corruption Act, Sections 7, 12, 13(1)(d) read with 13(2)",
+    "case_type": "Criminal Appeal",
+    "citation": "Not provided",
+    "acts_and_sections": "Prevention of Corruption Act, Sections 7, 12, 13(1)(d) read with 13(2)"
+  },
+  "residual_details": {
+    "additional_facts": "The appellants were convicted by the Special Judge under the Prevention of Corruption Act. Accused No.1 (Arjun Baban Jagdhane) was a Police Inspector and accused No.2 (Jagannath Shivram Jadhav) was allegedly involved in the acceptance of a bribe. The complainant, Ruksana Banu, alleged that accused No.1 demanded a bribe to release her brother-in-law, Mohd. Nabi Qureshi, from custody. The Anti-Corruption Bureau (ACB) was involved, and a trap was set up leading to the arrest of the accused. The defense argued that the accused were falsely implicated and questioned the competency of the sanctioning authority."
+  },
+  "template_id": "criminal_case",
+  "template_label": "Criminal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:15:17.148010"
+}

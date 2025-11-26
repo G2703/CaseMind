@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "case_title": "ATBIR V. STATE OF NCT OF DELHI",
+    "court": "Supreme Court of India",
+    "bench": "DINESH MAHESHWARI, J., ANIRUDDHA BOSE, J.",
+    "date_of_judgement": "2022-04-29",
+    "case_number": "Criminal Appeal No. 714 of 2022",
+    "type_of_case": "Criminal Appeal",
+    "ipc_sections": [
+      "Section 302",
+      "Section 34"
+    ],
+    "other_statutes": [
+      "Delhi Prison Act, 2000",
+      "Delhi Prison Rules, 2018",
+      "Code of Criminal Procedure, 1973 Section 432",
+      "Constitution of India Article 72"
+    ],
+    "lower_court_history": {
+      "trial_court_verdict": "Conviction of the offence under Section 302 IPC and awarded sentence of death.",
+      "high_court_verdict": "Dismissed the appeal and confirmed the death sentence. Subsequently, dismissed the writ petition challenging the denial of furlough."
+    }
+  },
+  "case_facts": {
+    "prosecution_version": "The appellant, Atbir, was charged for the offence under Section 302 IPC for causing the death of his step-mother, step-brother, and step-sister by multiple knife-blows. His death sentence was confirmed by the Supreme Court as a 'rarest of the rare category' case, motivated by 'hunger and lust for property'. The President of India later commuted the death sentence to life imprisonment 'for the whole of the remainder of his natural life without parole and without any remission'. The prison authorities and the High Court subsequently rejected his application for furlough, citing the bar on remission in the Presidential Order.",
+    "defence_version": "The appellant contended that the Presidential Order, which bars parole and remission, does not preclude his entitlement to furlough under the Delhi Prison Rules, 2018. Furlough is an incentive for good jail conduct and is not equivalent to remission, as the period spent on furlough is counted as time served towards the sentence. The appellant argued he meets the eligibility requirement of having '3 Annual good conduct reports' under Rule 1223(I), which was incorrectly equated with 'Annual good conduct remission' by the authorities.",
+    "timeline_of_events": [
+      "FIR No. 24 of 1996 registered.",
+      "Trial Court convicted the appellant and awarded death sentence.",
+      "High Court confirmed the death sentence.",
+      "Supreme Court confirmed the death sentence.",
+      "President of India commuted the death sentence to life imprisonment without parole and remission.",
+      "Director General of Prisons declined the appellant's application for furlough.",
+      "High Court dismissed the appellant's writ petition against the denial of furlough."
+    ],
+    "incident_location": "Police Station Mukherjee Nagar, Delhi",
+    "motive_alleged": "Hunger and lust for property"
+  },
+  "issues_for_determination": [
+    "Whether the appellant, whose death sentence was commuted to life imprisonment for the whole of his natural life without parole and remission, is entitled to be considered for furlough under the Delhi Prison Rules, 2018.",
+    "Whether the eligibility requirement to obtain furlough under Rule 1223(I) of the Delhi Prison Rules, 2018 is of '3 Annual good conduct reports' or '3 Annual good conduct remissions'.",
+    "Whether the bar on remission, as stipulated in the Presidential Order, acts as a debarment to the grant of furlough."
+  ],
+  "evidence": {
+    "witness_testimonies": [],
+    "medical_evidence": "",
+    "forensic_evidence": "",
+    "documentary_evidence": [
+      "Order issued by the President of India commuting the sentence",
+      "Order issued by the Director General of Prisons declining furlough",
+      "Order passed by the High Court of Delhi dismissing the writ petition",
+      "FIR No. 24 of 1996",
+      "Judgment of the Additional Sessions Judge",
+      "Judgment of the Supreme Court",
+      "Certificates towards recognition, good conduct, earned qualifications and appreciation for fight against COVID-19"
+    ],
+    "recovery_and_seizure": "",
+    "expert_opinions": "",
+    "investigation_findings": "The appellant caused the death of his step-mother, step-brother, and step-sister by inflicting 37 knife-blows, an act found to be barbaric, inhuman, and falling into the 'rarest of the rare category' due to 'hunger and lust for property'."
+  },
+  "arguments": {
+    "prosecution": "Furlough results in a reduction of the sentence, which amounts to remission, and is therefore not permissible under the Presidential Order. Since the period of furlough is deducted from the sentence per the Rules of 2018, and the appellant is barred from remission, he is also barred from furlough.",
+    "defence": "Furlough is an incentive for good conduct available during custody and is not dependent on entitlement to remission for premature release. The period of furlough is counted as time served, thus it is not a reduction in sentence like parole. The eligibility is based on '3 Annual good conduct reports', which is not the same as 'remissions'."
+  },
+  "reasoning": {
+    "analysis_of_evidence": "The Court clarified that the Rules require '3 Annual good conduct reports' for furlough eligibility, not '3 Annual good conduct remissions'. Earning rewards for good conduct is not equivalent to earning remissions. The Presidential Order bars parole and remission but is silent on furlough.",
+    "credibility_assessment": "The Court corrected the High Court's misunderstanding that remission was a prerequisite for furlough, stating that observations in other cases should not be read in isolation to equate furlough with remission.",
+    "legal_principles_applied": "Furlough is distinguished from parole: furlough is an incentive for good conduct and the prisoner is deemed to be serving the sentence during this period. Therefore, even if the appellant is barred from remission and must serve life in prison, the incentive for good conduct through furlough cannot be denied, as the Presidential Order did not prohibit it.",
+    "circumstantial_chain": "The fact that the appellant is a person convicted of multiple murders means his case must be considered under the special parameters of Rule 1225 of the Rules of 2018. However, this does not mean his case can never be considered for furlough.",
+    "court_findings": "The blanket denial of furlough was incorrect. The Presidential Order barring remission cannot be interpreted as negating the appellant's entitlement to maintain good conduct or the rights flowing from it, such as furlough, as this would contradict the reformative purpose of the Rules."
+  },
+  "judgement": {
+    "final_decision": "Appeal allowed. The blanket denial of furlough is disapproved.",
+    "sentence_or_bail_conditions": "The case for grant of furlough is restored for reconsideration by the Director General of Prisons. The authorities must examine the case specifically considering the requirements of Rule 1225, given the appellant is convicted of multiple murders.",
+    "directions": "The orders of the High Court and the Director General of Prisons are set aside. The case for furlough is restored for reconsideration. The Director General of Prisons is expected to take a decision expeditiously, preferably within two months."
+  }
+}

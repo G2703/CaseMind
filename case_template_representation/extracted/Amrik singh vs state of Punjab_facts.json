@@ -1,0 +1,32 @@
+{
+  "tier_1_determinative": {
+    "death_caused": "Yes",
+    "intention_to_cause_death": "No, conviction based on identification without intention proved"
+  },
+  "tier_2_material": {
+    "victim_details": "Details not provided in the text",
+    "accused_details": "Amrik Singh and two others",
+    "weapon_used": "Not specified"
+  },
+  "tier_3_contextual": {
+    "motive": "Robbery",
+    "circumstances_of_killing": "Victim murdered during the course of robbery",
+    "incident_location": "Not specified",
+    "incident_date_time": "Not specified"
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No. 993 of 2012",
+    "case_title": "AMRIK SINGH v. THE STATE OF PUNJAB",
+    "court_name": "Supreme Court of India",
+    "judgment_date": "July 11, 2022",
+    "appellant_or_petitioner": "Amrik Singh",
+    "respondent": "The State of Punjab"
+  },
+  "residual_details": {
+    "additional_facts": "Conviction quashed due to lack of proper identification and contradictions in witness statements."
+  },
+  "template_id": "ipc_302",
+  "template_label": "ipc_302",
+  "extraction_confidence": 0.0,
+  "extraction_timestamp": "2025-11-25T07:21:32Z"
+}

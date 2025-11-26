@@ -1,0 +1,37 @@
+{
+  "tier_1_determinative": {
+    "ipc_sections_charged": "IPC 302, 452, 392 r/w 397",
+    "nature_of_offense_category": "Violent Offense"
+  },
+  "tier_2_material": {
+    "accused_age": "Not specified",
+    "victim_age": "Not specified",
+    "motive_for_crime": "Robbery due to unemployment"
+  },
+  "tier_3_contextual": {
+    "time_of_offense": "17 September 2009, during the day",
+    "place_of_offense": "House No.306, Saibaba Rahivasi Sangh, Gaondevi, Santacruz (E), Mumbai"
+  },
+  "tier_4_procedural": {
+    "case_number": "Criminal Appeal No. 107 of 2011",
+    "case_title": "Avinash Shashikant Sawant vs. The State of Maharashtra",
+    "court_name": "High Court of Judicature at Bombay",
+    "judgment_date": "19 July 2021",
+    "appellant_or_petitioner": "Avinash Shashikant Sawant",
+    "respondent": "The State of Maharashtra",
+    "judges_coram": "NITIN JAMDAR and C. V. BHADANG, JJ.",
+    "counsel_for_appellant": "Mr. Chaitanya Pendse a/w. Mr. B. D. Shinde a/w. Ms. Siddhi Bhosale",
+    "counsel_for_respondent": "Ms. Prajakta Shinde, APP",
+    "sections_invoked": "IPC 302, 452, 392 r/w 397",
+    "case_type": "Criminal Appeal",
+    "citation": ".IN THE HIGH COURT OF JUDICATURE AT BOMBAY CRIMINAL APPELLATE JURISDICTION",
+    "acts_and_sections": "Indian Penal Code Sections 302, 452, 392 r/w 397"
+  },
+  "residual_details": {
+    "additional_facts": "The appellant was convicted for murder, house trespass, and robbery with an attempt to cause death or grievous hurt. The prosecution's case was based on circumstantial evidence, including the recovery of ornaments allegedly taken from the victim. The appellant was unemployed, which was suggested as the motive for robbery. The co-accused, Nilesh Khake, died accidentally during the investigation. The conviction was challenged on the basis of lack of direct evidence and discrepancies in the recovery of evidence."
+  },
+  "template_id": "criminal_case",
+  "template_label": "Criminal Case",
+  "extraction_confidence": 1.0,
+  "extraction_timestamp": "2025-11-12T14:34:19.278391"
+}

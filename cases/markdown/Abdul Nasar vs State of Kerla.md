@@ -1,9 +1,3 @@
-# Abdul Nasar vs State of Kerla
-
-## Case Information
-
-## Document Content
-
 [2025] 2 S.C.R. 1 : 2025 INSC 35
 Abdul Nassar
 v.
@@ -29,9 +23,7 @@ the Supreme Court – During pendency of the appeals, the
 accused expired  – However, application submitted by the
 legal heirs of the appellant u/s. 394 (2) CrPC for continuation
 of the instant appeals:
-
-## Held
-
+Held: The following circumstances stand firmly established from a
 threadbare analysis of the evidence available on record, pointing
 towards the guilt of the accused appellant – The child victim was
 a friend of the daughter of the accused, and they used to go to
@@ -75,9 +67,7 @@ killed her. [Paras 25, 26, 27]
 Evidence – Circumstantial Evidence – Principles that courts
 must adhere to while appreciating and evaluating evidence
 in cases based on circumstantial evidence:
-
-## Held
-
+Held: (i) The testimony of each prosecution and defence witness
 must be meticulously discussed and analysed – Each witness’s
 evidence should be assessed in its entirety to ensure no material
 aspect is overlooked; (ii) Circumstantial evidence is evidence that
@@ -139,9 +129,8 @@ Mongia, Advs. for the Appellants.
 R. Basant, Thomas P Joseph, Sr. Advs., Nishe Rajen Shonker,
 Mrs. Anu K Joy, Alim Anvar, Abraham Mathew, Manu Krishnan,
 Advs. for the Respondents.
-
-## Judgment
-
+Judgment / Order of the Supreme Court
+Judgment
 Mehta, J.
 1.
 These appeals assail the judgment and order dated 28th February,
@@ -189,9 +178,7 @@ Court vide common impugned judgment dated 28th February 2018
 whereby, the Criminal Appeal was dismissed, and the Death Sentence
 Reference was allowed confirming the death sentence awarded to
 the accused. Being aggrieved, the accused appellant has filed the
-
-## Present
-
+present appeals by way of special leave.
 4.
 This Court vide order dated 4th September, 2018, stayed the execution
 of death sentence awarded to the accused appellant.
@@ -253,9 +240,7 @@ aforesaid FIR. Material forensic evidence was collected from
 the crime scene and was subjected to scientific examination.
 Incriminating recoveries were effected in furtherance of
 the disclosure statements made by the appellant. After the
-
-## Conclusion
-
+conclusion of the investigation, a charge sheet came to be
 filed against the accused for the offences punishable under
 Sections 376, 302, and 201 IPC and Section 23 of the JJ Act
 in the Court of the concerned Jurisdictional Magistrate.
@@ -659,9 +644,7 @@ with the deceased, being the father of a friend of the deceased
 and there are no extenuating circumstances which can be said
 to mitigate the enormity of the crime.
 On these submissions, Mr. Basant implored the Court to dismiss the
-
-## Appeal Details
-
+appeals and affirm the impugned judgement.
 Discussion and Conclusion:-
 13.	 We have given our thoughtful consideration to the submissions
 advanced at bar and have gone through the judgments of the trial
@@ -735,9 +718,7 @@ accused must be and not merely may be guilty
 before a court can convict and the mental
 distance between ‘may be’ and ‘must be’ is
 long and divides vague conjectures from sure
-
-## Conclusion
-
+conclusions.”
 (2) the facts so established should be consistent only with
 the hypothesis of the guilt of the accused, that is to say,
 they should not be explainable on any other hypothesis
@@ -755,9 +736,7 @@ done by the accused.
 constitute the panchsheel of the proof of a case based
 on circumstantial evidence.”
 15.	 In the light of these guiding principles, we will have to examine the
-
-## Facts
-
+facts of the present case.
 
 --- Page 17 ---
 [2025] 2 S.C.R. 
