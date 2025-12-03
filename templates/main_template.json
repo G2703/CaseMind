@@ -1,0 +1,89 @@
+{
+  "description": "Comprehensive extraction format for Indian legal cases with detailed metadata, evidence, and reasoning",
+  "metadata_fields": {
+    "case_number": "Case number with year",
+    "case_title": "Full case title (Petitioner vs. Respondent)",
+    "court_name": "Name of the court",
+    "judgment_date": "Date of judgment (YYYY-MM-DD)",
+    "appellant_or_petitioner": "Name of appellant/petitioner",
+    "respondent": "Name of respondent",
+    "judges_coram": "Array of judge names",
+    "counsel_for_appellant": "Appellant's counsel name",
+    "counsel_for_respondent": "Respondent's counsel name",
+    "sections_invoked": "Array of ALL legal sections mentioned (e.g., ['IPC 376', 'POCSO 6'])",
+    "most_appropriate_section": "Primary offense section (severity & centrality)",
+    "case_type": "Type of case (Criminal Appeal, Bail Application, etc.)",
+    "citation": "Legal citation if available",
+    "acts_and_sections": "Acts and sections referenced",
+    "lower_court_history": {
+      "trial_court_verdict": "Trial court decision",
+      "high_court_verdict": "High court decision"
+    }
+  },
+  "sections": {
+    "case_facts": {
+      "description": "Factual narrative in paragraphs (NOT bullets)",
+      "sequence": 1,
+      "fields": {
+        "prosecution_version": "What prosecution alleges (stated facts only)",
+        "defence_version": "Defence stance (empty if not recorded)",
+        "timeline_of_events": "Chronological list (empty if unavailable)",
+        "incident_location": "Location of incident",
+        "motive_alleged": "Alleged motive"
+      }
+    },
+    "issues_for_determination": {
+      "description": "Court-framed questions or inferred issues",
+      "sequence": 2,
+      "format": "Array of strings"
+    },
+    "evidence": {
+      "description": "All evidence categories (all required, may be empty)",
+      "sequence": 3,
+      "fields": {
+        "witness_testimonies": "Array of witness objects [{witness_id, name, role, summary}]",
+        "medical_evidence": "Injuries, post-mortem, MLC (paragraph)",
+        "forensic_evidence": "FSL, DNA, ballistics (paragraph)",
+        "documentary_evidence": "List of exhibits",
+        "recovery_and_seizure": "Weapons, contraband (paragraph)",
+        "expert_opinions": "Expert testimony (paragraph)",
+        "investigation_findings": "Investigation results (paragraph)"
+      }
+    },
+    "arguments": {
+      "description": "Arguments by prosecution and defence",
+      "sequence": 4,
+      "fields": {
+        "prosecution": "Prosecution arguments (paragraph)",
+        "defence": "Defence arguments (paragraph)"
+      }
+    },
+    "reasoning": {
+      "description": "Court's reasoning in paragraphs",
+      "sequence": 5,
+      "fields": {
+        "analysis_of_evidence": "Court's evaluation of evidence",
+        "credibility_assessment": "Witness reliability assessment",
+        "legal_principles_applied": "Precedents and statutory interpretation",
+        "circumstantial_chain": "Circumstantial evidence chain (if applicable)",
+        "court_findings": "Core findings"
+      }
+    },
+    "judgement": {
+      "description": "Final decision and orders",
+      "sequence": 6,
+      "fields": {
+        "final_decision": "Appeal allowed/dismissed, bail granted/denied, conviction upheld/set aside",
+        "sentence_or_bail_conditions": "Sentence details or bail conditions",
+        "directions": "Court directions and orders"
+      }
+    }
+  },
+  "extraction_rules": {
+    "missing_required_fields": "Use 'Unknown' for required metadata",
+    "missing_optional_fields": "Use empty string '' or empty array []",
+    "no_inference": "Extract only stated facts, do not infer",
+    "paragraph_format": "Use paragraphs for narrative fields, NOT bullet points",
+    "empty_handling": "Empty fields → '' or [], never 'Unknown'"
+  }
+}

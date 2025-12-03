@@ -1,0 +1,218 @@
+"""
+Simple CLI for Weaviate ingestion pipeline.
+Quick and easy ingestion of legal case documents.
+"""
+
+import sys
+import os
+from pathlib import Path
+import argparse
+
+# Add parent directory to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from src.pipelines.weaviate_ingestion_pipeline import WeaviateIngestionPipeline
+from src.utils.logger import get_logger
+
+logger = get_logger(__name__)
+
+
+def ingest_file(file_path: str):
+    """Ingest a single PDF or markdown file."""
+    file_path = Path(file_path)
+    
+    if not file_path.exists():
+        logger.error(f"File not found: {file_path}")
+        return False
+    
+    logger.info(f"Ingesting file: {file_path.name}")
+    
+    pipeline = WeaviateIngestionPipeline()
+    result = pipeline.ingest_single(file_path)
+    
+    if result.status == "success":
+        logger.info(f"✓ Success!")
+        logger.info(f"  File ID: {result.file_id}")
+        logger.info(f"  Sections: {result.sections_count}")
+        logger.info(f"  Chunks: {result.chunks_count}")
+        
+        if result.metadata:
+            logger.info(f"  Case: {result.metadata.case_title}")
+            logger.info(f"  Court: {result.metadata.court_name}")
+            logger.info(f"  Date: {result.metadata.judgment_date}")
+    elif result.status == "skipped":
+        logger.warning(f"⚠ Skipped: {result.message}")
+    else:
+        logger.error(f"✗ Failed: {result.message}")
+    
+    pipeline.close()
+    return result.status == "success"
+
+
+def ingest_directory(directory: str, pattern: str = "*.pdf"):
+    """Ingest all matching files in a directory."""
+    directory = Path(directory)
+    
+    if not directory.exists():
+        logger.error(f"Directory not found: {directory}")
+        return False
+    
+    files = list(directory.glob(pattern))
+    
+    if not files:
+        logger.warning(f"No files matching '{pattern}' found in {directory}")
+        return False
+    
+    logger.info(f"Found {len(files)} files to ingest")
+    
+    pipeline = WeaviateIngestionPipeline()
+    results = pipeline.ingest_batch(files)
+    
+    # Summary
+    success_count = sum(1 for r in results if r.status == "success")
+    skipped_count = sum(1 for r in results if r.status == "skipped")
+    error_count = sum(1 for r in results if r.status == "error")
+    
+    logger.info(f"\nIngestion complete:")
+    logger.info(f"  ✓ Success: {success_count}")
+    logger.info(f"  ⚠ Skipped: {skipped_count}")
+    logger.info(f"  ✗ Errors: {error_count}")
+    
+    # Show errors if any
+    if error_count > 0:
+        logger.error(f"\nFailed files:")
+        for result in results:
+            if result.status == "error":
+                logger.error(f"  - {result.message}")
+    
+    pipeline.close()
+    return error_count == 0
+
+
+def verify_file(file_id: str):
+    """Verify ingestion of a specific file."""
+    logger.info(f"Verifying file_id: {file_id}")
+    
+    pipeline = WeaviateIngestionPipeline()
+    counts = pipeline.verify_ingestion(file_id)
+    
+    logger.info(f"Verification results:")
+    logger.info(f"  Documents: {counts['documents']}")
+    logger.info(f"  Metadata: {counts['metadata']}")
+    logger.info(f"  Sections: {counts['sections']}")
+    logger.info(f"  Chunks: {counts['chunks']}")
+    
+    # Check expected ratio (1:1:9:N)
+    if counts['documents'] == 1 and counts['metadata'] == 1:
+        logger.info(f"✓ Document and metadata counts correct")
+    else:
+        logger.warning(f"⚠ Unexpected document/metadata counts")
+    
+    if counts['sections'] > 0:
+        logger.info(f"✓ Sections found")
+    else:
+        logger.warning(f"⚠ No sections found")
+    
+    if counts['chunks'] > 0:
+        logger.info(f"✓ Chunks found")
+    else:
+        logger.warning(f"⚠ No chunks found")
+    
+    pipeline.close()
+    return True
+
+
+def search_sections(query: str, limit: int = 5):
+    """Search sections semantically."""
+    from src.infrastructure.weaviate_client import WeaviateClient
+    from src.core.config import Config
+    
+    logger.info(f"Searching sections for: '{query}'")
+    
+    client_wrapper = WeaviateClient()
+    client = client_wrapper.client
+    
+    sections = client.collections.get("CaseSections")
+    results = sections.query.near_text(query=query, limit=limit)
+    
+    logger.info(f"\nFound {len(results.objects)} results:")
+    logger.info("=" * 70)
+    
+    for i, obj in enumerate(results.objects, 1):
+        section_name = obj.properties.get("section_name", "unknown")
+        file_id = obj.properties.get("file_id", "unknown")
+        text = obj.properties.get("text", "")
+        
+        logger.info(f"\n{i}. Section: {section_name} (File: {file_id[:8]}...)")
+        logger.info(f"   {text[:200]}{'...' if len(text) > 200 else ''}")
+    
+    logger.info("=" * 70)
+    client_wrapper.close()
+    return True
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="CaseMind Weaviate Ingestion CLI",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Ingest single file
+  python ingest_cli.py ingest --file cases/input_files/case1.pdf
+  
+  # Ingest directory
+  python ingest_cli.py ingest --directory cases/input_files
+  
+  # Ingest with pattern
+  python ingest_cli.py ingest --directory cases/input_files --pattern "*.pdf"
+  
+  # Verify ingestion
+  python ingest_cli.py verify --file-id abc123...
+  
+  # Search sections
+  python ingest_cli.py search --query "what are the facts of the case" --limit 10
+        """
+    )
+    
+    subparsers = parser.add_subparsers(dest="command", help="Command to execute")
+    
+    # Ingest command
+    ingest_parser = subparsers.add_parser("ingest", help="Ingest files into Weaviate")
+    ingest_group = ingest_parser.add_mutually_exclusive_group(required=True)
+    ingest_group.add_argument("--file", help="Single file to ingest")
+    ingest_group.add_argument("--directory", help="Directory of files to ingest")
+    ingest_parser.add_argument("--pattern", default="*.pdf", help="File pattern (default: *.pdf)")
+    
+    # Verify command
+    verify_parser = subparsers.add_parser("verify", help="Verify ingestion of a file")
+    verify_parser.add_argument("--file-id", required=True, help="File ID to verify")
+    
+    # Search command
+    search_parser = subparsers.add_parser("search", help="Search sections semantically")
+    search_parser.add_argument("--query", required=True, help="Search query")
+    search_parser.add_argument("--limit", type=int, default=5, help="Number of results (default: 5)")
+    
+    args = parser.parse_args()
+    
+    if args.command == "ingest":
+        if args.file:
+            success = ingest_file(args.file)
+        else:
+            success = ingest_directory(args.directory, args.pattern)
+        sys.exit(0 if success else 1)
+    
+    elif args.command == "verify":
+        success = verify_file(args.file_id)
+        sys.exit(0 if success else 1)
+    
+    elif args.command == "search":
+        success = search_sections(args.query, args.limit)
+        sys.exit(0 if success else 1)
+    
+    else:
+        parser.print_help()
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
