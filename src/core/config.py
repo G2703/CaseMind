@@ -55,8 +55,8 @@ class Config:
         self.local_storage_path = Path(os.getenv('LOCAL_STORAGE_PATH', 'cases/local_storage_md'))
         
         # Chunking Configuration
-        self.chunk_size_tokens = int(os.getenv('CHUNK_SIZE_TOKENS', '512'))
-        self.chunk_overlap_tokens = int(os.getenv('CHUNK_OVERLAP_TOKENS', '51'))
+        self.chunk_size_tokens = int(os.getenv('CHUNK_SIZE_TOKENS', '300'))
+        self.chunk_overlap_tokens = int(os.getenv('CHUNK_OVERLAP_TOKENS', '30'))
         
         # Model configuration
         self.embedding_model = os.getenv('EMBEDDING_MODEL', 'sentence-transformers/all-mpnet-base-v2')
@@ -88,6 +88,7 @@ class Config:
         
         # Logging
         self.log_level = os.getenv('LOG_LEVEL', 'INFO')
+        self.log_file = os.getenv('LOG_FILE', 'logs/casemind.log')
         self.disable_logging = os.getenv('DISABLE_LOGGING', 'false').lower() in ('true', '1', 'yes')
         
         # Embedding dimensions

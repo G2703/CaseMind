@@ -76,7 +76,12 @@ class WeaviateWriter:
                     "file_id": "",
                     "status": "error",
                     "message": doc.meta["error"],
-                    "original_filename": doc.meta.get("original_filename", "unknown")
+                    "original_filename": doc.meta.get("original_filename", "unknown"),
+                    "error_details": {
+                        "stage": doc.meta.get("error_stage", "unknown"),
+                        "error_type": "PipelineError",
+                        "error_message": doc.meta["error"]
+                    }
                 })
                 continue
             
@@ -103,7 +108,7 @@ class WeaviateWriter:
                     continue
             
             try:
-                # Write to all 4 collections
+                # Write to all 4 collections (transactional-style)
                 self._write_document(client, doc, file_id, md_hash)
                 self._write_metadata(client, doc, file_id)
                 self._write_sections(client, sections, file_id)
@@ -126,12 +131,26 @@ class WeaviateWriter:
                 logger.info(f"✓ Ingested {original_filename}: {len(doc_sections)} sections, {len(doc_chunks)} chunks")
                 
             except Exception as e:
+                # Rollback: cleanup any partial writes
                 logger.error(f"Failed to ingest {original_filename}: {e}")
+                logger.info(f"Rolling back partial writes for {file_id}...")
+                
+                try:
+                    self._cleanup_partial_ingestion(client, file_id)
+                    logger.info(f"✓ Rollback successful for {file_id}")
+                except Exception as cleanup_error:
+                    logger.error(f"Rollback failed for {file_id}: {cleanup_error}")
+                
                 results.append({
                     "file_id": file_id,
                     "status": "error",
                     "message": str(e),
-                    "original_filename": original_filename
+                    "original_filename": original_filename,
+                    "error_details": {
+                        "stage": "weaviate_writer",
+                        "error_type": type(e).__name__,
+                        "error_message": str(e)
+                    }
                 })
         
         # Summary statistics
@@ -278,3 +297,33 @@ class WeaviateWriter:
         except Exception as e:
             logger.warning(f"Failed to parse date '{date_str}': {e}. Using current date.")
             return datetime.now(timezone.utc).isoformat()
+    
+    def _cleanup_partial_ingestion(self, client, file_id: str):
+        """
+        Remove all records for a file_id from all 4 collections.
+        Used for rollback when ingestion fails partway through.
+        
+        Args:
+            client: Weaviate client
+            file_id: File ID to clean up
+        """
+        collections_to_clean = [
+            "CaseDocuments",
+            "CaseMetadata",
+            "CaseSections",
+            "CaseChunks"
+        ]
+        
+        for collection_name in collections_to_clean:
+            try:
+                collection = client.collections.get(collection_name)
+                
+                # Delete all objects with this file_id
+                collection.data.delete_many(
+                    where=Filter.by_property("file_id").equal(file_id)
+                )
+                
+                logger.debug(f"Cleaned {collection_name} for file_id: {file_id}")
+            
+            except Exception as e:
+                logger.warning(f"Failed to clean {collection_name} for {file_id}: {e}")

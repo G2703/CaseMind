@@ -148,6 +148,11 @@ class EmbeddingGenerator:
             
         except Exception as e:
             logger.error(f"Failed to generate embeddings: {e}")
+            # Mark documents with error
+            for doc in documents:
+                if "error" not in doc.meta:
+                    doc.meta["error"] = str(e)
+                    doc.meta["error_stage"] = "embedding_generator"
         
         return {
             "documents": documents,

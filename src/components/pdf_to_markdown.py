@@ -252,7 +252,8 @@ Do not add any commentary or analysis - only extract the text."""
                     meta={
                         "original_filename": file_path.name,
                         "file_path": str(file_path),
-                        "error": str(e)
+                        "error": str(e),
+                        "error_stage": "pdf_converter"
                     }
                 )
                 documents.append(doc)

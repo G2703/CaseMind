@@ -138,8 +138,9 @@ class MarkdownNormalizer:
                 processed_docs.append(doc)
                 
             except Exception as e:
-                logger.error(f"Failed to normalize {doc.meta.get('original_filename', 'unknown')}: {e}")
+                logger.error(f"Failed to normalize markdown for {doc.meta.get('original_filename', 'unknown')}: {e}")
                 doc.meta["error"] = str(e)
+                doc.meta["error_stage"] = "markdown_normalizer"
                 processed_docs.append(doc)
         
         return {"documents": processed_docs}

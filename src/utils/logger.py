@@ -7,6 +7,7 @@ import logging
 import sys
 from pathlib import Path
 from typing import Optional
+from logging.handlers import RotatingFileHandler
 import os
 
 # Add parent directory to path
@@ -59,12 +60,32 @@ def setup_logger(
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
     
-    # File handler (if specified)
+    # File handler with rotation (if specified)
     if log_file:
         log_file = Path(log_file)
         log_file.parent.mkdir(parents=True, exist_ok=True)
         
-        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        # Rotating file handler: max 10MB per file, keep last 5 files
+        file_handler = RotatingFileHandler(
+            log_file,
+            maxBytes=10 * 1024 * 1024,  # 10MB
+            backupCount=5,
+            encoding='utf-8'
+        )
+        file_handler.setLevel(log_level)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+    elif hasattr(config, 'log_file') and config.log_file:
+        # Use log file from config if not explicitly provided
+        log_file = Path(config.log_file)
+        log_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        file_handler = RotatingFileHandler(
+            log_file,
+            maxBytes=10 * 1024 * 1024,  # 10MB
+            backupCount=5,
+            encoding='utf-8'
+        )
         file_handler.setLevel(log_level)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)

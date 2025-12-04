@@ -82,6 +82,8 @@ class SummaryExtractor:
                 
             except Exception as e:
                 logger.error(f"Failed to extract summary from {doc.meta.get('original_filename', 'unknown')}: {e}")
+                doc.meta["error"] = str(e)
+                doc.meta["error_stage"] = "summary_extractor"
         
         return {
             "documents": documents,

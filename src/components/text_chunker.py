@@ -150,6 +150,8 @@ class TextChunker:
                 
             except Exception as e:
                 logger.error(f"Failed to chunk {doc.meta.get('original_filename', 'unknown')}: {e}")
+                doc.meta["error"] = str(e)
+                doc.meta["error_stage"] = "text_chunker"
         
         logger.info(f"Total chunks created: {len(all_chunks)}")
         return {

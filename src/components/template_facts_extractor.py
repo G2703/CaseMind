@@ -101,6 +101,8 @@ class TemplateFactsExtractor:
                 
             except Exception as e:
                 logger.error(f"Failed to extract template facts from {doc.meta.get('original_filename', 'unknown')}: {e}")
+                doc.meta["error"] = str(e)
+                doc.meta["error_stage"] = "template_facts_extractor"
         
         return {
             "documents": documents,
