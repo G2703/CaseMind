@@ -6,7 +6,7 @@ Orchestrates PDF → Markdown → Chunks/Sections → Embeddings → Weaviate fl
 import sys
 import os
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import asdict
 import uuid
 from datetime import datetime, timezone
@@ -27,6 +27,7 @@ from src.services.markdown_service import MarkdownService
 from src.services.chunking_service import ChunkingService
 from src.services.extraction_service import ExtractionService
 from src.services.embedding_service import EmbeddingService
+from src.services.pdf_extraction_service import PDFExtractionService
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -66,6 +67,7 @@ class WeaviateIngestionPipeline:
         self.chunking_service = ChunkingService()
         self.extraction_service = ExtractionService(self.config)
         self.embedding_service = EmbeddingService()
+        self.pdf_extraction_service = PDFExtractionService()
         
         logger.info("WeaviateIngestionPipeline initialized")
     
@@ -158,6 +160,45 @@ class WeaviateIngestionPipeline:
         
         return sections
     
+    def _create_template_facts_section(self, template_facts: Dict[str, Any]) -> CaseSection:
+        """
+        Create a CaseSection from template-specific facts.
+        
+        Args:
+            template_facts: Dictionary with template_id, template_schema, and extracted_facts
+            
+        Returns:
+            CaseSection object with formatted template facts
+        """
+        import json
+        
+        template_id = template_facts.get('template_id', 'Unknown')
+        extracted_facts = template_facts.get('extracted_facts', {})
+        
+        # Format the template facts as readable text
+        facts_text = f"Template: {template_id}\n\n"
+        
+        # Convert extracted facts to formatted text
+        for key, value in extracted_facts.items():
+            if isinstance(value, dict):
+                facts_text += f"{key.upper()}:\n"
+                for sub_key, sub_value in value.items():
+                    if isinstance(sub_value, list):
+                        facts_text += f"  {sub_key}: {', '.join(str(v) for v in sub_value)}\n"
+                    else:
+                        facts_text += f"  {sub_key}: {sub_value}\n"
+                facts_text += "\n"
+            elif isinstance(value, list):
+                facts_text += f"{key}: {', '.join(str(v) for v in value)}\n"
+            else:
+                facts_text += f"{key}: {value}\n"
+        
+        return CaseSection(
+            section_name="Template Fact Extraction",
+            sequence_number=5,
+            text=facts_text
+        )
+    
     def ingest_single(
         self,
         file_path: Path,
@@ -180,10 +221,8 @@ class WeaviateIngestionPipeline:
             # Stage 1: Get markdown content
             if markdown_text is None:
                 if file_path.suffix.lower() == '.pdf':
-                    from haystack.components.converters import PyPDFToDocument
-                    converter = PyPDFToDocument()
-                    docs = converter.run(sources=[file_path])["documents"]
-                    markdown_text = "\n\n".join([doc.content for doc in docs])
+                    # Use intelligent PDF extraction with fallback
+                    markdown_text = self.pdf_extraction_service.extract(file_path)
                     logger.info(f"Extracted markdown from PDF: {len(markdown_text)} chars")
                 else:
                     markdown_text = file_path.read_text(encoding='utf-8')
@@ -236,11 +275,16 @@ class WeaviateIngestionPipeline:
             if template_facts:
                 logger.info(f"Template fact extraction complete: {template_facts['template_id']}")
                 logger.info(f"Extracted facts structure: {list(template_facts['extracted_facts'].keys())}")
+                
+                # Create a section for template facts
+                template_facts_section = self._create_template_facts_section(template_facts)
+                sections.append(template_facts_section)
+                logger.info(f"Added template facts as section (total sections: {len(sections)})")
             else:
                 logger.warning("No template facts extracted (no matching template found)")
             
             # Stage 5: Generate embeddings
-            # Sections
+            # Sections (including template facts section if present)
             section_texts = [s.text for s in sections]
             section_embeddings = self.embedding_service.embed_batch(section_texts, normalize=True)
             
@@ -291,7 +335,8 @@ class WeaviateIngestionPipeline:
                 "bench_strength": len(metadata.judges_coram) if metadata.judges_coram else 0,
                 "citation": metadata.citation,
                 "counsel_petitioner": metadata.counsel_for_appellant,
-                "counsel_respondent": metadata.counsel_for_respondent
+                "counsel_respondent": metadata.counsel_for_respondent,
+                "most_appropriate_section": metadata.most_appropriate_section
             }
             
             with metadata_collection.batch.dynamic() as batch:

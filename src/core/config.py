@@ -73,6 +73,9 @@ class Config:
         # OpenAI configuration
         self.openai_api_key = os.getenv('OPENAI_API_KEY', file_config.get('openai_api_key', ''))
         
+        # Gemini configuration
+        self.gemini_api_key = os.getenv('GEMINI_API_KEY', file_config.get('gemini_api_key', ''))
+        
         # Paths
         self.ontology_path = Path(os.getenv('ONTOLOGY_PATH', 'Ontology_schema/ontology_schema.json'))
         self.templates_dir = Path(os.getenv('TEMPLATES_DIR', 'templates'))

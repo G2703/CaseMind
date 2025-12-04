@@ -16,6 +16,7 @@ scikit-learn>=1.3.0                    # ML utilities
 # ========================================================================
 haystack-ai>=2.0.0                     # Core Haystack framework
 weaviate-haystack>=1.0.0               # Haystack Weaviate integration
+nltk>=3.9.1                            # Natural Language Toolkit (required for Haystack sentence splitting)
 
 # ========================================================================
 # Vector Database
@@ -26,6 +27,9 @@ weaviate-client>=4.9.0                 # Weaviate Python client v4
 # PDF Processing
 # ========================================================================
 PyMuPDF>=1.23.0                        # PDF text extraction (fitz)
+pymupdf4llm>=0.0.5                     # PyMuPDF markdown extraction for LLMs
+google-generativeai>=0.3.0             # Gemini Vision API for scanned PDFs
+Pillow>=10.0.0                         # Image processing for Gemini Vision
 
 # ========================================================================
 # Configuration and Environment

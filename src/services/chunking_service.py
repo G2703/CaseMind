@@ -1,10 +1,12 @@
 """
-Text chunking service.
-Handles tokenization and chunking with overlap for embedding.
+Text chunking service using Haystack's RecursiveDocumentSplitter.
+Implements semantic chunking with paragraph and sentence separators.
 """
 
 import logging
 from typing import List
+from haystack.components.preprocessors import RecursiveDocumentSplitter
+from haystack.dataclasses import Document as HaystackDocument
 from sentence_transformers import SentenceTransformer
 import sys
 import os
@@ -20,13 +22,13 @@ logger = logging.getLogger(__name__)
 
 class ChunkingService:
     """
-    Service for text chunking with token-based splitting.
-    Uses embedding model's tokenizer for accurate token counting.
+    Service for semantic text chunking using Haystack's RecursiveDocumentSplitter.
+    Splits text at natural boundaries (paragraphs, sentences) for legal documents.
     """
     
     def __init__(self, chunk_size: int = None, overlap: int = None):
         """
-        Initialize chunking service.
+        Initialize chunking service with RecursiveDocumentSplitter.
         
         Args:
             chunk_size: Number of tokens per chunk (default from config)
@@ -36,17 +38,38 @@ class ChunkingService:
         self.chunk_size = chunk_size or config.chunk_size_tokens
         self.overlap = overlap or config.chunk_overlap_tokens
         
-        # Initialize tokenizer from embedding model
+        # Initialize Haystack's RecursiveDocumentSplitter with paragraph separators
+        # Separators are applied in order: double newline (paragraphs) -> sentences -> single newline -> space
+        self.splitter = RecursiveDocumentSplitter(
+            split_length=self.chunk_size,
+            split_overlap=self.overlap,
+            split_unit="token",
+            separators=["\n\n", "sentence", "\n", " "],
+            sentence_splitter_params={
+                "language": "en",
+                "use_split_rules": True,
+                "keep_white_spaces": False
+            }
+        )
+        
+        # Initialize tokenizer for token counting
         embedding_model_name = config.embedding_model
         logger.info(f"Loading tokenizer from {embedding_model_name}")
         self.model = SentenceTransformer(embedding_model_name)
         self.tokenizer = self.model.tokenizer
         
-        logger.info(f"ChunkingService initialized (chunk_size={self.chunk_size}, overlap={self.overlap})")
+        # Warm up the splitter
+        self.splitter.warm_up()
+        
+        logger.info(
+            f"ChunkingService initialized with RecursiveDocumentSplitter "
+            f"(chunk_size={self.chunk_size} tokens, overlap={self.overlap} tokens, "
+            f"separators=['\\n\\n', 'sentence', '\\n', ' '])"
+        )
     
     def chunk_text(self, text: str) -> List[TextChunk]:
         """
-        Split text into overlapping chunks based on token count.
+        Split text into overlapping chunks using recursive separator-based splitting.
         
         Args:
             text: Input text to chunk
@@ -58,46 +81,36 @@ class ChunkingService:
             logger.warning("Empty text provided for chunking")
             return []
         
-        # Tokenize the entire text
-        tokens = self.tokenizer.tokenize(text)
-        total_tokens = len(tokens)
+        # Create Haystack document
+        haystack_doc = HaystackDocument(content=text)
         
-        if total_tokens == 0:
-            logger.warning("Text tokenized to zero tokens")
+        # Split using RecursiveDocumentSplitter
+        result = self.splitter.run(documents=[haystack_doc])
+        split_documents = result.get("documents", [])
+        
+        if not split_documents:
+            logger.warning("No chunks created from text")
             return []
         
-        logger.debug(f"Text tokenized to {total_tokens} tokens")
-        
+        # Convert Haystack documents to TextChunk objects
         chunks = []
-        chunk_index = 0
-        start_idx = 0
-        
-        while start_idx < total_tokens:
-            # Calculate end index for this chunk
-            end_idx = min(start_idx + self.chunk_size, total_tokens)
+        for idx, doc in enumerate(split_documents):
+            chunk_text = doc.content
+            token_count = self.get_token_count(chunk_text)
             
-            # Extract chunk tokens
-            chunk_tokens = tokens[start_idx:end_idx]
-            
-            # Convert tokens back to text
-            chunk_text = self.tokenizer.convert_tokens_to_string(chunk_tokens)
-            
-            # Create TextChunk object
             chunk = TextChunk(
-                chunk_index=chunk_index,
+                chunk_index=idx,
                 text=chunk_text,
-                token_count=len(chunk_tokens)
+                token_count=token_count
             )
-            
             chunks.append(chunk)
-            
-            logger.debug(f"Created chunk {chunk_index}: {len(chunk_tokens)} tokens")
-            
-            # Move start index forward (with overlap)
-            chunk_index += 1
-            start_idx += (self.chunk_size - self.overlap)
+            logger.debug(f"Created chunk {idx}: {token_count} tokens")
         
-        logger.info(f"Created {len(chunks)} chunks from {total_tokens} tokens")
+        total_tokens = sum(c.token_count for c in chunks)
+        logger.info(
+            f"Created {len(chunks)} chunks from {total_tokens} total tokens "
+            f"(avg {total_tokens // len(chunks)} tokens/chunk)"
+        )
         
         return chunks
     
