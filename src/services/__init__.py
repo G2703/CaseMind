@@ -1,18 +1,10 @@
 """
-Service layer for business logic.
-Implements domain services for markdown processing, chunking, extraction, and embedding.
+Service layer for CaseMind.
+Only contains ExtractionService - other services have been integrated into Haystack components.
 """
 
-from .markdown_service import MarkdownService
-from .chunking_service import ChunkingService
 from .extraction_service import ExtractionService
-from .embedding_service import EmbeddingService
-from .pdf_extraction_service import PDFExtractionService
 
 __all__ = [
-    'MarkdownService',
-    'ChunkingService',
     'ExtractionService',
-    'EmbeddingService',
-    'PDFExtractionService',
 ]

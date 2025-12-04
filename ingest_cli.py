@@ -1,6 +1,6 @@
 """
 Simple CLI for Weaviate ingestion pipeline.
-Quick and easy ingestion of legal case documents.
+Quick and easy ingestion of legal case documents using Haystack.
 """
 
 import sys
@@ -11,7 +11,7 @@ import argparse
 # Add parent directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-from src.pipelines.weaviate_ingestion_pipeline import WeaviateIngestionPipeline
+from src.pipelines.weaviate_ingestion_pipeline import create_weaviate_ingestion_pipeline
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -27,26 +27,35 @@ def ingest_file(file_path: str):
     
     logger.info(f"Ingesting file: {file_path.name}")
     
-    pipeline = WeaviateIngestionPipeline()
-    result = pipeline.ingest_single(file_path)
+    # Create Haystack pipeline
+    pipeline = create_weaviate_ingestion_pipeline()
     
-    if result.status == "success":
+    # Run pipeline
+    result = pipeline.run({
+        "pdf_converter": {"file_paths": [file_path]}
+    })
+    
+    # Extract results
+    results = result.get("weaviate_writer", {}).get("results", [])
+    
+    if not results:
+        logger.error(f"✗ Failed: No results from pipeline")
+        return False
+    
+    res = results[0]
+    status = res.get("status", "error")
+    
+    if status == "success":
         logger.info(f"✓ Success!")
-        logger.info(f"  File ID: {result.file_id}")
-        logger.info(f"  Sections: {result.sections_count}")
-        logger.info(f"  Chunks: {result.chunks_count}")
-        
-        if result.metadata:
-            logger.info(f"  Case: {result.metadata.case_title}")
-            logger.info(f"  Court: {result.metadata.court_name}")
-            logger.info(f"  Date: {result.metadata.judgment_date}")
-    elif result.status == "skipped":
-        logger.warning(f"⚠ Skipped: {result.message}")
+        logger.info(f"  File ID: {res.get('file_id', '')}")
+        logger.info(f"  Sections: {res.get('sections_count', 0)}")
+        logger.info(f"  Chunks: {res.get('chunks_count', 0)}")
+    elif status == "skipped":
+        logger.warning(f"⚠ Skipped: {res.get('message', '')}")
     else:
-        logger.error(f"✗ Failed: {result.message}")
+        logger.error(f"✗ Failed: {res.get('message', '')}")
     
-    pipeline.close()
-    return result.status == "success"
+    return status == "success"
 
 
 def ingest_directory(directory: str, pattern: str = "*.pdf"):
@@ -65,13 +74,21 @@ def ingest_directory(directory: str, pattern: str = "*.pdf"):
     
     logger.info(f"Found {len(files)} files to ingest")
     
-    pipeline = WeaviateIngestionPipeline()
-    results = pipeline.ingest_batch(files)
+    # Create Haystack pipeline
+    pipeline = create_weaviate_ingestion_pipeline()
     
-    # Summary
-    success_count = sum(1 for r in results if r.status == "success")
-    skipped_count = sum(1 for r in results if r.status == "skipped")
-    error_count = sum(1 for r in results if r.status == "error")
+    # Run pipeline with all files
+    result = pipeline.run({
+        "pdf_converter": {"file_paths": files}
+    })
+    
+    # Extract results
+    results_data = result.get("weaviate_writer", {}).get("results", [])
+    
+    # Count statistics
+    success_count = sum(1 for r in results_data if r.get("status") == "success")
+    skipped_count = sum(1 for r in results_data if r.get("status") == "skipped")
+    error_count = sum(1 for r in results_data if r.get("status") == "error")
     
     logger.info(f"\nIngestion complete:")
     logger.info(f"  ✓ Success: {success_count}")
@@ -81,44 +98,83 @@ def ingest_directory(directory: str, pattern: str = "*.pdf"):
     # Show errors if any
     if error_count > 0:
         logger.error(f"\nFailed files:")
-        for result in results:
-            if result.status == "error":
-                logger.error(f"  - {result.message}")
+        for res in results_data:
+            if res.get("status") == "error":
+                logger.error(f"  - {res.get('message', '')}")
     
-    pipeline.close()
     return error_count == 0
 
 
 def verify_file(file_id: str):
     """Verify ingestion of a specific file."""
+    from src.infrastructure.weaviate_client import WeaviateClient
+    from weaviate.classes.query import Filter
+    
     logger.info(f"Verifying file_id: {file_id}")
     
-    pipeline = WeaviateIngestionPipeline()
-    counts = pipeline.verify_ingestion(file_id)
+    client_wrapper = WeaviateClient()
+    client = client_wrapper.client
     
-    logger.info(f"Verification results:")
-    logger.info(f"  Documents: {counts['documents']}")
-    logger.info(f"  Metadata: {counts['metadata']}")
-    logger.info(f"  Sections: {counts['sections']}")
-    logger.info(f"  Chunks: {counts['chunks']}")
+    counts = {
+        "documents": 0,
+        "metadata": 0,
+        "sections": 0,
+        "chunks": 0
+    }
     
-    # Check expected ratio (1:1:9:N)
-    if counts['documents'] == 1 and counts['metadata'] == 1:
-        logger.info(f"✓ Document and metadata counts correct")
-    else:
-        logger.warning(f"⚠ Unexpected document/metadata counts")
+    try:
+        # Count in each collection
+        doc_collection = client.collections.get("CaseDocuments")
+        doc_result = doc_collection.query.fetch_objects(
+            filters=Filter.by_property("file_id").equal(file_id),
+            limit=1
+        )
+        counts["documents"] = len(doc_result.objects)
+        
+        metadata_collection = client.collections.get("CaseMetadata")
+        metadata_result = metadata_collection.query.fetch_objects(
+            filters=Filter.by_property("file_id").equal(file_id),
+            limit=1
+        )
+        counts["metadata"] = len(metadata_result.objects)
+        
+        sections_collection = client.collections.get("CaseSections")
+        sections_result = sections_collection.aggregate.over_all(
+            filters=Filter.by_property("file_id").equal(file_id)
+        )
+        counts["sections"] = sections_result.total_count
+        
+        chunks_collection = client.collections.get("CaseChunks")
+        chunks_result = chunks_collection.aggregate.over_all(
+            filters=Filter.by_property("file_id").equal(file_id)
+        )
+        counts["chunks"] = chunks_result.total_count
+        
+        logger.info(f"Verification results:")
+        logger.info(f"  Documents: {counts['documents']}")
+        logger.info(f"  Metadata: {counts['metadata']}")
+        logger.info(f"  Sections: {counts['sections']}")
+        logger.info(f"  Chunks: {counts['chunks']}")
+        
+        # Check expected ratio (1:1:9:N)
+        if counts['documents'] == 1 and counts['metadata'] == 1:
+            logger.info(f"✓ Document and metadata counts correct")
+        else:
+            logger.warning(f"⚠ Unexpected document/metadata counts")
+        
+        if counts['sections'] > 0:
+            logger.info(f"✓ Sections found")
+        else:
+            logger.warning(f"⚠ No sections found")
+        
+        if counts['chunks'] > 0:
+            logger.info(f"✓ Chunks found")
+        else:
+            logger.warning(f"⚠ No chunks found")
+        
+    finally:
+        client_wrapper.close()
     
-    if counts['sections'] > 0:
-        logger.info(f"✓ Sections found")
-    else:
-        logger.warning(f"⚠ No sections found")
-    
-    if counts['chunks'] > 0:
-        logger.info(f"✓ Chunks found")
-    else:
-        logger.warning(f"⚠ No chunks found")
-    
-    pipeline.close()
     return True
 
 
