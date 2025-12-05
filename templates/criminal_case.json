@@ -18,11 +18,16 @@
             "nature_of_offense_category": {
               "type": "string",
               "description": "The broad category of the offense (e.g., 'Violent Offense', 'Property Offense')."
+            },
+             "key_facts": {
+              "type": "string",
+              "description": "Key determinative facts"
             }
           },
           "required": [
             "ipc_sections_charged",
-            "nature_of_offense_category"
+            "nature_of_offense_category",
+            "key_facts"
           ],
           "additionalProperties": false
         },

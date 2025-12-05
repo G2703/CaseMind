@@ -265,11 +265,16 @@ class ExtractionService:
         
         # Check if we have a template for this section (try both formats)
         template = self.section_templates.get(template_key_underscore) or self.section_templates.get(template_key_space)
+        
+        # Fallback to default criminal_case template if no specific template found
         if not template:
-            print(f"No template found for section: {most_appropriate}")
-            print(f"Available templates: {list(self.section_templates.keys())}")
-            logger.warning(f"No template found for section: {most_appropriate}")
-            return None
+            logger.warning(f"No specific template found for section: {most_appropriate}, using default criminal_case template")
+            template = self.section_templates.get('CRIMINAL CASE')
+            
+            if not template:
+                # If criminal_case also not available, log error and return None
+                logger.error(f"Default criminal_case template not found. Available templates: {list(self.section_templates.keys())}")
+                return None
         
         logger.info(f"Stage 2 (template_fact_extraction): Extracting template-specific facts for {most_appropriate}...")
         

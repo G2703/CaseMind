@@ -94,6 +94,40 @@ class Config:
         # Embedding dimensions
         self.embedding_dim = 768  # for all-mpnet-base-v2
         
+        # Parallel Processing Configuration
+        self.max_workers = int(os.getenv('MAX_WORKERS', '3'))
+        self.worker_queue_size = int(os.getenv('WORKER_QUEUE_SIZE', '100'))
+        
+        # Batch Processing Configuration
+        self.batch_size_pdf = int(os.getenv('BATCH_SIZE_PDF', '10'))
+        self.batch_size_embedding = int(os.getenv('BATCH_SIZE_EMBEDDING', '100'))
+        self.batch_size_weaviate = int(os.getenv('BATCH_SIZE_WEAVIATE', '200'))
+        
+        # API Rate Limiting
+        self.openai_rpm = int(os.getenv('OPENAI_RPM', '3'))
+        self.openai_max_retries = int(os.getenv('OPENAI_MAX_RETRIES', '3'))
+        self.openai_retry_delay = int(os.getenv('OPENAI_RETRY_DELAY', '2'))
+        
+        # Resource Management
+        self.weaviate_pool_size = int(os.getenv('WEAVIATE_POOL_SIZE', '3'))
+        self.embedding_warmup = os.getenv('EMBEDDING_WARMUP', 'true').lower() == 'true'
+        self.keep_alive = os.getenv('KEEP_ALIVE', 'true').lower() == 'true'
+        
+        # Lifecycle Configuration
+        self.startup_timeout = int(os.getenv('STARTUP_TIMEOUT', '120'))
+        self.shutdown_grace_period = int(os.getenv('SHUTDOWN_GRACE_PERIOD', '30'))
+        self.health_check_interval = int(os.getenv('HEALTH_CHECK_INTERVAL', '30'))
+        
+        # Error Handling
+        self.auto_retry_failed = os.getenv('AUTO_RETRY_FAILED', 'true').lower() == 'true'
+        self.save_failed_files = os.getenv('SAVE_FAILED_FILES', 'true').lower() == 'true'
+        self.continue_on_error = os.getenv('CONTINUE_ON_ERROR', 'true').lower() == 'true'
+        
+        # Performance Monitoring
+        self.enable_metrics = os.getenv('ENABLE_METRICS', 'true').lower() == 'true'
+        self.metrics_output = Path(os.getenv('METRICS_OUTPUT', 'logs/metrics.json'))
+        self.show_dashboard = os.getenv('SHOW_DASHBOARD', 'true').lower() == 'true'
+        
         logger.info("Configuration loaded successfully")
     
     def get(self, key: str, default: Any = None) -> Any:

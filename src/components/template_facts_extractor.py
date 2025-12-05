@@ -199,7 +199,7 @@ class TemplateFactsExtractor:
                 facts_text += f"{key}: {value}\n"
         
         return {
-            "section_name": "Template Fact Extraction",
+            "section_name": "template_Fact_extraction",
             "sequence_number": 5,
             "text": facts_text,
             "file_id": file_id
