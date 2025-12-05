@@ -124,10 +124,9 @@ class MarkdownNormalizer:
                 # Normalize, hash, and save markdown
                 md_hash, md_uri = self._save_markdown(doc.content)
                 
-                # Generate deterministic file_id from ORIGINAL FILENAME (not md_hash)
-                # This ensures same file always gets same file_id for duplicate detection
-                original_filename = doc.meta.get("original_filename", "unknown")
-                file_id = str(uuid.uuid5(self.NAMESPACE, original_filename))
+                # Generate deterministic file_id from md_hash (content-based)
+                # This makes duplicate detection content-driven and stable
+                file_id = str(uuid.uuid5(self.NAMESPACE, md_hash))
                 
                 # Update document metadata
                 doc.meta.update({
@@ -136,6 +135,7 @@ class MarkdownNormalizer:
                     "file_id": file_id
                 })
                 
+                original_filename = doc.meta.get("original_filename", "unknown")
                 logger.info(f"✓ Normalized {original_filename}: hash={md_hash[:8]}..., file_id={file_id}")
                 processed_docs.append(doc)
                 

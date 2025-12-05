@@ -13,7 +13,13 @@ import json
 
 from src.core.config import Config
 from src.core.lifecycle import LifecycleManager
-from src.pipelines.stages import PDFStage, ExtractionStage, EmbeddingStage, IngestionStage
+from src.pipelines.stages import (
+    PDFStage,
+    ExtractionStage,
+    EmbeddingStage,
+    IngestionStage,
+    HaystackWrapperStage,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +72,7 @@ class OptimizedPipeline:
         self.extraction_stage: Optional[ExtractionStage] = None
         self.embedding_stage: Optional[EmbeddingStage] = None
         self.ingestion_stage: Optional[IngestionStage] = None
+        self.haystack_wrapper: Optional[HaystackWrapperStage] = None
         
         # Progress tracking
         self.progress_callback: Optional[callable] = None
@@ -105,13 +112,15 @@ class OptimizedPipeline:
                 skip_existing=self.skip_existing
             )
             
-            # Extraction Stage
-            self.extraction_stage = ExtractionStage(config=self.config)
-            await self.extraction_stage.initialize(self.lifecycle_manager.openai_pool)
+            # Initialize Haystack wrapper (runs extraction+embedding as one stage)
+            self.haystack_wrapper = HaystackWrapperStage(config=self.config)
+            await self.haystack_wrapper.initialize(
+                self.lifecycle_manager.openai_pool,
+                self.lifecycle_manager.embedding_pool,
+            )
             
-            # Embedding Stage
-            self.embedding_stage = EmbeddingStage(config=self.config)
-            await self.embedding_stage.initialize(self.lifecycle_manager.embedding_pool)
+            # Embedding Stage is managed by the Haystack wrapper; keep attribute for compatibility
+            self.embedding_stage = None
             
             # Ingestion Stage
             self.ingestion_stage = IngestionStage(
@@ -189,22 +198,27 @@ class OptimizedPipeline:
                 logger.warning("No new files to process (all duplicates or failed)")
                 return self._create_result(start_time, pdf_results, [], [], skipped_count=len(skipped_pdfs))
             
-            # Stage 2: Extraction (Rate-limited Sequential)
-            logger.info(f"\n[Stage 2/4] LLM Extraction (Rate-limited: {self.config.openai_rpm} RPM)")
-            logger.info(f"Processing {len(files_to_process)} new files (estimated time: ~{len(files_to_process) * 40 / 60:.1f} minutes)")
-            
+            # Stage 2 & 3: Extraction + Embedding (either via Haystack wrapper or internal stages)
+            # Stage 2 & 3: Always run via Haystack wrapper (Extraction + Embedding)
+            logger.info(f"\n[Stage 2/3] Haystack Wrapper (Extraction + Embedding)")
             documents = [r.document for r in files_to_process]
-            extraction_results = await self.extraction_stage.process_batch(
+            # The wrapper returns paired tuples (extraction_result, embedding_result)
+            paired_results = await self.haystack_wrapper.process_batch(
                 documents,
-                progress_callback=self._create_stage_callback("extraction", progress_callback)
+                progress_callback=self._create_stage_callback("haystack_wrapper", progress_callback)
             )
-            
+
+            # Unpack into separate lists and handle failures
+            extraction_results = [p[0] for p in paired_results]
+            embedding_results = [p[1] for p in paired_results]
+
             successful_extractions = [r for r in extraction_results if r.success]
             failed_extractions = [r for r in extraction_results if not r.success]
-            
-            logger.info(f"✓ Extraction Stage: {len(successful_extractions)}/{len(extraction_results)} successful")
-            
-            # Track failed extractions
+
+            successful_embeddings = [r for r in embedding_results if r.success]
+            failed_embeddings = [r for r in embedding_results if not r.success]
+
+            # Track failed extractions and embeddings
             for failed in failed_extractions:
                 self.failed_files.append({
                     "file_id": failed.file_id,
@@ -212,25 +226,7 @@ class OptimizedPipeline:
                     "stage": "extraction",
                     "error": failed.error
                 })
-            
-            if not successful_extractions:
-                logger.warning("No extractions successful")
-                return self._create_result(start_time, pdf_results, extraction_results, [], skipped_count=len(skipped_pdfs))
-            
-            # Stage 3: Embedding (Batched)
-            logger.info(f"\n[Stage 3/4] Embedding Generation (Batched: {self.config.batch_size_embedding})")
-            
-            embedding_results = await self.embedding_stage.process_batch_optimized(
-                successful_extractions,
-                progress_callback=self._create_stage_callback("embedding", progress_callback)
-            )
-            
-            successful_embeddings = [r for r in embedding_results if r.success]
-            failed_embeddings = [r for r in embedding_results if not r.success]
-            
-            logger.info(f"✓ Embedding Stage: {len(successful_embeddings)}/{len(embedding_results)} successful")
-            
-            # Track failed embeddings
+
             for failed in failed_embeddings:
                 self.failed_files.append({
                     "file_id": failed.file_id,
@@ -238,9 +234,9 @@ class OptimizedPipeline:
                     "stage": "embedding",
                     "error": failed.error
                 })
-            
-            if not successful_embeddings:
-                logger.warning("No embeddings generated successfully")
+
+            if not successful_extractions or not successful_embeddings:
+                logger.warning("No extractions/embeddings successful via Haystack wrapper")
                 return self._create_result(start_time, pdf_results, extraction_results, embedding_results, skipped_count=len(skipped_pdfs))
             
             # Stage 4: Ingestion (Batched Weaviate writes)

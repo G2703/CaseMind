@@ -12,6 +12,7 @@ from datetime import datetime
 from src.core.config import Config
 from src.core.pools import WeaviateConnectionPool, EmbeddingModelPool, OpenAIClientPool
 from src.core.lifecycle.health_checker import HealthChecker, HealthStatus, ComponentHealth
+from typing import Set
 
 logger = logging.getLogger(__name__)
 
@@ -59,6 +60,12 @@ class LifecycleManager:
         self.weaviate_pool: Optional[WeaviateConnectionPool] = None
         self.embedding_pool: Optional[EmbeddingModelPool] = None
         self.openai_pool: Optional[OpenAIClientPool] = None
+
+        # In-memory index of existing markdown hashes (md_hash)
+        self.existing_md_hashes: Set[str] = set()
+
+        # Single-writer lock to prevent concurrent writes in-process
+        self.write_lock: Optional[asyncio.Lock] = None
         
         # Health monitoring
         self.health_checker: Optional[HealthChecker] = None
@@ -90,6 +97,35 @@ class LifecycleManager:
             self.weaviate_pool = WeaviateConnectionPool(pool_size=pool_size, config=self.config)
             await self.weaviate_pool.initialize()
             logger.info(f"✓ Weaviate pool ready ({pool_size} connections)")
+
+            # Create single-writer lock and attach to pool for ingestion stage
+            self.write_lock = asyncio.Lock()
+            # expose lock on pool for stages that need to coordinate writes
+            setattr(self.weaviate_pool, 'write_lock', self.write_lock)
+
+            # Preload existing md_hash values into memory to avoid round-trips
+            try:
+                client = self.weaviate_pool.client.client
+                if client.collections.exists('CaseDocuments'):
+                    coll = client.collections.get('CaseDocuments')
+                    # Fetch objects (use a large limit) and collect md_hash properties
+                    try:
+                        res = coll.query.fetch_objects(limit=100000)
+                        hashes = set()
+                        for obj in getattr(res, 'objects', []) or []:
+                            props = getattr(obj, 'properties', None) or obj.get('properties', {})
+                            md = props.get('md_hash')
+                            if md:
+                                hashes.add(md)
+                        self.existing_md_hashes = hashes
+                        setattr(self.weaviate_pool, 'existing_md_hashes', self.existing_md_hashes)
+                        logger.info(f"Loaded {len(hashes)} existing md_hashes into memory")
+                    except Exception as qerr:
+                        logger.warning(f"Failed to preload md_hashes from Weaviate: {qerr}")
+                else:
+                    logger.info("CaseDocuments collection does not exist; skipping md_hash preload")
+            except Exception as e:
+                logger.warning(f"Could not preload md_hashes: {e}")
             
             # Step 2: Initialize embedding model pool
             if os.getenv('EMBEDDING_WARMUP', 'true').lower() == 'true':

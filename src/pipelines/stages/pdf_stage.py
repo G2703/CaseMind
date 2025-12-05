@@ -177,7 +177,14 @@ class PDFStage:
         Returns:
             True if duplicate exists, False otherwise
         """
+        # Use in-memory md_hash set if available for fast check
         try:
+            existing_set = getattr(self.weaviate_pool, 'existing_md_hashes', None)
+            if existing_set is not None:
+                # file_id is generated from md_hash; membership check is O(1)
+                return file_id in existing_set
+
+            # Fallback: make a synchronous query via pool
             async with self.weaviate_pool.acquire() as client:
                 loop = asyncio.get_event_loop()
                 exists = await loop.run_in_executor(
@@ -188,8 +195,9 @@ class PDFStage:
                 )
                 return exists
         except Exception as e:
-            logger.error(f"Duplicate check failed for {filename}: {e}")
-            return False  # Continue processing on error
+            # As requested: do not process the file if duplicate check fails
+            logger.error(f"Duplicate check FAILED for {filename}: {e} -> treating as duplicate (skipping)")
+            return True
     
     def _check_duplicate_sync(self, client, file_id: str) -> bool:
         """Synchronous duplicate check."""

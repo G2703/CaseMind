@@ -98,27 +98,59 @@ class IngestionStage:
             
             # Check if already exists
             if self.skip_existing:
-                exists = await self._check_exists(file_id)
-                if exists:
-                    logger.info(f"Skipping existing document: {filename}")
-                    return IngestionResult(
-                        file_id=file_id,
-                        original_filename=filename,
-                        skipped=True,
-                        success=True
-                    )
+                # Also update and consult in-memory md_hash cache if available
+                existing_set = getattr(self.weaviate_pool, 'existing_md_hashes', None)
+                md_hash = extraction_result.document.meta.get('md_hash', '')
+                if existing_set is not None:
+                    if md_hash in existing_set:
+                        logger.info(f"Skipping existing document (in-memory): {filename}")
+                        return IngestionResult(
+                            file_id=file_id,
+                            original_filename=filename,
+                            skipped=True,
+                            success=True
+                        )
+                else:
+                    exists = await self._check_exists(file_id)
+                    if exists:
+                        logger.info(f"Skipping existing document: {filename}")
+                        return IngestionResult(
+                            file_id=file_id,
+                            original_filename=filename,
+                            skipped=True,
+                            success=True
+                        )
             
             # Write to Weaviate
-            async with self.weaviate_pool.acquire() as client:
-                await self._write_document(client, extraction_result)
-                await self._write_metadata(client, extraction_result)
-                await self._write_sections(client, embedding_result)
-                await self._write_chunks(client, embedding_result)
+            # Acquire single-writer lock if available to avoid races
+            write_lock = getattr(self.weaviate_pool, 'write_lock', None)
+            if write_lock:
+                async with write_lock:
+                    async with self.weaviate_pool.acquire() as client:
+                        await self._write_document(client, extraction_result)
+                        await self._write_metadata(client, extraction_result)
+                        await self._write_sections(client, embedding_result)
+                        await self._write_chunks(client, embedding_result)
+            else:
+                async with self.weaviate_pool.acquire() as client:
+                    await self._write_document(client, extraction_result)
+                    await self._write_metadata(client, extraction_result)
+                    await self._write_sections(client, embedding_result)
+                    await self._write_chunks(client, embedding_result)
             
             sections_count = len(embedding_result.sections_with_embeddings or [])
             chunks_count = len(embedding_result.chunks_with_embeddings or [])
             
             logger.info(f"✓ Ingested {filename}: {sections_count} sections, {chunks_count} chunks")
+
+            # Update in-memory md_hash set after successful ingestion
+            try:
+                existing_set = getattr(self.weaviate_pool, 'existing_md_hashes', None)
+                md_hash = extraction_result.document.meta.get('md_hash', '')
+                if existing_set is not None and md_hash:
+                    existing_set.add(md_hash)
+            except Exception:
+                pass
             
             return IngestionResult(
                 file_id=file_id,

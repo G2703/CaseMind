@@ -122,6 +122,7 @@ class Config:
         self.auto_retry_failed = os.getenv('AUTO_RETRY_FAILED', 'true').lower() == 'true'
         self.save_failed_files = os.getenv('SAVE_FAILED_FILES', 'true').lower() == 'true'
         self.continue_on_error = os.getenv('CONTINUE_ON_ERROR', 'true').lower() == 'true'
+
         
         # Performance Monitoring
         self.enable_metrics = os.getenv('ENABLE_METRICS', 'true').lower() == 'true'
